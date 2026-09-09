@@ -1,0 +1,2907 @@
+{
+  "split": {
+    "seed": 42,
+    "sizes": {
+      "train": 140,
+      "validation": 30,
+      "test": 30
+    },
+    "cross_split_dup_messages": 0,
+    "dup_message_golden_vs_train": 1,
+    "dup_message_golden_vs_val": 0,
+    "dup_message_golden_vs_test": 0,
+    "golden_subsets": {
+      "challenge": 50,
+      "representative": 150
+    },
+    "train_label_dist": {
+      "other_unclear": 8,
+      "none": 40,
+      "service_complaint_escalation": 10,
+      "delivery_delay": 28,
+      "delivered_wrong_location": 3,
+      "charge_issue": 11,
+      "refund_request": 6,
+      "product_return_and_replacement": 6,
+      "device_app_issue": 5,
+      "order_status_query": 5,
+      "cancellation": 2,
+      "delivered_but_not_received": 11,
+      "account_info_update": 1,
+      "account_access": 4
+    },
+    "val_label_dist": {
+      "service_complaint_escalation": 4,
+      "delivered_wrong_location": 3,
+      "none": 13,
+      "device_app_issue": 2,
+      "product_return_and_replacement": 3,
+      "delivered_but_not_received": 2,
+      "other_unclear": 1,
+      "delivery_delay": 2
+    },
+    "test_label_dist": {
+      "delivery_delay": 8,
+      "product_return_and_replacement": 3,
+      "none": 9,
+      "delivered_but_not_received": 1,
+      "cancellation": 3,
+      "service_complaint_escalation": 2,
+      "charge_issue": 1,
+      "delivered_wrong_location": 2,
+      "other_unclear": 1
+    }
+  },
+  "results": {
+    "message_only__majority__test": {
+      "overall": {
+        "accuracy": 0.3,
+        "macro_f1": 0.05128205128205129,
+        "weighted_f1": 0.13846153846153847,
+        "macro_precision": 0.03333333333333333,
+        "macro_recall": 0.1111111111111111
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 9,
+          "precision": 0.3,
+          "recall": 1.0,
+          "f1": 0.46153846153846156
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__majority__val": {
+      "overall": {
+        "accuracy": 0.43333333333333335,
+        "macro_f1": 0.0755813953488372,
+        "weighted_f1": 0.262015503875969,
+        "macro_precision": 0.05416666666666667,
+        "macro_recall": 0.125
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.43333333333333335,
+          "recall": 1.0,
+          "f1": 0.6046511627906976
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__majority__golden_all": {
+      "overall": {
+        "accuracy": 0.16,
+        "macro_f1": 0.019704433497536946,
+        "weighted_f1": 0.044137931034482755,
+        "macro_precision": 0.011428571428571429,
+        "macro_recall": 0.07142857142857142
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 43,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 27,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 32,
+          "precision": 0.16,
+          "recall": 1.0,
+          "f1": 0.27586206896551724
+        },
+        "other_unclear": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__majority__golden_rep": {
+      "overall": {
+        "accuracy": 0.12666666666666668,
+        "macro_f1": 0.016060862214708368,
+        "weighted_f1": 0.028481262327416174,
+        "macro_precision": 0.009047619047619049,
+        "macro_recall": 0.07142857142857142
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 39,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 22,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 19,
+          "precision": 0.12666666666666668,
+          "recall": 1.0,
+          "f1": 0.22485207100591717
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__majority__golden_chal": {
+      "overall": {
+        "accuracy": 0.26,
+        "macro_f1": 0.031746031746031744,
+        "weighted_f1": 0.10730158730158729,
+        "macro_precision": 0.02,
+        "macro_recall": 0.07692307692307693
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.26,
+          "recall": 1.0,
+          "f1": 0.4126984126984127
+        },
+        "other_unclear": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__logistic__test": {
+      "overall": {
+        "accuracy": 0.2,
+        "macro_f1": 0.1333999333999334,
+        "weighted_f1": 0.19867243867243867,
+        "macro_precision": 0.13736263736263735,
+        "macro_recall": 0.16880341880341881
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 8,
+          "precision": 0.2857142857142857,
+          "recall": 0.25,
+          "f1": 0.26666666666666666
+        },
+        "delivered_but_not_received": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.25,
+          "recall": 0.3333333333333333,
+          "f1": 0.2857142857142857
+        },
+        "device_app_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 2,
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333
+        },
+        "none": {
+          "support": 9,
+          "precision": 0.5,
+          "recall": 0.1111111111111111,
+          "f1": 0.18181818181818182
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        }
+      }
+    },
+    "message_only__logistic__val": {
+      "overall": {
+        "accuracy": 0.13333333333333333,
+        "macro_f1": 0.04791666666666666,
+        "weighted_f1": 0.1825,
+        "macro_precision": 0.09523809523809523,
+        "macro_recall": 0.04700854700854701
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.14285714285714285,
+          "recall": 0.3333333333333333,
+          "f1": 0.2
+        },
+        "device_app_issue": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 13,
+          "precision": 1.0,
+          "recall": 0.23076923076923078,
+          "f1": 0.375
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__logistic__golden_all": {
+      "overall": {
+        "accuracy": 0.23,
+        "macro_f1": 0.1635282868479994,
+        "weighted_f1": 0.23200667117732227,
+        "macro_precision": 0.17193070904251026,
+        "macro_recall": 0.1908675603650687
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 43,
+          "precision": 0.5357142857142857,
+          "recall": 0.3488372093023256,
+          "f1": 0.4225352112676056
+        },
+        "delivered_but_not_received": {
+          "support": 11,
+          "precision": 0.14285714285714285,
+          "recall": 0.09090909090909091,
+          "f1": 0.1111111111111111
+        },
+        "delivered_wrong_location": {
+          "support": 7,
+          "precision": 0.1,
+          "recall": 0.14285714285714285,
+          "f1": 0.11764705882352941
+        },
+        "order_status_query": {
+          "support": 13,
+          "precision": 0.3333333333333333,
+          "recall": 0.15384615384615385,
+          "f1": 0.21052631578947367
+        },
+        "refund_request": {
+          "support": 8,
+          "precision": 0.17391304347826086,
+          "recall": 0.5,
+          "f1": 0.25806451612903225
+        },
+        "cancellation": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 11,
+          "precision": 0.3333333333333333,
+          "recall": 0.45454545454545453,
+          "f1": 0.38461538461538464
+        },
+        "product_return_and_replacement": {
+          "support": 18,
+          "precision": 0.06666666666666667,
+          "recall": 0.05555555555555555,
+          "f1": 0.06060606060606061
+        },
+        "device_app_issue": {
+          "support": 14,
+          "precision": 0.08333333333333333,
+          "recall": 0.07142857142857142,
+          "f1": 0.07692307692307693
+        },
+        "account_access": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 27,
+          "precision": 0.20454545454545456,
+          "recall": 0.3333333333333333,
+          "f1": 0.2535211267605634
+        },
+        "none": {
+          "support": 32,
+          "precision": 0.3333333333333333,
+          "recall": 0.1875,
+          "f1": 0.24
+        },
+        "other_unclear": {
+          "support": 3,
+          "precision": 0.1,
+          "recall": 0.3333333333333333,
+          "f1": 0.15384615384615385
+        }
+      }
+    },
+    "message_only__logistic__golden_rep": {
+      "overall": {
+        "accuracy": 0.24666666666666667,
+        "macro_f1": 0.17242211631309373,
+        "weighted_f1": 0.25055053134000504,
+        "macro_precision": 0.18481715652768285,
+        "macro_recall": 0.24578066044231459
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 39,
+          "precision": 0.5833333333333334,
+          "recall": 0.358974358974359,
+          "f1": 0.4444444444444444
+        },
+        "delivered_but_not_received": {
+          "support": 7,
+          "precision": 0.16666666666666666,
+          "recall": 0.14285714285714285,
+          "f1": 0.15384615384615385
+        },
+        "delivered_wrong_location": {
+          "support": 5,
+          "precision": 0.125,
+          "recall": 0.2,
+          "f1": 0.15384615384615385
+        },
+        "order_status_query": {
+          "support": 11,
+          "precision": 0.5,
+          "recall": 0.18181818181818182,
+          "f1": 0.26666666666666666
+        },
+        "refund_request": {
+          "support": 7,
+          "precision": 0.15789473684210525,
+          "recall": 0.42857142857142855,
+          "f1": 0.23076923076923078
+        },
+        "cancellation": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 6,
+          "precision": 0.3,
+          "recall": 0.5,
+          "f1": 0.375
+        },
+        "product_return_and_replacement": {
+          "support": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 10,
+          "precision": 0.09090909090909091,
+          "recall": 0.1,
+          "f1": 0.09523809523809523
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 22,
+          "precision": 0.2,
+          "recall": 0.3181818181818182,
+          "f1": 0.24561403508771928
+        },
+        "none": {
+          "support": 19,
+          "precision": 0.36363636363636365,
+          "recall": 0.21052631578947367,
+          "f1": 0.26666666666666666
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.1,
+          "recall": 1.0,
+          "f1": 0.18181818181818182
+        }
+      }
+    },
+    "message_only__logistic__golden_chal": {
+      "overall": {
+        "accuracy": 0.18,
+        "macro_f1": 0.11921768707482992,
+        "weighted_f1": 0.15923809523809523,
+        "macro_precision": 0.10706039991754276,
+        "macro_recall": 0.17527472527472526
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 4,
+          "precision": 0.25,
+          "recall": 0.25,
+          "f1": 0.25
+        },
+        "delivered_but_not_received": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 1,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4
+        },
+        "cancellation": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 5,
+          "precision": 0.4,
+          "recall": 0.4,
+          "f1": 0.4
+        },
+        "product_return_and_replacement": {
+          "support": 4,
+          "precision": 0.09090909090909091,
+          "recall": 0.25,
+          "f1": 0.13333333333333333
+        },
+        "device_app_issue": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 5,
+          "precision": 0.2222222222222222,
+          "recall": 0.4,
+          "f1": 0.2857142857142857
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.2857142857142857,
+          "recall": 0.15384615384615385,
+          "f1": 0.2
+        },
+        "other_unclear": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__svm__test": {
+      "overall": {
+        "accuracy": 0.2,
+        "macro_f1": 0.163003663003663,
+        "weighted_f1": 0.23174603174603176,
+        "macro_precision": 0.20512820512820512,
+        "macro_recall": 0.16880341880341881
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 8,
+          "precision": 0.3333333333333333,
+          "recall": 0.25,
+          "f1": 0.2857142857142857
+        },
+        "delivered_but_not_received": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "device_app_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5
+        },
+        "none": {
+          "support": 9,
+          "precision": 0.3333333333333333,
+          "recall": 0.1111111111111111,
+          "f1": 0.16666666666666666
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        }
+      }
+    },
+    "message_only__svm__val": {
+      "overall": {
+        "accuracy": 0.13333333333333333,
+        "macro_f1": 0.053030303030303025,
+        "weighted_f1": 0.16944444444444443,
+        "macro_precision": 0.07272727272727274,
+        "macro_recall": 0.05128205128205128
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.2,
+          "recall": 0.3333333333333333,
+          "f1": 0.25
+        },
+        "device_app_issue": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.6,
+          "recall": 0.23076923076923078,
+          "f1": 0.3333333333333333
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__svm__golden_all": {
+      "overall": {
+        "accuracy": 0.245,
+        "macro_f1": 0.14390255222323534,
+        "weighted_f1": 0.23749911448450348,
+        "macro_precision": 0.14542392131677845,
+        "macro_recall": 0.1607704195951704
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 43,
+          "precision": 0.5476190476190477,
+          "recall": 0.5348837209302325,
+          "f1": 0.5411764705882353
+        },
+        "delivered_but_not_received": {
+          "support": 11,
+          "precision": 0.15384615384615385,
+          "recall": 0.18181818181818182,
+          "f1": 0.16666666666666666
+        },
+        "delivered_wrong_location": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 13,
+          "precision": 0.25,
+          "recall": 0.07692307692307693,
+          "f1": 0.11764705882352941
+        },
+        "refund_request": {
+          "support": 8,
+          "precision": 0.1875,
+          "recall": 0.375,
+          "f1": 0.25
+        },
+        "cancellation": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 11,
+          "precision": 0.2727272727272727,
+          "recall": 0.5454545454545454,
+          "f1": 0.36363636363636365
+        },
+        "product_return_and_replacement": {
+          "support": 18,
+          "precision": 0.08333333333333333,
+          "recall": 0.05555555555555555,
+          "f1": 0.06666666666666667
+        },
+        "device_app_issue": {
+          "support": 14,
+          "precision": 0.09090909090909091,
+          "recall": 0.07142857142857142,
+          "f1": 0.08
+        },
+        "account_access": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 27,
+          "precision": 0.25,
+          "recall": 0.2222222222222222,
+          "f1": 0.23529411764705882
+        },
+        "none": {
+          "support": 32,
+          "precision": 0.2,
+          "recall": 0.1875,
+          "f1": 0.1935483870967742
+        },
+        "other_unclear": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__svm__golden_rep": {
+      "overall": {
+        "accuracy": 0.28,
+        "macro_f1": 0.15231169390833252,
+        "weighted_f1": 0.2683479135243841,
+        "macro_precision": 0.16397313369988023,
+        "macro_recall": 0.17790818204352038
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 39,
+          "precision": 0.5789473684210527,
+          "recall": 0.5641025641025641,
+          "f1": 0.5714285714285714
+        },
+        "delivered_but_not_received": {
+          "support": 7,
+          "precision": 0.2,
+          "recall": 0.2857142857142857,
+          "f1": 0.23529411764705882
+        },
+        "delivered_wrong_location": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 11,
+          "precision": 0.5,
+          "recall": 0.09090909090909091,
+          "f1": 0.15384615384615385
+        },
+        "refund_request": {
+          "support": 7,
+          "precision": 0.15384615384615385,
+          "recall": 0.2857142857142857,
+          "f1": 0.2
+        },
+        "cancellation": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 6,
+          "precision": 0.26666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.38095238095238093
+        },
+        "product_return_and_replacement": {
+          "support": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 10,
+          "precision": 0.1,
+          "recall": 0.1,
+          "f1": 0.1
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 22,
+          "precision": 0.23529411764705882,
+          "recall": 0.18181818181818182,
+          "f1": 0.20512820512820512
+        },
+        "none": {
+          "support": 19,
+          "precision": 0.2608695652173913,
+          "recall": 0.3157894736842105,
+          "f1": 0.2857142857142857
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_only__svm__golden_chal": {
+      "overall": {
+        "accuracy": 0.14,
+        "macro_f1": 0.1130952380952381,
+        "weighted_f1": 0.11,
+        "macro_precision": 0.09141156462585033,
+        "macro_recall": 0.16428571428571428
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 4,
+          "precision": 0.25,
+          "recall": 0.25,
+          "f1": 0.25
+        },
+        "delivered_but_not_received": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 1,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5
+        },
+        "cancellation": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 5,
+          "precision": 0.2857142857142857,
+          "recall": 0.4,
+          "f1": 0.3333333333333333
+        },
+        "product_return_and_replacement": {
+          "support": 4,
+          "precision": 0.125,
+          "recall": 0.25,
+          "f1": 0.16666666666666666
+        },
+        "device_app_issue": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 5,
+          "precision": 0.2857142857142857,
+          "recall": 0.4,
+          "f1": 0.3333333333333333
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "other_unclear": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__majority__test": {
+      "overall": {
+        "accuracy": 0.3,
+        "macro_f1": 0.05128205128205129,
+        "weighted_f1": 0.13846153846153847,
+        "macro_precision": 0.03333333333333333,
+        "macro_recall": 0.1111111111111111
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 9,
+          "precision": 0.3,
+          "recall": 1.0,
+          "f1": 0.46153846153846156
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__majority__val": {
+      "overall": {
+        "accuracy": 0.43333333333333335,
+        "macro_f1": 0.0755813953488372,
+        "weighted_f1": 0.262015503875969,
+        "macro_precision": 0.05416666666666667,
+        "macro_recall": 0.125
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.43333333333333335,
+          "recall": 1.0,
+          "f1": 0.6046511627906976
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__majority__golden_all": {
+      "overall": {
+        "accuracy": 0.16,
+        "macro_f1": 0.019704433497536946,
+        "weighted_f1": 0.044137931034482755,
+        "macro_precision": 0.011428571428571429,
+        "macro_recall": 0.07142857142857142
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 43,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 27,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 32,
+          "precision": 0.16,
+          "recall": 1.0,
+          "f1": 0.27586206896551724
+        },
+        "other_unclear": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__majority__golden_rep": {
+      "overall": {
+        "accuracy": 0.12666666666666668,
+        "macro_f1": 0.016060862214708368,
+        "weighted_f1": 0.028481262327416174,
+        "macro_precision": 0.009047619047619049,
+        "macro_recall": 0.07142857142857142
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 39,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 22,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 19,
+          "precision": 0.12666666666666668,
+          "recall": 1.0,
+          "f1": 0.22485207100591717
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__majority__golden_chal": {
+      "overall": {
+        "accuracy": 0.26,
+        "macro_f1": 0.031746031746031744,
+        "weighted_f1": 0.10730158730158729,
+        "macro_precision": 0.02,
+        "macro_recall": 0.07692307692307693
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.26,
+          "recall": 1.0,
+          "f1": 0.4126984126984127
+        },
+        "other_unclear": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__logistic__test": {
+      "overall": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.10315581854043392,
+        "weighted_f1": 0.18094017094017095,
+        "macro_precision": 0.15256410256410255,
+        "macro_recall": 0.14316239316239315
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 8,
+          "precision": 0.4,
+          "recall": 0.25,
+          "f1": 0.3076923076923077
+        },
+        "delivered_but_not_received": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 2,
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333
+        },
+        "none": {
+          "support": 9,
+          "precision": 1.0,
+          "recall": 0.1111111111111111,
+          "f1": 0.2
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5
+        }
+      }
+    },
+    "message_context__logistic__val": {
+      "overall": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.06904761904761905,
+        "weighted_f1": 0.14666666666666667,
+        "macro_precision": 0.08035714285714286,
+        "macro_recall": 0.09478021978021978
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 2,
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333
+        },
+        "delivered_but_not_received": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 4,
+          "precision": 0.375,
+          "recall": 0.75,
+          "f1": 0.5
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.5,
+          "recall": 0.07692307692307693,
+          "f1": 0.13333333333333333
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__logistic__golden_all": {
+      "overall": {
+        "accuracy": 0.245,
+        "macro_f1": 0.1209889299201786,
+        "weighted_f1": 0.21759846816518483,
+        "macro_precision": 0.1294543980382851,
+        "macro_recall": 0.1549150177680078
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 43,
+          "precision": 0.5208333333333334,
+          "recall": 0.5813953488372093,
+          "f1": 0.5494505494505495
+        },
+        "delivered_but_not_received": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 13,
+          "precision": 0.2,
+          "recall": 0.07692307692307693,
+          "f1": 0.1111111111111111
+        },
+        "refund_request": {
+          "support": 8,
+          "precision": 0.1,
+          "recall": 0.625,
+          "f1": 0.1724137931034483
+        },
+        "cancellation": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 11,
+          "precision": 0.25,
+          "recall": 0.2727272727272727,
+          "f1": 0.2608695652173913
+        },
+        "product_return_and_replacement": {
+          "support": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 14,
+          "precision": 0.2857142857142857,
+          "recall": 0.14285714285714285,
+          "f1": 0.19047619047619047
+        },
+        "account_access": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 27,
+          "precision": 0.2558139534883721,
+          "recall": 0.4074074074074074,
+          "f1": 0.3142857142857143
+        },
+        "none": {
+          "support": 32,
+          "precision": 0.2,
+          "recall": 0.0625,
+          "f1": 0.09523809523809523
+        },
+        "other_unclear": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__logistic__golden_rep": {
+      "overall": {
+        "accuracy": 0.28,
+        "macro_f1": 0.13435374149659865,
+        "weighted_f1": 0.2512063492063492,
+        "macro_precision": 0.148920543827287,
+        "macro_recall": 0.16723990295418867
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 39,
+          "precision": 0.5853658536585366,
+          "recall": 0.6153846153846154,
+          "f1": 0.6
+        },
+        "delivered_but_not_received": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 11,
+          "precision": 0.3333333333333333,
+          "recall": 0.09090909090909091,
+          "f1": 0.14285714285714285
+        },
+        "refund_request": {
+          "support": 7,
+          "precision": 0.0975609756097561,
+          "recall": 0.5714285714285714,
+          "f1": 0.16666666666666666
+        },
+        "cancellation": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 6,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4
+        },
+        "product_return_and_replacement": {
+          "support": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 10,
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1": 0.2857142857142857
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 22,
+          "precision": 0.23529411764705882,
+          "recall": 0.36363636363636365,
+          "f1": 0.2857142857142857
+        },
+        "none": {
+          "support": 19,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__logistic__golden_chal": {
+      "overall": {
+        "accuracy": 0.14,
+        "macro_f1": 0.07375798804370233,
+        "weighted_f1": 0.11918037518037519,
+        "macro_precision": 0.07052154195011338,
+        "macro_recall": 0.14313186813186812
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 4,
+          "precision": 0.14285714285714285,
+          "recall": 0.25,
+          "f1": 0.18181818181818182
+        },
+        "delivered_but_not_received": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 1,
+          "precision": 0.1111111111111111,
+          "recall": 1.0,
+          "f1": 0.2
+        },
+        "cancellation": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 5,
+          "precision": 0.3333333333333333,
+          "recall": 0.6,
+          "f1": 0.42857142857142855
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.4,
+          "recall": 0.15384615384615385,
+          "f1": 0.2222222222222222
+        },
+        "other_unclear": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__svm__test": {
+      "overall": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.050824175824175824,
+        "weighted_f1": 0.1857142857142857,
+        "macro_precision": 0.05961538461538462,
+        "macro_recall": 0.04594017094017094
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 8,
+          "precision": 0.375,
+          "recall": 0.375,
+          "f1": 0.375
+        },
+        "delivered_but_not_received": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "none": {
+          "support": 9,
+          "precision": 0.4,
+          "recall": 0.2222222222222222,
+          "f1": 0.2857142857142857
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__svm__val": {
+      "overall": {
+        "accuracy": 0.2,
+        "macro_f1": 0.07464114832535886,
+        "weighted_f1": 0.2357894736842105,
+        "macro_precision": 0.09090909090909091,
+        "macro_recall": 0.07342657342657342
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_but_not_received": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cancellation": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product_return_and_replacement": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 4,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.6666666666666666,
+          "recall": 0.3076923076923077,
+          "f1": 0.42105263157894735
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__svm__golden_all": {
+      "overall": {
+        "accuracy": 0.28,
+        "macro_f1": 0.13505434782608697,
+        "weighted_f1": 0.24017391304347824,
+        "macro_precision": 0.12484209918420444,
+        "macro_recall": 0.16915691282385634
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 43,
+          "precision": 0.4153846153846154,
+          "recall": 0.627906976744186,
+          "f1": 0.5
+        },
+        "delivered_but_not_received": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 8,
+          "precision": 0.20833333333333334,
+          "recall": 0.625,
+          "f1": 0.3125
+        },
+        "cancellation": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 11,
+          "precision": 0.21052631578947367,
+          "recall": 0.36363636363636365,
+          "f1": 0.26666666666666666
+        },
+        "product_return_and_replacement": {
+          "support": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 14,
+          "precision": 0.2222222222222222,
+          "recall": 0.14285714285714285,
+          "f1": 0.17391304347826086
+        },
+        "account_access": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 27,
+          "precision": 0.42105263157894735,
+          "recall": 0.2962962962962963,
+          "f1": 0.34782608695652173
+        },
+        "none": {
+          "support": 32,
+          "precision": 0.2702702702702703,
+          "recall": 0.3125,
+          "f1": 0.2898550724637681
+        },
+        "other_unclear": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__svm__golden_rep": {
+      "overall": {
+        "accuracy": 0.31333333333333335,
+        "macro_f1": 0.13685642678123883,
+        "weighted_f1": 0.2642860484544695,
+        "macro_precision": 0.13223485423946252,
+        "macro_recall": 0.17283956644858897
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 39,
+          "precision": 0.4642857142857143,
+          "recall": 0.6666666666666666,
+          "f1": 0.5473684210526316
+        },
+        "delivered_but_not_received": {
+          "support": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 7,
+          "precision": 0.19047619047619047,
+          "recall": 0.5714285714285714,
+          "f1": 0.2857142857142857
+        },
+        "cancellation": {
+          "support": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 6,
+          "precision": 0.15384615384615385,
+          "recall": 0.3333333333333333,
+          "f1": 0.21052631578947367
+        },
+        "product_return_and_replacement": {
+          "support": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 10,
+          "precision": 0.4,
+          "recall": 0.2,
+          "f1": 0.26666666666666666
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 22,
+          "precision": 0.38461538461538464,
+          "recall": 0.22727272727272727,
+          "f1": 0.2857142857142857
+        },
+        "none": {
+          "support": 19,
+          "precision": 0.25806451612903225,
+          "recall": 0.42105263157894735,
+          "f1": 0.32
+        },
+        "other_unclear": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "message_context__svm__golden_chal": {
+      "overall": {
+        "accuracy": 0.18,
+        "macro_f1": 0.12667595562332404,
+        "weighted_f1": 0.16795362532204636,
+        "macro_precision": 0.11507936507936507,
+        "macro_recall": 0.1717032967032967
+      },
+      "per_intent": {
+        "delivery_delay": {
+          "support": 4,
+          "precision": 0.1111111111111111,
+          "recall": 0.25,
+          "f1": 0.15384615384615385
+        },
+        "delivered_but_not_received": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivered_wrong_location": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "order_status_query": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_request": {
+          "support": 1,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5
+        },
+        "cancellation": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "charge_issue": {
+          "support": 5,
+          "precision": 0.3333333333333333,
+          "recall": 0.4,
+          "f1": 0.36363636363636365
+        },
+        "product_return_and_replacement": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "device_app_issue": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_access": {
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account_info_update": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "service_complaint_escalation": {
+          "support": 5,
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1": 0.5454545454545454
+        },
+        "none": {
+          "support": 13,
+          "precision": 0.3333333333333333,
+          "recall": 0.15384615384615385,
+          "f1": 0.21052631578947367
+        },
+        "other_unclear": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  }
+}
