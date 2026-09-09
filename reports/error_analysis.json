@@ -1,0 +1,4571 @@
+{
+  "n_logistic_msg_only": 154,
+  "n_logistic_ctx": 151,
+  "n_svm_msg_only": 151,
+  "logistic_msg_only_errors": [
+    {
+      "conversation_id": 2814438,
+      "language": "es",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.172,
+      "current_message": "@USER Ya lo he intentado. Me llego un mail pidiendo que les envie un fax.. les mande el fax con el resumen de la tarjeta y mi cuenta continua bloqueada! NECESITO AYUDA @USER"
+    },
+    {
+      "conversation_id": 2694949,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.107,
+      "current_message": "I tried @USER prime years ago for 30 days before the student offer or music service existed but now I'm unable to trial it but keeps being displayed on homepage."
+    },
+    {
+      "conversation_id": 519702,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.102,
+      "current_message": "@USER I just want my psn codes so me and my friends can download and play a game tonight. After I get those I'll never bother you again."
+    },
+    {
+      "conversation_id": 2853614,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.118,
+      "current_message": "@USER Hi, I made an order and it went straight to cancelled! How can I un-cancel? I bought these on blackfriday."
+    },
+    {
+      "conversation_id": 1955907,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.123,
+      "current_message": "@USER URL"
+    },
+    {
+      "conversation_id": 197857,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.108,
+      "current_message": "@USER It is your responsibility to bar sellers like these on your platform. An increase in 1300 rupees is criminal."
+    },
+    {
+      "conversation_id": 1568158,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.104,
+      "current_message": "@USER And I have another one too this one's actual MRP is Rs. 525/ Frontech 700 MB 5001 FC BLANK CD-R- 50 Pcs URL"
+    },
+    {
+      "conversation_id": 834216,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.139,
+      "current_message": "@USER AMZL US"
+    },
+    {
+      "conversation_id": 2798309,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.124,
+      "current_message": "@USER Sure, the thing is that I saw notified that my package arrived and this photo came with the notification. URL"
+    },
+    {
+      "conversation_id": 689484,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.115,
+      "current_message": "Did @USER really just not deliver my package and instead of taking responsibilty they ask me to contact usps and file a police report!? Really? After years of being a prime member I am glad to have cancelled my membership smh"
+    },
+    {
+      "conversation_id": 1242242,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.128,
+      "current_message": "@USER Your customer service is the worst first they investigated the wrong item then they thought I got someone else’s package now they say I"
+    },
+    {
+      "conversation_id": 1578555,
+      "language": "de",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "none",
+      "confidence": 0.105,
+      "current_message": "@USER @USER Same here. Amazon hat mich auch im Stich gelassen heute :("
+    },
+    {
+      "conversation_id": 2284883,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "refund_request",
+      "confidence": 0.12,
+      "current_message": "@USER Wasn’t my order, it was my neighbors. No idea what his name is. Not trying to tattle. Just pointing out you aren’t hiring the best, most trustworthy people to justify the key service here."
+    },
+    {
+      "conversation_id": 2170818,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": 0.142,
+      "current_message": "@USER @USER ??"
+    },
+    {
+      "conversation_id": 842315,
+      "language": "fr",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "account_access",
+      "confidence": 0.12,
+      "current_message": "@USER Transporteur : Amazon Logistics, n° de suivi CA0002376203"
+    },
+    {
+      "conversation_id": 2785904,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.123,
+      "current_message": "@USER No one seems sure. Cust service said \"hopefully\" it will arrive tomorrow."
+    },
+    {
+      "conversation_id": 1379340,
+      "language": "it",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.131,
+      "current_message": "@USER @USER C'è speranza di avere l'app #PrimeVideo sul Sony UHP-H1?"
+    },
+    {
+      "conversation_id": 227064,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "order_status_query",
+      "confidence": 0.103,
+      "current_message": "AmazonリーディングってこれKindleのアプリからいけねぇのか？"
+    },
+    {
+      "conversation_id": 1645512,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.099,
+      "current_message": "@USER I'm having it on the full site and the mobile site on all browsers. I don't use the app. Shopping works...I just can't buy."
+    },
+    {
+      "conversation_id": 2497106,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.117,
+      "current_message": "@USER @USER @USER @USER @USER @USER @USER @USER @USER Given that the app is launched in India, I was hoping that English(India) language would also be available to choose 😕"
+    },
+    {
+      "conversation_id": 487688,
+      "language": "fr",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "account_access",
+      "confidence": 0.16,
+      "current_message": "Mieux vaut tard que jamais... Commandé dimanche avec #AmazonPrime, reçu vendredi avec @USER! Cc @USER URL"
+    },
+    {
+      "conversation_id": 1451501,
+      "language": "pt",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.114,
+      "current_message": "@USER Como foi minha primeira compra, eu comprei 2 (use a cabeça c E linux a bíblia), mas já estou fazendo a lista das próximas compras"
+    },
+    {
+      "conversation_id": 2254596,
+      "language": "it",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.139,
+      "current_message": "@USER Grazie, buonanotte 😊"
+    },
+    {
+      "conversation_id": 426141,
+      "language": "es",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.128,
+      "current_message": "Cualquier día antes de que decida en pedir algo en @USER ,me ha llegado Dios que velocidad 😃😃"
+    },
+    {
+      "conversation_id": 816342,
+      "language": "it",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.175,
+      "current_message": "#AmazonIndia URL"
+    },
+    {
+      "conversation_id": 2586341,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "order_status_query",
+      "confidence": 0.103,
+      "current_message": "アマゾンプライムミュージック入れたが、ペルソナだけで年会費の価値超えててすげぇ……"
+    },
+    {
+      "conversation_id": 365605,
+      "language": "fr",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.135,
+      "current_message": "@USER je viens de recevoir, désolé pour le dérangement"
+    },
+    {
+      "conversation_id": 2472354,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.139,
+      "current_message": "@USER これから特典たくさん利用したいと思ってます！ わざわざリプライありがとうございます！☺️"
+    },
+    {
+      "conversation_id": 1033752,
+      "language": "de",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.098,
+      "current_message": "@USER Genau JETZT kam die Mail, dass mein Paket gleich ankommt. 👍 Danke für den tollen Kundenservice und die immer zügigen Antworten!"
+    },
+    {
+      "conversation_id": 1738390,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.175,
+      "current_message": "Amazonで頼んだやつ来たーーー！！ 😈ｷﾞﾗﾝ そして俺の姉達はもうクリスマス🎅気分w←ついこの間ハロウィン🎃終わったばかりなのに､､､ww URL"
+    },
+    {
+      "conversation_id": 2151072,
+      "language": "ja",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.139,
+      "current_message": "@USER あ、ありがとうございます🙇‍♀️"
+    },
+    {
+      "conversation_id": 1130527,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "account_info_update",
+      "confidence": 0.133,
+      "current_message": "@USER Invoice no: TN-MAA4-__credit_card__"
+    },
+    {
+      "conversation_id": 2149534,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "refund_request",
+      "confidence": 0.103,
+      "current_message": "@USER Ok but when placing an order, your site always tells you if the item is eligible for P.O. box delivery or not. My order was processed and went through with no issues"
+    },
+    {
+      "conversation_id": 2609965,
+      "language": "fr",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "other_unclear",
+      "predicted_intent": "account_access",
+      "confidence": 0.114,
+      "current_message": "Bonjour @USER je viens de recevoir mon colis que j’avais demandé à être envoyé dans un colis Amazon pour cacher les informations du produit or ce n’est pas le cas. Pourquoi ? Amazon de moins en moins satisfaisant..."
+    },
+    {
+      "conversation_id": 2909124,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "other_unclear",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.092,
+      "current_message": "I love @USER but really?? You mailed this at Christmas without putting it in a plain box???? My kids saw it outside when they got off the bus! #christmasruined URL"
+    },
+    {
+      "conversation_id": 835153,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.09,
+      "current_message": "I bought a captain America T-shirt from @USER and they sent me Rupa baniyan #AccheDin ? @USER URL"
+    },
+    {
+      "conversation_id": 2679197,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.116,
+      "current_message": "@USER @USER Amazon is not supposed to take returns of our item. Did they replace it for you?"
+    },
+    {
+      "conversation_id": 694411,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.113,
+      "current_message": "@USER I did !! Request you to please give me the email address on which i can fwd you the video."
+    },
+    {
+      "conversation_id": 232399,
+      "language": "fr",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "none",
+      "confidence": 0.095,
+      "current_message": "En fait #Amazonprime c'est surtout de la merde non? Ça existe un livreur qui fait son taf à Paris ou c'est une utopie? @USER @USER"
+    },
+    {
+      "conversation_id": 102915,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.131,
+      "current_message": "@USER And this is your TR customer: URL"
+    },
+    {
+      "conversation_id": 1323314,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.096,
+      "current_message": "@USER Look what reply we get when we complain to Amazon..... URL"
+    },
+    {
+      "conversation_id": 1912145,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.116,
+      "current_message": "@USER - I am unable to order gifts for my husband or son because you display all purchases. Is there a way to secretly purchase so they can't see it? Maybe a password at a purchase level ?"
+    },
+    {
+      "conversation_id": 179205,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.099,
+      "current_message": "@USER Read the previous tweets - I can’t log in! This has been going on for a day now!!!"
+    },
+    {
+      "conversation_id": 2789138,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.103,
+      "current_message": "Hello is there a way to check if I'm signed up to Prime? If so it's a mistake bc I can't afford the membership &amp; I noticed my packages are coming faster than expected. No complaints just can't afford Prime if charged @USER"
+    },
+    {
+      "conversation_id": 427799,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "account_info_update",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.094,
+      "current_message": "@USER can i pay with Amazon pay balance account for one year prime membership?? Plz reply"
+    },
+    {
+      "conversation_id": 22572,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "cancellation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.196,
+      "current_message": "@USER Ordered on 7 October 2017 Order# 403-7284574-6433108 not yet delivered. No way to cancel and get refund."
+    },
+    {
+      "conversation_id": 2899649,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.096,
+      "current_message": "@USER Welp, that didn’t do anything. I’m just going to cancel the order - I don’t see why I should keep waiting while it’s literally sitting on store shelves. URL"
+    },
+    {
+      "conversation_id": 136922,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.104,
+      "current_message": "@USER I am so upset I have just cancelled the whole order. Have you an email address I can write to you at. This is the first time I have ever received bad service from Amazon. He even brought me to tears"
+    },
+    {
+      "conversation_id": 880948,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.114,
+      "current_message": "@USER They act so bossy that they didn't even bother to make a call regarding the pickup Just a confirmation txt n thn later a cancellation txt"
+    },
+    {
+      "conversation_id": 650056,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.132,
+      "current_message": "@USER Oh right, you can't do that. I would hurt @USER wallet after all. @USER good on you."
+    },
+    {
+      "conversation_id": 1604096,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.112,
+      "current_message": "@USER And then they kindly dispersed the money in my ac to an ac they knew is closed."
+    },
+    {
+      "conversation_id": 332434,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "refund_request",
+      "confidence": 0.103,
+      "current_message": "@USER I don't get COD option for ur products.1st it shows that it is available but after proceeding for checkout,I can't get it.Why?"
+    },
+    {
+      "conversation_id": 895946,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.106,
+      "current_message": "@USER I know cart prices aren’t set in stone. But like, it went from on sale to more than the regular price. It’s not a cute look."
+    },
+    {
+      "conversation_id": 1423023,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.098,
+      "current_message": "@USER Have also had deliveries when courier claimed to have delivered, but put it back in the van and ended up back at the depot."
+    },
+    {
+      "conversation_id": 2289844,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.093,
+      "current_message": "@USER The delivery agent says he will deliver the package later but he updates the status saying delivered directly to customer .. URL"
+    },
+    {
+      "conversation_id": 1220925,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.101,
+      "current_message": "@USER Why to hear you do nothing again?"
+    },
+    {
+      "conversation_id": 2532842,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.102,
+      "current_message": "@USER can someone contact me ASAP re an undelivered parcel.2 weeks &amp; still no joy.DPD said speak to you. Totally fed up right now!"
+    },
+    {
+      "conversation_id": 380695,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.106,
+      "current_message": "@USER I'll have to do that later this morning. Absolutely infuriating"
+    },
+    {
+      "conversation_id": 482351,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "refund_request",
+      "confidence": 0.113,
+      "current_message": "@USER I received my order but part of it is missing but my account say it's delivered. Box was partly open. Parcel left in flower Box!!! Who do I contact? #xmaspresent"
+    },
+    {
+      "conversation_id": 533206,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.114,
+      "current_message": "@USER Also, if I haven't specifically indicated that I want my parcel to be left in a \"safe place\"... why is the delivery driver assuming my recycle bin is a safe place? It is visible from the street; is NOT in a garden; and if someone sees him putting it there, it can be stolen!"
+    },
+    {
+      "conversation_id": 2283511,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.111,
+      "current_message": "Amazon seems to have forgotten how to deliver to my address so here I am waiting on 5 packages that all say \"delivery attempted\" TO THE WRONG AREA"
+    },
+    {
+      "conversation_id": 2594956,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.092,
+      "current_message": "@USER I hope my pkg was not in there. Ste-Catherine Montreal, unlocked doors, windows open #unattendedpackages #intelcom #badcourrier URL"
+    },
+    {
+      "conversation_id": 1727624,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.114,
+      "current_message": "How to contact @USER about a stolen package? Website not user friendly requesting support. Unique situation would like to chat about."
+    },
+    {
+      "conversation_id": 458877,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "account_access",
+      "confidence": 0.11,
+      "current_message": "@USER No. Status still “arriving by 8pm today” (9 minutes from now) but no sign of shipment and no tracking number. URL"
+    },
+    {
+      "conversation_id": 1116569,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.131,
+      "current_message": "I bought something on @USER, paid extra for 1 day shipping and it isn’t here. Who do I complain to? @USER"
+    },
+    {
+      "conversation_id": 2447788,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.11,
+      "current_message": "@USER I placed an order with Amazon.in on October 17th and the money got deducted the same day. The order was supposed to deliver on 31st October, but it is 14th Nov today and I still have not received the product. Where is my stuff @USER ?"
+    },
+    {
+      "conversation_id": 608064,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.094,
+      "current_message": "@USER Sorry, the last picture was the shipment confirmation email. This one is the original order email, which also shows 11/20 as the delivery date URL"
+    },
+    {
+      "conversation_id": 1192307,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.091,
+      "current_message": "so @USER are fibbers. I saw the delivery van pull up in our car park yesterday just before 5pm, then they drove off..."
+    },
+    {
+      "conversation_id": 2780552,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.137,
+      "current_message": "\"helping us build Earth's Most Customer-Centric Company\" @USER is there an amendement to this vision which excludes me? Just been told to wait another 24 hours because you've misplaced my delivery (again!)."
+    },
+    {
+      "conversation_id": 2824739,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "cancellation",
+      "confidence": 0.098,
+      "current_message": "I think @USER @USER may want to look into the definition one \"one day delivery\" URL"
+    },
+    {
+      "conversation_id": 2913230,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.106,
+      "current_message": "@USER hi, I ordered a few Prime items on Monday, but they all say arriving Thursday. I thought it was 2 day shipping.... why the delay? Nothing has shipped yet and I thought they'd be here by tomorrow"
+    },
+    {
+      "conversation_id": 2003910,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": 0.093,
+      "current_message": "@USER Well, since \"taken care of\" would have meant Friday delivery, that's unlikely."
+    },
+    {
+      "conversation_id": 2954293,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.102,
+      "current_message": "@USER I don’t have time for that. That’s why I buy products on prime only. I work and go to school. I need prime to be a reliable service. Speed. Quality. Convenience. I don’t have time for stuff like this. I just won’t recommend your service."
+    },
+    {
+      "conversation_id": 2664071,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.111,
+      "current_message": "@USER Wrongly conceptualized add , bird's are being bullied Anyway Amazon is wowsome! Maintain this faith"
+    },
+    {
+      "conversation_id": 86209,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.117,
+      "current_message": "Today is the twins’ 4th Birthday. This is their gift from us - ordered on Sunday with Amazon Prime. We were assured yesterday that it would arrive today but I have just received this message. I understand that these things happen, but I’m hoping you can work some magic @USER URL"
+    },
+    {
+      "conversation_id": 2192580,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.108,
+      "current_message": "You know you can't trust @USER marketplace if your order doesn't have any tracking info updates since it supposedly left origin facility. It was supposed to arrive yesterday. Last time was a nightmare enough, this time isn't looking much better. Thanks for the sub-par service."
+    },
+    {
+      "conversation_id": 1406593,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.105,
+      "current_message": "@USER first weekend of prime... NOT IMPRESSED."
+    },
+    {
+      "conversation_id": 1570766,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": 0.098,
+      "current_message": "@USER Do you have any update here?"
+    },
+    {
+      "conversation_id": 1399860,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": 0.099,
+      "current_message": "@USER Thank u so much.. Kindly Arrange to provide my parcel.. Thank u so much"
+    },
+    {
+      "conversation_id": 1335118,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.106,
+      "current_message": "@USER We needed it for a trip we are leaving on tonight, now we will not have it."
+    },
+    {
+      "conversation_id": 2852150,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.108,
+      "current_message": "I'll go sit at the door for the next 8min then? @USER @USER URL"
+    },
+    {
+      "conversation_id": 2890574,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.112,
+      "current_message": ".@USER 3 years ago when something said #PRIME and I ordered it, it arrived in 2 days, this last year it is a lucky day to get something in 2 days, The service has gone 2 shit, it's so unreliable, You should knock prime membership in half, it's bogus at the moment #AMAZON"
+    },
+    {
+      "conversation_id": 1420099,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.106,
+      "current_message": "@USER ordered three items from amazon and all of their delivery dates kept getting pushed back and back and back. Not happy 😤"
+    },
+    {
+      "conversation_id": 550560,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.111,
+      "current_message": "@USER I have a Prime membership. Quite often the 1 or 2 day shipping that I've selected doesn't arrive until 3-5+ days later. I thought shipping time was supposed to be from when you order the item? What's with missing the date so often?"
+    },
+    {
+      "conversation_id": 673242,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.118,
+      "current_message": "@USER That was a joke lol. But my order IS late — i contacted amazon and they said that it’d be here by tomorrow so let’s see"
+    },
+    {
+      "conversation_id": 1193931,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.159,
+      "current_message": "@USER Amazon logistics is the carrier. Got disconnected while holding the first time around. Not clear if delivery is tmrw or delayed further."
+    },
+    {
+      "conversation_id": 2731105,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.115,
+      "current_message": "@USER One of my orders will be delivered tomorrow when I paid for delivery today."
+    },
+    {
+      "conversation_id": 1587374,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.111,
+      "current_message": "@USER i recently purchased an item from your website its scheduled to come on November 3rd at 8pm and i still havent received my order?"
+    },
+    {
+      "conversation_id": 1229688,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.102,
+      "current_message": "The all-new Kindle app is built for book lovers, with everything you need in one place. Learn more: URL URL"
+    },
+    {
+      "conversation_id": 26958,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.094,
+      "current_message": "@USER Good morning. Is the Alexa App down? It’s timing out here in London, UK."
+    },
+    {
+      "conversation_id": 2378990,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.121,
+      "current_message": "@USER @USER when I ask Alexa this price it says it’s $23.48 URL"
+    },
+    {
+      "conversation_id": 1384330,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.097,
+      "current_message": "@USER is there anything wrong with payment on the amazon app today . Seeing this for sometime URL"
+    },
+    {
+      "conversation_id": 2523357,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.116,
+      "current_message": "@USER Thank you for your quick reply! I have a first gen."
+    },
+    {
+      "conversation_id": 1766849,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.109,
+      "current_message": "@USER Fire stick is broke getting new remote second time app is on an android box."
+    },
+    {
+      "conversation_id": 2847379,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.117,
+      "current_message": "@USER At this time we CANNOT choose the language it is asking for, its under this tab in settings URL"
+    },
+    {
+      "conversation_id": 2569705,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.092,
+      "current_message": "@USER Timing out across the board today, any idea on when things will be back up? URL"
+    },
+    {
+      "conversation_id": 1464161,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "cancellation",
+      "confidence": 0.121,
+      "current_message": "@USER @USER @USER update: episode still unavailable. I think you're the people who update me. Not vice versa? 🔮"
+    },
+    {
+      "conversation_id": 1943693,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.134,
+      "current_message": "@USER Yes i have shared the whole concern"
+    },
+    {
+      "conversation_id": 2611658,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.108,
+      "current_message": "@USER Thanks! Got the package at 1.30 :D"
+    },
+    {
+      "conversation_id": 309233,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.116,
+      "current_message": "Thanks @USER for the new cat bed. Velho loves it! #floof #CatsOfTwitter URL"
+    },
+    {
+      "conversation_id": 2111184,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.105,
+      "current_message": "@USER Wow, that's was an amazingly quick response!! Hats off"
+    },
+    {
+      "conversation_id": 174486,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "order_status_query",
+      "confidence": 0.102,
+      "current_message": "@USER me hiciste muy feliz hoy! 😍"
+    },
+    {
+      "conversation_id": 2855145,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.101,
+      "current_message": "@USER Thanks so much for helping, @USER! It was definitely the sales tax!"
+    },
+    {
+      "conversation_id": 2384553,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.101,
+      "current_message": "New books are on their way!! Can’t stop looking at the @USER tracking screen though - hurry up new books. More coming next week 👏🏻👏🏻 URL"
+    },
+    {
+      "conversation_id": 1198549,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.109,
+      "current_message": "@USER @USER Nothing but respect for MY postal service 😤😤"
+    },
+    {
+      "conversation_id": 487699,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.097,
+      "current_message": "@USER I made a mistake. I ordered on your .co.uk site not .com so i actually do have the orders i ordered. Sorry for any inconvenience caused."
+    },
+    {
+      "conversation_id": 628261,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_required",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.142,
+      "current_message": "@USER I’m guessing by a marketplace seller? URL"
+    },
+    {
+      "conversation_id": 2931934,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.108,
+      "current_message": "@USER But I want I phone as a gift... On my birthday.. Don't want to purchase it"
+    },
+    {
+      "conversation_id": 2769011,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.103,
+      "current_message": "@USER No need to filled the form, I'm sharing you giving the registered email via direct message"
+    },
+    {
+      "conversation_id": 1707062,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.089,
+      "current_message": "@USER The guy who sent it to me already reached me, tracking number checks out, mystery solved. Thanks, though"
+    },
+    {
+      "conversation_id": 2389800,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.108,
+      "current_message": "Every breath you take should be as pure as nature intended. Improve the quality of the air you breathe indoors with a wide range air purifiers to choose from on Amazon.in. Visit: URL URL"
+    },
+    {
+      "conversation_id": 2266765,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.119,
+      "current_message": "@USER hey guys, Do you have any upcoming sale? In looking forward to buy the Moto g5s+ and I'm short of little money. Can you help me out?"
+    },
+    {
+      "conversation_id": 1721707,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.122,
+      "current_message": "when you pay extra for shipping for next day delivery through amazon prime but they didnt deliver it @USER URL"
+    },
+    {
+      "conversation_id": 646730,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "cancellation",
+      "confidence": 0.093,
+      "current_message": "@USER when will me scampi fries be getting dispatched? Should have been yesterday and still not been dispatched. I want fishy fingers. Cheers 😏👍"
+    },
+    {
+      "conversation_id": 2363235,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.104,
+      "current_message": "@USER So on the amazon website when I track my package it says that it just got to a warehouse near me and it is close, but on the usps site when I input my tracking number it says that they are still waiting to receive my items?"
+    },
+    {
+      "conversation_id": 2960026,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.104,
+      "current_message": "@USER where’s my tv going... it came to my ups then back to Sacramento.... URL"
+    },
+    {
+      "conversation_id": 1464285,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "refund_request",
+      "confidence": 0.111,
+      "current_message": "@USER @USER Order# 408-9863763-1429137 will my order be shipped or not?"
+    },
+    {
+      "conversation_id": 832924,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.099,
+      "current_message": "@USER Yes, wc26th Oct. But if I click on the album it says in-stock and available for this weekend."
+    },
+    {
+      "conversation_id": 2288190,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.116,
+      "current_message": "@USER It would be nice to know if my order is shipping any time soon. I ordered 24 hours ago with same day delivery. The status has been not yet shipped all day. Was supposed to be here at 9 pm today, 1.5 hours ago."
+    },
+    {
+      "conversation_id": 2374486,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.141,
+      "current_message": "@USER how can an order be “delivered by 8pm today” and “not yet shipped”?"
+    },
+    {
+      "conversation_id": 1397273,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "none",
+      "confidence": 0.123,
+      "current_message": "i want to buy echo spot when did it launch in india @USER @USER @USER @USER"
+    },
+    {
+      "conversation_id": 467536,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.107,
+      "current_message": "@USER Not received the item. App is not upto the mark so did not get terms &amp; conditions clearly while placing order hence lost cashback offer also. Poor experience overall."
+    },
+    {
+      "conversation_id": 1147828,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.112,
+      "current_message": "@USER I HAVE OPTED for no cost emi thats why i am doing follow ups... Otherwise i am not a free person to exchange tweets and mails with u"
+    },
+    {
+      "conversation_id": 2454046,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "account_access",
+      "confidence": 0.149,
+      "current_message": "@USER No idea 😂 I've started a return and reordered URL"
+    },
+    {
+      "conversation_id": 679025,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.117,
+      "current_message": "Hi @USER I purchased the wrong colour kindle and forgot to tick u registered. Can I exchange for a different colour?"
+    },
+    {
+      "conversation_id": 2460750,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.105,
+      "current_message": "@USER So I had ordered a Moto G5s and I got a Moto G5 plus. Please do something about it. Thank you URL"
+    },
+    {
+      "conversation_id": 2450570,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.11,
+      "current_message": "amazon sent the wrong cases 😩🤦🏾‍♀️"
+    },
+    {
+      "conversation_id": 2608094,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "refund_request",
+      "confidence": 0.116,
+      "current_message": "@USER if I got a product and it didn’t come with everything listed who would I contact to get the rest to the product ?"
+    },
+    {
+      "conversation_id": 982267,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.114,
+      "current_message": "Wtf @USER ... I ordered an altitude mask and you sent me a ‘tutu’ ?!😂🤦🏼‍♂️ URL"
+    },
+    {
+      "conversation_id": 2291505,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.119,
+      "current_message": "@USER I have buy Nokia 6 from Amazon India. The phone's display has purple colour on right side of the display. I want to replace my phone but Amazon can't. What can I do ? Help ASAP."
+    },
+    {
+      "conversation_id": 1018235,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.109,
+      "current_message": "@USER Now amazon starts blackmailing customers by sending wrong product and when return req. placed,They says ship prdct back by urself"
+    },
+    {
+      "conversation_id": 1229460,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.1,
+      "current_message": "Hey, @USER, this DVD is a fraud. It claims to be the lost 1917 Cleopatra but is really the 1912 version. URL"
+    },
+    {
+      "conversation_id": 2484077,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.124,
+      "current_message": "I payed good money for this cup that I received today in the post! I am deeply disappointed that it’s faulty #donotbuy @USER URL"
+    },
+    {
+      "conversation_id": 345473,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "cancellation",
+      "confidence": 0.118,
+      "current_message": "Dear @USER You suck. We’ve had to replace one device already bc it keeps malfunctioning. The “new” one is malfunctioning too."
+    },
+    {
+      "conversation_id": 676899,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "refund_request",
+      "confidence": 0.103,
+      "current_message": "@USER why haven’t you fulfilled Lex Luthor’s order of a blue-ray copy of A league of their own? Amazon you have to stop doing an injustice to Lex he might start a league! #JusticeLeague"
+    },
+    {
+      "conversation_id": 1420491,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.115,
+      "current_message": "@USER Yes i have sent my details via the form. I have cancelled the product and dont want to be associated with amazon refund my money to my CC"
+    },
+    {
+      "conversation_id": 915961,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.142,
+      "current_message": "@USER how would you justify blocking a customer’s number who’s awaiting a refund?"
+    },
+    {
+      "conversation_id": 2515914,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.122,
+      "current_message": "@USER Yes on all three orders, then you kept arguing with me about how it wasn’t your fault and how you don’t have the resources to refund my Prime membership"
+    },
+    {
+      "conversation_id": 2217342,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.092,
+      "current_message": "@USER Yes, and now you are rejecting the claim but the seller is sketchy."
+    },
+    {
+      "conversation_id": 1893565,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.122,
+      "current_message": "@USER Nope...never received a call"
+    },
+    {
+      "conversation_id": 1763226,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.114,
+      "current_message": "@USER Yes. I have also spent 8 hours on live chat."
+    },
+    {
+      "conversation_id": 2573750,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.105,
+      "current_message": "@USER I've checked all of my folders. Like I said, the number in that link is the exact one I have called five times. I'm a Prime member who has been locked from their account for three weeks and have had nothing visible done to remedy this."
+    },
+    {
+      "conversation_id": 334873,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "account_access",
+      "confidence": 0.103,
+      "current_message": "@USER 6 years of shopping and never had an issue with CS until tonight. 10 mins later and no reply. URL"
+    },
+    {
+      "conversation_id": 272875,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.098,
+      "current_message": "@USER I checked the link even on the desktop. There's no link given to contact support, that's why i am pinging you here."
+    },
+    {
+      "conversation_id": 1588773,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.115,
+      "current_message": "God damn it, but @USER is getting worse and worse and worse as time goes on. Maybe it's time to dump all @USER services and move on."
+    },
+    {
+      "conversation_id": 2353843,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.111,
+      "current_message": "@USER I am sorry but I would like to receive a phone call &amp; have this matter resolved asap! I have phoned 5 times now &amp; every time I get nothing. I am £90 down on an error on your part. This has been going on for almost 3 weeks now &amp; it’s time for you to actually do something."
+    },
+    {
+      "conversation_id": 1136222,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.112,
+      "current_message": "@USER Already send and call to 50 tym no proper response from ur side.. My neice birthday on 17 oct. Fake commitment 405-8158996-7018755oredr id"
+    },
+    {
+      "conversation_id": 1746071,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.12,
+      "current_message": "@USER I don’t this information to be public, as it’s impossible to reach your customer care on phone. So either they should call me or reach item"
+    },
+    {
+      "conversation_id": 390810,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "cancellation",
+      "confidence": 0.157,
+      "current_message": "@USER You must shut down your improper business. Now when the payment is done you're coming up with nasty excuses. Read the DM."
+    },
+    {
+      "conversation_id": 2151408,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "order_status_query",
+      "confidence": 0.093,
+      "current_message": "@USER doesn't provide way to claim #gst input credit for Business purchases. Even if I am giving all details they are denying this basic"
+    },
+    {
+      "conversation_id": 1250967,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.109,
+      "current_message": "Super disappointed in @USER lately. Lost packages, multiple wrong charges. What's the point of being prime 🙄🤔"
+    },
+    {
+      "conversation_id": 2447260,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.135,
+      "current_message": "@USER should only &amp; selectively use #USPS for certain deliveries since the majority of time your order isn't going to arrive as promised, thus defeating entire premise of #AmazonPrime This is about #logistics plain &amp; simple."
+    },
+    {
+      "conversation_id": 2245407,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.102,
+      "current_message": "@USER why my call gets dropped Kindly please check my call log and please take an appropriate actions Why my call dropped? In between URL"
+    },
+    {
+      "conversation_id": 886169,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.088,
+      "current_message": "@USER The email was terribly short with no direction expect “we left you a voice mail win instructions” and I had no voice mails!"
+    }
+  ],
+  "logistic_ctx_errors": [
+    {
+      "conversation_id": 2814438,
+      "language": "es",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "account_info_update",
+      "confidence": 0.112,
+      "current_message": "@USER Ya lo he intentado. Me llego un mail pidiendo que les envie un fax.. les mande el fax con el resumen de la tarjeta y mi cuenta continua bloqueada! NECESITO AYUDA @USER"
+    },
+    {
+      "conversation_id": 2694949,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.109,
+      "current_message": "I tried @USER prime years ago for 30 days before the student offer or music service existed but now I'm unable to trial it but keeps being displayed on homepage."
+    },
+    {
+      "conversation_id": 519702,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "refund_request",
+      "confidence": 0.108,
+      "current_message": "@USER I just want my psn codes so me and my friends can download and play a game tonight. After I get those I'll never bother you again."
+    },
+    {
+      "conversation_id": 2853614,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.113,
+      "current_message": "@USER Hi, I made an order and it went straight to cancelled! How can I un-cancel? I bought these on blackfriday."
+    },
+    {
+      "conversation_id": 1955907,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.093,
+      "current_message": "@USER URL"
+    },
+    {
+      "conversation_id": 616914,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.108,
+      "current_message": "@USER Same card. Most orders are paid with gift vouchers. You say it’s because I’m buying others say it’s because I sell. No one can give me a straight answer. I currently have 4 £1 trans in my account."
+    },
+    {
+      "conversation_id": 197857,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.108,
+      "current_message": "@USER It is your responsibility to bar sellers like these on your platform. An increase in 1300 rupees is criminal."
+    },
+    {
+      "conversation_id": 1845984,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "refund_request",
+      "confidence": 0.102,
+      "current_message": "@USER But I have already activated the card?"
+    },
+    {
+      "conversation_id": 1568158,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "refund_request",
+      "confidence": 0.093,
+      "current_message": "@USER And I have another one too this one's actual MRP is Rs. 525/ Frontech 700 MB 5001 FC BLANK CD-R- 50 Pcs URL"
+    },
+    {
+      "conversation_id": 834216,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "refund_request",
+      "confidence": 0.102,
+      "current_message": "@USER AMZL US"
+    },
+    {
+      "conversation_id": 2798309,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.098,
+      "current_message": "@USER Sure, the thing is that I saw notified that my package arrived and this photo came with the notification. URL"
+    },
+    {
+      "conversation_id": 689484,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.116,
+      "current_message": "Did @USER really just not deliver my package and instead of taking responsibilty they ask me to contact usps and file a police report!? Really? After years of being a prime member I am glad to have cancelled my membership smh"
+    },
+    {
+      "conversation_id": 1242242,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.101,
+      "current_message": "@USER Your customer service is the worst first they investigated the wrong item then they thought I got someone else’s package now they say I"
+    },
+    {
+      "conversation_id": 1578555,
+      "language": "de",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.124,
+      "current_message": "@USER @USER Same here. Amazon hat mich auch im Stich gelassen heute :("
+    },
+    {
+      "conversation_id": 2284883,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.117,
+      "current_message": "@USER Wasn’t my order, it was my neighbors. No idea what his name is. Not trying to tattle. Just pointing out you aren’t hiring the best, most trustworthy people to justify the key service here."
+    },
+    {
+      "conversation_id": 2170818,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.102,
+      "current_message": "@USER @USER ??"
+    },
+    {
+      "conversation_id": 842315,
+      "language": "fr",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.13,
+      "current_message": "@USER Transporteur : Amazon Logistics, n° de suivi CA0002376203"
+    },
+    {
+      "conversation_id": 2785904,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.115,
+      "current_message": "@USER No one seems sure. Cust service said \"hopefully\" it will arrive tomorrow."
+    },
+    {
+      "conversation_id": 1379340,
+      "language": "it",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.111,
+      "current_message": "@USER @USER C'è speranza di avere l'app #PrimeVideo sul Sony UHP-H1?"
+    },
+    {
+      "conversation_id": 227064,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "order_status_query",
+      "confidence": 0.111,
+      "current_message": "AmazonリーディングってこれKindleのアプリからいけねぇのか？"
+    },
+    {
+      "conversation_id": 1645512,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.112,
+      "current_message": "@USER I'm having it on the full site and the mobile site on all browsers. I don't use the app. Shopping works...I just can't buy."
+    },
+    {
+      "conversation_id": 2497106,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.104,
+      "current_message": "@USER @USER @USER @USER @USER @USER @USER @USER @USER Given that the app is launched in India, I was hoping that English(India) language would also be available to choose 😕"
+    },
+    {
+      "conversation_id": 1451501,
+      "language": "pt",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.122,
+      "current_message": "@USER Como foi minha primeira compra, eu comprei 2 (use a cabeça c E linux a bíblia), mas já estou fazendo a lista das próximas compras"
+    },
+    {
+      "conversation_id": 787658,
+      "language": "es",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "account_info_update",
+      "confidence": 0.164,
+      "current_message": "@USER ¡Gracias todo resuelto!"
+    },
+    {
+      "conversation_id": 2254596,
+      "language": "it",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.097,
+      "current_message": "@USER Grazie, buonanotte 😊"
+    },
+    {
+      "conversation_id": 426141,
+      "language": "es",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.123,
+      "current_message": "Cualquier día antes de que decida en pedir algo en @USER ,me ha llegado Dios que velocidad 😃😃"
+    },
+    {
+      "conversation_id": 816342,
+      "language": "it",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.188,
+      "current_message": "#AmazonIndia URL"
+    },
+    {
+      "conversation_id": 2586341,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "order_status_query",
+      "confidence": 0.111,
+      "current_message": "アマゾンプライムミュージック入れたが、ペルソナだけで年会費の価値超えててすげぇ……"
+    },
+    {
+      "conversation_id": 365605,
+      "language": "fr",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.115,
+      "current_message": "@USER je viens de recevoir, désolé pour le dérangement"
+    },
+    {
+      "conversation_id": 2472354,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.144,
+      "current_message": "@USER これから特典たくさん利用したいと思ってます！ わざわざリプライありがとうございます！☺️"
+    },
+    {
+      "conversation_id": 1033752,
+      "language": "de",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.126,
+      "current_message": "@USER Genau JETZT kam die Mail, dass mein Paket gleich ankommt. 👍 Danke für den tollen Kundenservice und die immer zügigen Antworten!"
+    },
+    {
+      "conversation_id": 1738390,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.188,
+      "current_message": "Amazonで頼んだやつ来たーーー！！ 😈ｷﾞﾗﾝ そして俺の姉達はもうクリスマス🎅気分w←ついこの間ハロウィン🎃終わったばかりなのに､､､ww URL"
+    },
+    {
+      "conversation_id": 2151072,
+      "language": "ja",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "cancellation",
+      "confidence": 0.12,
+      "current_message": "@USER あ、ありがとうございます🙇‍♀️"
+    },
+    {
+      "conversation_id": 1130527,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.101,
+      "current_message": "@USER Invoice no: TN-MAA4-__credit_card__"
+    },
+    {
+      "conversation_id": 2149534,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.109,
+      "current_message": "@USER Ok but when placing an order, your site always tells you if the item is eligible for P.O. box delivery or not. My order was processed and went through with no issues"
+    },
+    {
+      "conversation_id": 2609965,
+      "language": "fr",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "other_unclear",
+      "predicted_intent": "account_access",
+      "confidence": 0.11,
+      "current_message": "Bonjour @USER je viens de recevoir mon colis que j’avais demandé à être envoyé dans un colis Amazon pour cacher les informations du produit or ce n’est pas le cas. Pourquoi ? Amazon de moins en moins satisfaisant..."
+    },
+    {
+      "conversation_id": 2909124,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "other_unclear",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.099,
+      "current_message": "I love @USER but really?? You mailed this at Christmas without putting it in a plain box???? My kids saw it outside when they got off the bus! #christmasruined URL"
+    },
+    {
+      "conversation_id": 582649,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.105,
+      "current_message": "@USER *occassion"
+    },
+    {
+      "conversation_id": 835153,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.094,
+      "current_message": "I bought a captain America T-shirt from @USER and they sent me Rupa baniyan #AccheDin ? @USER URL"
+    },
+    {
+      "conversation_id": 2679197,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "refund_request",
+      "confidence": 0.13,
+      "current_message": "@USER @USER Amazon is not supposed to take returns of our item. Did they replace it for you?"
+    },
+    {
+      "conversation_id": 694411,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "refund_request",
+      "confidence": 0.108,
+      "current_message": "@USER I did !! Request you to please give me the email address on which i can fwd you the video."
+    },
+    {
+      "conversation_id": 232399,
+      "language": "fr",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "none",
+      "confidence": 0.095,
+      "current_message": "En fait #Amazonprime c'est surtout de la merde non? Ça existe un livreur qui fait son taf à Paris ou c'est une utopie? @USER @USER"
+    },
+    {
+      "conversation_id": 102915,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.111,
+      "current_message": "@USER And this is your TR customer: URL"
+    },
+    {
+      "conversation_id": 1912145,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.109,
+      "current_message": "@USER - I am unable to order gifts for my husband or son because you display all purchases. Is there a way to secretly purchase so they can't see it? Maybe a password at a purchase level ?"
+    },
+    {
+      "conversation_id": 179205,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "refund_request",
+      "confidence": 0.104,
+      "current_message": "@USER Read the previous tweets - I can’t log in! This has been going on for a day now!!!"
+    },
+    {
+      "conversation_id": 2789138,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.109,
+      "current_message": "Hello is there a way to check if I'm signed up to Prime? If so it's a mistake bc I can't afford the membership &amp; I noticed my packages are coming faster than expected. No complaints just can't afford Prime if charged @USER"
+    },
+    {
+      "conversation_id": 427799,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "account_info_update",
+      "predicted_intent": "refund_request",
+      "confidence": 0.119,
+      "current_message": "@USER can i pay with Amazon pay balance account for one year prime membership?? Plz reply"
+    },
+    {
+      "conversation_id": 22572,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "cancellation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.136,
+      "current_message": "@USER Ordered on 7 October 2017 Order# 403-7284574-6433108 not yet delivered. No way to cancel and get refund."
+    },
+    {
+      "conversation_id": 2899649,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.11,
+      "current_message": "@USER Welp, that didn’t do anything. I’m just going to cancel the order - I don’t see why I should keep waiting while it’s literally sitting on store shelves. URL"
+    },
+    {
+      "conversation_id": 136922,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.11,
+      "current_message": "@USER I am so upset I have just cancelled the whole order. Have you an email address I can write to you at. This is the first time I have ever received bad service from Amazon. He even brought me to tears"
+    },
+    {
+      "conversation_id": 880948,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.107,
+      "current_message": "@USER They act so bossy that they didn't even bother to make a call regarding the pickup Just a confirmation txt n thn later a cancellation txt"
+    },
+    {
+      "conversation_id": 650056,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.113,
+      "current_message": "@USER Oh right, you can't do that. I would hurt @USER wallet after all. @USER good on you."
+    },
+    {
+      "conversation_id": 1604096,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.124,
+      "current_message": "@USER And then they kindly dispersed the money in my ac to an ac they knew is closed."
+    },
+    {
+      "conversation_id": 332434,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "refund_request",
+      "confidence": 0.096,
+      "current_message": "@USER I don't get COD option for ur products.1st it shows that it is available but after proceeding for checkout,I can't get it.Why?"
+    },
+    {
+      "conversation_id": 895946,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.11,
+      "current_message": "@USER I know cart prices aren’t set in stone. But like, it went from on sale to more than the regular price. It’s not a cute look."
+    },
+    {
+      "conversation_id": 1109519,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "refund_request",
+      "confidence": 0.108,
+      "current_message": "@USER No, they haven't. They routinely mark packages as delivered before delivery is attempted, and sometimes the packages never arrive at all."
+    },
+    {
+      "conversation_id": 1423023,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.102,
+      "current_message": "@USER Have also had deliveries when courier claimed to have delivered, but put it back in the van and ended up back at the depot."
+    },
+    {
+      "conversation_id": 2289844,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.098,
+      "current_message": "@USER The delivery agent says he will deliver the package later but he updates the status saying delivered directly to customer .. URL"
+    },
+    {
+      "conversation_id": 1220925,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.103,
+      "current_message": "@USER Why to hear you do nothing again?"
+    },
+    {
+      "conversation_id": 2532842,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.113,
+      "current_message": "@USER can someone contact me ASAP re an undelivered parcel.2 weeks &amp; still no joy.DPD said speak to you. Totally fed up right now!"
+    },
+    {
+      "conversation_id": 380695,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "refund_request",
+      "confidence": 0.112,
+      "current_message": "@USER I'll have to do that later this morning. Absolutely infuriating"
+    },
+    {
+      "conversation_id": 482351,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "refund_request",
+      "confidence": 0.099,
+      "current_message": "@USER I received my order but part of it is missing but my account say it's delivered. Box was partly open. Parcel left in flower Box!!! Who do I contact? #xmaspresent"
+    },
+    {
+      "conversation_id": 533206,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "refund_request",
+      "confidence": 0.111,
+      "current_message": "@USER Also, if I haven't specifically indicated that I want my parcel to be left in a \"safe place\"... why is the delivery driver assuming my recycle bin is a safe place? It is visible from the street; is NOT in a garden; and if someone sees him putting it there, it can be stolen!"
+    },
+    {
+      "conversation_id": 149199,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.111,
+      "current_message": "@USER I don’t know about the item as it is not my parcel to open, it is my partners. It is unacceptable to force drivers to leave parcels in unsafe positions!"
+    },
+    {
+      "conversation_id": 2283511,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.103,
+      "current_message": "Amazon seems to have forgotten how to deliver to my address so here I am waiting on 5 packages that all say \"delivery attempted\" TO THE WRONG AREA"
+    },
+    {
+      "conversation_id": 2594956,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.125,
+      "current_message": "@USER I hope my pkg was not in there. Ste-Catherine Montreal, unlocked doors, windows open #unattendedpackages #intelcom #badcourrier URL"
+    },
+    {
+      "conversation_id": 1727624,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.116,
+      "current_message": "How to contact @USER about a stolen package? Website not user friendly requesting support. Unique situation would like to chat about."
+    },
+    {
+      "conversation_id": 458877,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.119,
+      "current_message": "@USER No. Status still “arriving by 8pm today” (9 minutes from now) but no sign of shipment and no tracking number. URL"
+    },
+    {
+      "conversation_id": 1192307,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.094,
+      "current_message": "so @USER are fibbers. I saw the delivery van pull up in our car park yesterday just before 5pm, then they drove off..."
+    },
+    {
+      "conversation_id": 2780552,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.109,
+      "current_message": "\"helping us build Earth's Most Customer-Centric Company\" @USER is there an amendement to this vision which excludes me? Just been told to wait another 24 hours because you've misplaced my delivery (again!)."
+    },
+    {
+      "conversation_id": 2824739,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.094,
+      "current_message": "I think @USER @USER may want to look into the definition one \"one day delivery\" URL"
+    },
+    {
+      "conversation_id": 2913230,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.123,
+      "current_message": "@USER hi, I ordered a few Prime items on Monday, but they all say arriving Thursday. I thought it was 2 day shipping.... why the delay? Nothing has shipped yet and I thought they'd be here by tomorrow"
+    },
+    {
+      "conversation_id": 2003910,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.113,
+      "current_message": "@USER Well, since \"taken care of\" would have meant Friday delivery, that's unlikely."
+    },
+    {
+      "conversation_id": 2664071,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.099,
+      "current_message": "@USER Wrongly conceptualized add , bird's are being bullied Anyway Amazon is wowsome! Maintain this faith"
+    },
+    {
+      "conversation_id": 1406593,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": 0.097,
+      "current_message": "@USER first weekend of prime... NOT IMPRESSED."
+    },
+    {
+      "conversation_id": 1570766,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.1,
+      "current_message": "@USER Do you have any update here?"
+    },
+    {
+      "conversation_id": 1399860,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.152,
+      "current_message": "@USER Thank u so much.. Kindly Arrange to provide my parcel.. Thank u so much"
+    },
+    {
+      "conversation_id": 2852150,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.1,
+      "current_message": "I'll go sit at the door for the next 8min then? @USER @USER URL"
+    },
+    {
+      "conversation_id": 1420099,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.104,
+      "current_message": "@USER ordered three items from amazon and all of their delivery dates kept getting pushed back and back and back. Not happy 😤"
+    },
+    {
+      "conversation_id": 673242,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.115,
+      "current_message": "@USER That was a joke lol. But my order IS late — i contacted amazon and they said that it’d be here by tomorrow so let’s see"
+    },
+    {
+      "conversation_id": 1193931,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.109,
+      "current_message": "@USER Amazon logistics is the carrier. Got disconnected while holding the first time around. Not clear if delivery is tmrw or delayed further."
+    },
+    {
+      "conversation_id": 2731105,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": 0.119,
+      "current_message": "@USER One of my orders will be delivered tomorrow when I paid for delivery today."
+    },
+    {
+      "conversation_id": 1229688,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.107,
+      "current_message": "The all-new Kindle app is built for book lovers, with everything you need in one place. Learn more: URL URL"
+    },
+    {
+      "conversation_id": 26958,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.095,
+      "current_message": "@USER Good morning. Is the Alexa App down? It’s timing out here in London, UK."
+    },
+    {
+      "conversation_id": 2378990,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "refund_request",
+      "confidence": 0.101,
+      "current_message": "@USER @USER when I ask Alexa this price it says it’s $23.48 URL"
+    },
+    {
+      "conversation_id": 1384330,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.091,
+      "current_message": "@USER is there anything wrong with payment on the amazon app today . Seeing this for sometime URL"
+    },
+    {
+      "conversation_id": 2523357,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "refund_request",
+      "confidence": 0.1,
+      "current_message": "@USER Thank you for your quick reply! I have a first gen."
+    },
+    {
+      "conversation_id": 1766849,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": 0.107,
+      "current_message": "@USER Fire stick is broke getting new remote second time app is on an android box."
+    },
+    {
+      "conversation_id": 2847379,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.107,
+      "current_message": "@USER At this time we CANNOT choose the language it is asking for, its under this tab in settings URL"
+    },
+    {
+      "conversation_id": 2569705,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "refund_request",
+      "confidence": 0.103,
+      "current_message": "@USER Timing out across the board today, any idea on when things will be back up? URL"
+    },
+    {
+      "conversation_id": 1943693,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": 0.094,
+      "current_message": "@USER Yes i have shared the whole concern"
+    },
+    {
+      "conversation_id": 2611658,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "refund_request",
+      "confidence": 0.104,
+      "current_message": "@USER Thanks! Got the package at 1.30 :D"
+    },
+    {
+      "conversation_id": 309233,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.093,
+      "current_message": "Thanks @USER for the new cat bed. Velho loves it! #floof #CatsOfTwitter URL"
+    },
+    {
+      "conversation_id": 2111184,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.106,
+      "current_message": "@USER Wow, that's was an amazingly quick response!! Hats off"
+    },
+    {
+      "conversation_id": 174486,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.108,
+      "current_message": "@USER me hiciste muy feliz hoy! 😍"
+    },
+    {
+      "conversation_id": 2580464,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.109,
+      "current_message": "@USER @USER I ended up escalated to a new chat room and the guy was great. Too nice, really!"
+    },
+    {
+      "conversation_id": 2855145,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "refund_request",
+      "confidence": 0.102,
+      "current_message": "@USER Thanks so much for helping, @USER! It was definitely the sales tax!"
+    },
+    {
+      "conversation_id": 2384553,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.096,
+      "current_message": "New books are on their way!! Can’t stop looking at the @USER tracking screen though - hurry up new books. More coming next week 👏🏻👏🏻 URL"
+    },
+    {
+      "conversation_id": 1198549,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.132,
+      "current_message": "@USER @USER Nothing but respect for MY postal service 😤😤"
+    },
+    {
+      "conversation_id": 1204940,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.102,
+      "current_message": "@USER @USER @USER Yes absolutely Right 💯 👍"
+    },
+    {
+      "conversation_id": 487699,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "refund_request",
+      "confidence": 0.113,
+      "current_message": "@USER I made a mistake. I ordered on your .co.uk site not .com so i actually do have the orders i ordered. Sorry for any inconvenience caused."
+    },
+    {
+      "conversation_id": 1181640,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.108,
+      "current_message": "@USER Will do! Thank you so much!"
+    },
+    {
+      "conversation_id": 628261,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_required",
+      "gold_intent": "none",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.096,
+      "current_message": "@USER I’m guessing by a marketplace seller? URL"
+    },
+    {
+      "conversation_id": 2931934,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.1,
+      "current_message": "@USER But I want I phone as a gift... On my birthday.. Don't want to purchase it"
+    },
+    {
+      "conversation_id": 2769011,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "refund_request",
+      "confidence": 0.146,
+      "current_message": "@USER No need to filled the form, I'm sharing you giving the registered email via direct message"
+    },
+    {
+      "conversation_id": 1707062,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "refund_request",
+      "confidence": 0.101,
+      "current_message": "@USER The guy who sent it to me already reached me, tracking number checks out, mystery solved. Thanks, though"
+    },
+    {
+      "conversation_id": 957126,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "refund_request",
+      "confidence": 0.109,
+      "current_message": "@USER @USER I haven't tried again simce yesterday. I was using mine in US before bringing it here so maybe I'll have to check the location etc agai"
+    },
+    {
+      "conversation_id": 2389800,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.105,
+      "current_message": "Every breath you take should be as pure as nature intended. Improve the quality of the air you breathe indoors with a wide range air purifiers to choose from on Amazon.in. Visit: URL URL"
+    },
+    {
+      "conversation_id": 2266765,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.11,
+      "current_message": "@USER hey guys, Do you have any upcoming sale? In looking forward to buy the Moto g5s+ and I'm short of little money. Can you help me out?"
+    },
+    {
+      "conversation_id": 1721707,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.115,
+      "current_message": "when you pay extra for shipping for next day delivery through amazon prime but they didnt deliver it @USER URL"
+    },
+    {
+      "conversation_id": 646730,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.095,
+      "current_message": "@USER when will me scampi fries be getting dispatched? Should have been yesterday and still not been dispatched. I want fishy fingers. Cheers 😏👍"
+    },
+    {
+      "conversation_id": 2363235,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.104,
+      "current_message": "@USER So on the amazon website when I track my package it says that it just got to a warehouse near me and it is close, but on the usps site when I input my tracking number it says that they are still waiting to receive my items?"
+    },
+    {
+      "conversation_id": 2960026,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.096,
+      "current_message": "@USER where’s my tv going... it came to my ups then back to Sacramento.... URL"
+    },
+    {
+      "conversation_id": 1464285,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "refund_request",
+      "confidence": 0.11,
+      "current_message": "@USER @USER Order# 408-9863763-1429137 will my order be shipped or not?"
+    },
+    {
+      "conversation_id": 993935,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "refund_request",
+      "confidence": 0.102,
+      "current_message": "@USER I also search redmi note4 didn't show your website.please help me"
+    },
+    {
+      "conversation_id": 832924,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.102,
+      "current_message": "@USER Yes, wc26th Oct. But if I click on the album it says in-stock and available for this weekend."
+    },
+    {
+      "conversation_id": 2288190,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.122,
+      "current_message": "@USER It would be nice to know if my order is shipping any time soon. I ordered 24 hours ago with same day delivery. The status has been not yet shipped all day. Was supposed to be here at 9 pm today, 1.5 hours ago."
+    },
+    {
+      "conversation_id": 2374486,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.111,
+      "current_message": "@USER how can an order be “delivered by 8pm today” and “not yet shipped”?"
+    },
+    {
+      "conversation_id": 1397273,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "none",
+      "confidence": 0.102,
+      "current_message": "i want to buy echo spot when did it launch in india @USER @USER @USER @USER"
+    },
+    {
+      "conversation_id": 1755281,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "other_unclear",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.098,
+      "current_message": "@USER so I got this email. But I don't shop with Amazon so it might be a spam? Thought I would let you people know anyway. URL"
+    },
+    {
+      "conversation_id": 467536,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "refund_request",
+      "confidence": 0.138,
+      "current_message": "@USER Not received the item. App is not upto the mark so did not get terms &amp; conditions clearly while placing order hence lost cashback offer also. Poor experience overall."
+    },
+    {
+      "conversation_id": 1147828,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "refund_request",
+      "confidence": 0.135,
+      "current_message": "@USER I HAVE OPTED for no cost emi thats why i am doing follow ups... Otherwise i am not a free person to exchange tweets and mails with u"
+    },
+    {
+      "conversation_id": 2454046,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "device_app_issue",
+      "confidence": 0.093,
+      "current_message": "@USER No idea 😂 I've started a return and reordered URL"
+    },
+    {
+      "conversation_id": 679025,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.126,
+      "current_message": "Hi @USER I purchased the wrong colour kindle and forgot to tick u registered. Can I exchange for a different colour?"
+    },
+    {
+      "conversation_id": 2460750,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.107,
+      "current_message": "@USER So I had ordered a Moto G5s and I got a Moto G5 plus. Please do something about it. Thank you URL"
+    },
+    {
+      "conversation_id": 2450570,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "order_status_query",
+      "confidence": 0.095,
+      "current_message": "amazon sent the wrong cases 😩🤦🏾‍♀️"
+    },
+    {
+      "conversation_id": 2608094,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "refund_request",
+      "confidence": 0.098,
+      "current_message": "@USER if I got a product and it didn’t come with everything listed who would I contact to get the rest to the product ?"
+    },
+    {
+      "conversation_id": 982267,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.106,
+      "current_message": "Wtf @USER ... I ordered an altitude mask and you sent me a ‘tutu’ ?!😂🤦🏼‍♂️ URL"
+    },
+    {
+      "conversation_id": 2291505,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.116,
+      "current_message": "@USER I have buy Nokia 6 from Amazon India. The phone's display has purple colour on right side of the display. I want to replace my phone but Amazon can't. What can I do ? Help ASAP."
+    },
+    {
+      "conversation_id": 1018235,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.101,
+      "current_message": "@USER Now amazon starts blackmailing customers by sending wrong product and when return req. placed,They says ship prdct back by urself"
+    },
+    {
+      "conversation_id": 1229460,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.095,
+      "current_message": "Hey, @USER, this DVD is a fraud. It claims to be the lost 1917 Cleopatra but is really the 1912 version. URL"
+    },
+    {
+      "conversation_id": 2484077,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.1,
+      "current_message": "I payed good money for this cup that I received today in the post! I am deeply disappointed that it’s faulty #donotbuy @USER URL"
+    },
+    {
+      "conversation_id": 345473,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.096,
+      "current_message": "Dear @USER You suck. We’ve had to replace one device already bc it keeps malfunctioning. The “new” one is malfunctioning too."
+    },
+    {
+      "conversation_id": 676899,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "none",
+      "confidence": 0.096,
+      "current_message": "@USER why haven’t you fulfilled Lex Luthor’s order of a blue-ray copy of A league of their own? Amazon you have to stop doing an injustice to Lex he might start a league! #JusticeLeague"
+    },
+    {
+      "conversation_id": 2712534,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "delivery_delay",
+      "confidence": 0.108,
+      "current_message": "This is the second time Prime Now has delivered an order with missing items, and I can't find a way to request a refund in the app."
+    },
+    {
+      "conversation_id": 2515914,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": 0.105,
+      "current_message": "@USER Yes on all three orders, then you kept arguing with me about how it wasn’t your fault and how you don’t have the resources to refund my Prime membership"
+    },
+    {
+      "conversation_id": 2217342,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": 0.098,
+      "current_message": "@USER Yes, and now you are rejecting the claim but the seller is sketchy."
+    },
+    {
+      "conversation_id": 1893565,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "cancellation",
+      "confidence": 0.098,
+      "current_message": "@USER Nope...never received a call"
+    },
+    {
+      "conversation_id": 1763226,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.115,
+      "current_message": "@USER Yes. I have also spent 8 hours on live chat."
+    },
+    {
+      "conversation_id": 2573750,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.121,
+      "current_message": "@USER I've checked all of my folders. Like I said, the number in that link is the exact one I have called five times. I'm a Prime member who has been locked from their account for three weeks and have had nothing visible done to remedy this."
+    },
+    {
+      "conversation_id": 1415560,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.099,
+      "current_message": "@USER Yes, I'm talking to a representative again but I'm still super disappointed.. The call I made last night with you guys was useless"
+    },
+    {
+      "conversation_id": 334873,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.092,
+      "current_message": "@USER 6 years of shopping and never had an issue with CS until tonight. 10 mins later and no reply. URL"
+    },
+    {
+      "conversation_id": 272875,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.115,
+      "current_message": "@USER I checked the link even on the desktop. There's no link given to contact support, that's why i am pinging you here."
+    },
+    {
+      "conversation_id": 1537572,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.095,
+      "current_message": "3/ @USER WHY IS IT SO HARD TO REPORT A SHIPPING PROBLEM? Yesterday I got the \"chat is too slow, please call\" option. Why no message/email?"
+    },
+    {
+      "conversation_id": 1136222,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.134,
+      "current_message": "@USER Already send and call to 50 tym no proper response from ur side.. My neice birthday on 17 oct. Fake commitment 405-8158996-7018755oredr id"
+    },
+    {
+      "conversation_id": 1746071,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.116,
+      "current_message": "@USER I don’t this information to be public, as it’s impossible to reach your customer care on phone. So either they should call me or reach item"
+    },
+    {
+      "conversation_id": 390810,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "charge_issue",
+      "confidence": 0.097,
+      "current_message": "@USER You must shut down your improper business. Now when the payment is done you're coming up with nasty excuses. Read the DM."
+    },
+    {
+      "conversation_id": 2151408,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "order_status_query",
+      "confidence": 0.091,
+      "current_message": "@USER doesn't provide way to claim #gst input credit for Business purchases. Even if I am giving all details they are denying this basic"
+    },
+    {
+      "conversation_id": 1250967,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": 0.107,
+      "current_message": "Super disappointed in @USER lately. Lost packages, multiple wrong charges. What's the point of being prime 🙄🤔"
+    },
+    {
+      "conversation_id": 2447260,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": 0.103,
+      "current_message": "@USER should only &amp; selectively use #USPS for certain deliveries since the majority of time your order isn't going to arrive as promised, thus defeating entire premise of #AmazonPrime This is about #logistics plain &amp; simple."
+    },
+    {
+      "conversation_id": 2245407,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "other_unclear",
+      "confidence": 0.101,
+      "current_message": "@USER why my call gets dropped Kindly please check my call log and please take an appropriate actions Why my call dropped? In between URL"
+    }
+  ],
+  "svm_msg_only_errors": [
+    {
+      "conversation_id": 2814438,
+      "language": "es",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": null,
+      "current_message": "@USER Ya lo he intentado. Me llego un mail pidiendo que les envie un fax.. les mande el fax con el resumen de la tarjeta y mi cuenta continua bloqueada! NECESITO AYUDA @USER"
+    },
+    {
+      "conversation_id": 2694949,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "I tried @USER prime years ago for 30 days before the student offer or music service existed but now I'm unable to trial it but keeps being displayed on homepage."
+    },
+    {
+      "conversation_id": 519702,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER I just want my psn codes so me and my friends can download and play a game tonight. After I get those I'll never bother you again."
+    },
+    {
+      "conversation_id": 2853614,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER Hi, I made an order and it went straight to cancelled! How can I un-cancel? I bought these on blackfriday."
+    },
+    {
+      "conversation_id": 1955907,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER URL"
+    },
+    {
+      "conversation_id": 197857,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER It is your responsibility to bar sellers like these on your platform. An increase in 1300 rupees is criminal."
+    },
+    {
+      "conversation_id": 1568158,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER And I have another one too this one's actual MRP is Rs. 525/ Frontech 700 MB 5001 FC BLANK CD-R- 50 Pcs URL"
+    },
+    {
+      "conversation_id": 834216,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER AMZL US"
+    },
+    {
+      "conversation_id": 2798309,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER Sure, the thing is that I saw notified that my package arrived and this photo came with the notification. URL"
+    },
+    {
+      "conversation_id": 689484,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "Did @USER really just not deliver my package and instead of taking responsibilty they ask me to contact usps and file a police report!? Really? After years of being a prime member I am glad to have cancelled my membership smh"
+    },
+    {
+      "conversation_id": 1242242,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER Your customer service is the worst first they investigated the wrong item then they thought I got someone else’s package now they say I"
+    },
+    {
+      "conversation_id": 1578555,
+      "language": "de",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER @USER Same here. Amazon hat mich auch im Stich gelassen heute :("
+    },
+    {
+      "conversation_id": 2284883,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER Wasn’t my order, it was my neighbors. No idea what his name is. Not trying to tattle. Just pointing out you aren’t hiring the best, most trustworthy people to justify the key service here."
+    },
+    {
+      "conversation_id": 2170818,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER @USER ??"
+    },
+    {
+      "conversation_id": 842315,
+      "language": "fr",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "account_access",
+      "confidence": null,
+      "current_message": "@USER Transporteur : Amazon Logistics, n° de suivi CA0002376203"
+    },
+    {
+      "conversation_id": 2785904,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER No one seems sure. Cust service said \"hopefully\" it will arrive tomorrow."
+    },
+    {
+      "conversation_id": 1379340,
+      "language": "it",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER @USER C'è speranza di avere l'app #PrimeVideo sul Sony UHP-H1?"
+    },
+    {
+      "conversation_id": 227064,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "order_status_query",
+      "confidence": null,
+      "current_message": "AmazonリーディングってこれKindleのアプリからいけねぇのか？"
+    },
+    {
+      "conversation_id": 1645512,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": null,
+      "current_message": "@USER I'm having it on the full site and the mobile site on all browsers. I don't use the app. Shopping works...I just can't buy."
+    },
+    {
+      "conversation_id": 2497106,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER @USER @USER @USER @USER @USER @USER @USER @USER Given that the app is launched in India, I was hoping that English(India) language would also be available to choose 😕"
+    },
+    {
+      "conversation_id": 487688,
+      "language": "fr",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "account_access",
+      "confidence": null,
+      "current_message": "Mieux vaut tard que jamais... Commandé dimanche avec #AmazonPrime, reçu vendredi avec @USER! Cc @USER URL"
+    },
+    {
+      "conversation_id": 1451501,
+      "language": "pt",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER Como foi minha primeira compra, eu comprei 2 (use a cabeça c E linux a bíblia), mas já estou fazendo a lista das próximas compras"
+    },
+    {
+      "conversation_id": 787658,
+      "language": "es",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "account_info_update",
+      "confidence": null,
+      "current_message": "@USER ¡Gracias todo resuelto!"
+    },
+    {
+      "conversation_id": 893308,
+      "language": "pt",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "Atualizando meu @USER e quais são meus maiores gastos do mês? Sim meus caros, @USER , claro."
+    },
+    {
+      "conversation_id": 2254596,
+      "language": "it",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER Grazie, buonanotte 😊"
+    },
+    {
+      "conversation_id": 426141,
+      "language": "es",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "Cualquier día antes de que decida en pedir algo en @USER ,me ha llegado Dios que velocidad 😃😃"
+    },
+    {
+      "conversation_id": 816342,
+      "language": "it",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "account_access",
+      "confidence": null,
+      "current_message": "#AmazonIndia URL"
+    },
+    {
+      "conversation_id": 2586341,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "order_status_query",
+      "confidence": null,
+      "current_message": "アマゾンプライムミュージック入れたが、ペルソナだけで年会費の価値超えててすげぇ……"
+    },
+    {
+      "conversation_id": 365605,
+      "language": "fr",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER je viens de recevoir, désolé pour le dérangement"
+    },
+    {
+      "conversation_id": 2472354,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER これから特典たくさん利用したいと思ってます！ わざわざリプライありがとうございます！☺️"
+    },
+    {
+      "conversation_id": 1033752,
+      "language": "de",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER Genau JETZT kam die Mail, dass mein Paket gleich ankommt. 👍 Danke für den tollen Kundenservice und die immer zügigen Antworten!"
+    },
+    {
+      "conversation_id": 1738390,
+      "language": "ja",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "account_access",
+      "confidence": null,
+      "current_message": "Amazonで頼んだやつ来たーーー！！ 😈ｷﾞﾗﾝ そして俺の姉達はもうクリスマス🎅気分w←ついこの間ハロウィン🎃終わったばかりなのに､､､ww URL"
+    },
+    {
+      "conversation_id": 2151072,
+      "language": "ja",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER あ、ありがとうございます🙇‍♀️"
+    },
+    {
+      "conversation_id": 1130527,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER Invoice no: TN-MAA4-__credit_card__"
+    },
+    {
+      "conversation_id": 2149534,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER Ok but when placing an order, your site always tells you if the item is eligible for P.O. box delivery or not. My order was processed and went through with no issues"
+    },
+    {
+      "conversation_id": 2609965,
+      "language": "fr",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "other_unclear",
+      "predicted_intent": "account_access",
+      "confidence": null,
+      "current_message": "Bonjour @USER je viens de recevoir mon colis que j’avais demandé à être envoyé dans un colis Amazon pour cacher les informations du produit or ce n’est pas le cas. Pourquoi ? Amazon de moins en moins satisfaisant..."
+    },
+    {
+      "conversation_id": 2909124,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "other_unclear",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "I love @USER but really?? You mailed this at Christmas without putting it in a plain box???? My kids saw it outside when they got off the bus! #christmasruined URL"
+    },
+    {
+      "conversation_id": 835153,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "I bought a captain America T-shirt from @USER and they sent me Rupa baniyan #AccheDin ? @USER URL"
+    },
+    {
+      "conversation_id": 2679197,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_required",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER @USER Amazon is not supposed to take returns of our item. Did they replace it for you?"
+    },
+    {
+      "conversation_id": 694411,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER I did !! Request you to please give me the email address on which i can fwd you the video."
+    },
+    {
+      "conversation_id": 232399,
+      "language": "fr",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "En fait #Amazonprime c'est surtout de la merde non? Ça existe un livreur qui fait son taf à Paris ou c'est une utopie? @USER @USER"
+    },
+    {
+      "conversation_id": 102915,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER And this is your TR customer: URL"
+    },
+    {
+      "conversation_id": 1323314,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER Look what reply we get when we complain to Amazon..... URL"
+    },
+    {
+      "conversation_id": 1912145,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER - I am unable to order gifts for my husband or son because you display all purchases. Is there a way to secretly purchase so they can't see it? Maybe a password at a purchase level ?"
+    },
+    {
+      "conversation_id": 179205,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER Read the previous tweets - I can’t log in! This has been going on for a day now!!!"
+    },
+    {
+      "conversation_id": 2789138,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "account_access",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "Hello is there a way to check if I'm signed up to Prime? If so it's a mistake bc I can't afford the membership &amp; I noticed my packages are coming faster than expected. No complaints just can't afford Prime if charged @USER"
+    },
+    {
+      "conversation_id": 427799,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "account_info_update",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER can i pay with Amazon pay balance account for one year prime membership?? Plz reply"
+    },
+    {
+      "conversation_id": 22572,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "cancellation",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER Ordered on 7 October 2017 Order# 403-7284574-6433108 not yet delivered. No way to cancel and get refund."
+    },
+    {
+      "conversation_id": 2899649,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER Welp, that didn’t do anything. I’m just going to cancel the order - I don’t see why I should keep waiting while it’s literally sitting on store shelves. URL"
+    },
+    {
+      "conversation_id": 136922,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER I am so upset I have just cancelled the whole order. Have you an email address I can write to you at. This is the first time I have ever received bad service from Amazon. He even brought me to tears"
+    },
+    {
+      "conversation_id": 880948,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER They act so bossy that they didn't even bother to make a call regarding the pickup Just a confirmation txt n thn later a cancellation txt"
+    },
+    {
+      "conversation_id": 650056,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "cancellation",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER Oh right, you can't do that. I would hurt @USER wallet after all. @USER good on you."
+    },
+    {
+      "conversation_id": 332434,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER I don't get COD option for ur products.1st it shows that it is available but after proceeding for checkout,I can't get it.Why?"
+    },
+    {
+      "conversation_id": 895946,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "charge_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER I know cart prices aren’t set in stone. But like, it went from on sale to more than the regular price. It’s not a cute look."
+    },
+    {
+      "conversation_id": 1423023,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER Have also had deliveries when courier claimed to have delivered, but put it back in the van and ended up back at the depot."
+    },
+    {
+      "conversation_id": 1220925,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER Why to hear you do nothing again?"
+    },
+    {
+      "conversation_id": 2532842,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER can someone contact me ASAP re an undelivered parcel.2 weeks &amp; still no joy.DPD said speak to you. Totally fed up right now!"
+    },
+    {
+      "conversation_id": 380695,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER I'll have to do that later this morning. Absolutely infuriating"
+    },
+    {
+      "conversation_id": 482351,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_but_not_received",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER I received my order but part of it is missing but my account say it's delivered. Box was partly open. Parcel left in flower Box!!! Who do I contact? #xmaspresent"
+    },
+    {
+      "conversation_id": 533206,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER Also, if I haven't specifically indicated that I want my parcel to be left in a \"safe place\"... why is the delivery driver assuming my recycle bin is a safe place? It is visible from the street; is NOT in a garden; and if someone sees him putting it there, it can be stolen!"
+    },
+    {
+      "conversation_id": 149199,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER I don’t know about the item as it is not my parcel to open, it is my partners. It is unacceptable to force drivers to leave parcels in unsafe positions!"
+    },
+    {
+      "conversation_id": 2283511,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "Amazon seems to have forgotten how to deliver to my address so here I am waiting on 5 packages that all say \"delivery attempted\" TO THE WRONG AREA"
+    },
+    {
+      "conversation_id": 2594956,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER I hope my pkg was not in there. Ste-Catherine Montreal, unlocked doors, windows open #unattendedpackages #intelcom #badcourrier URL"
+    },
+    {
+      "conversation_id": 1727624,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivered_wrong_location",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "How to contact @USER about a stolen package? Website not user friendly requesting support. Unique situation would like to chat about."
+    },
+    {
+      "conversation_id": 458877,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "account_access",
+      "confidence": null,
+      "current_message": "@USER No. Status still “arriving by 8pm today” (9 minutes from now) but no sign of shipment and no tracking number. URL"
+    },
+    {
+      "conversation_id": 1116569,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "I bought something on @USER, paid extra for 1 day shipping and it isn’t here. Who do I complain to? @USER"
+    },
+    {
+      "conversation_id": 1192307,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "so @USER are fibbers. I saw the delivery van pull up in our car park yesterday just before 5pm, then they drove off..."
+    },
+    {
+      "conversation_id": 2780552,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "\"helping us build Earth's Most Customer-Centric Company\" @USER is there an amendement to this vision which excludes me? Just been told to wait another 24 hours because you've misplaced my delivery (again!)."
+    },
+    {
+      "conversation_id": 2824739,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "cancellation",
+      "confidence": null,
+      "current_message": "I think @USER @USER may want to look into the definition one \"one day delivery\" URL"
+    },
+    {
+      "conversation_id": 2913230,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER hi, I ordered a few Prime items on Monday, but they all say arriving Thursday. I thought it was 2 day shipping.... why the delay? Nothing has shipped yet and I thought they'd be here by tomorrow"
+    },
+    {
+      "conversation_id": 2003910,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER Well, since \"taken care of\" would have meant Friday delivery, that's unlikely."
+    },
+    {
+      "conversation_id": 300514,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "Really glad I used prime @USER seems @USER are unable to honour the next day delivery 😡, glad I invest in prime"
+    },
+    {
+      "conversation_id": 322945,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER Prime member should be given some preference and the items must be delivered within 2 days otherwise it is equal to a non prime member"
+    },
+    {
+      "conversation_id": 2664071,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "other_unclear",
+      "confidence": null,
+      "current_message": "@USER Wrongly conceptualized add , bird's are being bullied Anyway Amazon is wowsome! Maintain this faith"
+    },
+    {
+      "conversation_id": 1406593,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER first weekend of prime... NOT IMPRESSED."
+    },
+    {
+      "conversation_id": 1399860,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER Thank u so much.. Kindly Arrange to provide my parcel.. Thank u so much"
+    },
+    {
+      "conversation_id": 2852150,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": null,
+      "current_message": "I'll go sit at the door for the next 8min then? @USER @USER URL"
+    },
+    {
+      "conversation_id": 1420099,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER ordered three items from amazon and all of their delivery dates kept getting pushed back and back and back. Not happy 😤"
+    },
+    {
+      "conversation_id": 673242,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER That was a joke lol. But my order IS late — i contacted amazon and they said that it’d be here by tomorrow so let’s see"
+    },
+    {
+      "conversation_id": 1193931,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": null,
+      "current_message": "@USER Amazon logistics is the carrier. Got disconnected while holding the first time around. Not clear if delivery is tmrw or delayed further."
+    },
+    {
+      "conversation_id": 1587374,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "delivery_delay",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER i recently purchased an item from your website its scheduled to come on November 3rd at 8pm and i still havent received my order?"
+    },
+    {
+      "conversation_id": 1229688,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "The all-new Kindle app is built for book lovers, with everything you need in one place. Learn more: URL URL"
+    },
+    {
+      "conversation_id": 26958,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER Good morning. Is the Alexa App down? It’s timing out here in London, UK."
+    },
+    {
+      "conversation_id": 2378990,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER @USER when I ask Alexa this price it says it’s $23.48 URL"
+    },
+    {
+      "conversation_id": 1384330,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER is there anything wrong with payment on the amazon app today . Seeing this for sometime URL"
+    },
+    {
+      "conversation_id": 2523357,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER Thank you for your quick reply! I have a first gen."
+    },
+    {
+      "conversation_id": 1766849,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER Fire stick is broke getting new remote second time app is on an android box."
+    },
+    {
+      "conversation_id": 2847379,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER At this time we CANNOT choose the language it is asking for, its under this tab in settings URL"
+    },
+    {
+      "conversation_id": 2569705,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER Timing out across the board today, any idea on when things will be back up? URL"
+    },
+    {
+      "conversation_id": 1464161,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "device_app_issue",
+      "predicted_intent": "cancellation",
+      "confidence": null,
+      "current_message": "@USER @USER @USER update: episode still unavailable. I think you're the people who update me. Not vice versa? 🔮"
+    },
+    {
+      "conversation_id": 1943693,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER Yes i have shared the whole concern"
+    },
+    {
+      "conversation_id": 309233,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "Thanks @USER for the new cat bed. Velho loves it! #floof #CatsOfTwitter URL"
+    },
+    {
+      "conversation_id": 2111184,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER Wow, that's was an amazingly quick response!! Hats off"
+    },
+    {
+      "conversation_id": 174486,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER me hiciste muy feliz hoy! 😍"
+    },
+    {
+      "conversation_id": 2384553,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "New books are on their way!! Can’t stop looking at the @USER tracking screen though - hurry up new books. More coming next week 👏🏻👏🏻 URL"
+    },
+    {
+      "conversation_id": 1198549,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER @USER Nothing but respect for MY postal service 😤😤"
+    },
+    {
+      "conversation_id": 487699,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "other_unclear",
+      "confidence": null,
+      "current_message": "@USER I made a mistake. I ordered on your .co.uk site not .com so i actually do have the orders i ordered. Sorry for any inconvenience caused."
+    },
+    {
+      "conversation_id": 628261,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_required",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER I’m guessing by a marketplace seller? URL"
+    },
+    {
+      "conversation_id": 2931934,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER But I want I phone as a gift... On my birthday.. Don't want to purchase it"
+    },
+    {
+      "conversation_id": 2769011,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "other_unclear",
+      "confidence": null,
+      "current_message": "@USER No need to filled the form, I'm sharing you giving the registered email via direct message"
+    },
+    {
+      "conversation_id": 1707062,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "none",
+      "predicted_intent": "product_return_and_replacement",
+      "confidence": null,
+      "current_message": "@USER The guy who sent it to me already reached me, tracking number checks out, mystery solved. Thanks, though"
+    },
+    {
+      "conversation_id": 2389800,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "Every breath you take should be as pure as nature intended. Improve the quality of the air you breathe indoors with a wide range air purifiers to choose from on Amazon.in. Visit: URL URL"
+    },
+    {
+      "conversation_id": 2266765,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "none",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER hey guys, Do you have any upcoming sale? In looking forward to buy the Moto g5s+ and I'm short of little money. Can you help me out?"
+    },
+    {
+      "conversation_id": 1721707,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "when you pay extra for shipping for next day delivery through amazon prime but they didnt deliver it @USER URL"
+    },
+    {
+      "conversation_id": 646730,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER when will me scampi fries be getting dispatched? Should have been yesterday and still not been dispatched. I want fishy fingers. Cheers 😏👍"
+    },
+    {
+      "conversation_id": 2363235,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER So on the amazon website when I track my package it says that it just got to a warehouse near me and it is close, but on the usps site when I input my tracking number it says that they are still waiting to receive my items?"
+    },
+    {
+      "conversation_id": 2960026,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER where’s my tv going... it came to my ups then back to Sacramento.... URL"
+    },
+    {
+      "conversation_id": 1105754,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "Order updates from @USER have timestamps from before the order was placed. Looks like they are GMT."
+    },
+    {
+      "conversation_id": 1464285,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER @USER Order# 408-9863763-1429137 will my order be shipped or not?"
+    },
+    {
+      "conversation_id": 832924,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER Yes, wc26th Oct. But if I click on the album it says in-stock and available for this weekend."
+    },
+    {
+      "conversation_id": 2288190,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER It would be nice to know if my order is shipping any time soon. I ordered 24 hours ago with same day delivery. The status has been not yet shipped all day. Was supposed to be here at 9 pm today, 1.5 hours ago."
+    },
+    {
+      "conversation_id": 2374486,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER how can an order be “delivered by 8pm today” and “not yet shipped”?"
+    },
+    {
+      "conversation_id": 1397273,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "order_status_query",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "i want to buy echo spot when did it launch in india @USER @USER @USER @USER"
+    },
+    {
+      "conversation_id": 1755281,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "other_unclear",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER so I got this email. But I don't shop with Amazon so it might be a spam? Thought I would let you people know anyway. URL"
+    },
+    {
+      "conversation_id": 467536,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER Not received the item. App is not upto the mark so did not get terms &amp; conditions clearly while placing order hence lost cashback offer also. Poor experience overall."
+    },
+    {
+      "conversation_id": 1147828,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER I HAVE OPTED for no cost emi thats why i am doing follow ups... Otherwise i am not a free person to exchange tweets and mails with u"
+    },
+    {
+      "conversation_id": 2454046,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "account_access",
+      "confidence": null,
+      "current_message": "@USER No idea 😂 I've started a return and reordered URL"
+    },
+    {
+      "conversation_id": 679025,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "Hi @USER I purchased the wrong colour kindle and forgot to tick u registered. Can I exchange for a different colour?"
+    },
+    {
+      "conversation_id": 2460750,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER So I had ordered a Moto G5s and I got a Moto G5 plus. Please do something about it. Thank you URL"
+    },
+    {
+      "conversation_id": 2450570,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "amazon sent the wrong cases 😩🤦🏾‍♀️"
+    },
+    {
+      "conversation_id": 2608094,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER if I got a product and it didn’t come with everything listed who would I contact to get the rest to the product ?"
+    },
+    {
+      "conversation_id": 982267,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "other_unclear",
+      "confidence": null,
+      "current_message": "Wtf @USER ... I ordered an altitude mask and you sent me a ‘tutu’ ?!😂🤦🏼‍♂️ URL"
+    },
+    {
+      "conversation_id": 2291505,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER I have buy Nokia 6 from Amazon India. The phone's display has purple colour on right side of the display. I want to replace my phone but Amazon can't. What can I do ? Help ASAP."
+    },
+    {
+      "conversation_id": 1018235,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER Now amazon starts blackmailing customers by sending wrong product and when return req. placed,They says ship prdct back by urself"
+    },
+    {
+      "conversation_id": 1229460,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "other_unclear",
+      "confidence": null,
+      "current_message": "Hey, @USER, this DVD is a fraud. It claims to be the lost 1917 Cleopatra but is really the 1912 version. URL"
+    },
+    {
+      "conversation_id": 2484077,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "I payed good money for this cup that I received today in the post! I am deeply disappointed that it’s faulty #donotbuy @USER URL"
+    },
+    {
+      "conversation_id": 345473,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "Dear @USER You suck. We’ve had to replace one device already bc it keeps malfunctioning. The “new” one is malfunctioning too."
+    },
+    {
+      "conversation_id": 676899,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "product_return_and_replacement",
+      "predicted_intent": "none",
+      "confidence": null,
+      "current_message": "@USER why haven’t you fulfilled Lex Luthor’s order of a blue-ray copy of A league of their own? Amazon you have to stop doing an injustice to Lex he might start a league! #JusticeLeague"
+    },
+    {
+      "conversation_id": 2712534,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "This is the second time Prime Now has delivered an order with missing items, and I can't find a way to request a refund in the app."
+    },
+    {
+      "conversation_id": 1420491,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER Yes i have sent my details via the form. I have cancelled the product and dont want to be associated with amazon refund my money to my CC"
+    },
+    {
+      "conversation_id": 915961,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "service_complaint_escalation",
+      "confidence": null,
+      "current_message": "@USER how would you justify blocking a customer’s number who’s awaiting a refund?"
+    },
+    {
+      "conversation_id": 2515914,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER Yes on all three orders, then you kept arguing with me about how it wasn’t your fault and how you don’t have the resources to refund my Prime membership"
+    },
+    {
+      "conversation_id": 2217342,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "refund_request",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER Yes, and now you are rejecting the claim but the seller is sketchy."
+    },
+    {
+      "conversation_id": 1893565,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "other_unclear",
+      "confidence": null,
+      "current_message": "@USER Nope...never received a call"
+    },
+    {
+      "conversation_id": 1763226,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "device_app_issue",
+      "confidence": null,
+      "current_message": "@USER Yes. I have also spent 8 hours on live chat."
+    },
+    {
+      "conversation_id": 2573750,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "account_access",
+      "confidence": null,
+      "current_message": "@USER I've checked all of my folders. Like I said, the number in that link is the exact one I have called five times. I'm a Prime member who has been locked from their account for three weeks and have had nothing visible done to remedy this."
+    },
+    {
+      "conversation_id": 1541879,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER Look your cust service people just emailed to say they couldn’t deal with me because my email isn’t recognised. So unhelpful"
+    },
+    {
+      "conversation_id": 1415560,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "other_unclear",
+      "confidence": null,
+      "current_message": "@USER Yes, I'm talking to a representative again but I'm still super disappointed.. The call I made last night with you guys was useless"
+    },
+    {
+      "conversation_id": 334873,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER 6 years of shopping and never had an issue with CS until tonight. 10 mins later and no reply. URL"
+    },
+    {
+      "conversation_id": 272875,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER I checked the link even on the desktop. There's no link given to contact support, that's why i am pinging you here."
+    },
+    {
+      "conversation_id": 1537572,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "3/ @USER WHY IS IT SO HARD TO REPORT A SHIPPING PROBLEM? Yesterday I got the \"chat is too slow, please call\" option. Why no message/email?"
+    },
+    {
+      "conversation_id": 1588773,
+      "language": "en",
+      "difficulty": "easy",
+      "context_dependency": "self_contained",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "God damn it, but @USER is getting worse and worse and worse as time goes on. Maybe it's time to dump all @USER services and move on."
+    },
+    {
+      "conversation_id": 2353843,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivery_delay",
+      "confidence": null,
+      "current_message": "@USER I am sorry but I would like to receive a phone call &amp; have this matter resolved asap! I have phoned 5 times now &amp; every time I get nothing. I am £90 down on an error on your part. This has been going on for almost 3 weeks now &amp; it’s time for you to actually do something."
+    },
+    {
+      "conversation_id": 1136222,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "other_unclear",
+      "confidence": null,
+      "current_message": "@USER Already send and call to 50 tym no proper response from ur side.. My neice birthday on 17 oct. Fake commitment 405-8158996-7018755oredr id"
+    },
+    {
+      "conversation_id": 1746071,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivered_but_not_received",
+      "confidence": null,
+      "current_message": "@USER I don’t this information to be public, as it’s impossible to reach your customer care on phone. So either they should call me or reach item"
+    },
+    {
+      "conversation_id": 390810,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "cancellation",
+      "confidence": null,
+      "current_message": "@USER You must shut down your improper business. Now when the payment is done you're coming up with nasty excuses. Read the DM."
+    },
+    {
+      "conversation_id": 2151408,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "order_status_query",
+      "confidence": null,
+      "current_message": "@USER doesn't provide way to claim #gst input credit for Business purchases. Even if I am giving all details they are denying this basic"
+    },
+    {
+      "conversation_id": 1250967,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "delivered_wrong_location",
+      "confidence": null,
+      "current_message": "Super disappointed in @USER lately. Lost packages, multiple wrong charges. What's the point of being prime 🙄🤔"
+    },
+    {
+      "conversation_id": 2447260,
+      "language": "en",
+      "difficulty": "medium",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "refund_request",
+      "confidence": null,
+      "current_message": "@USER should only &amp; selectively use #USPS for certain deliveries since the majority of time your order isn't going to arrive as promised, thus defeating entire premise of #AmazonPrime This is about #logistics plain &amp; simple."
+    },
+    {
+      "conversation_id": 2245407,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "charge_issue",
+      "confidence": null,
+      "current_message": "@USER why my call gets dropped Kindly please check my call log and please take an appropriate actions Why my call dropped? In between URL"
+    },
+    {
+      "conversation_id": 886169,
+      "language": "en",
+      "difficulty": "hard",
+      "context_dependency": "context_helpful",
+      "gold_intent": "service_complaint_escalation",
+      "predicted_intent": "account_info_update",
+      "confidence": null,
+      "current_message": "@USER The email was terribly short with no direction expect “we left you a voice mail win instructions” and I had no voice mails!"
+    }
+  ]
+}
