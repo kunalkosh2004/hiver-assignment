@@ -1,0 +1,37 @@
+brand: AmazonHelp
+phase: 2
+method: conversation-aware corpus + deterministic sample + local sentence-transformer
+  embeddings + KMeans clusters interpreted by hand + keyword rubric
+seed: 42
+intents:
+- id: delivery_delay
+  description: Expected delivery is late / not arrived
+- id: delivered_but_not_received
+  description: Tracking shows delivered but customer got nothing
+- id: delivered_wrong_location
+  description: Delivered to wrong place / stolen / dumped / missed
+- id: order_status_query
+  description: Where is my order / when will it ship (pre-delivery)
+- id: refund_request
+  description: Initiate or chase a refund
+- id: cancellation
+  description: Cancel an order / I did not order this
+- id: charge_issue
+  description: Wrong, double or unauthorized charge; price discrepancy
+- id: product_return_and_replacement
+  description: Return / exchange / faulty-damaged item
+- id: device_app_issue
+  description: Echo/Alexa/Kindle/Fire/app technical problem
+- id: account_access
+  description: Cannot log in / password / hacked / suspended
+- id: account_info_update
+  description: Change email / address / phone / name
+- id: service_complaint_escalation
+  description: Dissatisfaction with support; escalation or threat to leave
+notes:
+- AmazonHelp traffic is ~27% multilingual (Sep-2017 sample); intent taxonomy defined
+  on the English slice; language treated as a routing attribute, not an other bucket.
+- Conversation-continuation messages (thanks / will do / what?) are real but context-only;
+  they form a messaging layer, not a domain intent.
+- Intents overlap (e.g. return x refund); Phase 3 should allow co-occurring labels.
+- Many messages are meaningless without conversation context -> classify message+context.
