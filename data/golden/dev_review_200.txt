@@ -1,0 +1,799 @@
+### CID=43713 TWEET=43716 SRC=sampled
+MSG: @USER @USER 読みたーい。。。キンドルがもっと便利になってくれたらいいのに。。。アメリカからではまだまだ買えないし、シンクできないし、キンドル化が遅い。。。帰国時に買おうか。。#kindle #キンドル #電子書籍
+CTX: 
+
+### CID=71873 TWEET=71861 SRC=screened
+MSG: @AmazonHelp @115850 @115821 @15704 @116618 No Resolution yet. Haha, I am getting a email on 1st December 2017 for an pickup of 28th November.   For Amazon time will go in reverse and they will come to me on 28th November 2017 for pickup. #greatfun https://t.co/EeBqPr2uFk
+CTX: nan
+
+### CID=74611 TWEET=74604 SRC=screened
+MSG: @132443 @AmazonHelp @115850 @115821 Interested in reviewing your products
+CTX: BRAND: @USER Thanks for the update, we will reach out to you soon. ^MJ | CUSTOMER: @USER Have replied to Ur mail. Hope for a more logical response from your side. | BRAND: @USER I understand your point. I request you to please reply to the email you've received stating the same and we'll assist you accordingly. ^NR | CUSTOMER: @USER @USER @USER so as per your help team, if a seller packs trash and sends to a customer then it's fine and he is not liable. As long as the packaging is good and product is received in tact, the customer is at risk of receiving trash. Pathetic customer service. | BRAND: @USER I'm sorry to see you disappointed with the resolution, you can reply to our correspondence for further clarifications. ^MJ | CUSTOMER: @USER I just got a mail that you guys can't help because the product was received intact condition. What does that mean? I received trash in a well packed box.
+
+### CID=99899 TWEET=99900 SRC=sampled
+MSG: @USER necesito escribirles por privado por un inconveniente con mi cuenta. Gracias
+CTX: 
+
+### CID=122705 TWEET=122706 SRC=sampled
+MSG: アマゾンから荷物来てたみたいだけど不在の上に頼んだ覚えがないんだが
+CTX: BRAND: @USER Amazonです。予約商品、定期おトク便、お知り合いからの贈り物である可能性がございます。ご確認いただいても問題が解決しない場合は、お調べしますのでリンクよりお問い合わせください。URL MH
+
+### CID=124763 TWEET=124762 SRC=sampled
+MSG: Amazonさん、流石にこの梱包は酷すぎる…畳まれてないし袋は上から被せただけで袋に入れられて無かったし、スカートしわしわなんですが… URL
+CTX: 
+
+### CID=132555 TWEET=132554 SRC=screened
+MSG: @AmazonHelp Heute versandt, Dienstag geliefert? Früher wart ihr bei Prime-Versand mal schneller... :-( https://t.co/GAhuoYHvZF
+CTX: nan
+
+### CID=142875 TWEET=142868 SRC=sampled
+MSG: So I’ve just purchased a @USER #echo and #echodot now I’ll need to spend the rest of the year figuring out how it works
+CTX: 
+
+### CID=144159 TWEET=144160 SRC=screened
+MSG: @AmazonHelp 参りました。
+CTX: nan
+
+### CID=160274 TWEET=160276 SRC=sampled
+MSG: É hoje 🔥📦🎉😱 Corra e confira as Ofertas Relâmpago da Black Friday: URL URL
+CTX: 
+
+### CID=160437 TWEET=160437 SRC=screened
+MSG: @AmazonHelp Thanks.
+CTX: BRAND: @USER We shall be replying to your DM soon. Request you to check. ^MP | CUSTOMER: @USER Plz provide me the current progress of my order. | BRAND: @USER Please don't provide your order details, we consider it personal information. Our Twitter page is visible to public. (2/2) ^SV
+
+### CID=167910 TWEET=167908 SRC=screened
+MSG: @AmazonHelp Entre nous, la Switch ne descendra pas en dessous de 292€, même pour le black friday ou le cyber monday, pas vrai? Que je sache si je dois me jeter dessus maintenant et prendre les jeux en boutique (cheques cadeaux ftw!)
+CTX: nan
+
+### CID=169499 TWEET=169502 SRC=screened
+MSG: Quería comprar algo y el precio regresaba al de normal al meterlo al carrito @116875  #BlackFridayEnAmazon 😥
+CTX: nan
+
+### CID=179089 TWEET=179092 SRC=screened
+MSG: Dites @132988, il va peut-être falloir se bouger ! Livraison en 24h, OK. Si vous mettez 48h pour prendre en charge le colis, hein... https://t.co/g9kMEKRDZq
+CTX: nan
+
+### CID=179430 TWEET=179434 SRC=screened
+MSG: @AmazonHelp I need an urgent help??
+CTX: nan
+
+### CID=204928 TWEET=204930 SRC=screened
+MSG: Amazonプライムミュージックにドリカムが入ってるのを発見！JBLに繋いで大音量でお掃除♪♪♪ https://t.co/6b7Rd67uYj
+CTX: BRAND: @USER ありがとうございます！ ｶﾞﾝﾊﾞ━━━o(・`ω´・)○))━━━ ﾙ!!! TY | CUSTOMER: @USER はーい🙋楽しんでるユーザーが待ってるので、お仕事がんばってくださいね💕 | BRAND: @USER 「TVCM洋画ソングス」ですね、、( ..)φﾒﾓﾒﾓ 勝手に突撃させていただいたのに、喜んでいただけて嬉しいです(*ﾉωﾉ) 朝のお忙しい時間帯に、リプライいただきまして、ありがとうございました。 今後ともどうぞご贔屓に。。。。(‘v`◎)TY | CUSTOMER: @USER はい！たくさん聴かせて頂きますー♪公式さんからのリプ嬉しい😆 お掃除には「TVCM洋画ソングス」もテンポが良くてぴったりです^ ^これからもプライムミュージックにはお世話になります✨ | BRAND: @USER お掃除が捗ったとのことで、何よりです（＾ω＾） 引き続き、Prime Musicをお楽しみくださいませ～♪ (*´-`).｡oO(お掃除の際にPrime Musicながそう～っと。。)TY | CUSTOMER: @USER こちらこそありがとうございます✨お掃除がはかどりました😊
+
+### CID=215983 TWEET=215983 SRC=screened
+MSG: @AmazonHelp Just wanted to say thank you for your fast responses. Amazon is the best.
+CTX: nan
+
+### CID=218049 TWEET=218050 SRC=sampled
+MSG: Why can't I pre order @USER @USER on @USER app the @USER one isn't showing up #Wrestling #2K18 #XBoxOne
+CTX: 
+
+### CID=231507 TWEET=231508 SRC=sampled
+MSG: Kindle unlimitedとpremiumReading読み放題とどう違うっていうんだ… Prime Reading URL
+CTX: 
+
+### CID=234234 TWEET=234235 SRC=sampled
+MSG: @USER Sí lo he hecho. Pero hay preguntas de clientes respondidas hace años por el propio vendedor y la información en la ficha sigue mal
+CTX: 
+
+### CID=245210 TWEET=245209 SRC=screened
+MSG: Seit einiger Zeit versendet @116316 seine Lieferungen an mich per @122924, sich nicht an Lieferzeiten halten. Lausig! @AmazonHelp
+CTX: nan
+
+### CID=245874 TWEET=245870 SRC=screened
+MSG: @AmazonHelp Vendido por “SOLUCIONES ALTHEA”.
+CTX: BRAND: @USER Comprendo. ¿Podrías indicarnos si el producto era vendido y enviado por Amazon o por un vendedor externo? ^LG | CUSTOMER: @USER Ya que yo pague por un producto que no se me ha otorgado. 2/2. | CUSTOMER: @USER Al utilizar el número de rastreo que me dieron en la página de la compañía, me marca error ¿que procede? puedo obtener mi dinero 1/2. | BRAND: @USER (2/2)transportista directamente a traves de este enlace: URL . ^MB | BRAND: @USER Te comento que por motivos de seguridad recomendamos que no postees datos de tu cuenta. En este caso puedes contactar al (1/2) | CUSTOMER: @USER Hola, muchas gracias por la atención. Si lo recibí, si gustas mandarme DM para adjuntarte una imagen.
+
+### CID=271574 TWEET=271570 SRC=screened
+MSG: @AmazonHelp お仕事ご苦労さまです。 返品申し込みをさせて頂きました。 完全な誤商品というよりは商品ページの記載に問題があるのでは？という気がしておりますが、返品しますのでまあもういいかなという感じです。今日使いたかったので不信感で腹が立ってしまいました。 わざわざリプありがとうございました。
+CTX: BRAND: @USER Twitter上ではセキュリティ上の理由によりご状況を確認することができないのですが、ご不明な点がございましたらカスタマーサービスまでお問い合わせいただければと存じます。チャット、お電話でも２４時間対応しております。どうぞよろしくお願いいたします。SK | BRAND: @USER Amazonです。Tweet拝見いたしました。Amazon発送の商品をご注文され、別な商品が到着したという状況かと存じます。その場合、ご注文履歴より返品（交換可能商品の場合は交換）のお手続きをお願いしております。お手数をおかけしましたことをお詫びいたします。SK | BRAND: @USER また、お問い合わせはAmazonカスタマーサービスへＥメールでお送りいただきましたでしょうか。その場合、順次対応しておりますため、回答までにお時間を要する場合がございます。SK | CUSTOMER: 問合せに返答もないねってことで返品手続きした。返答がないってことはクレーマーだと思われたのかしらんが今まで1回もキャンセルも滞納も問合せもしたことないしうっかり2年もプライム会員やってるつーのに、腹立たしい！ できれば2度とAmazon使いたくない。楽天頑張れ。
+
+### CID=275517 TWEET=275516 SRC=screened
+MSG: Amazon届いた⋆⸜(* ॑꒳ ॑*  )⸝ﾋﾟｮﾝﾋﾟｮﾝ 買いまくってしまったイエベ秋似合うという化粧品⋆⸜(* ॑꒳ ॑*  )⸝ﾋﾟｮﾝﾋﾟｮﾝ とずっと気になってたケイトのブルーグロス⋆⸜(* ॑꒳ ॑*  )⸝ﾋﾟｮﾝﾋﾟｮﾝ https://t.co/PvBr9PJ7BK
+CTX: nan
+
+### CID=277573 TWEET=277571 SRC=sampled
+MSG: @USER Can you tell me right now where is my package I will go there and pick my self i dont believe any more on amazon.
+CTX: 
+
+### CID=282811 TWEET=282809 SRC=screened
+MSG: @AmazonHelp 分かりました。amazonのサイト上をみるに返金手続きをするとなっていますが、商品は再度でも送っていただく方向でお願いします。こうなった原因についても後日の連絡時に教えていただければと思います。
+CTX: BRAND: @USER このたびは、ご迷惑をおかけし申し訳ございません。 本件についてご注文いただいたお客様に後日URL SM | CUSTOMER: なんかヤマトの追跡サイト見たら即日返品されとる。住所間違ってるはず無いしこれはさすがに温厚な僕でもキレるんだけど、既に電話対応の時間終わってて泣ける２ちゃんねる URL
+
+### CID=304554 TWEET=304552 SRC=screened
+MSG: @AmazonHelp So I have to create a unique listing. Sold on amazon for years and confused by this. Could you explain further please? What's the purpose? https://t.co/I5gTxIuwVe
+CTX: BRAND: @USER You can simply adjust the qty for duplicates. You must create a unique listing for each if the conditions/editions vary. ^SH | CUSTOMER: @USER Hi. I've just come to list a duplicate DVD I have for sale— Do I now have to complete 'Selling Application for ASIN' each time? | BRAND: @USER I'm sorry, we don't have that information. Please use the link ^EA provided so we can look into it. ^AM | CUSTOMER: @USER *explain | CUSTOMER: @USER Could someone just exile why I need to 'Request Approval' for an item I'm selling. It's nothing special - just a DVD.
+
+### CID=307901 TWEET=307902 SRC=sampled
+MSG: @USER Thanks!
+CTX: BRAND: @USER That means you have a message or notification. You can see more about your light ring statuses here: URL ^AM
+
+### CID=316306 TWEET=316307 SRC=sampled
+MSG: @USER @USER ordered LG ac on amazon, delivered on 4th Oct, but still no call for installation, Why so lazy ?
+CTX: 
+
+### CID=332782 TWEET=332783 SRC=sampled
+MSG: Why does @USER customer service get so mad at you when you ask them to clarify?
+CTX: 
+
+### CID=351165 TWEET=351166 SRC=sampled
+MSG: 一番ぐぬぬぬしてるのが、密林用意の密林発送なのに、代引きコンビニ支払い不可で、クレ払いのみってやつがぐぬぬぬぬぬぬしてる(クレカは持たない主義) いちいちギフカ買うのめんどくさいよ〜〜〜
+CTX: 
+
+### CID=382580 TWEET=382581 SRC=screened
+MSG: Énième souci avec une commande @120533 dont le colis a été retourné à l’expéditeur suite à une erreur de tri. Cmt vous contacter ?
+CTX: nan
+
+### CID=388854 TWEET=388852 SRC=sampled
+MSG: @USER this time ever wrost delivery system shown..ord id : 408-8882422-4718768 At Vadodara hub for Saturday but don't delived till now.
+CTX: 
+
+### CID=404092 TWEET=404092 SRC=screened
+MSG: @AmazonHelp 💗💗💗
+CTX: BRAND: @USER We're here for you, Macy! So glad we were able to help, and you are very welcome. 😊 ^JD | CUSTOMER: @USER Requested a replacement and it was in my mailbox less than 24 hours later at no charge. Thank you, Amazon! | CUSTOMER: @USER has the most AMAZING customer service. I received an ornament yesterday that was broken.
+
+### CID=407498 TWEET=407497 SRC=sampled
+MSG: @USER why do y'all hate me? I haven't gotten a single thing on time??
+CTX: 
+
+### CID=411435 TWEET=411436 SRC=sampled
+MSG: I searched a book on amazon and it just automatically bought it wtf
+CTX: 
+
+### CID=414010 TWEET=414011 SRC=screened
+MSG: Amazonで頼んだやつかれこれ２週間待ってる(  ˙-˙  )←遅いなぁ....
+CTX: nan
+
+### CID=420425 TWEET=420420 SRC=sampled
+MSG: @USER plz refund asap for order 404-4900250-3974731
+CTX: 
+
+### CID=428614 TWEET=428615 SRC=sampled
+MSG: @USER in the past Amazon had already hurted are Hindu feelings and our nationalistic sentiments my selling Indian flag door mats
+CTX: 
+
+### CID=436337 TWEET=436359 SRC=screened
+MSG: @AmazonHelp @115850 Few mins before received out for delivery.its update turely or Fakely??its 4th time this week.End of the close order status Fakely
+CTX: BRAND: @USER As mentioned earlier, we're working on it. For further concerns, revert to our email correspondence and we'll get back ^VR | CUSTOMER: @USER DELIVERY.that same day Close order status cannot reach customer Fakely.then how @USER Reach me 9th oct | CUSTOMER: @USER @USER DELIVERY THIS LOCATION ME WITHIN 17HRS.I HAVE PROOF.I ORDER 8TH OCT 5PM,PRODUCT REACH 9TH OCT BEFORE 1PM.@USER STILL NOT | BRAND: @USER you as soon as we receive an update from them. 2/2 ^SH | BRAND: @USER I'm sorry it is taking longer than expected. We've escalated the issue with our concerned team, we'll get back to 1/2 ^SH | CUSTOMER: @USER Finally Ask.@USER delivery this product Or not.IF NOT DELIVERY PRODUCT TODAY GIVE STATEMENT TO ME "WE NOT HAVE SERVICE IN CHENNAI 600034
+
+### CID=437366 TWEET=437367 SRC=screened
+MSG: @AmazonHelp My Mobile delivered to someone else.Waste of choosing 2day delivery.No response from CustomerCare.Feeling insecure to pay online
+CTX: nan
+
+### CID=470156 TWEET=470157 SRC=sampled
+MSG: Dear @USER, today is Friday. You really don't need to keep sending cyber Monday emails. Thank you, The World.
+CTX: 
+
+### CID=471605 TWEET=471606 SRC=screened
+MSG: Amazonで北海道に荷物頼んだらなぜか島根県へと配送されていた…
+CTX: nan
+
+### CID=502468 TWEET=502469 SRC=sampled
+MSG: Ey @USER, estaría bien que tanto en la app como en la web tuviérais un apartado de novedades, para ver lo que vais incluyendo en vuestro catálogo. Da cosa enterarse por otras personas o por casualidad.
+CTX: 
+
+### CID=535015 TWEET=535009 SRC=screened
+MSG: @133929 @AmazonHelp Ok...then 1.  why on Friday it was updated thru sms that courier attempt failed as customer not available  2. Why on Saturday it was told that I will get my courier on Saturday itself but still not delivered ?
+CTX: CUSTOMER: @USER @USER Hello Vivek, thank you for reaching out and apologies for any inconvenience, our courier couldn't reach your address due to heavy rain, we are checking with our team to rearrange delivery at the earliest. | CUSTOMER: @USER You have all the details .What is there to actively work on it. courier is in madiwala branch of aramex since Friday..14 kms from delivery location..you guys have failed to deliver and now also no one is active working on issue | BRAND: @USER I understand your concern regarding the delivery. We have received your details and are actively working on it and will get back to you. We won't be able to provide any further insights on this. Appreciate your understanding. ^JS | CUSTOMER: @USER Ok...so please take your time...I give up here on any more follow up...I have been asking that whether it will delivered today ...half day is gone and I don't have even answer to my question...but I understood now..no use of any follow up...I give up | BRAND: @USER We do not have the option for customers to pick up the package from warehouse. However, I see that we have received your details. Please give us some time to check and take necessary action. We will
+
+### CID=542144 TWEET=542146 SRC=screened
+MSG: Pues me da que mi ahijada se queda sin regalo ya que @116928 me habia dicho que llegaba ayer el pedido y resulta al final ni ayer ni hoy...
+CTX: nan
+
+### CID=566690 TWEET=566691 SRC=screened
+MSG: @AmazonHelp UPS
+CTX: BRAND: @USER I'm sorry to hear your package hasn't arrived yet. Can you tell us who the carrier is? If you're unsure you can check here: URL ^AY | CUSTOMER: @USER My package was due yesterday and now it’s two days late 🙄🙄
+
+### CID=576056 TWEET=576057 SRC=sampled
+MSG: Shout out to the #Boston @USER @USER and @USER for the beautiful wreath! Brought it home to surprise my wife and it smelled amazing when I opened the box and she loved it! #Winning #TreasureTruck URL
+CTX: 
+
+### CID=605115 TWEET=605115 SRC=screened
+MSG: @AmazonHelp たった今届きました…お手数をおかけして申し訳ありません
+CTX: BRAND: @USER 代金引換のご注文商品を、お受け取りでないにもかかわらず配達完了となっているということでしょうか。状況をお調べさせていただきますので、お手数ですがこちらよりカスタマーサービスにお問い合わせださい。URL RI | CUSTOMER: あの…アマゾンくん届いてないのに見たらもう届けたよ？ってなってんだけど…不在票入ってないし…代引きだから別に良いけどさ…
+
+### CID=619219 TWEET=619136 SRC=screened
+MSG: @AmazonHelp Mañana, pero eso son 8 días después de realizar el pedido. Con estos plazos no creo que cambie mi compra en supermercado por Pantry
+CTX: BRAND: @USER Hola Paloma, lamento el inconveniente. Me podrías informar según el e-mail de confirmación de tu pedido, ¿cuál es la fecha estimada de entrega del mismo? ^AZ | CUSTOMER: A Amazon pantry aún le queda por mejorar, eh, @USER. Hice el pedido el día 15 y hasta hoy no se ha enviado
+
+### CID=619972 TWEET=44713 SRC=screened
+MSG: @116928 PUES NO , NO ME HA LLEGADO 😡
+CTX: BRAND: @USER Puedes enviarnos tu consulta vía MD pinchando el siguiente enlace: ^VL URL | CUSTOMER: @USER Podéis abrirme por MD? Gracias! | BRAND: @USER Entendemos ¿nos podrías indicar si, ya has podido contactar con el vendedor del producto? ^KA | CUSTOMER: @USER Por uno de vuestros vendedores ( SuperStore2014 ) gracias! | BRAND: @USER Hola, ¿nos podrías indicar si el producto es vendido por Amazon o por uno de nuestros vendedores? ^KA | CUSTOMER: @USER OYE TETES QUE PASA YA. Me llega o no? 😥😂 URL
+
+### CID=663814 TWEET=663817 SRC=screened
+MSG: Me encanta que @116928 nos permita usar @116618  con el Amazon Prime 😍
+CTX: nan
+
+### CID=674259 TWEET=674261 SRC=sampled
+MSG: @USER please could you start a lost item for 3 items I sent as you have decided not to move my items from Tyneside and is out of the delivery timescale of 2-3 days! @USER won’t go for lost item or refund me so you can!no wonder @USER wants rm to be public owned
+CTX: 
+
+### CID=719853 TWEET=719854 SRC=sampled
+MSG: good job @USER URL
+CTX: 
+
+### CID=728121 TWEET=728120 SRC=sampled
+MSG: Amazon support is careless,I returned one of product two Weeks back, still I didn't get any refund to my account.#AmazonIndia #amazonprime
+CTX: 
+
+### CID=746831 TWEET=746832 SRC=sampled
+MSG: @USER received this really strange email from you guys URL
+CTX: 
+
+### CID=758987 TWEET=758986 SRC=screened
+MSG: @AmazonHelp Unfortunately it is a gift for tomorrow.  Normally I would return it but that wont work in this case.  Thanks though.
+CTX: BRAND: @USER Please contact us at the following link so we can go over our available options: URL ^WT | CUSTOMER: @USER Yes, the item was crushed as well although it’s packaging saved it from real harm. But it’s a gift that looks like a used piñata. | BRAND: @USER I'm sorry your package was delivered to you this way. If the contents were damaged. Please contact Amazon. ^TT | BRAND: @USER I'm sorry for the condition upon arrival! Was anything damaged within your package? ^JA | CUSTOMER: Stellar work here @USER @USER @USER #shipping #fail URL
+
+### CID=764802 TWEET=764803 SRC=sampled
+MSG: Dear twatty courier for @USER who thought it would be a good idea to leave my uni books in cardboard in the rain, you're an utter wanker.
+CTX: 
+
+### CID=783437 TWEET=783440 SRC=sampled
+MSG: @USER i got the notification that I received my package but i did not and I waited an hour and nothing has came yet!
+CTX: 
+
+### CID=832367 TWEET=832368 SRC=screened
+MSG: @AmazonHelp Warum dürfen eure Transporter eigentlich im Haltverbot und in einer Feuerwehr Zufahrt stehen? https://t.co/Jy2nBM7szX
+CTX: nan
+
+### CID=840845 TWEET=840846 SRC=sampled
+MSG: アマゾンで頼んだバラストが初期不良で新しい物を送ってくれって言ったら中国直送で2週間かかるとか言われたんだけど、 そろそろかなと思って確認しに行ったら受取人不明で返送されたとか言われたんだけど どうしてくれる（怒）
+CTX: 
+
+### CID=858760 TWEET=858761 SRC=sampled
+MSG: As an event design company, we spend $$$ with @USER every year. Why can't we post reviews &amp; ask questions in the @USER community. Sick of waiting for your Call! FIX IT!
+CTX: 
+
+### CID=870091 TWEET=870088 SRC=sampled
+MSG: @USER @USER if u said we could not deliver it bcuz of heavy rain and traffic block i would have believed, not reachable really ?? URL
+CTX: 
+
+### CID=896646 TWEET=896647 SRC=sampled
+MSG: @USER Any mobile giveaways at the time of #AmazonGreatIndianFestival ? Lost in last two Amazon Great Indian Festivals
+CTX: 
+
+### CID=897110 TWEET=897113 SRC=screened
+MSG: @AmazonHelp I just sent the requested details through my mail to __email__
+CTX: BRAND: @USER Please don't provide your details, we consider it to be personal information. Our page is visible to the public. (2/2)^SF | BRAND: @USER We've emailed a correspondence to you. Kindly check it here: URL (1/2)^SF | CUSTOMER: @USER I just sent an email with requested details (my amazon account : __email__) | BRAND: @USER Sorry for any inconvenience. I'll be sure to pass your comments as feedback to our concerned team for review. ^GS | CUSTOMER: @USER I replied to your email again..thanks for everything..I'm frustrated and tired with your service. GOOD BYE..Amazon!!!! | BRAND: @USER Thank you for replying to the email and we shall connect with you soon. ^SH
+
+### CID=907087 TWEET=907088 SRC=sampled
+MSG: @USER , would love to be playing 2k18 now, but @USER failed to deliver my pre order. 😖
+CTX: 
+
+### CID=947732 TWEET=947738 SRC=screened
+MSG: @116618 You are in my area !!! YeY !! @116618 #UnlimitedScreaming  🎃
+CTX: CUSTOMER: @USER That was scary fast!! See if we're in your area! URL 🎃 #UnlimitedScreaming | CUSTOMER: @USER @USER + #UnlimitedScreaming + 🎃 !! 😋 | BRAND: @USER Hey! Give it a try again, let us know if you still don't receive a link. ^KJ | CUSTOMER: @USER I'm not getting the link, I tweeted 20minutes ago | CUSTOMER: Tweet @USER + #UnlimitedScreaming + for some free pizza to pair with a scary movie. While supplies last. URL
+
+### CID=956263 TWEET=956269 SRC=sampled
+MSG: @USER Ré avec vous une réponse ?
+CTX: 
+
+### CID=964223 TWEET=964224 SRC=screened
+MSG: @AmazonHelp..  Hi team i have sent you a msg for your worst services example msg.. Please look into the matter and help. Since you do not cr
+CTX: nan
+
+### CID=980000 TWEET=980003 SRC=screened
+MSG: @AmazonHelp メルアドを登録し忘れててたのですが コンビニで支払う11桁の支払番号は 注文履歴で確認することはできますか？
+CTX: BRAND: @USER 注文が確定されているかどうかは、注文履歴をご確認下さい。 URL また、注文確定メールが届かない場合、登録のEメールアドレスやメール拒否設定が影響している事が考えられます。設定の見直しをお願いします。 EK | CUSTOMER: 初めてAmazon使ったけど 購入完了のメールこないけど 大丈夫なのかな
+
+### CID=1005058 TWEET=1005059 SRC=screened
+MSG: @AmazonHelp you have a DM
+CTX: nan
+
+### CID=1009216 TWEET=1009217 SRC=sampled
+MSG: @USER tried prime to get order for today. Waited all day for ‘out for delivery’ &amp; not turned up. 40 min call to get a refund. Rubbish!
+CTX: 
+
+### CID=1059308 TWEET=1059307 SRC=sampled
+MSG: @USER I think amazon executive are not interested in providing right assistance you can see for yourself. &amp; this does not ends here URL
+CTX: 
+
+### CID=1085206 TWEET=1085208 SRC=screened
+MSG: @375979 @115825 @22687 ich scheiße dann mal auf Twitch Prime 😂
+CTX: CUSTOMER: @USER @USER @USER Netflix ist nice 👌 | CUSTOMER: So am Freitag word @USER gekündigt und dann wird sich aufgrund der besseren Auswahl @USER geholt ^^
+
+### CID=1093291 TWEET=1082396 SRC=sampled
+MSG: Hey @USER gibt es irgendwie in der app die Möglichkeit serien auf englisch mit englischen Untertiteln zu schauen? Also beides?
+CTX: 
+
+### CID=1100448 TWEET=1100434 SRC=screened
+MSG: @AmazonHelp Ups da hat sich eine 0 unerlaubt verzischt... Es sind 120 Sendungen!!!
+CTX: CUSTOMER: @USER Ich glaube bei ca 12 Sendungen bislang ist das schon nicht wenig. ;-) | BRAND: @USER Unser Klebeband langweilig zu nennen ist ja schon ziemlich gemein! 😱 Du musst einfach mehr bestellen, dann bekommst du auch mal ein anderes. 😜 ^SI | CUSTOMER: @USER ich möchte doch auch nur sowas... :-D Aber ich bekomme immer das langweilige Prime Klebeband! :-/ URL
+
+### CID=1103613 TWEET=1103609 SRC=sampled
+MSG: why would @USER say the package was delivered if it wasn't?
+CTX: 
+
+### CID=1106537 TWEET=1106535 SRC=sampled
+MSG: @USER should b like #AmazonPrimeNEVER. Order placed 4 hrs ago &amp; watched driver go opposite direction while in 'hood. #inept #shame
+CTX: 
+
+### CID=1112663 TWEET=1112660 SRC=screened
+MSG: @AmazonHelp Amazon Logistics
+CTX: BRAND: @USER l'enquête est nécessaire afin de localiser le colis.Sinon pour qu'on puisse aussi remonter cela,quel est le nom du transporteur? | CUSTOMER: @USER Ouverture d’enquête auprès du transporteur et on me recontacte mardi pour savoir ce qu’il en est... | BRAND: @USER Que vous a dit notre SAV? ^SM | CUSTOMER: @USER Je devais l’avoir hier et il est marqué « déposé dans la boîte aux lettres » dans le suivi mais je n’ai rien. J’ai contacté vos collègues. | BRAND: @USER Bonjour, désolée d'apprendre cela :/ s'agit-il d'un retard de livraison ? ^SN | CUSTOMER: déjà Amazon me doit un colis parce que le transporteur fait mal son boulot . URL
+
+### CID=1152679 TWEET=1152675 SRC=screened
+MSG: @AmazonHelp Ya lo he hecho, y me envían un reemplazo, pero sigue siendo pésimo que entreguéis a otra persona, casi prefería las cagadas de Seur
+CTX: BRAND: @USER Hola Marta. Lamentamos lo sucedido. Te sugerimos contactar a Servicio de Atención al Cliente para reportar lo acontecido ^HC | CUSTOMER: Lamentable el servicio de @USER entregan el paquete a otra persona, no saben a quién con su Amazon Logistics y yo estaba en casa
+
+### CID=1160398 TWEET=1160404 SRC=screened
+MSG: Dei um baita azar com a @117086. Meu cartão de crédito deu problema e perderei uma compra com desconto que fiz em JULHO!
+CTX: CUSTOMER: @USER Entendi. Perdi a compra que fiz. Parabéns | BRAND: @USER Raphael, o pagamento com cartão de débito pode não qualificar se o produto se encontra dentro dos fatores que 1/2 | BRAND: @USER 2/2 se encontram neste link: URL você poderia verificar e nos confirmar. ^DA | CUSTOMER: @USER Nada se resolveu.
+
+### CID=1165671 TWEET=1165671 SRC=screened
+MSG: @AmazonHelp Thank you!
+CTX: BRAND: @USER Then you can use this link: URL Best regards ^MH | CUSTOMER: @USER it's a company order, not personal order | CUSTOMER: @USER r and I need to make sure that it is delivered by November 1st. I want to fix the issue, it was most likely just a typo | CUSTOMER: @USER Thank you for the information! However, my account is locked and I can't access that link. There was some issue with the payment for my orde | BRAND: @USER Please use this link: URL My colleagues are pleased to assist you. ^DS | CUSTOMER: @USER Hey I need some help, how do I contact customer support?
+
+### CID=1171368 TWEET=1171365 SRC=screened
+MSG: @AmazonHelp Liefertermin ist natürlich der 27.10.. Wird versandt am 26.10.. Hoffe eben, dass es durch den Feiertag zu keinen Verzögerungen kommt.
+CTX: BRAND: @USER Was sagt denn der Liefertermin deiner Bestellung? Diesen kannst du über "Mein Konto" einsehen. Gruß ^DS | CUSTOMER: @USER In Österreich ist am Donnerstag Nationalfeiertag. Kommt mein vorbestelltes Produkt trotzdem am Freitag bei mir an?
+
+### CID=1177138 TWEET=1177140 SRC=sampled
+MSG: Thanks for not knocking or ringing the door bell @USER definitely not jewelry or anything that got left on my door step at 8:30 pm URL
+CTX: 
+
+### CID=1195807 TWEET=1195805 SRC=sampled
+MSG: @USER The New iOS app is great, but is their any hope of Split View support on iPad?
+CTX: 
+
+### CID=1198272 TWEET=1198271 SRC=sampled
+MSG: @USER October 20th. Now it's a week from now. I paid extra for faster service. Reason from Amazon help: "it stopped".
+CTX: 
+
+### CID=1200067 TWEET=1200065 SRC=screened
+MSG: @AmazonHelp @182669 Hat der Kundenservice helfen können? Ich finde die neue Funktion „Routinen definieren“ auch nicht.
+CTX: BRAND: @USER Das können dir am besten die Spezialisten im Kundenservice erklären: URL ^KM | CUSTOMER: @USER Das dachte ich mir. ZBsp. „Guten Morgen“ Hue und WeMo. Aber wo definiere ich was „Guten Morgen“ auslöst? | BRAND: @USER Mit den neuen Alexa Routinen kannst du verschiedene Aktionen auf einen Befehl legen. ^KM | CUSTOMER: @USER Das stimmt! 😄 Aber wo finde ich denn die Routinen? 🤔 Unter Smart Home? Ist das extra aufgeführt? | BRAND: @USER Wir sehen alles 😎 Bei Updates muss nicht immer zwingend ein neues Interface kommen. Manchmal sinds die kleinen Dinge im Leben 😝 URL | CUSTOMER: @USER Oh. Ihr reagiert auch bei Non-Mentions? 😄 Hab ich. :) Aber altes Layout noch. Keine Routinen, kein neues Interface. URL
+
+### CID=1208413 TWEET=1208412 SRC=sampled
+MSG: amazonに嘘つかれた男 URL
+CTX: 
+
+### CID=1213413 TWEET=1213415 SRC=screened
+MSG: Miss Glausen's Classroom Wishlist https://t.co/UnXottuuBL via @115821
+CTX: BRAND: @USER We can help! Here's some helpful info on how to create a wishlist: URL I hope this helps! ^AD | CUSTOMER: @USER @USER How do you create a wishlist? I've been trying to figure it out for a while.
+
+### CID=1219141 TWEET=1219139 SRC=screened
+MSG: Yo hago la reserva de un juego en @116928 que dice "entrega garantizada el dia de lanzamiento". Y la compensación por romper esa promesa?
+CTX: nan
+
+### CID=1221827 TWEET=1221828 SRC=screened
+MSG: @AmazonHelp I know there is Kindle Audio Upgrade. But is it possible the other way round, too, if I already have the Audio book?
+CTX: CUSTOMER: @USER If I bought the audiobook first, how can I get the matching Kindle version of the book to switch between reading and listening?
+
+### CID=1223522 TWEET=1223524 SRC=sampled
+MSG: @USER what is the point in stating a safe place when delivery drivers don’t use it??
+CTX: 
+
+### CID=1232177 TWEET=1232176 SRC=sampled
+MSG: @USER why won't you pay me my money from my seller account? Avoid selling used items on @USER if you actually want to get the money
+CTX: 
+
+### CID=1234099 TWEET=1234098 SRC=screened
+MSG: @AmazonHelp Erledigt. Der Link ist übrigens nicht gerade Smartphonetauglich 😉
+CTX: nan
+
+### CID=1261655 TWEET=1261654 SRC=sampled
+MSG: @USER i used my gift card in # 403-6112284-7792352 while chng paymnt option it got exprd and now allwg to reuse my gift crd, hw to use? URL
+CTX: 
+
+### CID=1261878 TWEET=1261872 SRC=screened
+MSG: @AmazonHelp What else information do you require ?
+CTX: BRAND: @USER personal information. Our Twitter page is visible to public. 3/3 ^SB | BRAND: @USER We deliver packages to meet the delivery estimates. Could you please let us know If we have missed on the 1/3 ^SB | BRAND: @USER estimated delivery date ? Also, please don’t provide your account details as we consider them to be 2/3 ^SB | CUSTOMER: @USER @USER @USER @USER order no. 406-0749005-4977949 | CUSTOMER: @USER @USER Delivery boy dint even call once and my product was undelivered. Please help
+
+### CID=1307226 TWEET=1307224 SRC=sampled
+MSG: Seriously @USER please get your shit together. It was suppose to be here by the 18 then today &amp; now I have to wait 1 week &amp; 1/2!@USER URL
+CTX: 
+
+### CID=1308262 TWEET=1308261 SRC=sampled
+MSG: What the heck is this @USER. Inexcusable! Packages from other floors in my office building just sitting there in the hallway of 4th floor URL
+CTX: 
+
+### CID=1323412 TWEET=1323413 SRC=sampled
+MSG: Planning to write a book inspired by @USER Title : How to not help a Customer. Can plan to sale it on @USER though.
+CTX: 
+
+### CID=1339609 TWEET=1339609 SRC=screened
+MSG: @432465 @AmazonHelp 😘😘😘
+CTX: CUSTOMER: @USER @USER T'es con 🙄😂😂 | CUSTOMER: @USER 😂😂😂😂😂 | CUSTOMER: @USER @USER Absolument | CUSTOMER: @USER @USER Au moins ils ont de l'humour chez Amazon 😀 | BRAND: @USER Bonjour, je suis désolée pour cela. Pourriez-vous nous indiquer le transporteur s'étant occupé de la livraison de votre colis?^FT | CUSTOMER: Sympa le nouveau système d’Amazon. Un livreur Amazon vient me donner un rouleau PQ et il a même essuyé la petite goutte. 👍🏼
+
+### CID=1343595 TWEET=1343596 SRC=screened
+MSG: Rien dans la boîte aux lettres... 😔
+CTX: nan
+
+### CID=1364737 TWEET=1364738 SRC=sampled
+MSG: @USER have you removed the lyrics function on songs with the latest firmware?!
+CTX: BRAND: @USER We'd like to look into this further, please reach out to us by phone or chat here: URL ^SY
+
+### CID=1380925 TWEET=1380916 SRC=sampled
+MSG: @USER What's d big idea behind Amazon Prime's promise of 1 day delivery.? While ordering it says 3-4 days for delivery. #Disappointed.
+CTX: 
+
+### CID=1386473 TWEET=1386484 SRC=screened
+MSG: Arriving Friday 😍😍 @115850 echoooooo  #AmazonEcho https://t.co/HwPrpdEEac
+CTX: nan
+
+### CID=1390714 TWEET=1390711 SRC=screened
+MSG: Paket verschollen, Ersatzlieferung nicht möglich. Aber ich soll für eine Erstattung die Ware zurückschicken.  @116316 will mich trollen.
+CTX: nan
+
+### CID=1394424 TWEET=1394423 SRC=sampled
+MSG: @USER @USER Order# 407-8361283-2219545 . Your delivery agent telephoned us and asked to "come and collect the parcel "
+CTX: 
+
+### CID=1424922 TWEET=1424921 SRC=sampled
+MSG: Amazonで頼んでたやつ注文履歴見たら消えてるのなんで
+CTX: 
+
+### CID=1429494 TWEET=1429491 SRC=sampled
+MSG: @USER PLEASE ESCALATE Order 406-5479718-3481931AND SHARE ME THE STATUS
+CTX: 
+
+### CID=1436676 TWEET=1436677 SRC=screened
+MSG: @AmazonHelp Bonjour, Je souhaiterais avoir des informations sur le retour d’un produit.
+CTX: nan
+
+### CID=1453811 TWEET=1453810 SRC=screened
+MSG: @AmazonHelp hallo, Paket sollte gestern (Feiertag) zugestellt worden sein. Ortung des Pakets ist ca 40-50 km von mir weg. Was kann ich tun?
+CTX: nan
+
+### CID=1466972 TWEET=1466932 SRC=screened
+MSG: @AmazonHelp I was told it was a amazon carrier! But the fact that I received a email on Wednesday to say my parcel was out for delivery and would be there by 8pm that day to now be into Saturday and to now be told oh sorry we don’t know where the parcel is, is an absolute joke!
+CTX: BRAND: @USER Hi Louise! Apologies for the trouble this has caused. Do you know which carrier was delivering your parcel?^CN | CUSTOMER: @USER And to be offered compensation of £5 after I have wasted 4 days from work to sit in and wait for a parcel that was promised to be delivered on time is a joke!! | CUSTOMER: @USER On more than 8 occasions over the past 4 days to be told the parcel was in transit with the driver and promised to be delivered and now they say they don’t even know where it is so now I am out of pocket through the shocking customer service from yourselves | CUSTOMER: @USER The current order status was that they where unable to track my parcel and to be told they do not know where my parcel is so now I have had to cancel the parcel and have been told to reorder but the Black Friday deal on the XBox has now ended. I have phoned your call centre | BRAND: @USER I'm sorry to hear about your bad experience! What is the current status of your parcel? Has the delivery date changed from the initial confirmation email? You can check this information here: URL Thank you! ^WB | CUSTOMER: @USER the worst customer service I have ever experienced will not be using you again!! Sat 
+
+### CID=1488377 TWEET=1488376 SRC=screened
+MSG: @115850 @115851  What's wrong with the Earth's most customer centric company!? Very disappointed.
+CTX: nan
+
+### CID=1519126 TWEET=1519127 SRC=screened
+MSG: @116875 no puedo entrar a mi cuanta
+CTX: nan
+
+### CID=1548344 TWEET=1548343 SRC=screened
+MSG: @AmazonHelp Yes, I have.
+CTX: BRAND: @USER I get your concern. We'll certainly look into it. Could you please confirm if you've shared your details through the link? ^AP | CUSTOMER: @USER Doing. I sent many emails through your customer care help too but still doing as told | BRAND: @USER We'd like to help you out. However, Twitter being a social media platform, we cannot access your Amazon account via Twitter. Please submit the form by entering random 4-digits in the order block. Do keep us posted if the issue persists. ^AP | CUSTOMER: @USER This is what happens. Why not just look into things without putting me through this hassle? So many emails and tweets later the issue remains unsolved. URL | BRAND: @USER Kindly fill the block requesting for order number as "NA" and submit the details. We'll look into the concern and reach out to you soon. ^AP | CUSTOMER: @USER I will look again but there is no column to write the concern. It asks for order number etc. Am I missing something? If I leave the columns empty the form doesn't get sent.
+
+### CID=1551311 TWEET=1551312 SRC=screened
+MSG: @AmazonHelp hey i need help
+CTX: nan
+
+### CID=1565868 TWEET=1565869 SRC=sampled
+MSG: @USER is it usual practice to cut off calls to customers as u av failed twice in a week to deliver prime? Very rude!!!!!
+CTX: 
+
+### CID=1572899 TWEET=1572897 SRC=sampled
+MSG: @USER delivery attempt at 11.54 pm ?? Looks like a courier fraud .pls check Tracking # 913115081942 URL
+CTX: 
+
+### CID=1598729 TWEET=1598732 SRC=screened
+MSG: Amazonさ、予定日過ぎたから 問い合わせしたら11学校3日まで待って言われて待って来なかったから問い合わせしたら… これどーすればいいの？ 郵便局に連絡って？？？ https://t.co/qPxtEgjUZj
+CTX: nan
+
+### CID=1604131 TWEET=1604132 SRC=sampled
+MSG: Dear @USER ,I wish u sort newest movies based on lang . Thupparivalan,a new tamil movie is not listed at top when click 'See More'
+CTX: 
+
+### CID=1616279 TWEET=1616278 SRC=screened
+MSG: アマゾン… 弟がスクコレ買ったんだけど開ける前から潰れてたらしい() https://t.co/Vs5z90VVZ4
+CTX: nan
+
+### CID=1622253 TWEET=1622252 SRC=screened
+MSG: @AmazonHelp as far as my cal goes, we are past Oct 16. Screen shot of expected delivery was attached to previous twt. Ono. 4__credit_card__
+CTX: BRAND: @USER Apologies. Have we missed the estimated date? You can check it here: URL keep us posted. ^HR | CUSTOMER: @USER I hav prime subscpn, an order takes 7 days despite that. N after 7 days it's still not delivered. Do you ppl work or just sleep? URL
+
+### CID=1648054 TWEET=1648057 SRC=sampled
+MSG: @USER I've been waiting for my parcel all day, it's expected today but I've already had the post delivered.
+CTX: 
+
+### CID=1655018 TWEET=1655017 SRC=sampled
+MSG: @USER tell me what detail do you need? URL
+CTX: 
+
+### CID=1663547 TWEET=1663546 SRC=screened
+MSG: @AmazonHelp Est ce que les données personnelles de vos clients ont été piratées ?
+CTX: CUSTOMER: @USER On me répond comme vous que ce n'est pas un mail d'amazon. Mais ça ne dit pas comment mes coordonnées ont été connues des auteurs du mail. | BRAND: @USER Nous vous conseillons de faire suivre l'email que vous avez reçu à __email__. Veuillez le supprimer par la suite. | CUSTOMER: @USER J'ai envoyé un message. Si vous voulez que je vous transfère le mail, communiquez moi une adresse svp. | BRAND: @USER Bjr, il ne s'agit pas d'un mail d'Amazon, je vous invite à le signaler à notre SAV immédiatement: URL . ^ASZ | CUSTOMER: Bonjour @USER Je n'ai rien commandé. Ça n'apparaît pas dans mon compte client mais c'est bien mes nom &amp; adresse. Vous avez été hacké ? URL
+
+### CID=1684961 TWEET=1684962 SRC=screened
+MSG: アマゾンがプリパラのBDBOXと3dsゲームの支払い番号を送ってこないんじゃが…
+CTX: nan
+
+### CID=1693690 TWEET=1693689 SRC=sampled
+MSG: @USER @USER @USER. They charged me extra amount see photos, now I want refund and compensation for the same from Amazon. Respond URL
+CTX: 
+
+### CID=1718328 TWEET=1565155 SRC=screened
+MSG: @115850 I didnt got the reply over there thats the reason i had msg here hope u will help me out as early as possible was expecting this kind of ser
+CTX: BRAND: @USER Please don't provide your order details, as we consider it to be personal information. Our Twitter page is public.​ ^RW | BRAND: @USER I'm sorry for any confusion. Please connect with our support team here: URL for assistance on it. ^RW | CUSTOMER: @USER @USER plz help us out My order No:403-6607251-9373104 got a defective item same was returned yet no update from U r end pathetic | BRAND: @USER We have addressed your query here: URL Please check the same for more information. ^ZH | CUSTOMER: @USER You do not return the customer's money for 15days you should be ashamed.Do my money back quickly youare giving poor service Iam not satisfie | CUSTOMER: Iss #DiwaliKiTayyari Karo Amazon deals ke saath poori. Take a screenshot of your favourite offer &amp; show it to us. #AmazonGreatIndianFestival URL
+
+### CID=1741712 TWEET=1741713 SRC=sampled
+MSG: @USER Help!!!! #amazonvideo #amazonvideoindia URL
+CTX: 
+
+### CID=1770463 TWEET=1770468 SRC=sampled
+MSG: @USER Como puedo obtener el archivo de la factura de una compra?
+CTX: 
+
+### CID=1780206 TWEET=1780203 SRC=sampled
+MSG: @USER Is there a way to restrict one amazon echo to one specific person in the household?
+CTX: 
+
+### CID=1806474 TWEET=1806477 SRC=screened
+MSG: Amazonで予約注文したnon・noの注文番号がいつ届くかわからないので、ヒヤヒヤしてる😞💦
+CTX: nan
+
+### CID=1827324 TWEET=1827325 SRC=screened
+MSG: まってAmazonのアカウント乗っ取られてるやん絶対。あたしメアドとか変更してないよ。どーすればいいの。 https://t.co/SZyWPEIDNE
+CTX: nan
+
+### CID=1850390 TWEET=1850387 SRC=screened
+MSG: @AmazonHelp  https://t.co/4wseahQJam
+CTX: CUSTOMER: @USER You can see this screen shot was shortly before... Haven't recieved an email just your reply. Kind of really disappointed | CUSTOMER: @USER Wow, first it was next day shipping. Then once ordered it was two days. Now it's between now and the 31st... URL | BRAND: @USER So sorry to hear your order is running late! What's the most recent tracking update provided here: URL ^BL | CUSTOMER: Its 8:00p, where's my shit @USER
+
+### CID=1877582 TWEET=1877583 SRC=sampled
+MSG: やっちまった... Amazonプライム会員、今年も解約すんの忘れた... また1年よろしくお願いします...Amazonさん...
+CTX: 
+
+### CID=1910321 TWEET=1910322 SRC=screened
+MSG: Liebes @116316 Team. Ich bekomme seit gewisser Zeit Bestellbestädigungen "angeblich" von euch mit einer ZIP Datei die sich nicht öffnen lässt. Allerdings habe ich ewig lange nichts mehr über euch bestellt. Finde, ihr solltet das wissen 😊 https://t.co/HUy21qdGc5
+CTX: nan
+
+### CID=1912587 TWEET=1912588 SRC=screened
+MSG: e quando vão vender o box de soa no brasil, @115821 https://t.co/tKagfpP0qB
+CTX: nan
+
+### CID=1968370 TWEET=1968366 SRC=screened
+MSG: @AmazonHelp My order showing cancelled...What the hell?
+CTX: BRAND: @USER As mentioned earlier, kindly wait till you receive an update from us. Appreciate your patience. ^AK | CUSTOMER: @USER I need item today itself.I dont know anything....I paid for 1 day.I need it..thats it...Be like a real man....! | BRAND: @USER We understand you received a new update on your delivery. Please wait for our team to reach out to you with an update. ^VM | CUSTOMER: @USER Asa I contacted u ,delivery showing Arriving by friday..Is this ur new fraud? what does ariving today(1 day del) means?U people r damn cheaters....Crap company... | BRAND: @USER Thanks for the update. We've received your details and we'll reach out to you at the earliest. ^SC | CUSTOMER: @USER Filled the from...Now with get back with proper Resolution asap.
+
+### CID=2052149 TWEET=2052147 SRC=screened
+MSG: @AmazonHelp Done! Thanks
+CTX: nan
+
+### CID=2061567 TWEET=2061567 SRC=sampled
+MSG: @USER @USER You're missing the point. You've tricked your customers into something they don't want. We should be able to cancel immediately!
+CTX: 
+
+### CID=2089262 TWEET=2089261 SRC=sampled
+MSG: Amazon仕事早ーい(笑)(。-∀-)姪っ子ちゃんらのクリスマスプレゼントもうきた(笑)(。-∀-)🎄🎅🎁✨ URL
+CTX: 
+
+### CID=2093938 TWEET=2093939 SRC=screened
+MSG: @147135 @115850 @138673 @160663 2000रूपये के लिए यह कंपनी बेईमानी धोखेबाजी कर लेती हे ऐसी तुछ ओछी हरकत मेरे साथ हुई हे मुझे अबreorderकरने के लिए कहा जा रहा हे ताकि मुझे अब10999की जगह12999देने पड़ेंगे इसी सोचीसमझी साजिस के तहत मेरेorderको बीच रास्ते से return कर लिया था ? https://t.co/dYcEODIAu6
+CTX: CUSTOMER: #RedmiY1 &amp; Redmi Y1 Lite: &gt;150K units sold in ~3 mins across @USER and URL 👊👊 Thank you Mi Fans for your love and support. 🙏 Next sale is on 15th Nov at 12 noon! #LoveYourSelfie URL
+
+### CID=2162437 TWEET=2162435 SRC=sampled
+MSG: @USER you guys damage a package in transit &amp; then ask me to reorder the whole thing &amp; wait for another 10 days for delivery?!
+CTX: 
+
+### CID=2208276 TWEET=2208276 SRC=sampled
+MSG: @USER @USER Happened to me, too. Gotta wait until the 13th to play it.
+CTX: 
+
+### CID=2213169 TWEET=2213168 SRC=screened
+MSG: Waving stupidly at your #amazon driver as he's driving of my drive, him taking no notice, me no item. Brilliant NOT
+CTX: nan
+
+### CID=2220210 TWEET=2220211 SRC=sampled
+MSG: Bei @USER respektive dieses Mal @USER und der @USER funzt Mal wieder nix ---&gt; brauche Ware heute und nicht am Montag! #Amazon #Prime
+CTX: 
+
+### CID=2277148 TWEET=2277149 SRC=sampled
+MSG: If you’re gonna advertise (&amp; charge me) for 2 day shipping, can your items actually arrive in 2 damn days? Shit. @USER
+CTX: 
+
+### CID=2278758 TWEET=2278755 SRC=sampled
+MSG: Why so I pay @USER for prime when my shit never ever arrives in two days as the shipping claims? Such a con job
+CTX: 
+
+### CID=2286003 TWEET=2286004 SRC=sampled
+MSG: @USER @USER I’m confused why this box was necessary. Doesn’t this seem wasteful to anyone else or just downright ridiculous ??? URL
+CTX: 
+
+### CID=2291005 TWEET=2291006 SRC=sampled
+MSG: @USER I paid extra postage to guarantee delivery of my order yesterday but only half arrived on time. Can I get a refund on postage?
+CTX: 
+
+### CID=2312754 TWEET=2312755 SRC=screened
+MSG: Find it messed up that @115821 gave prime to my fiancé during chat with support, then all of a sudden they charged my card..wtf fix this
+CTX: nan
+
+### CID=2342084 TWEET=2342085 SRC=sampled
+MSG: @USER how do I connect my spotify account to Echo? And why doesn't Alexa search Google web?
+CTX: 
+
+### CID=2349567 TWEET=2349569 SRC=sampled
+MSG: eu tô indo ver o site da @USER porque aparentemente meu hobby é viver a beira da falência
+CTX: 
+
+### CID=2350925 TWEET=2350926 SRC=sampled
+MSG: still do not have my reputation copy... what the fuck are you doing @USER
+CTX: 
+
+### CID=2352338 TWEET=2352337 SRC=sampled
+MSG: @USER Worst service offered to a Prime membersip customer as per ur update parcel has been delivered today till 09:00pm but no agent no. is shared at 9:26pm updated customer is not available.Is this is ur service ur &amp; customer executive Mr.Bunty disconneted call on calling URL
+CTX: 
+
+### CID=2360502 TWEET=2360503 SRC=sampled
+MSG: @USER I've shared my contact details and the problems which I faced (In detail). Waiting for your response... URL
+CTX: 
+
+### CID=2383229 TWEET=2383230 SRC=sampled
+MSG: AmazonからBluetoothスピーカーが届いた。なにこれ便利…！！
+CTX: 
+
+### CID=2398918 TWEET=2398919 SRC=sampled
+MSG: @USER My account has been hacked and password changed without consent
+CTX: 
+
+### CID=2408722 TWEET=2408721 SRC=screened
+MSG: @AmazonHelp Stop assuring. 7 agents did that today!
+CTX: BRAND: @USER If you've shared the details in the link provided to you earlier, I can assure you that our team will look into this and get back to you soon. ^SU | CUSTOMER: @USER You had no intention of sorting out the issue! That's for sure!!! | BRAND: @USER Apologies for the experience, that wasn't intended. Please share your details here: URL and we will get in touch with you. ^BS | CUSTOMER: @USER bad service, items not delivered on time. Customer service hung-up without sorting the issue out. delivery team updated false info. What makes you brag about your services?
+
+### CID=2416355 TWEET=2416356 SRC=sampled
+MSG: @USER &amp; @USER I had to struggle a lot to find the option to contact/chat regarding my order. Not a user friendly experience :(
+CTX: 
+
+### CID=2450867 TWEET=2437713 SRC=screened
+MSG: @AmazonHelp do you want me to switch over to @118702 . COD is available for same address for other users but not for me.is this prime mean https://t.co/6MrFa9CRPE
+CTX: nan
+
+### CID=2472404 TWEET=2472403 SRC=screened
+MSG: @AmazonHelp hi there! i've got two items to return, and the amazon locker reservation time on one of them has expired- can i just put them both in one box in the locker space i still have available? if not, how do i go about getting a new locker space reservation? thanks!
+CTX: nan
+
+### CID=2483748 TWEET=2483748 SRC=screened
+MSG: @AmazonHelp No response and it’s been 7 days
+CTX: BRAND: @USER I'm sorry for the frustration! When contacted us, did we indicate a specific day we'll be able to refund/replace it as lost?^CN
+
+### CID=2516925 TWEET=2516924 SRC=screened
+MSG: @116313 iPadのwebからほしい物リストに追加すると勝手に買い物かごに追加されてしまいます。ブラウザはchromeです。修正お願いします。
+CTX: BRAND: @USER リプライありがとうございます。また、何かございましたらお知らせください。ET | CUSTOMER: @USER 現在直ってます。一週間ほど前からバグが見られたので報告させてもらいました。もう大丈夫です。 | BRAND: @USER ご不便をおかけし申し訳ございません。該当の問題については、担当部署にて調査を行っております。何かわかり次第ご連絡いたしますので、今しばらくお待ちください。 YM
+
+### CID=2520585 TWEET=2520586 SRC=sampled
+MSG: プライムはいりますたw glee cast 聴き放題なの嬉しい！！ URL
+CTX: 
+
+### CID=2533178 TWEET=2533182 SRC=screened
+MSG: I hear @115850 is delivering Echo Dot orders from tomorrow. Mine's shipping in a few minutes. I hope it's from BLR or Chennai.
+CTX: nan
+
+### CID=2539036 TWEET=2539043 SRC=screened
+MSG: @AmazonHelp Go to hellll
+CTX: BRAND: @USER Refund once initiated by Amazon will be processed to the issuing bank and hence it takes 3-5 business days to be credited. ^PR | CUSTOMER: @USER Haa haa keep ur timeline with u Happyly deleted Amazon account PEACE U lost a valuable costumer URL | BRAND: @USER I apologies for the inconvenience. However, the timeline for refund totally depends on the bank's policies. You can check the details here: URL ^MN | CUSTOMER: @USER See i already contacted the costumer care through phone more dan 7-8times My concern is u said u have refunded my amt but it takes 5-7 days to reflect in my a/c i cant wait dat long I needed it today .If u can make it today reply or else dont post anything Thank. U | BRAND: @USER I understand your concern regarding your refund. Please fill out this form: URL and we'll look into this for you. ^AM | CUSTOMER: @USER I cant wait for 5-7 days kindly i dont need amt to bank just give me amazon pay bal worth 200
+
+### CID=2540322 TWEET=2540321 SRC=screened
+MSG: @AmazonHelp Ok merci bcp !
+CTX: BRAND: @USER Je vous en prie Delphine 🙂 N'hésitez pas à contacter notre SAV afin que vous ne vous déplaciez pas pour rien 😉 ^SM | CUSTOMER: @USER Ok j'attends aujourd'hui j'irai voir à la poste demain avec le papier quand même si j'ai rien aujourd'hui ! Meeerci bcp pr votre aide bonne journée ☺ | BRAND: @USER Si le colis doit vous être livré aujourd'hui, je vous invite à patienter. Dans le cas contraire, vous pouvez contacter notre SAV afin qu'il fasse le suivi et vérifie le nom du point relais. ^SM | CUSTOMER: @USER Livré aujourd'hui à mon adresse et dans le suivi de colis disponible en point relais | BRAND: @USER Que dit le suivi de votre commande SVP ? ^SM | CUSTOMER: @USER Au secours c'est encore moi 😌 j'ai envoyé un mail. Et là je reçois un message de mon compte Amazon me disant que mon colis est dispo en point relais.. mais quel point relais le papier de la poste me dit qu'il sera dispo à la poste demain 😭
+
+### CID=2549840 TWEET=2549842 SRC=screened
+MSG: @262279 &amp; @78574 - please do NOT say "Alexa" 20x during a radio piece when u both advertise that we should use our AI to listen to your program.
+CTX: nan
+
+### CID=2567029 TWEET=2567030 SRC=sampled
+MSG: Ordered a Christmas brooch from @USER for same day posting...came literally after i've had my dinner. My only complaint is...why does the package box need to be so big? Thought we were trying to save the environment. URL
+CTX: 
+
+### CID=2571862 TWEET=2571862 SRC=screened
+MSG: @AmazonHelp Will do. Thanks.
+CTX: BRAND: @USER Thanks for that information, Alessia. We'd like to assist you the best we can, would you mind contacting us via phone or chat here?: URL ^VF | CUSTOMER: @USER Thank you. It says on here that it is delivered by Amazon Shipping. | BRAND: @USER Hi there- thanks for reaching out. If you're currently dealing with a late package or a scan like the one you described, we'd like to help in any way we can. Would you mind letting us know who the carrier is? That info is here: URL ^BL | CUSTOMER: Dear @USER @USER why do you even have the Prime option if delivery always gets delayed and then scanned as attempted when actually nobody came?
+
+### CID=2573764 TWEET=2573769 SRC=sampled
+MSG: Me prélever 2 brosses à dents électriques que j’ai même pas commander ni reçue ça va vous avez pas du mal à y arriver vous #Voleurs @USER
+CTX: 
+
+### CID=2587901 TWEET=2587900 SRC=screened
+MSG: Ahh se me hace increible que una tarjeta Oro de @100143 no entre a meses para comprar una TV en @116875
+CTX: nan
+
+### CID=2596396 TWEET=2596396 SRC=screened
+MSG: @AmazonHelp Alrdy done
+CTX: BRAND: @USER We do not have access to your account details over Twitter. Please drop in your details via the link shared earlier. We'll sort this out. ^SB | CUSTOMER: @USER I want a call right away | CUSTOMER: @USER I want u to cal me right away.. ur representative seethapathy used unparliamentary words.. I want an apology and an escalation cal.. | BRAND: @USER Sorry for the delay. Please drop in your details here: - URL and we'll get in touch with you at the earliest. ^SC | CUSTOMER: @USER Amazon India sucks... pathetic service for a prime member.. overdue delivery from nov 12 and poor response from customer care.. #amazonsucks..
+
+### CID=2611640 TWEET=2611641 SRC=sampled
+MSG: @USER hi, I have cancelled my amazon prime account but the payment has still been collected post cancellation. Help please
+CTX: 
+
+### CID=2615198 TWEET=2612191 SRC=sampled
+MSG: This is what the seller delivers. @USER worst experience ever. URL
+CTX: 
+
+### CID=2616364 TWEET=2616365 SRC=sampled
+MSG: @USER will OnePlus 5T have No Cost EMI as payment option on @USER
+CTX: 
+
+### CID=2641344 TWEET=2641341 SRC=screened
+MSG: @AmazonHelp UPS
+CTX: BRAND: @USER Could you tell us who the carrier is for this delivery? It can be found here: URL ^ML | CUSTOMER: @USER It says out for delivery. It has said that all day. It's after 8pm where I am. | BRAND: @USER Hey Ronnie! I'm sorry your order hasn't arrived. We'd like to help! What is the current tracking listed on the order? ^AJ | CUSTOMER: OMG my @USER order from Thursday still hasn't arrived Prime Fail! It was a 6 y/o's last minute Halloween costume change.
+
+### CID=2646224 TWEET=2646227 SRC=sampled
+MSG: I'm just going to go sit in a corner and cry because my package still isn't here😭 this is the first time @USER has ever failed me. Hurt isn't the word
+CTX: 
+
+### CID=2710825 TWEET=2710824 SRC=sampled
+MSG: @USER my Echo Look doesn't seem to have the same functionality as the other Echo devices (Show, Dot, Tap, Echo 1st Gen) I own. For example, I can't get it to play song of the day, or to "stop" playing a song. Is there a list of known differences for the feature set?
+CTX: 
+
+### CID=2762698 TWEET=2762696 SRC=screened
+MSG: per la cronaca, un pacchetto spedito il 15/11 da Roma per Padova via @300933 per conto di @120540 (riparazione in garanzia) risulta oggi ancora in transito a Piacenza, il numero verde di Poste mi dice che non mi può dare informazioni.
+CTX: nan
+
+### CID=2793099 TWEET=2793100 SRC=sampled
+MSG: @USER why on earth would a courier try to deliver to a school this time of night. 9pm! Just had email confirming unable to deliver my prime order already a day late - it’s a school 😖 One can only hope the attempt to redeliver tomorrow is within school hours.
+CTX: 
+
+### CID=2813544 TWEET=2813545 SRC=sampled
+MSG: My @USER package was stolen today..
+CTX: 
+
+### CID=2828095 TWEET=2828094 SRC=sampled
+MSG: @USER Je viens de recevoir un colis et le livre est arrivé en mauvais état. Est ce normal ? @USER URL
+CTX: 
+
+### CID=2830752 TWEET=2830753 SRC=sampled
+MSG: @USER worst customer service __email__.
+CTX: 
+
+### CID=2837028 TWEET=2837029 SRC=sampled
+MSG: @USER eu estou decepcionada com a amazon, vcs vendem livros sem ao menos dar um aviso prévio de que o livro é versão econômica!! nunca mais compro com vcs.
+CTX: 
+
+### CID=2838599 TWEET=2838600 SRC=sampled
+MSG: Can't believe how bad @USER customer service over the phone is! Disappointed :( thought it would be fast and easy @USER
+CTX: 
+
+### CID=2875661 TWEET=1381910 SRC=screened
+MSG: @AmazonHelp Positive thing is that this time they not requested me t fill form which I still confused
+CTX: BRAND: @USER We value your time and we shall get in touch with you at the earliest. ^RB | CUSTOMER: @USER No reply for my request of firm answer..... almost 28 days still counting | CUSTOMER: @USER When ? Is this assurance can be trusted | BRAND: @USER We apologize for the stretch and miscommunication as well. We are working on the order and shall get it delivered soon. ^CB | CUSTOMER: @USER How many form do need me fill. Please address the issues at earliest if u can or else keep quiet you lier | BRAND: @USER Sorry for the mess. I’d like to help you; please fill this form: URL and I’ll contact you soon. ^SC
+
+### CID=2876322 TWEET=2876323 SRC=sampled
+MSG: The most painful and slow return policy is of Amazon. They can definitely learn a thing or two about customer experience from some of the smaller players in the market. #neveragain #Amazonreturn @USER
+CTX: 
+
+### CID=2881862 TWEET=2881866 SRC=screened
+MSG: @AmazonHelp Gracias, pero no funciona... No existe lo que necesito en: 'elige una opción'. y si no elijo, no me permite ir a una dirección de email.
+CTX: BRAND: @USER Entiendo Fani, si lo deseas puedes contactar con nuestro Servicio al Cliente por medio del enlace para ayduarte en la gestión: URL ^JD | CUSTOMER: @USER Gracias :) Es importante | CUSTOMER: @USER Necesito cambiar la dirección de facturación. He hecho todo lo que pone en vuestra sección: 'ayuda'. Y sigue apareciendo la dirección incorrecta. | BRAND: @USER Hola Fani, para poder orientarte mejor nos podrías indicar sin publicar detalles de tu cuenta o pedidos cuál es el problema que tienes ^AR | CUSTOMER: @USER Hola, seríais TAN amables de facilitarme una dirección de email donde pueda, de verdad, consultaros lo que me impide gestionar mi cuenta ;((((( Gracias.
+
+### CID=2885720 TWEET=2885717 SRC=screened
+MSG: Pretty poor service from @115830. Ordered a @4263 spark drone on the 16th Oct and still haven't received it. The 2nd expected delivery was by 1st Dec but I don't have confidence in that... Last week you still didn't know when it would be delivered.
+CTX: nan
+
+### CID=2899717 TWEET=2899718 SRC=sampled
+MSG: @USER i have a digital service charge but i dont know why
+CTX: 
+
+### CID=2925496 TWEET=2925490 SRC=sampled
+MSG: @USER I have not received any email regarding my package. I’ve just checked and rechecked the app, and now it’s saying in two days.
+CTX: BRAND: @USER Oh no, Lauren. We are sorry that your order has not arrived as expected. Have you received an email notification regarding the delay? ^LM
+
+### CID=2931916 TWEET=2931917 SRC=screened
+MSG: Amazon Music Umlimitedになったら世界が変わってしまった
+CTX: nan
+
+### CID=2939131 TWEET=2939128 SRC=screened
+MSG: @AmazonHelp Ist ein Kontakt auch als Firmenkunde möglich wenn man nicht der eingetragene Ansprechpartner, sondern nur ausführender Sachbearbeiter ist?
+CTX: BRAND: @USER Melde dich gerne bei unserem Kundenservice, sollte die Lieferung nicht am garantierten Lieferdatum ankommen. Du erreichst sie ganz einfach hier: URL ^AW | CUSTOMER: Hätte ich Standard-Versand bei @USER gewählt wäre die wichtige Firmenlieferung schon da, der Premiumversand hat noch 1 Stunde um während der Bürozeiten einzutreffen...
+
+### CID=2942015 TWEET=2942013 SRC=screened
+MSG: @115850 @951 I've bought a G5s Plus already for a family member. Will my order, if placed, for another one for personal use be cancelled now?
+CTX: nan
+
+### CID=2952251 TWEET=2952252 SRC=sampled
+MSG: @USER it's nice if your drivers give customers a little longer than 3 seconds to answer the door before their van door slams shut and drive off. If they are that pushed for time your traffic office needs to plan better or employ more drivers
+CTX: 
+
+### CID=2962808 TWEET=2962805 SRC=screened
+MSG: @AmazonHelp December 1st
+CTX: BRAND: @USER I'm so sorry for the trouble! One-Day shipping refers to transit time, in business days, once your order has shipped. When you placed your order, what was the delivery date shown when you selected One-Day Shipping? ^JP | CUSTOMER: Extra $30 for “1 day shipping” but “guaranteed” delivery by Friday &amp; by my calculations that’s TWO DAY shipping which should be free for a prime member like myself 😭 @USER
+
+### CID=2971950 TWEET=2971953 SRC=screened
+MSG: @AmazonHelp Okay thank you
+CTX: BRAND: @USER Thanks for reaching out! There isn't a way to sign out of all devices, but you could change your password. That would effectively log you out. Let us know if you have additional questions, we will be here to help! ^EA | CUSTOMER: @USER Can I sign out of all devices at once? | CUSTOMER: @USER Okay thank you. | BRAND: @USER You can find details on how to sign out of various devices here: URL ^CL | CUSTOMER: @USER Yes i am. | BRAND: @USER We're here to help! Are you needing to sign out of your account on certain devices? ^AC
+
+### CID=2976516 TWEET=2976445 SRC=sampled
+MSG: @USER "We cud nt dlvr as we cud nt cntact u on the phone." U r fooling cstmrs, I clled 3 times AmzAgent(7500100310).
+CTX: 
+
+### CID=2986458 TWEET=644885 SRC=screened
+MSG: @115851 @115850 I want be a member of amazon family... what should i do..🤔
+CTX: CUSTOMER: @USER @USER When Amazon Prime Music will officially head to India ??? 🤔🤔 | BRAND: @USER We would like to address your concern at the earliest. However, for us to assist you better please reach us via the link provided earlier by my colleague and we'll reach out to you soon. ^VM | CUSTOMER: @USER how to become a professional liar @USER | BRAND: @USER Apologies for all the hassle that you have been through. Were any of your quries left unaddressed. We are here to help, please share your details on the secured link here URL we would investigate and connect with you shortly. ^KK | CUSTOMER: @USER @USER most corrpt than any indian politician,even lalu yadav fails @USER Ur customer support never sends feedback mail when they lie and didn't solve issue...n wow @USER just retweet or rply send a mail and say issue but never ever helped ..... | CUSTOMER: @USER Gadget Accessories TM seller is a cheat associated with Amazon and Amazon is not able to do anything about it.Such kind of sellers should be blacklisted from Amazon for cheating customers.
