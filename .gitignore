@@ -1,0 +1,15 @@
+# Data (large, downloaded via scripts/download_data.py)
+data/*.csv
+data/*.parquet
+data/cache/
+!data/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+*.egg-info/
+
+# OS / editor
+.DS_Store
