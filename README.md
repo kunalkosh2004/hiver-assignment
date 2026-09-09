@@ -1,15 +1,16 @@
-# Hiver SDE-Intern — AI Support Agent (Phase 2: AmazonHelp Intent Taxonomy)
+# Hiver SDE-Intern — AI Support Agent
 
 Take-home assignment: build an AI customer-support agent that classifies intents,
 drafts replies grounded in a brand's historical resolutions, and decides
-auto-handle vs. escalate. This repo currently contains **Phase 1 — Dataset
-Forensics** (understanding the dataset and picking a brand) and **Phase 2 —
-AmazonHelp support-intent discovery**. No agent is built yet, by design (see
-phase plan at the bottom).
+auto-handle vs. escalate. The repo currently contains **Phase 1 — Dataset
+Forensics**, **Phase 2 — AmazonHelp support-intent discovery**, **Phase 3 —
+golden evaluation set**, and **Phase 4 — baseline intent classifiers + LLM
+provider layer**. No *final* agent is built yet, by design (see phase plan at
+the bottom).
 
 This README is the **single progress & results document**: it summarises what
-we did, every headline number from the executed notebooks, and the discovered
-intent taxonomy for Phase 2.
+we did, every headline number from the executed notebooks / baseline runs, and
+the discovered intent taxonomy.
 
 ---
 
@@ -22,7 +23,12 @@ intent taxonomy for Phase 2.
 | Reusable helpers | ✅ Done | `src/{config,data_io,threads}.py` |
 | Brand choice (recommendation) | ✅ Done | **AmazonHelp** (rationale in §5) |
 | Phase 2 — AmazonHelp intent discovery | ✅ Done | `notebooks/02_amazon_intent_discovery.ipynb` + `config/amazon_intents.yaml` |
-| Phase 3+ (agent, RAG, eval) | ⏳ Not started | next |
+| Phase 3 — Golden evaluation set | ✅ Done | `data/golden/` (200 examples, §7) |
+| Phase 4A — Baseline split infra | ✅ Done | `data/golden/amazon_dev_set.jsonl` (§8) |
+| LLM provider layer | ✅ Done | `src/llm/` (optional, resilient fallback, §9) |
+| Phase 4B/4C — Majority + TF-IDF baselines | ✅ Done | `scripts/run_baselines.py`, `reports/baseline_results.*` (§8) |
+| Phase 4D — Evaluation & error analysis | ✅ Done | `scripts/evaluate_baselines.py`, `reports/analysis_4D.md` (§8) |
+| Final agent (retrieval, generation, escalation) | ⏳ Not started | next |
 
 ---
 
@@ -271,22 +277,121 @@ local sentence-transformer (`all-MiniLM-L6-v2`) downloads once on first run. No
 API key is required — the cluster reading is hand-authored markdown from the real
 cluster output, and every statistic is computed live.
 
+## 7. Phase 3 — golden evaluation set
+
+See [`data/golden/README.md`](data/golden/README.md) for the full spec. Summary:
+
+- **200 examples** = 150 representative + 50 challenge, hand-labelled from the
+  frozen `amazon-intents-v1` taxonomy, mapped to the *exact* reviewed tweet
+  (join by `tweet_id`), with `primary_intent`, `secondary_intents`,
+  `message_type`, `context_dependency`, `difficulty`, `label_confidence`,
+  `language`, and an annotation note.
+- Conversation-safe: every golden example maps to a distinct conversation;
+  `conversation_holdout.json` reserves those ids; `amazon_golden_eval.jsonl`
+  contains **no `next_brand_response`** (leak-free). Use for evaluation ONLY.
+
+## 8. Phase 4 — baseline intent classifiers
+
+**Design.** A 200-example labelled **developer set**
+(`data/golden/amazon_dev_set.jsonl`) was built (100 screened-but-not-golden +
+100 deterministically sampled corpus conversations, seed 42), shown to be
+conversation-disjoint from golden, then split **at the conversation level** into
+train / validation / internal-test (140 / 30 / 30, seed 42). Leakage is asserted
+(mutual conversation disjointness, golden holdout, and duplicate message-text
+crossings). The golden benchmark is used **only** for final evaluation.
+
+**Models & inputs** (`scripts/run_baselines.py`): Majority, TF-IDF +
+LogisticRegression, and TF-IDF + Linear SVM, each under *message-only* vs
+*message+context* serialization. Deterministic (seed 42), fully offline.
+
+### Headline results — golden benchmark, macro F1
+
+| Model | Input | Acc | Macro F1 | Weighted F1 |
+|---|---:|---:|---:|---:|
+| logistic | message_only | 0.230 | **0.164** | 0.232 |
+| svm | message_only | 0.245 | 0.144 | 0.237 |
+| svm | message_context | 0.280 | 0.135 | 0.240 |
+| logistic | message_context | 0.245 | 0.121 | 0.218 |
+| majority | message_only / context | 0.160 | 0.020 | 0.044 |
+
+Detailed per-intent P/R/F1, confusion matrices (`reports/figures/`), full error
+analysis (154/151 misclassifications captured), calibration/confidence buckets,
+and segmentation by difficulty / language / context dependency / message type
+are in `reports/` (see `reports/README.md`) and the write-up in
+`reports/analysis_4D.md`.
+
+### Key findings (Phases 4B–4D)
+
+- **Baselines are weak on this benchmark (macro F1 ≈ 0.12–0.16)**, driven by a
+  14-way class count with heavy skew, only 140 training rows, and short noisy
+  multilingual tweets. This is the honest, reproducible state of the art for a
+  numeric baseline here — and the number an LLM agent must beat to justify
+  retrieval + generation complexity.
+- **Message-only ≈ message+context**: ~72% of dev messages have zero retrievable
+  prior turns (most crowd tweets are conversation-first), so adding context
+  mostly adds nothing (and slightly hurts TF-IDF sparsity).
+- **English-only works better than the pooled result** (macro F1 0.173 on the
+  180-English subset) — multilingual short messages are essentially at chance
+  with this train size.
+- **Calibration is poor**: logistic confidence never exceeds ~0.21 (softmax
+  stays flat), and performance is nearly constant across confidence quantiles —
+  no trustworthy confidence signal for rejection/escalation yet.
+- **Dev vs golden shift**: the developer set is dominated by `none`
+  (acknowledgements), golden emphasizes actionable intents (`delivery_delay`).
+  See `reports/analysis_4D.md` §6.
+
+### Reproduce Phase 4 (deterministic baselines, no API key)
+
+```bash
+python scripts/run_baselines.py       # trains + evaluates, writes reports/
+python scripts/evaluate_baselines.py  # segmentation/calibration/error analysis
+```
+
+Both regenerate `reports/*.csv|json|md` from the committed dev + golden sets.
+They never call an LLM and never modify golden labels.
+
+## 9. LLM provider layer (optional, resilient)
+
+`src/llm/` provides an **OpenAI + Gemini abstraction with automatic fallback**
+(primary = Gemini, fallback = OpenAI per spec), bounded exponential backoff with
+jitter (2 retries), 30s timeouts, structured JSON output, and a conservative
+`max_calls_per_run` guard. It is **not required** for the baselines: with no
+`GEMINI_API_KEY` / `OPENAI_API_KEY` (see `.env.example`) the router reports
+`enabled=False` and every baseline still runs. LLM analysis output, when used,
+is stored separately under `reports/llm_analysis/` and explicitly marked
+**not ground truth** and never used to train the deterministic baselines.
+Mocked unit tests (no API credits) live in `tests/test_llm_providers.py`
+(`python -m unittest tests.test_llm_providers`); `scripts/check_llm_providers.py`
+is a no-cost health check.
+
 ## Repo layout
 
 ```
-data/            git-ignored (raw csv + parquet caches + large Phase-2 artifacts)
+data/            git-ignored raw csv + parquet caches + large Phase-2 artifacts
+data/golden/     Phase-3 golden benchmark (200) + Phase-4 dev set (200) + holdout
 config/amazon_intents.yaml       the discovered Phase-2 intent taxonomy
+config/amazon_intent_guidelines.yaml  frozen human-label rules (v1)
 notebooks/01_dataset_forensics.ipynb   the Phase-1 deliverable
 notebooks/02_amazon_intent_discovery.ipynb   the Phase-2 deliverable (intent taxonomy)
 scripts/
   download_data.py    downloads the Kaggle dataset into data/
   build_notebook.py   regenerates the Phase-1 notebook from cells (deterministic)
   build_notebook_p2.py  regenerates the Phase-2 notebook from cells (deterministic)
+  golden_annotations.py, build_golden_eval.py, build_golden_pool.py   Phase-3 builders
+  dev_annotations.py, build_dev_pool.py, build_dev_eval.py            Phase-4 dev-set builders
+  run_baselines.py      trains/evaluates baselines -> reports/ (deterministic)
+  evaluate_baselines.py Phase-4D segmentation/calibration/error analysis -> reports/
+  check_llm_providers.py no-cost LLM health check (optional)
 src/
   config.py           project-relative paths & seed
   data_io.py          loaders (parquet cache)
   threads.py          reply-graph / conversation-reconstruction helpers
   amazon.py           AmazonHelp conversation-aware customer-corpus builder
+  baselines.py        dev/golden loaders, conversation-safe split, leakage guards, metrics
+  evaluation.py       Phase-3 evaluation helpers
+  llm/                optional resilient OpenAI+Gemini provider layer (auto-fallback)
+tests/
+  test_llm_providers.py  mocked unit tests (no API credits)
 requirements.txt
 README.md
 ```
@@ -303,10 +408,11 @@ README.md
 
 ## Later phases (not yet implemented)
 
-3. Golden evaluation set
-4. Baselines
-5. Retrieval (RAG)
-6. Response generation
-7. Escalation policy
-8. Evaluation harness + LLM judge
-9. Failure analysis & report
+- Phase 3 — Golden evaluation set ✅ *(done, §7)*
+- Phase 4 — Deterministic baselines + evaluation ✅ *(done, §8)*
+- Phase 5 — Retrieval (RAG): embeddings, retrieval over the historical
+  resolution corpus, retrieval-augmented intent classification and drafting
+- Phase 6 — Response generation (grounded in retrieved resolutions)
+- Phase 7 — Escalation policy (auto-handle vs escalate, confidence-based)
+- Phase 8 — Final evaluation harness + LLM judge on the golden benchmark
+- Phase 9 — Failure analysis & report
