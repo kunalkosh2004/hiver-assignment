@@ -17,13 +17,15 @@ occurred, not that the issue was successfully fixed.
 from __future__ import annotations
 
 import json
+import os
 import re
 from collections import Counter
 
 import numpy as np
 import pandas as pd
 
-from .. import amazon, data_io
+from .. import amazon, config, data_io
+from .base import RetrievalHit
 from .language import detect_language
 
 CANNED_TEMPLATE_THRESHOLD = 20
@@ -238,6 +240,126 @@ def build_cases(
             c["template_count"] = 0
             c["is_canned_template"] = False
     return cases
+
+
+def save_slim_corpus(cases: list[dict], out_path: str) -> None:
+    """Persist a fast-to-reload copy of the case list.
+
+    `doc_msg`/`doc_ctx` are the pre-serialized Experiment A/B strings, so a
+    reloading process never re-walks 200k contexts. `conversation_context` and
+    `metadata` are stored as JSON strings and re-parsed on load.
+    """
+    from .text import document_text
+
+    df = pd.DataFrame({
+        "case_id": [c["case_id"] for c in cases],
+        "conversation_id": [int(c["conversation_id"]) for c in cases],
+        "position_in_conversation": [int(c["position_in_conversation"]) for c in cases],
+        "conv_length": [int(c["conv_length"]) for c in cases],
+        "customer_timestamp": [c["customer_timestamp"] for c in cases],
+        "response_timestamp": [c.get("response_timestamp") for c in cases],
+        "language": [c.get("language", "") for c in cases],
+        "customer_message": [c["customer_message"] for c in cases],
+        "conversation_context": [json.dumps(c.get("conversation_context") or [], ensure_ascii=False) for c in cases],
+        "brand_response": [c.get("brand_response") for c in cases],
+        "has_usable_response": [bool(c["has_usable_response"]) for c in cases],
+        "is_canned_template": [bool(c.get("is_canned_template")) for c in cases],
+        "template_count": [int(c.get("template_count", 0)) for c in cases],
+        "metadata": [
+            json.dumps({k: bool(v) for k, v in (c.get("metadata") or {}).items()}, ensure_ascii=False)
+            for c in cases
+        ],
+        "doc_msg": [document_text(c["customer_message"], None, False) for c in cases],
+        "doc_ctx": [
+            document_text(c["customer_message"], c.get("conversation_context"), True) for c in cases
+        ],
+    })
+    df.to_parquet(out_path, index=False)
+
+
+def _cases_from_slim(df: pd.DataFrame) -> list[dict]:
+    cases = []
+    for row in df.to_dict("records"):
+        features = json.loads(row["metadata"] or "{}")
+        for k, v in row.items():
+            if k in ("has_usable_response", "is_canned_template"):
+                row[k] = bool(v)
+            elif k in ("template_count", "position_in_conversation", "conv_length"):
+                row[k] = int(v)
+        row["metadata"] = {k: bool(v) for k, v in features.items()}
+        row["conversation_context"] = json.loads(row["conversation_context"] or "[]")
+        row["__doc_msg"] = row["doc_msg"]
+        row["__doc_ctx"] = row["doc_ctx"]
+        cases.append(row)
+    return cases
+
+
+def load_corpus(path: str | None = None, prefer_slim: bool = True) -> list[dict]:
+    p = path or str(config.DATA_DIR / "retrieval" / "corpus.jsonl")
+    slim = str(config.DATA_DIR / "retrieval" / "corpus.slim.parquet")
+    if prefer_slim and os.path.exists(slim):
+        return _cases_from_slim(pd.read_parquet(slim))
+    with open(p) as fh:
+        return [json.loads(line) for line in fh]
+
+
+class CaseStore:
+    """Index of historical cases + deterministic text construction per variant."""
+
+    def __init__(self, cases: list[dict], include_context: bool):
+        self.cases = cases
+        self.include_context = include_context
+        self._by_id = {c["case_id"]: i for i, c in enumerate(cases)}
+        self._texts: list[str] | None = None
+
+    def n(self) -> int:
+        return len(self.cases)
+
+    def texts(self) -> list[str]:
+        if self._texts is None:
+            from .text import document_text
+
+            cached = "__doc_ctx" if self.include_context else "__doc_msg"
+            if self.cases and cached in self.cases[0]:
+                self._texts = [c[cached] for c in self.cases]
+            else:
+                self._texts = [
+                    document_text(
+                        c["customer_message"], c.get("conversation_context"), self.include_context
+                    )
+                    for c in self.cases
+                ]
+        return self._texts
+
+    def query_text(self, query: str, context: list[dict] | str | None) -> str:
+        from .text import document_text
+
+        return document_text(query, context, self.include_context)
+
+    def hit(self, i: int, score: float, timestamp_cutoff: str | None = None) -> "RetrievalHit":
+        c = self.cases[i]
+        return RetrievalHit(
+            case_id=c["case_id"],
+            score=score,
+            customer_message=c["customer_message"],
+            brand_response=c.get("brand_response"),
+            conversation_context=c.get("conversation_context") or [],
+            language=c.get("language", ""),
+            customer_timestamp=c.get("customer_timestamp", ""),
+            metadata=c.get("metadata") or {},
+        )
+
+    def filter_mask(
+        self, timestamp_cutoff: str | None = None, exclude_conversation_ids: set[int] | None = None
+    ) -> np.ndarray:
+        mask = np.ones(self.n(), dtype=bool)
+        if timestamp_cutoff:
+            ts = np.array([c.get("customer_timestamp", "") for c in self.cases], dtype="object")
+            mask &= ts <= timestamp_cutoff
+        if exclude_conversation_ids:
+            cids = np.array([int(c["conversation_id"]) for c in self.cases])
+            mask &= ~np.isin(cids, list(exclude_conversation_ids))
+        return mask
 
 
 def assert_no_golden_overlap(indexed_conversation_ids, golden: pd.DataFrame | None = None) -> None:
