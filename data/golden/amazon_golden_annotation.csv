@@ -1,0 +1,201 @@
+example_id,conversation_id,split,tweet_id,language,primary_intent,secondary_intents,message_type,context_dependency,difficulty,label_confidence,annotation_note
+challenge-2814438,2814438,challenge,2814421,es,account_access,,complaint,context_helpful,hard,medium,Sent fax but account still blocked.
+challenge-2694949,2694949,challenge,2694952,en,account_access,,complaint,self_contained,hard,low,Prime trial unavailable though displayed; membership confusion.
+challenge-519702,519702,challenge,519700,en,account_access,,complaint,context_helpful,hard,medium,PSN codes wanted; account access flagged.
+challenge-2853614,2853614,challenge,2853615,en,cancellation,,support_request,self_contained,easy,high,Order went to cancelled; how to un-cancel.
+challenge-1955907,1955907,challenge,1955900,en,charge_issue,,follow_up,context_required,hard,medium,Gift-card/voucher validation error.
+challenge-616914,616914,challenge,616909,en,charge_issue,,follow_up,context_helpful,hard,medium,Repeated £1 auth; no straight answer.
+challenge-197857,197857,challenge,197855,en,charge_issue,service_complaint_escalation,complaint,context_helpful,hard,medium,Seller price hike ₹1300; 'criminal'.
+challenge-1845984,1845984,challenge,1845978,en,charge_issue,,follow_up,context_helpful,hard,medium,Amazon CC activated; promised voucher/authorisation.
+challenge-1568158,1568158,challenge,1568156,en,charge_issue,,complaint,context_helpful,hard,medium,MRP price discrepancy on items.
+challenge-834216,834216,challenge,834216,en,delivered_but_not_received,,clarification,context_helpful,hard,medium,AMZL; delivery guy 'couldn't access' — not received.
+challenge-2798309,2798309,challenge,2798309,en,delivered_but_not_received,,follow_up,context_required,hard,medium,Arrival photo in notification vs problem with package.
+challenge-689484,689484,challenge,689485,en,delivered_but_not_received,service_complaint_escalation,complaint,context_helpful,medium,high,Package not delivered; told to file police report.
+challenge-1242242,1242242,challenge,1242240,en,delivered_but_not_received,service_complaint_escalation+product_return_and_replacement,complaint,context_helpful,hard,medium,Investigated wrong item; package rob/investigation mess.
+challenge-1578555,1578555,challenge,1578557,de,delivered_wrong_location,,complaint,context_helpful,hard,medium,Both packages delivered to wrong person.
+challenge-2284883,2284883,challenge,2284883,en,delivered_wrong_location,service_complaint_escalation,complaint,context_helpful,hard,medium,Neighbor's order misdelivered; distrustful.
+challenge-2170818,2170818,challenge,815512,en,delivery_delay,,follow_up,context_required,hard,medium,Needs by tomorrow; tracking late (context).
+challenge-842315,842315,challenge,842315,fr,delivery_delay,,clarification,context_helpful,hard,medium,Providing carrier/tracking for late parcel.
+challenge-2171079,2171079,challenge,2171076,en,delivery_delay,,complaint,self_contained,medium,high,Pre-order never arrived; angry.
+challenge-2785904,2785904,challenge,2785901,en,delivery_delay,,complaint,context_helpful,medium,high,Item not left fulfillment center; 'hopefully tomorrow'.
+challenge-1379340,1379340,challenge,1379339,it,device_app_issue,,support_request,self_contained,medium,high,Prime Video app availability on a device.
+challenge-227064,227064,challenge,227063,ja,device_app_issue,,support_request,self_contained,medium,medium,Kindle reading access from app.
+challenge-1645512,1645512,challenge,1645507,en,device_app_issue,,complaint,context_helpful,hard,medium,Cannot buy on site/app (cart pages).
+challenge-2497106,2497106,challenge,2454034,en,device_app_issue,,complaint,context_helpful,medium,medium,App launched in India; expects English(India) language.
+challenge-487688,487688,challenge,487687,fr,none,,acknowledgement,context_helpful,medium,medium,Ordered Sunday received Friday; 'better late than never' — ack.
+challenge-1451501,1451501,challenge,1451493,pt,none,,acknowledgement,context_helpful,medium,high,First purchase praise; no intent.
+challenge-787658,787658,challenge,787651,es,none,,acknowledgement,context_helpful,medium,high,"'Thanks, everything resolved' — ack."
+challenge-893308,893308,challenge,893309,pt,none,,unknown,context_helpful,hard,low,Vague spending-related post; no clear intent.
+challenge-2254596,2254596,challenge,2254596,it,none,,acknowledgement,context_helpful,easy,high,"'Grazie, buonanotte' — ack."
+challenge-426141,426141,challenge,426142,es,none,,acknowledgement,self_contained,medium,high,Fast delivery praise; ack.
+challenge-816342,816342,challenge,816343,it,none,,unknown,self_contained,hard,low,Just a hashtag + media link; no intent.
+challenge-2586341,2586341,challenge,2586342,ja,none,,acknowledgement,self_contained,medium,high,Prime Music value praise; ack.
+challenge-365605,365605,challenge,365606,fr,none,,acknowledgement,context_helpful,medium,high,Just received; apologies — resolved ack.
+challenge-2472354,2472354,challenge,2472355,ja,none,,acknowledgement,context_helpful,medium,medium,Thanks re Prime membership benefits; ack.
+challenge-1033752,1033752,challenge,1033750,de,none,,acknowledgement,context_helpful,medium,high,Praise for support / arrival; ack.
+challenge-1738390,1738390,challenge,1738391,ja,none,,acknowledgement,self_contained,medium,high,"Received package, happy — ack."
+challenge-2151072,2151072,challenge,2151070,ja,none,,acknowledgement,context_helpful,easy,high,'Thank you' — ack.
+challenge-1130527,1130527,challenge,931494,en,order_status_query,,support_request,context_helpful,hard,medium,Requests invoice print for phone order.
+challenge-2149534,2149534,challenge,2149535,en,order_status_query,,complaint,context_helpful,hard,low,PO-box eligibility allowed at checkout but failed.
+challenge-2609965,2609965,challenge,2609966,fr,other_unclear,,complaint,context_helpful,hard,low,Packaging not discreet vs request; no intent fits clearly.
+challenge-2909124,2909124,challenge,2909125,en,other_unclear,,complaint,context_helpful,hard,low,"Gift packaging not discreet; privacy complaint, no intent fits."
+challenge-582649,582649,challenge,582649,en,product_return_and_replacement,service_complaint_escalation,follow_up,context_helpful,hard,low,Replacement recurring; multilingual fragment.
+challenge-835153,835153,challenge,835154,en,product_return_and_replacement,,complaint,self_contained,easy,high,Got a baniyan instead of the t-shirt.
+challenge-2679197,2679197,challenge,2679196,en,product_return_and_replacement,,follow_up,context_required,hard,medium,Ask whether item was replaced (returns).
+challenge-694411,694411,challenge,694409,en,product_return_and_replacement,,follow_up,context_helpful,medium,medium,Wants email to forward video re wrong product.
+challenge-972720,972720,challenge,311013,en,refund_request,,follow_up,context_required,hard,low,Current msg is promo text; context about courier refund.
+challenge-232399,232399,challenge,232401,fr,service_complaint_escalation,,complaint,self_contained,medium,medium,Prime/couriers in Paris useless; complaint.
+challenge-102915,102915,challenge,102913,en,service_complaint_escalation,,complaint,context_helpful,medium,high,"Filled form, no hope/no one read it."
+challenge-2747122,2747122,challenge,2747124,en,service_complaint_escalation,,complaint,self_contained,easy,high,CS quality decreased; barely speak English.
+challenge-2521823,2521823,challenge,2521823,en,service_complaint_escalation,,complaint,self_contained,easy,high,No one reads customer service emails.
+challenge-1323314,1323314,challenge,1323315,en,service_complaint_escalation,,complaint,context_helpful,medium,high,Replies when complaining are poor.
+representative-1912145,1912145,representative,1777657,en,account_access,,support_request,context_helpful,medium,medium,Wants purchase history hidden/password; access/privacy.
+representative-179205,179205,representative,179210,en,account_access,,complaint,context_helpful,easy,high,Can't log in for a day.
+representative-2789138,2789138,representative,2789141,en,account_access,,support_request,context_helpful,hard,low,Check if signed up to Prime; membership status.
+representative-427799,427799,representative,427798,en,account_info_update,,support_request,self_contained,medium,low,Ask about paying prime with Amazon Pay balance.
+representative-22572,22572,representative,22571,en,cancellation,refund_request,support_request,self_contained,medium,high,Not delivered; no way to cancel and get refund.
+representative-2899649,2899649,representative,2899649,en,cancellation,,support_request,context_helpful,medium,high,Going to cancel the order; done waiting.
+representative-136922,136922,representative,136919,en,cancellation,service_complaint_escalation,complaint,context_helpful,hard,medium,Cancelled whole order; wants an email address.
+representative-880948,880948,representative,880952,en,cancellation,service_complaint_escalation,complaint,context_helpful,hard,medium,Pickup cancelled without proper call; courier complaint.
+representative-650056,650056,representative,650056,en,cancellation,refund_request,follow_up,context_helpful,hard,medium,Cancel prime and refund last charge.
+representative-1604096,1604096,representative,1604100,en,charge_issue,refund_request,complaint,context_helpful,hard,medium,Money sent to a closed bank account; refund/charge.
+representative-1218305,1218305,representative,1218307,en,charge_issue,service_complaint_escalation,complaint,context_helpful,hard,low,"Money taken, asked to cancel; ambiguous charge/cancel/service."
+representative-1724691,1724691,representative,1724692,en,charge_issue,,support_request,self_contained,easy,high,Money debited but not credited to Amazon Pay.
+representative-2612309,2612309,representative,2612218,en,charge_issue,,complaint,self_contained,easy,high,Card overdrawn from something not bought on Amazon.
+representative-332434,332434,representative,332435,en,charge_issue,,complaint,context_helpful,medium,medium,COD available but fails at checkout; payment option issue.
+representative-895946,895946,representative,895944,en,charge_issue,,complaint,context_helpful,medium,medium,Cart price jumped above regular; price discrepancy.
+representative-1109519,1109519,representative,1109516,en,delivered_but_not_received,,complaint,context_helpful,medium,high,Routinely marked delivered before attempt; some never arrive.
+representative-1423023,1423023,representative,1423022,en,delivered_but_not_received,,complaint,context_helpful,medium,high,Courier marked delivered then kept parcel in van.
+representative-2289844,2289844,representative,2289845,en,delivered_but_not_received,,complaint,self_contained,easy,high,Agent marks delivered without actual delivery.
+representative-1220925,1220925,representative,1220925,en,delivered_but_not_received,service_complaint_escalation,complaint,context_helpful,medium,high,Listed delivered but not here; 'why do nothing'.
+representative-2532842,2532842,representative,2532835,en,delivered_but_not_received,service_complaint_escalation,complaint,context_helpful,hard,medium,Undelivered parcel 2 weeks; fed up.
+representative-380695,380695,representative,380690,en,delivered_but_not_received,,follow_up,context_helpful,medium,medium,Package 'lost or damaged'; not received.
+representative-482351,482351,representative,482350,en,delivered_but_not_received,product_return_and_replacement,complaint,context_helpful,hard,medium,"Marked delivered, part missing, box partly open."
+representative-533206,533206,representative,533205,en,delivered_wrong_location,,complaint,context_helpful,hard,medium,Driver left parcel in exposed recycle bin without consent.
+representative-149199,149199,representative,149195,en,delivered_wrong_location,,complaint,context_helpful,medium,high,Parcel left in unsafe spot despite note.
+representative-2283511,2283511,representative,2283514,en,delivered_wrong_location,,complaint,self_contained,easy,high,5 packages 'delivery attempted' to wrong area.
+representative-2594956,2594956,representative,2594963,en,delivered_wrong_location,,complaint,context_helpful,hard,medium,Package at risk near open doors; unattended drop.
+representative-1727624,1727624,representative,1727625,en,delivered_wrong_location,,support_request,self_contained,easy,high,How to contact about a stolen package.
+representative-458877,458877,representative,458870,en,delivery_delay,,complaint,context_helpful,medium,high,Arriving-8pm window passing; no shipment/tracking.
+representative-142833,142833,representative,142830,en,delivery_delay,,follow_up,context_helpful,medium,high,Out for delivery / due but overdue; chases status.
+representative-1116569,1116569,representative,1116567,en,delivery_delay,,complaint,self_contained,easy,high,"Paid 1-day, not arrived."
+representative-515245,515245,representative,515239,en,delivery_delay,,complaint,self_contained,easy,high,"Due Wednesday, still missing Friday."
+representative-2447788,2447788,representative,2447789,en,delivery_delay,,complaint,self_contained,easy,high,"Due 31 Oct, not delivered by 14 Nov."
+representative-2960467,2960467,representative,2960466,en,delivery_delay,,complaint,context_helpful,medium,high,Two-day prime turned into a week.
+representative-1311577,1311577,representative,1311574,en,delivery_delay,order_status_query,follow_up,self_contained,medium,high,Where is it for a late order.
+representative-608064,608064,representative,608062,en,delivery_delay,,follow_up,context_helpful,medium,medium,Delivery date repeatedly pushed back.
+representative-2967623,2967623,representative,2901348,en,delivery_delay,,complaint,context_helpful,medium,medium,Package late beyond promised day.
+representative-2528270,2528270,representative,2528271,en,delivery_delay,,complaint,context_helpful,medium,medium,One-day-shipping options disappeared; promise missed.
+representative-2683519,2683519,representative,2683520,en,delivery_delay,,complaint,context_helpful,hard,medium,Prime Pantry 'delivered' actually at USPS; delay/not-received.
+representative-1192307,1192307,representative,1192309,en,delivery_delay,,complaint,self_contained,easy,high,Van pulled up then left; not delivered.
+representative-2780552,2780552,representative,2780553,en,delivery_delay,,follow_up,context_helpful,medium,medium,Told to wait longer for delivery.
+representative-2824739,2824739,representative,2823953,en,delivery_delay,,complaint,self_contained,easy,high,Questions meaning of 'one day delivery'.
+representative-2913230,2913230,representative,2913231,en,delivery_delay,,follow_up,self_contained,easy,high,Prime items due Thursday; why 2-day delay.
+representative-1218249,1218249,representative,1218247,en,delivery_delay,,follow_up,context_helpful,medium,high,UPS tracking shows shipping delay.
+representative-2003910,2003910,representative,2003910,en,delivery_delay,,follow_up,context_helpful,medium,high,'Taken care of' should have meant Friday delivery.
+representative-300514,300514,representative,300517,en,delivery_delay,,complaint,context_helpful,medium,high,Prime next-day not honored.
+representative-322945,322945,representative,322946,en,delivery_delay,,complaint,context_helpful,medium,medium,Prime preference/2-day promise not met.
+representative-2954293,2954293,representative,2954293,en,delivery_delay,,complaint,context_helpful,medium,medium,Prime not reliable/fast; delivery promise missed.
+representative-2664071,2664071,representative,19162,en,delivery_delay,service_complaint_escalation,complaint,context_helpful,hard,low,Mixed ad complaint + prime not fast; ambiguous.
+representative-1210214,1210214,representative,1202802,en,delivery_delay,,complaint,self_contained,medium,medium,Package returned to courier; driver refused delivery.
+representative-86209,86209,representative,86208,en,delivery_delay,,complaint,self_contained,easy,high,"Prime gift promised today, not arrived."
+representative-2192580,2192580,representative,2192583,en,delivery_delay,,complaint,self_contained,easy,high,No tracking updates; supposed to arrive yesterday.
+representative-1406593,1406593,representative,1406585,en,delivery_delay,,complaint,context_helpful,medium,low,"'First weekend of prime, not impressed'; delay presumed."
+representative-1570766,1570766,representative,1570761,en,delivery_delay,,follow_up,context_helpful,medium,medium,Any update on delivery.
+representative-1389974,1389974,representative,1389978,en,delivery_delay,,follow_up,context_helpful,medium,medium,Asks to arrange/provide parcel.
+representative-1399860,1399860,representative,735698,en,delivery_delay,,acknowledgement,context_helpful,medium,medium,Thanks + kindly arrange my parcel.
+representative-1335118,1335118,representative,1335114,en,delivery_delay,,follow_up,context_helpful,medium,high,"Order placed 24th, not shipped; needed for trip."
+representative-999138,999138,representative,999133,en,delivery_delay,service_complaint_escalation,complaint,context_helpful,medium,medium,Prime let down; will cancel subscription; delivery delay.
+representative-2852150,2852150,representative,2852152,en,delivery_delay,,follow_up,context_helpful,medium,medium,Waiting at door for expected delivery.
+representative-2890574,2890574,representative,2890575,en,delivery_delay,,complaint,context_helpful,medium,medium,Prime 2-day often not met; service degraded.
+representative-1420099,1420099,representative,1420100,en,delivery_delay,refund_request,complaint,context_helpful,medium,medium,Three items' delivery dates pushed; wants refund.
+representative-550560,550560,representative,550563,en,delivery_delay,,complaint,self_contained,easy,high,Prime 1-2 day shipping arrives 3-5+ days.
+representative-673242,673242,representative,673240,en,delivery_delay,,follow_up,context_helpful,medium,medium,Order late; told it'd be here tomorrow.
+representative-1193931,1193931,representative,1193932,en,delivery_delay,,follow_up,context_helpful,medium,medium,Carrier named; unclear if tomorrow or delayed.
+representative-2731105,2731105,representative,2731108,en,delivery_delay,,complaint,self_contained,easy,high,"Paid same-day, delivered tomorrow."
+representative-1587374,1587374,representative,1587376,en,delivery_delay,,complaint,self_contained,easy,high,"Scheduled 3 Nov, still not received."
+representative-2296826,2296826,representative,2296823,en,delivery_delay,,follow_up,context_helpful,medium,high,Royal Mail didn't deliver; order delayed.
+representative-1229688,1229688,representative,1159333,en,device_app_issue,,complaint,context_helpful,medium,medium,Kindle app text broken after reinstall.
+representative-26958,26958,representative,26959,en,device_app_issue,,support_request,self_contained,easy,high,Alexa app down/timing out in London.
+representative-2378990,2378990,representative,2378988,en,device_app_issue,charge_issue,complaint,context_helpful,hard,medium,Alexa reports a price different from listing.
+representative-1384330,1384330,representative,1384329,en,device_app_issue,charge_issue,complaint,context_helpful,hard,medium,Payment issue inside Amazon app.
+representative-2523357,2523357,representative,2523355,en,device_app_issue,,follow_up,context_helpful,medium,high,Echo Dot alarm suddenly quiet.
+representative-1766849,1766849,representative,1766850,en,device_app_issue,,support_request,context_helpful,medium,medium,Fire Stick/Android box streaming issue.
+representative-2847379,2847379,representative,2847377,en,device_app_issue,,complaint,context_helpful,medium,high,Alexa language setting unavailable in Canada.
+representative-2569705,2569705,representative,2569706,en,device_app_issue,,complaint,self_contained,easy,high,Timing out across the board; outage.
+representative-350494,350494,representative,350493,en,device_app_issue,,complaint,context_helpful,medium,medium,Echo sold without Alexa app for India.
+representative-1464161,1464161,representative,1464161,en,device_app_issue,,complaint,context_helpful,medium,medium,Prime Video episode still unavailable.
+representative-1943693,1943693,representative,1943691,en,none,,acknowledgement,context_helpful,easy,high,'Yes I've shared the concern' — ack/confirmation.
+representative-2611658,2611658,representative,2611657,en,none,,acknowledgement,context_helpful,easy,high,"'Got the package, thanks'."
+representative-309233,309233,representative,309234,en,none,,acknowledgement,self_contained,easy,high,Thanks for cat bed; praise.
+representative-2111184,2111184,representative,2111182,en,none,,acknowledgement,self_contained,easy,high,Praise for quick response.
+representative-174486,174486,representative,174489,en,none,,acknowledgement,context_helpful,easy,high,'Made me very happy today'.
+representative-2580464,2580464,representative,2580465,en,none,,acknowledgement,context_helpful,medium,medium,Good rep in chat now; praise—resolved.
+representative-2855145,2855145,representative,2855143,en,none,,acknowledgement,context_helpful,medium,medium,Resolution thanks (was sales tax).
+representative-2384553,2384553,representative,2384554,en,none,,acknowledgement,self_contained,easy,high,Books on the way; excited ack.
+representative-1198549,1198549,representative,1198546,en,none,,acknowledgement,context_helpful,easy,high,Respect for postal service; ack.
+representative-1204940,1204940,representative,1204936,en,none,,acknowledgement,context_helpful,easy,high,'Yes absolutely right' — ack.
+representative-487699,487699,representative,487699,en,none,,acknowledgement,context_helpful,easy,high,Resolved mistake; sorry for inconvenience.
+representative-1181640,1181640,representative,1181655,en,none,,acknowledgement,context_helpful,easy,high,"'Will do, thank you' — ack."
+representative-628261,628261,representative,628264,en,none,,clarification,context_required,medium,medium,'Guessing marketplace seller?' — answering brand question.
+representative-2931934,2931934,representative,1890579,en,none,,unknown,context_helpful,hard,low,Wants an iphone as a gift without purchase; unclear.
+representative-2769011,2769011,representative,2769010,en,none,,clarification,context_helpful,medium,medium,"No need to fill form, sharing email via DM."
+representative-1707062,1707062,representative,1707062,en,none,,acknowledgement,context_helpful,easy,high,"Mystery solved, thanks."
+representative-957126,957126,representative,2679251,en,none,,clarification,context_helpful,medium,medium,Responds re device region; clarification.
+representative-2389800,2389800,representative,2321027,en,none,,unknown,self_contained,hard,low,"Generic product marketing text, no intent."
+representative-2266765,2266765,representative,2266766,en,none,,support_request,self_contained,medium,high,Asks about upcoming sale / help; no domain intent.
+representative-1721707,1721707,representative,1721706,en,order_status_query,delivery_delay,complaint,self_contained,medium,medium,"Paid next-day, not delivered; status/delay overlap."
+representative-646730,646730,representative,646729,en,order_status_query,delivery_delay,follow_up,context_helpful,medium,medium,When will it dispatch; overdue dispatch.
+representative-2363235,2363235,representative,2363236,en,order_status_query,,support_request,context_helpful,medium,high,Tracking discrepancy amazon vs USPS.
+representative-2960026,2960026,representative,2960027,en,order_status_query,,follow_up,self_contained,medium,high,TV went to UPS then back; where is it.
+representative-1105754,1105754,representative,1105750,en,order_status_query,,complaint,self_contained,medium,medium,Order-update timestamps wrong (GMT).
+representative-1464285,1464285,representative,1464282,en,order_status_query,,support_request,self_contained,easy,high,Will my order be shipped?
+representative-993935,993935,representative,984170,en,order_status_query,service_complaint_escalation,follow_up,context_helpful,medium,medium,Searching for product + delivery response.
+representative-832924,832924,representative,832924,en,order_status_query,delivery_delay,follow_up,context_helpful,medium,medium,Revised delivery date vs in-stock discrepancy.
+representative-2288190,2288190,representative,2288189,en,order_status_query,,follow_up,context_helpful,medium,medium,Same-day order not yet shipped; wants to know when.
+representative-2374486,2374486,representative,2374485,en,order_status_query,delivered_but_not_received,complaint,self_contained,hard,medium,'Delivered by 8pm' but 'not yet shipped' contradiction.
+representative-1397273,1397273,representative,1397265,en,order_status_query,,support_request,self_contained,easy,high,When will Echo Spot launch in India.
+representative-1755281,1755281,representative,1755282,en,other_unclear,,support_request,context_helpful,hard,low,Reports a suspicious phishing-style email; no intent fits cleanly.
+representative-467536,467536,representative,467525,en,product_return_and_replacement,charge_issue,complaint,context_helpful,hard,medium,App hid T&C; lost cashback; item not received.
+representative-1147828,1147828,representative,1147821,en,product_return_and_replacement,refund_request,follow_up,context_helpful,hard,medium,No-cost EMI return/refund friction.
+representative-2454046,2454046,representative,2454044,en,product_return_and_replacement,,acknowledgement,context_helpful,easy,high,Started a return and reordered a wrong item.
+representative-679025,679025,representative,679028,en,product_return_and_replacement,,support_request,context_helpful,medium,high,Wrong colour Kindle; asks to exchange.
+representative-2460750,2460750,representative,2460751,en,product_return_and_replacement,,complaint,self_contained,easy,high,"Ordered G5s, got G5plus; wrong item."
+representative-2450570,2450570,representative,2450571,en,product_return_and_replacement,,complaint,self_contained,easy,high,Sent wrong cases.
+representative-2608094,2608094,representative,2608093,en,product_return_and_replacement,,support_request,context_helpful,medium,medium,Item missing parts; contact to get rest.
+representative-982267,982267,representative,980697,en,product_return_and_replacement,,complaint,self_contained,easy,high,"Ordered altitude mask, received a tutu."
+representative-2291505,2291505,representative,2291509,en,product_return_and_replacement,,support_request,context_helpful,hard,medium,Defective display; wants replacement.
+representative-1018235,1018235,representative,1018233,en,product_return_and_replacement,service_complaint_escalation,complaint,context_helpful,hard,medium,Wrong product; forced to self-ship return.
+representative-1229460,1229460,representative,1229459,en,product_return_and_replacement,,complaint,context_helpful,hard,medium,DVD fraud (wrong version).
+representative-2484077,2484077,representative,2484076,en,product_return_and_replacement,,complaint,self_contained,easy,high,Faulty cup received.
+representative-345473,345473,representative,345474,en,product_return_and_replacement,device_app_issue,complaint,context_helpful,hard,medium,Device keeps malfunctioning; replacements faulty.
+representative-676899,676899,representative,676900,en,product_return_and_replacement,,complaint,context_helpful,hard,medium,Unfulfilled Blu-ray order; product/order complaint.
+representative-18706,18706,representative,18697,en,refund_request,product_return_and_replacement,support_request,context_helpful,medium,high,Returned wrong product; demands refund.
+representative-1436650,1436650,representative,1436651,en,refund_request,,complaint,self_contained,easy,high,"Promised refund, now denied."
+representative-2712534,2712534,representative,2712535,en,refund_request,delivered_but_not_received,support_request,context_helpful,medium,medium,Prime Now missing items; cannot find refund path.
+representative-1420491,1420491,representative,1420490,en,refund_request,cancellation,follow_up,context_helpful,medium,high,Cancelled product; refund to CC.
+representative-915961,915961,representative,915962,en,refund_request,service_complaint_escalation,follow_up,context_helpful,medium,medium,Awaiting refund; number blocked.
+representative-2515914,2515914,representative,2515914,en,refund_request,service_complaint_escalation,follow_up,context_helpful,medium,medium,Argues for Prime refund on three orders.
+representative-2217342,2217342,representative,2217340,en,refund_request,,complaint,context_helpful,hard,medium,"Claim rejected, seller sketchy."
+representative-1893565,1893565,representative,1893564,en,service_complaint_escalation,,follow_up,context_helpful,medium,medium,Never received promised call back.
+representative-1763226,1763226,representative,1763216,en,service_complaint_escalation,,complaint,context_helpful,medium,high,"8 hours on live chat, got nowhere."
+representative-2573750,2573750,representative,2573743,en,service_complaint_escalation,,complaint,context_helpful,medium,medium,"Called support number 5 times, nothing."
+representative-1541879,1541879,representative,1541874,en,service_complaint_escalation,,complaint,context_helpful,medium,high,Support says can't deal with me; email not recognised.
+representative-1415560,1415560,representative,1415558,en,service_complaint_escalation,,complaint,context_helpful,medium,medium,Rep call was useless; still disappointed.
+representative-334873,334873,representative,334871,en,service_complaint_escalation,,complaint,context_helpful,medium,medium,"6 years, first issue; 10 mins no reply."
+representative-272875,272875,representative,272872,en,service_complaint_escalation,,complaint,context_helpful,medium,medium,No support link given; pinging here.
+representative-1537572,1537572,representative,1537573,en,service_complaint_escalation,,complaint,context_helpful,medium,medium,Hard to report a shipping problem.
+representative-411902,411902,representative,411903,en,service_complaint_escalation,,complaint,self_contained,easy,high,Never use Amazon for business; bad CS.
+representative-1588773,1588773,representative,1588769,en,service_complaint_escalation,,complaint,self_contained,easy,high,Service getting worse; may dump Amazon.
+representative-2353843,2353843,representative,2353849,en,service_complaint_escalation,,complaint,context_helpful,medium,high,"Called 5 times, no resolution; wants phone call."
+representative-1136222,1136222,representative,1136222,en,service_complaint_escalation,delivery_delay,complaint,context_helpful,hard,medium,"50 calls, no response; fake commitment."
+representative-1384189,1384189,representative,1384190,en,service_complaint_escalation,,complaint,self_contained,easy,high,"Bad experience, no customer service."
+representative-1746071,1746071,representative,1746068,en,service_complaint_escalation,,complaint,context_helpful,medium,medium,Impossible to reach customer care by phone.
+representative-390810,390810,representative,390805,en,service_complaint_escalation,charge_issue,complaint,context_helpful,hard,low,"Payment done, nasty excuses; angry, ambiguous."
+representative-2151408,2151408,representative,2151405,en,service_complaint_escalation,,complaint,context_helpful,medium,medium,Denied basic GST input credit; complaining.
+representative-2216600,2216600,representative,2216601,en,service_complaint_escalation,charge_issue,complaint,context_helpful,hard,medium,Cashback offers not honored; complaint.
+representative-1250967,1250967,representative,1250968,en,service_complaint_escalation,delivered_but_not_received+charge_issue,complaint,context_helpful,hard,medium,Lost packages + wrong charges; 'point of prime'.
+representative-2447260,2447260,representative,2447259,en,service_complaint_escalation,delivery_delay,complaint,context_helpful,medium,medium,USPS deliveries never on time; complaint.
+representative-1179639,1179639,representative,1179651,en,service_complaint_escalation,delivered_but_not_received,complaint,context_helpful,hard,medium,Agents contradict each other; locker item.
+representative-2245407,2245407,representative,2004000,en,service_complaint_escalation,,complaint,context_helpful,hard,medium,Calls dropped; wants call log checked.
+representative-886169,886169,representative,886165,en,service_complaint_escalation,,complaint,context_helpful,hard,medium,"Terrible short email, no instructions/voice mails."

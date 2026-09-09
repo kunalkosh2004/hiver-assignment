@@ -1,0 +1,148 @@
+# AmazonHelp support-intent labeling guidelines (golden set v1)
+# Freezes the 12-intent taxonomy from config/amazon_intents.yaml and adds the
+# operational rules used to hand-label Phase-3 golden examples.
+# Version tag: config/amazon_intent_version.txt == "amazon-intents-v1"
+
+brand: AmazonHelp
+version: amazon-intents-v1
+source_taxonomy: config/amazon_intents.yaml
+
+# ---------------------------------------------------------------------------
+# Label `primary_intent`
+#   - exactly one of the 12 intent ids, or one of two special values:
+#       none          : no domain intent (pure conversational layer: thanks,
+#                       acknowledgement, small-talk, deictic continuation)
+#       other_unclear : genuine domain concern that cannot safely be mapped to
+#                       any of the 12 intents (use sparingly, annotate WHY)
+# `secondary_intents` : additional intents that are ACTUALLY present in the
+#   message+context (co-occurring labels), NOT merely implied or possible.
+
+column_definitions:
+  message_type:
+    support_request: "customer states a problem / asks for action"
+    follow_up:       "chasing status / pushing on an earlier request"
+    clarification:   "answering a brand question; providing details"
+    acknowledgement: "thanks / done / noted (no new request)"
+    complaint:       "venting / dissatisfaction, may or may not demand action"
+    unknown:         "cannot determine type"
+  context_dependency:
+    self_contained:   "message alone is enough to label"
+    context_helpful:  "message is clearer WITH context, but labelable alone"
+    context_required: "message is not labelable without conversation context"
+  difficulty:
+    easy:   "clear single intent"
+    medium: "needs context or has a secondary intent"
+    hard:   "ambiguous / multilingual / angry / very short"
+  label_confidence:
+    high:   "confident from message+context"
+    medium: "reasonable but with a boundary call"
+    low:    "uncertain; note explains residual ambiguity"
+# When confidence == low, annotation_note MUST explain the ambiguity.
+
+# ---------------------------------------------------------------------------
+# What is NOT an intent
+# `prime_membership` is deliberately EXCLUDED as a top-level intent (decision log):
+#   - "prime" overwhelmingly refers to (a) promised shipping speed -> delivery_delay,
+#     (b) Prime Video / Prime Music app -> device_app, or
+#   - genuine membership-management messages (check/cancel/renew/charge) always
+#     co-occur with an existing intent (charge_issue, cancellation, account_access,
+#     account_info_update, device_app).
+#   Adding prime_membership would create a weak, overlapping boundary. Keep 12.
+
+# ---------------------------------------------------------------------------
+# Ambiguous-pair boundary rules (use when a message could map to >1 label)
+# ---------------------------------------------------------------------------
+ambiguous_pairs:
+  delivery_delay_vs_order_status_query:
+    rule: "delivery_delay if an expected delivery date has PASSED (late, not arrived).
+           order_status_query if the customer asks WHERE/WHEN (future/pre-shipment) and
+           no promised date has been missed."
+  delivered_but_not_received_vs_delivered_wrong_location:
+    rule: "delivered_but_not_received: 'delivered' but customer got nothing (lost/van).
+           delivered_wrong_location: delivered to a specific wrong place (neighbor,
+           address, dumped in bin/street) or stolen."
+  refund_request_vs_cancellation:
+    rule: "cancellation: stop/un-do an order (cancel before/after ship, 'I did not
+           order this'). refund_request: money already taken must come back; often
+           the follow-up after a cancellation." 
+  refund_request_vs_product_return_and_replacement:
+    rule: "return/replacement: physical item goes back / exchanged / faulty-damaged.
+           refund_request: the money transaction is the focus. A message may carry
+           both (return the item AND refund me) -> secondary list."
+  charge_issue_vs_account_access:
+    rule: "charge_issue: wrong/unauthorized/double charge or price discrepancy.
+           account_access: cannot log in/reset password/suspended/hacked (even if
+           the customer suspects unauthorized activity)." 
+  return_replacement_vs_delivery:
+    rule: "faulty/damaged-wrong-item received -> return/replacement (product focus).
+           item missing entirely / not delivered -> delivery intent."
+  device_app_issue_vs_delivery:
+    rule: "device_app_issue: hardware/app/software problem (Echo/Alexa/Kindle/Fire).
+           delivery_delay: a device is LATE — delivery problem, not device problem.
+           'where is my Echo?' = delivery_delay/order_status, NOT device_app."
+  service_complaint_escalation_as_primary:
+    rule: "Primary ONLY when the complaint is about support/service itself (unhelpful
+           reps, ignored, 'your service sucks') with no concrete resolvable order/
+           account/charge issue. If a concrete issue (late order, wrong charge) is
+           present, that intent is primary and the venting is the tone, not a label."
+  account_access_vs_account_info_update:
+    rule: "account_access: the problem is REACHING the account (login/password/suspend).
+           account_info_update: account is reachable, customer wants to CHANGE details
+           (email/address/phone/name)."
+  none_vs_other_unclear:
+    rule: "none = conversational only (thanks/done/ack). other_unclear = a real concern
+           exists but fits no intent. Prefer none for pure ack/thanks; other_unclear
+           must come with a note."
+
+# ---------------------------------------------------------------------------
+# per-intent criteria (description / positive / negative / boundary)
+# ---------------------------------------------------------------------------
+intents:
+  delivery_delay:
+    description: Expected delivery is late or has not arrived.
+    positive: "customer references a missed/overdue delivery date for an expected order."
+    negative: "customer only asks when/where a not-yet-due order is (-> order_status_query)."
+    boundary: "device late (Echo)? still delivery_delay, not device_app_issue."
+  delivered_but_not_received:
+    description: Tracking shows delivered but customer got nothing.
+    positive: "'shows delivered' + 'didn't receive'; lost/van/concierge discrepancy."
+    negative: "delivered but to another address/neighbor (-> delivered_wrong_location)."
+    boundary: "agent claims delivered, customer disputes -> this intent."
+  delivered_wrong_location:
+    description: Delivered to wrong place / stolen / dumped / missed.
+    positive: "neighbor/house next door/doorstep dump/bin/street/porch theft; driver left it exposed."
+    negative: "simply not received with no wrong-place info (-> delivered_but_not_received)."
+  order_status_query:
+    description: Where is my order / when will it ship (pre-delivery).
+    positive: "asks current status/shipment/progress; expects update on a not-yet-late order."
+    negative: "past-due -> delivery_delay."
+  refund_request:
+    description: Initiate or chase a refund.
+    positive: "asks for money back, chases refund timing/blocked refund, 'refund me'."
+    negative: "return physical item w/o money focus (-> return/replacement)."
+  cancellation:
+    description: Cancel an order / I did not order this.
+    positive: "wants to cancel/un-cancel; 'I didn't order this'; stop a membership renewal."
+  charge_issue:
+    description: Wrong, double or unauthorized charge; price discrepancy.
+    positive: "overcharged, double-charged, unauthorized card charge, cart/checkout price
+               changed, Amazon Pay balance not credited."
+  product_return_and_replacement:
+    description: Return / exchange / faulty-damaged item.
+    positive: "return, exchange, wrong/faulty/damaged product, missing parts of a product."
+  device_app_issue:
+    description: Echo/Alexa/Kindle/Fire/app technical problem.
+    positive: "app crash, Alexa malfunction, Kindle text broken, hardware fault, app outage."
+    negative: "device is late in the mail -> delivery intent."
+  account_access:
+    description: Cannot log in / password / hacked / suspended.
+    positive: "password reset, login blocked, account locked/suspended/hacked, can't reach account."
+  account_info_update:
+    description: Change email / address / phone / name.
+    positive: "wants to update profile/contact/Wishlist/settings on a reachable account."
+    negative: "can't GET IN -> account_access."
+  service_complaint_escalation:
+    description: Dissatisfaction with support; escalation or threat to leave.
+    positive: "complaint is about the support experience itself; escalation demand;
+               'your reps are useless'; threat to switch."
+    negative: "venting with a concrete order/charge issue -> that intent primary."
