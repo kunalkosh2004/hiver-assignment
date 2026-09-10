@@ -1,4 +1,4 @@
-# Hiver SDE-Intern — Full Progress Report (Phases 1–5)
+# Hiver SDE-Intern — Full Progress Report (Phases 1–9)
 
 **Generated:** 2026-09-09 · **Repo:** `Hiver-Assignment` · **Branch:** `main`
 **Call sign for this workstream:** `QFTHX4`
@@ -21,8 +21,9 @@ current objective).
 | **Phase 4 — Baseline classifiers** | ✅ Done — majority + TF-IDF LogReg/SVM, msg-only vs msg+context |
 | **LLM provider layer** | ✅ Done — resilient OpenAI+Gemini auto-fallback (optional) |
 | **Phase 5 — Retrieval (RAG memory)** | ✅ Done — TF-IDF/BM25/dense/hybrid × {msg, ctx} over a 201,741-interaction corpus; human-labelled benchmark + scaling + error analysis |
-| **Final agent (RAG, generation, escalation)** | ⏳ Not started (next) |
-| **Commits** | 11 (`8f0d25c` → `0659cf6`) |
+| **Phases 6–8 — Final agent** | ✅ Done — weak-201k intent model + dense retrieval + dev-calibrated escalation + grounded deterministic drafting; final harness on the golden 200 (LLM judge shipped off when no key) |
+| **Phase 9 — Failure analysis** | ✅ Done — per-golden-row taxonomy (162/200 rows ≥1 failure; intent misclassification dominates) |
+| **Commits** | 15 (`8f0d25c` → docs/agent) |
 | **Reproducibility** | `seed 42`, deterministic, no API key; `pip/requirements` offline |
 
 ---
@@ -207,6 +208,88 @@ python scripts/build_error_analysis.py
 python -m unittest tests.test_retrieval_lexical tests.test_retrieval_dense
 ```
 
+## 6. Phases 6–9 — Retrieval-Augmented Agent (final)
+
+### 6A — Agent components (intent, retrieval, drafting — `src/agent/`)
+
+- `intent.py` — TF-IDF + LogisticRegression intent models: the agent's runtime
+  **weak-201k** (trained on the Phase-5E proxy labels, 12 classes) and a
+  **dev-140** variant (14 human classes incl. `none`) for the learning curve.
+  Per-call predictions include best probability + top-two *margin*.
+- `draft.py` — deterministic grounded drafting: the drafter transforms the best
+  retrieved brand reply, stripping handles, URLs, phone numbers, raw order ids
+  and `^RB` scrub markers; it never invents order ids/amounts/links.
+- `escalation.py` — fixed, documented policy: escalate on catch-all intents
+  (`none`/`other_unclear`), missing usable reply in top-3, or combined
+  confidence (0.6·intent_prob + 0.4·mean-sim) below a floor.
+- `agent.py` — orchestrates intent → dense retrieval (temporal filter) →
+  escalation → draft, with golden leakage assertion (no golden conversation is
+  ever retrievable).
+
+### 6B — Threshold calibration (dev-only)
+
+`scripts/calibrate_escalation.py` probes the pipeline over the **dev** set
+(golden untouched) and picks `comb_low` so ~25% escalate on dev. The weak-model
+probabilities saturate near 1.0 on dev, so a *single combined-confidence floor*
+(not per-feature gates) is used; the value is frozen in
+`data/retrieval/models/escalation_thresholds.json`. Result: `comb_low = 0.8775`,
+27.5% escalate on dev.
+
+### 6C — Final evaluation on the golden 200 (`scripts/evaluate_agent.py`)
+
+Intent classifier learning curve (golden accuracy / macro-F1):
+
+| model | train rows | classes | acc | macro-F1 |
+| ----: | ---------: | ------: | --: | -------: |
+| majority | 0 | 14 | 0.160 | 0.020 |
+| dev-140 (human) | 140 | 14 | 0.315 | 0.078 |
+| weak-201k (proxy) | 201,741 | 12 | 0.245 | 0.050 |
+
+Honest finding: **more noisy weak data did not beat 140 clean human labels**
+(also on label-space-shared subsets: weak 0.29/0.06 vs dev-140 0.32/0.08).
+The weak labels are 86% `delivery_delay` (proxy bias) and are auto-correlated
+with the same small dev family; the learning curve plateaus where label noise
+meets class imbalance. Retrieval memory is not the bottleneck — intent is.
+
+Escalation (Phase 7): **61/200 = 30.5%** on golden with the frozen floor;
+sensitivity 1% (0.45) → 7% (0.75) → 31% (0.8775) → 95% (0.95). Spread evenly
+across true intents; no escalation ground truth exists, so this is reported as a
+distribution + ECE-style calibration diagnostic on dev (ECE 0.12).
+
+Drafting (Phase 6): auto-handled replies reuse retrieved-resolution words in
+**≈96%** of rows (token-overlap ≥2, no fabrication); avg 263 chars, 0 empty
+drafts. Optional LLM judge disabled (no provider key) and recorded as such.
+
+### 6D — Failure analysis (Phase 9, `scripts/analyze_agent_errors.py`)
+
+Per-golden-row taxonomy over the agent dump:
+
+| category | rows |
+| ---- | --: |
+| `intent_off_target` | 143 |
+| `escalation_conservative` | 61 |
+| `intent_close_secondary` | 8 |
+| `drafting_ungrounded` | 6 |
+| `retrieval_lang_mismatch` | 3 |
+| **failure rows (≥1 code)** | **162 / 200** |
+| success rows (0 codes) | 38 |
+
+Top combination `intent_off_target` alone (87 rows) outweighs all others. The
+biggest lever for the final agent is intent quality — matching the Phases-4/6B
+result — while retrieval + grounded drafting already work (dense R@5 0.576 §5C,
+draft reuse 96%).
+
+### Phase-6–9 reproduction (no API key)
+
+```bash
+python scripts/train_agent_intent.py        # weak-201k + dev-140 -> data/retrieval/models/
+python scripts/calibrate_escalation.py      # dev-only floor -> escalation_thresholds.json
+python scripts/evaluate_agent.py --dump-rows reports/agent_rows.json
+python scripts/analyze_agent_errors.py reports/agent_rows.json
+python scripts/build_notebook_p4.py && jupyter nbconvert --execute notebooks/04_retrieval_augmented_agent.ipynb
+python -m unittest tests.test_agent          # drafting / escalation / pipeline unit tests
+```
+
 ## Reproduction (no API key required)
 
 ```bash
@@ -220,6 +303,10 @@ python scripts/check_llm_providers.py         # optional no-cost LLM health chec
 ## Commit log
 
 ```
+<hash>  docs: document Phases 6–9 agent, eval and failure analysis       (6–9 docs)
+<hash>  feat: add agent failure analysis                                  (9)
+<hash>  feat: add final agent evaluation harness + escalation calibration (7–8)
+<hash>  feat: add retrieval-augmented agent (intent, drafting, escalation) (6)
 0659cf6 feat: add retrieval scaling, weak-intent proxy, and error analysis (5E)
 d102191 fix: correct bm25 scoring after scipy 1.18 getcol bug
 f245cc2 feat: add retrieval evaluation benchmark                         (5D)
@@ -236,9 +323,8 @@ de0206f feat: add resilient OpenAI+Gemini LLM provider with auto-fallback
 8f0d25c feat: add dataset forensics and brand analysis                   (P1)
 ```
 
-## Next steps (Phase 6+, not started)
+## Next steps (future work, out of scope)
 
-Retrieval-augmented **drafting** (grounded in the retrieved resolutions) →
-confidence-aware **escalation** policy → final evaluation harness + LLM judge
-on the golden benchmark → failure analysis & report (Phase 9, feeding on
-`retrieval_error_analysis.json`).
+LLM-labelled weak intents (needs a provider key; targets the dominant intent
+ceiling), escalation ground-truth labels, LLM-judged drafting-quality sweeps,
+hybrid-alpha tuning on a dev pool.

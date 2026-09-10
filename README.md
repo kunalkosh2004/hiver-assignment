@@ -25,14 +25,17 @@ the discovered intent taxonomy.
 | Phase 2 — AmazonHelp intent discovery | ✅ Done | `notebooks/02_amazon_intent_discovery.ipynb` + `config/amazon_intents.yaml` |
 | Phase 3 — Golden evaluation set | ✅ Done | `data/golden/` (200 examples, §7) |
 | Phase 4A — Baseline split infra | ✅ Done | `data/golden/amazon_dev_set.jsonl` (§8) |
-| LLM provider layer | ✅ Done | `src/llm/` (optional, resilient fallback, §10) |
+| LLM provider layer | ✅ Done | `src/llm/` (optional, resilient fallback, §11) |
 | Phase 4B/4C — Majority + TF-IDF baselines | ✅ Done | `scripts/run_baselines.py`, `reports/baseline_results.*` (§8) |
 | Phase 4D — Evaluation & error analysis | ✅ Done | `scripts/evaluate_baselines.py`, `reports/analysis_4D.md` (§8) |
 | Phase 5A — Historical support corpus | ✅ Done | ~203k interactions, `src/retrieval/corpus.py` (§9) |
 | Phase 5B/5C — Lexical + dense retrieval | ✅ Done | `src/retrieval/{tfidf,bm25,dense,hybrid}.py`, cached embeddings (§9) |
 | Phase 5D — Retrieval evaluation | ✅ Done | human-labelled pool (30q/150 pairs), `reports/retrieval_results.*` (§9) |
 | Phase 5E — Data scaling + error analysis | ✅ Done | `reports/retrieval_scaling.*`, `retrieval_error_analysis.*` (§9) |
-| Final agent (retrieval, generation, escalation) | ⏳ Not started | next |
+| Phase 6 — Response generation (grounded) | ✅ Done | `src/agent/` draft+intent, deterministic, no fabrication (§10) |
+| Phase 7 — Escalation policy | ✅ Done | `src/agent/escalation.py`, dev-calibrated floor (§10) |
+| Phase 8 — Final harness + LLM judge | ✅ Done | `scripts/evaluate_agent.py`, `reports/agent_results.*` (§10) |
+| Phase 9 — Failure analysis & report | ✅ Done | `reports/agent_error_analysis.*`, `notebooks/04_…` (§10) |
 
 ---
 
@@ -412,8 +415,9 @@ all-MiniLM-L6-v2, 384d, cached embeddings), and hybrid α·bm25 + (1−α)·dens
 
 **Yes — and it is still climbing.** Dense R@5 grows ~3.4× from 50k→full with no
 plateau (0.19→0.32→0.58), and index size is only 308 MB. This is the honest
-motivation for LLM-weak-label bootstrapping: human labels give the classifier
-(Phases 9–10), but retrieval scales automatically off the raw historical corpus.
+motivation for LLM-weak-label bootstrapping: clean human labels capped the intent
+classifier at a low ceiling (macro-F1 ~0.08, §8/§10), while retrieval scales
+automatically off the raw historical corpus.
 
 ### Error analysis — 131 categorized failures
 
@@ -440,7 +444,63 @@ python scripts/evaluate_retrieval_scaling.py      # 10k/50k/100k/full curve -> r
 python scripts/build_error_analysis.py            # >=30 categorized failures -> reports/
 ```
 
-## 10. LLM provider layer (optional, resilient)
+## 10. Phases 6–9 — the retrieval-augmented agent (final)
+
+`src/agent/` closes the agent loop end-to-end; every number below is computed
+live in `notebooks/04_retrieval_augmented_agent.ipynb` from committed reports.
+
+**Pipeline (per customer message, deterministic, no API key):** weak-201k intent
+classifier → dense message-only retrieval (temporal filter) → confidence-based
+escalation → grounded templated drafting. The drafter transforms the best
+retrieved brand reply verbatim-limited (handles/URLs/order numbers/phones/
+`^RB` scrub-tags stripped, nothing fabricated).
+
+**Intent learning curve on the golden benchmark (200 rows):**
+
+| model | train rows | accuracy | macro-F1 | note |
+| ----- | ---------- | -------- | -------- | ---- |
+| majority | 0 | 0.160 | 0.020 | `delivery_delay` mode |
+| dev-140 (human labels) | 140 | 0.315 | 0.078 | 14 classes incl. `none` |
+| weak-201k (proxy labels) | 201,741 | 0.245 | 0.050 | 12 classes, no `none` |
+
+Honest headline: **more noisy weak data did *not* beat 140 clean human labels**
+(weak macro-F1 0.05 vs 0.08; on shared-intent subsets 0.29 acc / 0.06 F1 vs
+0.32 / 0.08). The weak-201k labels are 86% `delivery_delay` (proxy bias) and
+auto-correlated with the same small dev family — the scaling curve plateaus where
+label noise meets class imbalance. This is the real argument for clean/LLM
+labels, not a coverage gap in retrieval.
+
+**Escalation (Phase 7, dev-calibrated floor):** fires on catch-all intents,
+missing usable evidence in top-3, or combined confidence
+(0.6·intent_prob + 0.4·mean-sim) below a floor calibrated on the **dev** set
+only (golden untouched, frozen after). On golden: **61/200 escalated (30.5%)**,
+with sensitivity 1%→7%→31%→95% as the floor moves 0.45→0.75→0.8775→0.95.
+
+**Drafting (Phase 6):** auto-handled replies reuse retrieved-resolution words in
+**~96%** of rows (token-overlap, ≥2 tokens); average draft 263 chars, zero empty;
+no URLs, phone numbers, raw order IDs or fabricated data. Optional LLM judge was
+**disabled** (no provider key) and recorded as such — deterministic rubric metrics
+above are the shipped proxy.
+
+**Failure analysis (Phase 9, per-golden-row taxonomy, ≥30):** 162/200 rows carry
+at least one failure code — intent misclassification dominates
+(`intent_off_target` 143 + `intent_close_secondary` 8), then
+`escalation_conservative` 61 (escalated rows that individually looked
+answerable), `drafting_ungrounded` 6, `retrieval_lang_mismatch` 3. 38/200 rows
+are clean runs. The single largest lever for the agent is a better *intent
+model*, not better retrieval: recall is already strong (dense R@5 0.576, §9).
+
+### Reproduce Phases 6–9 (deterministic, no API key)
+
+```bash
+python scripts/train_agent_intent.py        # weak-201k + dev-140 models
+python scripts/calibrate_escalation.py      # dev-only confidence floor (comb_low)
+python scripts/evaluate_agent.py --dump-rows reports/agent_rows.json
+python scripts/analyze_agent_errors.py reports/agent_rows.json
+# notebook: scripts/build_notebook_p4.py && jupyter nbconvert --execute …
+```
+
+## 11. LLM provider layer (optional, resilient)
 
 `src/llm/` provides an **OpenAI + Gemini abstraction with automatic fallback**
 (primary = Gemini, fallback = OpenAI per spec), bounded exponential backoff with
@@ -464,6 +524,7 @@ config/amazon_intent_guidelines.yaml  frozen human-label rules (v1)
 notebooks/01_dataset_forensics.ipynb   the Phase-1 deliverable
 notebooks/02_amazon_intent_discovery.ipynb   the Phase-2 deliverable (intent taxonomy)
 notebooks/03_historical_support_corpus.ipynb the Phase-5 retrieval baseline (regenerate: scripts/build_notebook_p3.py)
+notebooks/04_retrieval_augmented_agent.ipynb Phases 6–9 agent eval (regenerate: scripts/build_notebook_p4.py)
 scripts/
   download_data.py    downloads the Kaggle dataset into data/
   build_notebook.py   regenerates the Phase-1 notebook from cells (deterministic)
@@ -478,6 +539,11 @@ scripts/
   evaluate_retrieval_scaling.py  10k/50k/100k/full nested subsets -> reports/
   build_weak_intents.py  LogReg intent proxy over 201,741 cases (analysis only)
   build_error_analysis.py  -> reports/retrieval_error_analysis.* (131 categorized failures)
+  train_agent_intent.py  Phase-6 intent models (weak-201k + dev-140) -> data/retrieval/models/
+  calibrate_escalation.py  Phase-7 dev-only escalation floor -> papers-frozen JSON
+  evaluate_agent.py  Phase-8 final harness -> reports/agent_results.* + figures
+  analyze_agent_errors.py  Phase-9 per-golden-row failure taxonomy -> reports/agent_error_analysis.*
+  build_notebook_p4.py  regenerates the Phases 6–9 notebook
   check_llm_providers.py no-cost LLM health check (optional)
 src/
   config.py           project-relative paths & seed
@@ -487,10 +553,12 @@ src/
   baselines.py        dev/golden loaders, conversation-safe split, leakage guards, metrics
   evaluation.py       Phase-3 evaluation helpers
   retrieval/          Phase-5 retrievers (corpus, text, tfidf, bm25, dense, hybrid, language)
+  agent/              Phases 6–9 agent (intent.py, draft.py, escalation.py, agent.py)
   llm/                optional resilient OpenAI+Gemini provider layer (auto-fallback)
 tests/
   test_llm_providers.py  mocked unit tests (no API credits)
   test_retrieval_lexical.py / test_retrieval_dense.py  retrieval unit tests (no network)
+  test_agent.py        agent drafting/escalation/pipeline unit tests (no network)
 requirements.txt
 README.md
 ```
@@ -510,7 +578,12 @@ README.md
 - Phase 3 — Golden evaluation set ✅ *(done, §7)*
 - Phase 4 — Deterministic baselines + evaluation ✅ *(done, §8)*
 - Phase 5 — Historical-corpus retrieval (RAG memory) ✅ *(done, §9)*
-- Phase 6 — Response generation (grounded in retrieved resolutions)
-- Phase 7 — Escalation policy (auto-handle vs escalate, confidence-based)
-- Phase 8 — Final evaluation harness + LLM judge on the golden benchmark
-- Phase 9 — Failure analysis & report
+- Phase 6 — Response generation (grounded in retrieved resolutions) ✅ *(done, §10)*
+- Phase 7 — Escalation policy (auto-handle vs escalate, confidence-based) ✅ *(done, §10)*
+- Phase 8 — Final evaluation harness + LLM judge on the golden benchmark ✅ *(done, §10)*
+- Phase 9 — Failure analysis & report ✅ *(done, §10)*
+
+**Future work (out of scope here):** LLM-labelled weak intents (requires a
+provider key; would target the intent ceiling, the dominant failure mode),
+tuning hybrid alphas on a dev pool, escalation ground-truth labels, and an
+LLM-judged drafting-quality sweep.
