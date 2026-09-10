@@ -106,12 +106,29 @@ def main() -> int:
         })
 
     cooc = Counter(tuple(sorted(f["codes"])) for f in failures if f["codes"])
+    row_by_id = {r["example_id"]: r for r in rows}
+    examples = {}
+    for code, _count in per_code.most_common():
+        cand = [f for f in failures if code in f["codes"]]
+        examples[code] = [
+            {
+                "example_id": str(r["example_id"]),
+                "language": r["language"],
+                "true_intent": r["true_intent"],
+                "predicted_intent": r["intent"],
+                "action": r["action"],
+                "query": (r["query"] or "")[:220],
+                "draft": (r["draft"] or "")[:260],
+            }
+            for r in (row_by_id[f["example_id"]] for f in cand[:2])
+        ]
     summary = {
         "n_golden": len(rows),
         "n_failure_rows": sum(1 for f in failures if f["codes"]),
         "n_success_rows": sum(1 for f in failures if not f["codes"]),
         "category_counts": dict(sorted(per_code.items(), key=lambda kv: -kv[1])),
         "co_occurrence": {str(k): v for k, v in sorted(cooc.items(), key=lambda kv: -kv[1])},
+        "examples": examples,
     }
     (REPORTS / "agent_error_analysis.json").write_text(json.dumps(summary, indent=2))
     with (REPORTS / "agent_error_analysis.csv").open("w", newline="") as fh:

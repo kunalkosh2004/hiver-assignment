@@ -1,0 +1,8 @@
+{
+  "note": "no rows judged (rate limit)",
+  "status": "ran",
+  "sample_requested": 15,
+  "rows_judged": 0,
+  "rows_available": 175,
+  "provider": "gemini"
+}

@@ -303,11 +303,12 @@ python scripts/check_llm_providers.py         # optional no-cost LLM health chec
 ## Commit log
 
 ```
-<hash>  docs: document Phases 6–9 agent, eval and failure analysis       (6–9 docs)
-<hash>  feat: add agent failure analysis                                  (9)
-<hash>  feat: add final agent evaluation harness + escalation calibration (7–8)
-<hash>  feat: add retrieval-augmented agent (intent, drafting, escalation) (6)
-0659cf6 feat: add retrieval scaling, weak-intent proxy, and error analysis (5E)
+eaa721a feat: auto-load .env, refresh LLM models, wire resilient live judge   (deliverables)
+f350e40 docs: document retrieval-augmented agent evaluation                    (6–9 docs)
+b5519f4 feat: add agent failure analysis                                       (9)
+4e8937c feat: add final agent evaluation harness + escalation calibration      (7–8)
+f4a6a17 feat: add retrieval-augmented agent (intent, drafting, escalation)     (6)
+0659cf6 feat: add retrieval scaling, weak-intent proxy, and error analysis     (5E)
 d102191 fix: correct bm25 scoring after scipy 1.18 getcol bug
 f245cc2 feat: add retrieval evaluation benchmark                         (5D)
 d29e73d feat: add dense historical support retrieval                     (5C)
@@ -323,8 +324,138 @@ de0206f feat: add resilient OpenAI+Gemini LLM provider with auto-fallback
 8f0d25c feat: add dataset forensics and brand analysis                   (P1)
 ```
 
+## 7. "What is misleading about my headline number?"
+
+My headline **macro-F1 0.078 for the dev-140 intent classifier** — and the agent
+numbers that build on it — are in three ways *too good*, and one way *too bad*.
+
+1. **The dev-140 classifier's 14-class F1 overstates real ability.** Fourteen
+   classes with 140 training rows means **every single train example ≈ 10 fewer
+   pixels of signal per class**. F1 is macro-averaged over tiny per-class n; one
+   lucky class can move the whole number. It also masks *which* classes are
+   being bought and sold: `delivery_delay` dominates train and test, and the
+   direct messages (non-`@brand`) that a live agent would actually see are
+   *under*-represented.
+2. **The agent's "resolution reuse ≈ 96%" flatters drafting.** Reuse is measured
+   by token overlap between the draft and the *retrieved* historical reply. But
+   retrieval is what misses; a draft that simply restates a wrong-but-relevant
+   resolution scores "grounded" even when the resolution is wrong for the query.
+   The drafting module is honest *given the evidence*; it is not honest about
+   whether the evidence was the right evidence.
+3. **Escalation 30.5% "matches the calibrated floor" but that floor was fit on
+   the same brand inbox.** `comb_low=0.8775` maximizes dev-desired behavior; the
+   golden hold-out then matching at 27.5%→30.5% is reassuring, but both pools
+   come from the same 2015–2017 AmazonHelp distribution. On a *new* brand's
+   support data these calibrated thresholds would need re-fitting, and our
+   coverage numbers say nothing about that.
+4. **Conversely, the macro-F1 headline undersells the system people would
+   actually use.** The heavy multi-lingual segment (es/pt/it/de/…, ~40% of
+   golden) drags every metric down, and a brand deploying this in English-only
+   would see meaningfully better behavior than 0.078 suggests. Both directions
+   of the "misleading" argument are true at once — the number is an average over
+   a mix that does not match any single deployment.
+
+## 8. Top-5 failure modes (real examples + hypotheses)
+
+| # | failure mode | 200-row count | hypothesis |
+|--:|---|---|---|
+| 1 | `intent_off_target` (primary intent missed; not even a secondary) | 143 rows | 86%-`delivery_delay` prior + TF-IDF bag-of-graphemes collapses "Prime Video app", "invoice", "refund" into `delivery_delay`; multilingual tokens share no surface features |
+| 2 | `escalation_conservative` (escalated although confident + usable evidence) | 61 | single combined floor `comb_low=0.8775` set on dev; mass-`delivery_delay` confidence near 1.0 pushes floor high; thresholds over-tuned to dev-pool |
+| 3 | `intent_close_secondary` (right family, wrong leaf) | 8 | secondary classes share super-tokens ("account", "paid"); TF-IDF can't separate costs from holds |
+| 4 | `drafting_ungrounded` (auto draft is the generic template only) | 6 | drafting intentionally never fabricates; when the top-5 retrieval lacks a usable reply *and* intent is confident, it produces a neutral template that is honest but useless |
+| 5 | `retrieval_lang_mismatch` (top-1 evidence language ≠ query) | 3 | dense embeddings are multilingual but tolerance to mixed-language queries is low; corpus is ~90% EN, so non-EN queries retrieve EN evidence |
+
+Real rows (from `reports/agent_error_analysis.json` → `examples`):
+
+- **off-target:** `challenge-1033752` (de, true `none`):
+  *"Genau JETZT kam die Mail, dass mein Paket gleich ankommt. 👍 Danke für den
+  tollen Kundenservice…"* — a thank-you → predicted `delivery_delay` and
+  auto-handled with a delay resolution.
+- **off-target:** `challenge-102915` (en, true `service_complaint_escalation`):
+  *"And this is your TR customer: URL"* — the 160km app-install query → predicted
+  `delivery_delay` → Kindle sign-up template drafted.
+- **conservative escalation:** `challenge-1451501` (pt, true `none`):
+  *"Como foi minha primeira compra, eu comprei 2…"* — excited post-purchase
+  tweet → predicted `charge_issue`, escalated to specialists on high confidence.
+- **conservative escalation:** `challenge-1568158` (en, true `charge_issue`):
+  *"…actual MRP is Rs. 525/ Frontech 700 MB 5001 FC BLANK CD-R…"* — price/money
+  complaint → predicted `delivery_delay`, escalated although evidence existed.
+- **close-secondary:** `challenge-1242242` (en, true `delivered_but_not_received`):
+  complaint about the wrong investigation → predicted `service_complaint_escalation`.
+- **drafting_ungrounded:** `challenge-1645512` (en, true `device_app_issue`):
+  web checkout failure → predicted `delivery_delay` and the generic "tell us
+  more" template with no app-device resolution.
+
+Every category except `escalation_conservative` is downstream of `intent_off_target`
+(there is not one top-5 mode that survives a better classifier). That is the
+single highest-leverage fix (§10).
+
+## 9. What I'd do with one more week
+
+1. **Fix the classifier axis first** (largest lever, proven by co-occurrence):
+   (a) hand-annotate the 100 gold-parent rows to *de-noise* the weak-201k proxy,
+   (b) add a `none`-like catch-all calibration on the dev pool, (c) escalate any
+   non-EN query by default instead of guessing, removing the 
+   `retrieval_lang_mismatch` failure entirely.
+2. **Judge-human agreement, live:** the harness (`scripts/evaluate_judge_agreement.py`)
+   is written and the rubric is frozen; everything was blocked by the free-tier
+   daily quota mid-session. With the quota reset (or a funded key) I'd run a
+   15-row sample → judge-self-repeat consistency + judge-vs-deterministic kappa,
+   and *only then* trust the judge's rates as claims.
+3. **Escalation ground-truth labels:** 200 rows of "should have been escalated"
+   from the golden conversations, fit a per-intent floor instead of one global
+   `comb_low`, report expected-vs-actual escalation per intent.
+4. **Copy-style sweep:** LLM-judged comparison of draft variants (template-family
+   rewrites) on the 38 success rows to raise reply quality without touching
+   action decisions.
+5. **Second-brand port:** run the Phase-5/6 pipeline against a second brand's
+   threads to quantify how much of the calibrated floor + drafting templates
+   transfer.
+
+## 10. Decision log (15 non-obvious decisions)
+
+- **Chose AmazonHelp (amazon) as the brand:** largest clean multi-turn threads
+  with public replies; forensics (§1) showed it maximally exercises
+  multi-language + context-dependent flavors.
+- **Excluded `prime_membership` as a primary label** (merges with 4 others);
+  prevented fake class signal in 14-class setting.
+- **Built my own golden set (200) instead of trusting tweet hashtags/labels**;
+  150 representative + 50 challenge rows, challenge half oversamples
+  multilingual/hard/angry/context-dependent.
+- **Split golden into a *reference* file** so `next_brand_response` is available
+  for judging but never present where models read — layers leak-proofing.
+- **Single annotator + frozen guidelines (v1) + 17 low-confidence notes**
+  instead of pretending to have inter-annotator agreement we don't.
+- **Retrieval at message granularity, not conversation granularity** — the
+  unit the agent actually resolves; documented that at-cell granularity would
+  introduce lab-sweetness but not deployment behavior.
+- **Temporal filter on string timestamps** (Twitter RFC-ish stamps aren't
+  lexicographically sortable across months) — accepted as approximate rather
+  than silently training on the future.
+- **Golden conversations excluded from the index *and* asserted at runtime**
+  (`assert_no_golden_overlap`) — the single biggest integrity guarantee.
+- **Dense message-only over BM25/hybrid** for drafting evidence, measured by
+  its own human-labelled benchmark before trusting it (dense R@5 0.576 vs
+  BM25 0.53).
+- **Weak-intent proxy (201k TF-IDF labels) over LLM bootstrapping** — no API
+  key required, fully offline; disclosed it did *not* beat 140 clean labels.
+- **`comb_low` calibrated on dev only, frozen; golden never touched** — then
+  verified it transfers (27.5% dev → 30.5% golden) as an out-of-pool check.
+- **One global escalation floor** instead of per-intent gates, after measuring
+  weak-model probabilities saturate near 1.0 (per-feature gates were
+  non-discriminative).
+- **Deterministic drafting that "never fabricates"** — parsing/retrieval reuse
+  over generative text; the cost (generic templates) is documented as a
+  failure mode rather than hidden.
+- **Seeded every sampler (42)** and forbade API-key dependence for headline
+  numbers — any reviewer can re-derive everything offline.
+- **Shipped the LLM layer optional + disabled-by-default** with mocked tests,
+  so the repo is runnable in ≤15 min without credentials, and the judge is a
+  clearly-separated optional step.
+
 ## Next steps (future work, out of scope)
 
 LLM-labelled weak intents (needs a provider key; targets the dominant intent
 ceiling), escalation ground-truth labels, LLM-judged drafting-quality sweeps,
-hybrid-alpha tuning on a dev pool.
+hybrid-alpha tuning on a dev pool. The one-week plan above (§9) is the ordered
+shortlist.

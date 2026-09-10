@@ -1,0 +1,2 @@
+note,status,sample_requested,rows_judged,rows_available,provider
+no rows judged (rate limit),ran,15,0,175,gemini

@@ -18,5 +18,107 @@
     "('intent_off_target', 'retrieval_lang_mismatch')": 2,
     "('escalation_conservative', 'intent_close_secondary')": 2,
     "('escalation_conservative', 'intent_off_target', 'retrieval_lang_mismatch')": 1
+  },
+  "examples": {
+    "intent_off_target": [
+      {
+        "example_id": "challenge-102915",
+        "language": "en",
+        "true_intent": "service_complaint_escalation",
+        "predicted_intent": "delivery_delay",
+        "action": "auto_handle",
+        "query": "@USER And this is your TR customer: URL",
+        "draft": "Hello! This is Amazon Customer Service. Hi, Frank! Thanks for reaching out to us! To find out more about Kindle Unlimited and to sign up please visit us here: To help, please share a little more detail (for example the order number or the exact message you see"
+      },
+      {
+        "example_id": "challenge-1033752",
+        "language": "de",
+        "true_intent": "none",
+        "predicted_intent": "delivery_delay",
+        "action": "auto_handle",
+        "query": "@USER Genau JETZT kam die Mail, dass mein Paket gleich ankommt. \ud83d\udc4d Danke f\u00fcr den tollen Kundenservice und die immer z\u00fcgigen Antworten!",
+        "draft": "Hello! This is Amazon Customer Service. Freut mich sehr zu h\u00f6ren, dass meine Kollegen dir helfen konnten. Hab noch einen sch\u00f6nen Tag! To help, please share a little more detail (for example the order number or the exact message you see) and we'll take it from "
+      }
+    ],
+    "escalation_conservative": [
+      {
+        "example_id": "challenge-1451501",
+        "language": "pt",
+        "true_intent": "none",
+        "predicted_intent": "charge_issue",
+        "action": "escalate",
+        "query": "@USER Como foi minha primeira compra, eu comprei 2 (use a cabe\u00e7a c E linux a b\u00edblia), mas j\u00e1 estou fazendo a lista das pr\u00f3ximas compras",
+        "draft": "Hello! We are sorry to hear about this experience. Thank you for raising this. I have included our specialists on this thread so they can look into it for you; they will follow up with next steps shortly."
+      },
+      {
+        "example_id": "challenge-1568158",
+        "language": "en",
+        "true_intent": "charge_issue",
+        "predicted_intent": "delivery_delay",
+        "action": "escalate",
+        "query": "@USER And I have another one too this one's actual MRP is Rs. 525/ Frontech 700 MB 5001 FC BLANK CD-R- 50 Pcs URL",
+        "draft": "Hello! We are sorry to hear about this experience. Thank you for raising this. I have included our specialists on this thread so they can look into it for you; they will follow up with next steps shortly."
+      }
+    ],
+    "intent_close_secondary": [
+      {
+        "example_id": "challenge-1242242",
+        "language": "en",
+        "true_intent": "delivered_but_not_received",
+        "predicted_intent": "service_complaint_escalation",
+        "action": "auto_handle",
+        "query": "@USER Your customer service is the worst first they investigated the wrong item then they thought I got someone else\u2019s package now they say I",
+        "draft": "Hello! We are sorry to hear about this experience. Oh my! I'm so sorry for this poor experience, Brandon! Without providing account specific details, please tell us who the carrier was for this order. You can find that here: To help, please share a little more"
+      },
+      {
+        "example_id": "challenge-197857",
+        "language": "en",
+        "true_intent": "charge_issue",
+        "predicted_intent": "service_complaint_escalation",
+        "action": "escalate",
+        "query": "@USER It is your responsibility to bar sellers like these on your platform. An increase in 1300 rupees is criminal.",
+        "draft": "Hello! We are sorry to hear about this experience. Thank you for raising this. I have included our specialists on this thread so they can look into it for you; they will follow up with next steps shortly."
+      }
+    ],
+    "drafting_ungrounded": [
+      {
+        "example_id": "challenge-1645512",
+        "language": "en",
+        "true_intent": "device_app_issue",
+        "predicted_intent": "delivery_delay",
+        "action": "auto_handle",
+        "query": "@USER I'm having it on the full site and the mobile site on all browsers. I don't use the app. Shopping works...I just can't buy.",
+        "draft": "Hello! This is Amazon Customer Service. Ok! Let us know when you are able to try it on a computer To help, please share a little more detail (for example the order number or the exact message you see) and we'll take it from there."
+      },
+      {
+        "example_id": "challenge-1738390",
+        "language": "ja",
+        "true_intent": "none",
+        "predicted_intent": "delivery_delay",
+        "action": "auto_handle",
+        "query": "Amazon\u3067\u983c\u3093\u3060\u3084\u3064\u6765\u305f\u30fc\u30fc\u30fc\uff01\uff01 \ud83d\ude08\uff77\uff9e\uff97\uff9d \u305d\u3057\u3066\u4ffa\u306e\u59c9\u9054\u306f\u3082\u3046\u30af\u30ea\u30b9\u30de\u30b9\ud83c\udf85\u6c17\u5206w\u2190\u3064\u3044\u3053\u306e\u9593\u30cf\u30ed\u30a6\u30a3\u30f3\ud83c\udf83\u7d42\u308f\u3063\u305f\u3070\u304b\u308a\u306a\u306e\u306b\uff64\uff64\uff64ww URL",
+        "draft": "Hello! This is Amazon Customer Service. |\u00b4-`)\uff81\uff97\uff6f \u304a\u5f85\u305f\u305b\u3044\u305f\u3057\u307e\u3057\u305f\u3002Amazon\u306e\u3054\u5229\u7528\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\ud83d\ude47 HM To help, please share a little more detail (for example the order number or the exact message you see) and we'll take it from there."
+      }
+    ],
+    "retrieval_lang_mismatch": [
+      {
+        "example_id": "challenge-1379340",
+        "language": "it",
+        "true_intent": "device_app_issue",
+        "predicted_intent": "delivery_delay",
+        "action": "auto_handle",
+        "query": "@USER @USER C'\u00e8 speranza di avere l'app #PrimeVideo sul Sony UHP-H1?",
+        "draft": "Hello! This is Amazon Customer Service. Hola, Bernice. Actualmente estos son los dispositivos compatibles: To help, please share a little more detail (for example the order number or the exact message you see) and we'll take it from there."
+      },
+      {
+        "example_id": "challenge-816342",
+        "language": "it",
+        "true_intent": "none",
+        "predicted_intent": "delivery_delay",
+        "action": "auto_handle",
+        "query": "#AmazonIndia URL",
+        "draft": "Hello! We are sorry to hear about this experience. Sorry for the trouble. You may request an immediate call back from our support team here: To help, please share a little more detail (for example the order number or the exact message you see) and we'll take i"
+      }
+    ]
   }
 }

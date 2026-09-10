@@ -523,11 +523,25 @@ automatically (no `export` needed). The default models are `gemini-3.6-flash`
 python scripts/check_llm_providers.py        # config only, zero credits
 python -m unittest tests.test_llm_providers  # mocked, zero credits
 python scripts/evaluate_agent.py --llm-sample 5   # live judge on 5 drafts
+python scripts/evaluate_judge_agreement.py --sample 15  # judge-vs-human agreement study
 ```
 
 Note: Gemini free-tier is capped at ~5 req/min, so the judge paces itself
 (12s gap between drafts, skips rows that still hit the limit and reports them
 as `skipped`). The OpenAI key is used only as a fallback when Gemini fails.
+**Total reproduction time with keys + warm caches ≈ 12–20 min; offline
+(deterministic, no keys) ≈ 10–14 min** — the corpus index build and agent eval
+dominate; both are one-shot scripts with 15-min README walkthrough in §6.
+
+**Try the agent interactively:**
+
+```
+python scripts/agent_chat.py
+# My order still hasn't arrived and says "delayed".
+# How long do refunds take after a return?
+# /inspect   → intent, action, confidence, reasons
+# /topk 8    → deeper retrieval;  /reset → new customer;  /quit
+```
 
 ## Repo layout
 
@@ -558,6 +572,8 @@ scripts/
   calibrate_escalation.py  Phase-7 dev-only escalation floor -> papers-frozen JSON
   evaluate_agent.py  Phase-8 final harness -> reports/agent_results.* + figures
   analyze_agent_errors.py  Phase-9 per-golden-row failure taxonomy -> reports/agent_error_analysis.*
+  agent_chat.py  interactive console conversation with the loaded agent (/topk, /inspect)
+  evaluate_judge_agreement.py  LLM-judge vs human agreement study -> reports/judge_agreement.*
   build_notebook_p4.py  regenerates the Phases 6–9 notebook
   check_llm_providers.py no-cost LLM health check (optional)
 src/
