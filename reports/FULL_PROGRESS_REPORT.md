@@ -258,7 +258,12 @@ distribution + ECE-style calibration diagnostic on dev (ECE 0.12).
 
 Drafting (Phase 6): auto-handled replies reuse retrieved-resolution words in
 **≈96%** of rows (token-overlap ≥2, no fabrication); avg 263 chars, 0 empty
-drafts. Optional LLM judge disabled (no provider key) and recorded as such.
+drafts. Optional LLM judge: `scripts/evaluate_judge_agreement.py` grades drafts
+vs human reference replies; a live 4-row pilot (free-tier) was run before the
+**Gemini free-tier daily quota was exhausted** (OpenAI key has no credits), so
+per-row judge-vs-human agreement is generated live via that script when quota
+resets / a funded key is provided. Judge remains optional and is recorded as
+such — the deterministic numbers above never depend on it.
 
 ### 6D — Failure analysis (Phase 9, `scripts/analyze_agent_errors.py`)
 
