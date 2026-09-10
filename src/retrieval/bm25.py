@@ -74,22 +74,18 @@ class BM25Retriever:
         return cls(store, tf, idf, dl, avgdl, k1=k1, b=b, vocab=vocab_list)
 
     def score_all(self, query: str, context=None) -> np.ndarray:
-        scores = np.zeros(self.store.n(), dtype=float)
+        # NOTE: sparse column extraction (getcol / tf[:, j].indices) is broken
+        # on scipy 1.18.1 + py3.14 (indices collapse to 0 while values are
+        # correct), so we pull the query-term columns as a small dense block.
         toks = set(tokenize(self._query_text(query, context)))
-        k1, b, avgdl = self.k1, self.b, self.avgdl
-        for t in toks:
-            j = self._vocab_map.get(t)
-            if j is None:
-                continue
-            tf_col = self.tf.getcol(j)
-            nz = tf_col.indices
-            if len(nz) == 0:
-                continue
-            vals = tf_col.data
-            dl_nz = self.dl[nz]
-            denom = vals + k1 * (1 - b + b * dl_nz / avgdl)
-            scores[nz] += self.idf[j] * (vals * (k1 + 1)) / denom
-        return scores
+        js = [self._vocab_map[t] for t in toks if t in self._vocab_map]
+        if not js:
+            return np.zeros(self.store.n(), dtype=float)
+        cols = self.tf[:, js].toarray()
+        k1, b, avgdl, dl = self.k1, self.b, self.avgdl, self.dl
+        idf = self.idf[js]
+        denom = cols + k1 * (1 - b + b * dl[:, None] / avgdl)
+        return (idf[None, :] * cols * (k1 + 1) / denom).sum(axis=1)
 
     def _query_text(self, query: str, context) -> str:
         return self.store.query_text(query, context)

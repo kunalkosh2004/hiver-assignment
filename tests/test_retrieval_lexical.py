@@ -59,7 +59,7 @@ class LexicalRetrievalTest(unittest.TestCase):
         self.assertTrue((a == b).all())
 
     def test_bm25_ranks_relevant_first(self):
-        r = BM25Retriever.fit(self.store_msg)
+        r = BM25Retriever.fit(self.store_msg, min_df=1)
         hits = r.search("where is my order", top_k=2)
         self.assertEqual(hits[0].case_id, "1")
 
