@@ -35,6 +35,7 @@ the discovered intent taxonomy.
 | Phase 6 — Response generation (grounded) | ✅ Done | `src/agent/` draft+intent, deterministic, no fabrication (§10) |
 | Phase 7 — Escalation policy | ✅ Done | `src/agent/escalation.py`, dev-calibrated floor (§10) |
 | Phase 8 — Final harness + LLM judge | ✅ Done | `scripts/evaluate_agent.py`, `reports/agent_results.*` (§10) |
+| Escalation decision benchmark | ✅ Done | hand-labelled 200 (`data/golden/escalation_gold.jsonl`) + `scripts/evaluate_escalation.py` (§10) |
 | Phase 9 — Failure analysis & report | ✅ Done | `reports/agent_error_analysis.*`, `notebooks/04_…` (§10) |
 
 ---
@@ -497,6 +498,8 @@ python scripts/train_agent_intent.py        # weak-201k + dev-140 models
 python scripts/calibrate_escalation.py      # dev-only confidence floor (comb_low)
 python scripts/evaluate_agent.py --dump-rows reports/agent_rows.json
 python scripts/analyze_agent_errors.py reports/agent_rows.json
+python scripts/build_escalation_benchmark.py
+python scripts/evaluate_escalation.py reports/agent_rows.json
 # notebook: scripts/build_notebook_p4.py && jupyter nbconvert --execute …
 ```
 
@@ -572,6 +575,8 @@ scripts/
   calibrate_escalation.py  Phase-7 dev-only escalation floor -> papers-frozen JSON
   evaluate_agent.py  Phase-8 final harness -> reports/agent_results.* + figures
   analyze_agent_errors.py  Phase-9 per-golden-row failure taxonomy -> reports/agent_error_analysis.*
+  build_escalation_benchmark.py  Phase A: labels TSV -> data/golden/escalation_gold.jsonl (200 rows)
+  evaluate_escalation.py     Phase A: agent decision vs human-expected -> reports/escalation_gold_results.*
   agent_chat.py  interactive console conversation with the loaded agent (/topk, /inspect)
   evaluate_judge_agreement.py  LLM-judge vs human agreement study -> reports/judge_agreement.*
   build_notebook_p4.py  regenerates the Phases 6–9 notebook
@@ -613,8 +618,9 @@ README.md
 - Phase 7 — Escalation policy (auto-handle vs escalate, confidence-based) ✅ *(done, §10)*
 - Phase 8 — Final evaluation harness + LLM judge on the golden benchmark ✅ *(done, §10)*
 - Phase 9 — Failure analysis & report ✅ *(done, §10)*
+- Phase A — Escalation decision benchmark (human labels + eval) ✅ *(done, §10)*
 
 **Future work (out of scope here):** LLM-labelled weak intents (requires a
 provider key; would target the intent ceiling, the dominant failure mode),
-tuning hybrid alphas on a dev pool, escalation ground-truth labels, and an
-LLM-judged drafting-quality sweep.
+tuning hybrid alphas on a dev pool, re-weighting escalation by intent-level
+risk rules (the top Phase-A finding), and an LLM-judged drafting-quality sweep.

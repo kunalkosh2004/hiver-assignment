@@ -1,0 +1,200 @@
+challenge-2814438	escalate	identity-account-recovery: fax sent, account still locked — needs human verification
+challenge-2694949	escalate	membership-trial account state confusion — needs account lookup
+challenge-519702	escalate	demands gift codes; wants immediate personal action
+challenge-2853614	escalate	un-cancel an order — account-side action with order history
+challenge-1955907	escalate	URL-only, no context — insufficient information
+challenge-616914	escalate	card/buy-and-sell dispute — conflicting statements need human
+challenge-197857	escalate	seller/surcharge complaint demanding platform action
+challenge-1845984	escalate	card-activation payment verification — sensitive account data
+challenge-1568158	escalate	MRP/pricing dispute across orders
+challenge-834216	escalate	"AMZL US" only — insufficient information
+challenge-2798309	escalate	delivered-photo claim contradicts receipt — investigation
+challenge-689484	escalate	angry dispute re police-report instruction — human care needed
+challenge-1242242	escalate	complaint that the wrong item was investigated — case review
+challenge-1578555	escalate	partner grievance, German — complaint needs human follow-up
+challenge-2284883	escalate	neighbour-parcel complaint about delivery agent conduct
+challenge-2170818	escalate	"??" only — insufficient information
+challenge-842315	auto_handle	routine delay status w/ tracking number provided
+challenge-2171079	escalate	angry pre-order miss with demand for explanation
+challenge-2785904	escalate	no one sure, contradictory CS message — escalate for a single owner
+challenge-1379340	auto_handle	app-availability FAQ (Prime Video on Sony) — informational
+challenge-227064	auto_handle	Kindle-app how-to question — informational
+challenge-1645512	escalate	checkout failure on all browsers — account/technical debugging
+challenge-2497106	auto_handle	app-language feature request — informational
+challenge-487688	auto_handle	casual receipt notice, no escalation needed
+challenge-1451501	auto_handle	excited first-purchase note — no escalation needed
+challenge-787658	auto_handle	"thanks, resolved!" closure — no escalation needed
+challenge-893308	auto_handle	casual life update — no escalation needed
+challenge-2254596	auto_handle	"thanks, goodnight" closure — no escalation needed
+challenge-426141	auto_handle	happy delivery note — no escalation needed
+challenge-816342	auto_handle	URL-only hashtag — likely spam/casual, low risk
+challenge-2586341	auto_handle	casual product review note — no escalation needed
+challenge-365605	auto_handle	"just received, sorry for the trouble" closure
+challenge-2472354	auto_handle	thanks for reply — closure
+challenge-1033752	auto_handle	thank-you with delivery arrival — closure
+challenge-1738390	auto_handle	casual celebration tweet — no escalation needed
+challenge-2151072	auto_handle	thanks (Japanese) — closure
+challenge-1130527	escalate	invoice number only; ambiguous request, account data present
+challenge-2149534	escalate	P.O.-box eligibility dispute re processed order
+challenge-2609965	escalate	packaging-discretion complaint — service follow-up
+challenge-2909124	escalate	Christmas packaging complaint (kids saw gift) — human care
+challenge-582649	escalate	"*occassion" only — insufficient information
+challenge-835153	escalate	wrong item received — remedy required
+challenge-2679197	escalate	third-party return dispute — needs policy review
+challenge-694411	escalate	follow-up wants private email to send video — direct transfer
+challenge-972720	auto_handle	promotional/casual tweet, no escalation needed
+challenge-232399	escalate	rhetorical courier complaint — service grievance
+challenge-102915	escalate	complaint with evidence URL — case review
+challenge-2747122	escalate	CS-quality complaint — human care needed
+challenge-2521823	escalate	escalating complaint about unread emails
+challenge-1323314	escalate	complaint re poor reply — case review
+representative-1912145	escalate	privacy/account-visibility setting — sensitive account action
+representative-179205	escalate	cannot login — identity/account access
+representative-2789138	auto_handle	membership-enrolment check — informational
+representative-427799	auto_handle	Amazon-pay-balance FAQ — informational
+representative-22572	escalate	no delivery + no cancel + refund demanded — account action
+representative-2899649	auto_handle	customer resolved by cancelling — closure
+representative-136922	escalate	upset, wants direct email, first-time frustration
+representative-880948	escalate	pickup/cancellation process complaint
+representative-650056	escalate	cynical cancellation complaint — retention risk
+representative-1604096	escalate	refund credited to closed account — money dispute
+representative-1218305	escalate	seller-shielding charge dispute — merchant accountability
+representative-1724691	escalate	Amazon-pay balance not credited — money dispute
+representative-2612309	escalate	unauthorized overdraft claim — fraud-sensitive
+representative-332434	auto_handle	COD-availability checkout FAQ — informational
+representative-895946	escalate	price-complaint cynicism — service grievance
+representative-1109519	escalate	claims systematic false 'delivered' — investigation
+representative-1423023	escalate	carrier returned package to depot — investigation
+representative-2289844	escalate	delivery agent marked delivered but will deliver later — investigation
+representative-1220925	escalate	repeated 'you do nothing' frustration — case review
+representative-2532842	escalate	"contact ASAP re undelivered parcel" — urgent investigation
+representative-380695	escalate	mid-conversation follow-up, infuriated — case continuity
+representative-482351	escalate	partial delivery, box open, parcel left outdoors — investigation
+representative-533206	auto_handle	safe-place delivery complaint — standard flow
+representative-149199	auto_handle	safe-place complaint (partner's parcel) — standard flow
+representative-2283511	escalate	5 packages 'delivery attempted' wrong area — systematic failure
+representative-2594956	escalate	stolen-package fear, unlocked doors — theft-sensitive
+representative-1727624	escalate	stolen package, unique situation, want chat — handle directly
+representative-458877	auto_handle	status check 'arriving by 8pm' — routine
+representative-142833	auto_handle	status/order-history complaint — routine
+representative-1116569	auto_handle	1-day shipping miss — routine status follow-up
+representative-515245	auto_handle	prime delay status complaint — routine
+representative-2447788	auto_handle	Amazon.in delivery delay — routine
+representative-2960467	auto_handle	two-day-delivery complaint — routine
+representative-1311577	auto_handle	'where is it' delay — routine
+representative-608064	auto_handle	sends order emails, date discrepancy — routine status
+representative-2967623	auto_handle	waits for promised delivery — routine
+representative-2528270	auto_handle	shipping-option availability note — informational
+representative-2683519	auto_handle	Prime Pantry 'delivered' sitting at post office — routine status
+representative-1192307	auto_handle	saw van drive off — routine delay
+representative-2780552	auto_handle	sarcastic delay complaint — routine apology/status
+representative-2824739	auto_handle	one-day delivery definition quip — routine
+representative-2913230	auto_handle	2-day shipping 'why the delay' — routine
+representative-1218249	auto_handle	delay w/ tracking photo — routine
+representative-2003910	auto_handle	skeptical 'taken care of' reply — routine
+representative-300514	auto_handle	prime next-day miss — routine
+representative-322945	auto_handle	prime preference complaint — routine
+representative-2954293	auto_handle	prime reliability complaint — routine
+representative-2664071	auto_handle	casual positive note — no escalation needed
+representative-1210214	auto_handle	package returned/refused status — routine
+representative-86209	auto_handle	late birthday gift — routine delay, keep care
+representative-2192580	auto_handle	no tracking updates — routine
+representative-1406593	auto_handle	prime weekend 'not impressed' — routine
+representative-1570766	auto_handle	'any update here?' — routine status
+representative-1389974	escalate	driver-conduct complaint (6s knock, surgery note)
+representative-1399860	auto_handle	thanks + 'arrange parcel' — routine status
+representative-1335118	auto_handle	needed for trip — routine prioritization
+representative-999138	escalate	cancelling-subscription threat — retention risk
+representative-2852150	auto_handle	waiting at door — routine delay
+representative-2890574	auto_handle	historical prime speed complaint — routine
+representative-1420099	escalate	repeatedly pushed back delivery dates — case review
+representative-550560	auto_handle	prime shipping consistently late — routine
+representative-673242	auto_handle	joking + late order — routine status
+representative-1193931	auto_handle	carrier status, got disconnected — routine status
+representative-2731105	auto_handle	paid for today's delivery, arriving tmrw — routine
+representative-1587374	auto_handle	scheduled Nov 3, not received — routine status
+representative-2296826	auto_handle	Royal Mail holiday delivery miss — routine
+representative-1229688	auto_handle	Kindle app promo/copy, no escalation needed
+representative-26958	auto_handle	Alexa app down status query — status info
+representative-2378990	auto_handle	Alexa price-tell mismatch — informational
+representative-1384330	escalate	payment error in app — sensitive account/payment
+representative-2523357	auto_handle	thanks for quick reply, first gen — closure
+representative-1766849	auto_handle	fire stick broken, standard replacement path — routine
+representative-2847379	auto_handle	language-selection limitation — informational
+representative-2569705	auto_handle	app timing out — status info
+representative-350494	escalate	Echo sold without Alexa app — product complaint
+representative-1464161	escalate	episode unavailable, wants update — content support
+representative-1943693	escalate	mid-flow follow-up 'shared whole concern' — case continuity
+representative-2611658	auto_handle	thanks, package arrived — closure
+representative-309233	auto_handle	thanks for cat bed — closure
+representative-2111184	auto_handle	quick response praise — closure
+representative-174486	auto_handle	'you made me happy' — closure
+representative-2580464	auto_handle	chat-room praise — closure
+representative-2855145	auto_handle	thanks, sales-tax solved — closure
+representative-2384553	auto_handle	casual new-books note — no escalation needed
+representative-1198549	auto_handle	postal-service praise — closure
+representative-1204940	auto_handle	agreement reply — closure
+representative-487699	auto_handle	self-resolved ordering mistake — closure
+representative-1181640	auto_handle	'will do, thank you' — closure
+representative-628261	auto_handle	uncertain marketplace-seller guess — informational
+representative-2931934	escalate	asks Amazon to gift a phone — out-of-taxonomy request
+representative-2769011	escalate	wants private DM transfer — direct human handoff
+representative-1707062	auto_handle	resolved by sender — closure
+representative-957126	auto_handle	follow-up re location check — low-risk, self-managed
+representative-2389800	auto_handle	promotional copy — no escalation needed
+representative-2266765	escalate	asks for deal/help re money shortage — out-of-taxonomy
+representative-1721707	auto_handle	paid extra shipping, not delivered — routine status
+representative-646730	auto_handle	dispatch-time query — routine
+representative-2363235	auto_handle	tracking mismatch amazon vs usps — routine
+representative-2960026	auto_handle	TV went back to Sacramento — routine status
+representative-1105754	auto_handle	timestamp/GMT observation — informational
+representative-1464285	auto_handle	order# shipped? — routine status
+representative-993935	auto_handle	product search help — informational
+representative-832924	auto_handle	in-stock availability — informational
+representative-2288190	auto_handle	same-day order 'not yet shipped' — routine
+representative-2374486	auto_handle	'delivered by 8pm' vs 'not shipped' — routine
+representative-1397273	auto_handle	launch-date query — informational
+representative-1755281	escalate	possible phishing email reported — security-sensitive
+representative-467536	escalate	item not received + lost cashback — compensation issue
+representative-1147828	escalate	EMI follow-ups anger — retention/case review
+representative-2454046	auto_handle	started return + reordered — standard flow
+representative-679025	auto_handle	wrong-colour Kindle exchange — standard flow
+representative-2460750	escalate	wrong model (G5+ instead of G5s) — remedy required
+representative-2450570	escalate	wrong cases sent — remedy required
+representative-2608094	auto_handle	how-to: missing items contact — informational
+representative-982267	escalate	wrong item (tutu) — remedy required
+representative-2291505	escalate	replacement refused — case review
+representative-1018235	escalate	'blackmail' return friction — merchant dispute
+representative-1229460	escalate	fraudulent DVD claim — complaint w/ proof
+representative-2484077	escalate	faulty cup, compensation demanded
+representative-345473	escalate	repeated device malfunction — case review
+representative-676899	escalate	Lex Luthor blue-ray fulfillment complaint
+representative-18706	escalate	refund demanded after return, disappointed — money action
+representative-1436650	escalate	refund refused, hotel delivery missed — contested refund
+representative-2712534	escalate	2nd missing-items + no refund path — investigation
+representative-1420491	escalate	cancelled order, refund to CC — sensitive account action
+representative-915961	escalate	blocked customer awaiting refund — case review
+representative-2515914	escalate	arguing about Prime refund — retention dispute
+representative-2217342	escalate	claim rejected, sketchy seller — merchant dispute
+representative-1893565	escalate	never received promised call — case review
+representative-1763226	escalate	8 hours on live chat — escalation-worthy
+representative-2573750	escalate	called five times, prime member lockout — human resolution
+representative-1541879	escalate	email not recognised — identity issue
+representative-1415560	escalate	still disappointed after rep call — case continuity
+representative-334873	escalate	CS non-reply complaint — service grievance
+representative-272875	escalate	no contact link, pinging twitter — direct handoff
+representative-1537572	escalate	too hard to report shipping problem — service grievance
+representative-411902	escalate	will never use again — retention/complaint
+representative-1588773	escalate	dump-services threat — retention risk
+representative-2353843	escalate	demands phone call, called 5x — human resolution
+representative-1136222	escalate	50 attempts, niece birthday — urgent human resolution
+representative-1384189	escalate	bad experience complaint — service grievance
+representative-1746071	escalate	wants private call, public-info concern — direct handoff
+representative-390810	escalate	'you must shut down' + DM — hostile, human care
+representative-2151408	escalate	GST input-credit denial — policy/account case
+representative-2216600	escalate	cashback promise dispute — retention dispute
+representative-1250967	escalate	lost packages + wrong charges — multi-issue review
+representative-2447260	escalate	USPS delivery grievance — service complaint
+representative-1179639	escalate	agents contradict themselves — case review
+representative-2245407	escalate	call dropped, ask to check call log — direct handoff
+representative-886169	escalate	short no-direction email complaint — service grievance

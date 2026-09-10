@@ -1,0 +1,144 @@
+{
+  "n": 200,
+  "confusion": {
+    "auto_handle": {
+      "auto_handle": 73,
+      "escalate": 23
+    },
+    "escalate": {
+      "auto_handle": 66,
+      "escalate": 38
+    }
+  },
+  "accuracy": 0.555,
+  "escalate_precision": 0.623,
+  "escalate_recall": 0.3654,
+  "escalate_f1": 0.4606,
+  "auto_precision": 0.5252,
+  "auto_recall": 0.7604,
+  "false_auto_dangerous": 66,
+  "false_escalate_cost": 23,
+  "expected_decision_rate": {
+    "escalate": 104,
+    "auto_handle": 96
+  },
+  "predicted_decision_rate": {
+    "auto_handle": 139,
+    "escalate": 61
+  },
+  "per_intent": [
+    {
+      "intent": "account_access",
+      "n": 6,
+      "expected_escalate": 5,
+      "predicted_escalate": 1,
+      "expected_escalate_rate": 0.833,
+      "predicted_escalate_rate": 0.167
+    },
+    {
+      "intent": "account_info_update",
+      "n": 1,
+      "expected_escalate": 0,
+      "predicted_escalate": 0,
+      "expected_escalate_rate": 0.0,
+      "predicted_escalate_rate": 0.0
+    },
+    {
+      "intent": "cancellation",
+      "n": 6,
+      "expected_escalate": 5,
+      "predicted_escalate": 2,
+      "expected_escalate_rate": 0.833,
+      "predicted_escalate_rate": 0.333
+    },
+    {
+      "intent": "charge_issue",
+      "n": 11,
+      "expected_escalate": 10,
+      "predicted_escalate": 6,
+      "expected_escalate_rate": 0.909,
+      "predicted_escalate_rate": 0.545
+    },
+    {
+      "intent": "delivered_but_not_received",
+      "n": 11,
+      "expected_escalate": 11,
+      "predicted_escalate": 2,
+      "expected_escalate_rate": 1.0,
+      "predicted_escalate_rate": 0.182
+    },
+    {
+      "intent": "delivered_wrong_location",
+      "n": 7,
+      "expected_escalate": 5,
+      "predicted_escalate": 1,
+      "expected_escalate_rate": 0.714,
+      "predicted_escalate_rate": 0.143
+    },
+    {
+      "intent": "delivery_delay",
+      "n": 43,
+      "expected_escalate": 6,
+      "predicted_escalate": 8,
+      "expected_escalate_rate": 0.14,
+      "predicted_escalate_rate": 0.186
+    },
+    {
+      "intent": "device_app_issue",
+      "n": 14,
+      "expected_escalate": 4,
+      "predicted_escalate": 2,
+      "expected_escalate_rate": 0.286,
+      "predicted_escalate_rate": 0.143
+    },
+    {
+      "intent": "none",
+      "n": 32,
+      "expected_escalate": 4,
+      "predicted_escalate": 10,
+      "expected_escalate_rate": 0.125,
+      "predicted_escalate_rate": 0.312
+    },
+    {
+      "intent": "order_status_query",
+      "n": 13,
+      "expected_escalate": 2,
+      "predicted_escalate": 5,
+      "expected_escalate_rate": 0.154,
+      "predicted_escalate_rate": 0.385
+    },
+    {
+      "intent": "other_unclear",
+      "n": 3,
+      "expected_escalate": 3,
+      "predicted_escalate": 0,
+      "expected_escalate_rate": 1.0,
+      "predicted_escalate_rate": 0.0
+    },
+    {
+      "intent": "product_return_and_replacement",
+      "n": 18,
+      "expected_escalate": 15,
+      "predicted_escalate": 11,
+      "expected_escalate_rate": 0.833,
+      "predicted_escalate_rate": 0.611
+    },
+    {
+      "intent": "refund_request",
+      "n": 8,
+      "expected_escalate": 7,
+      "predicted_escalate": 1,
+      "expected_escalate_rate": 0.875,
+      "predicted_escalate_rate": 0.125
+    },
+    {
+      "intent": "service_complaint_escalation",
+      "n": 27,
+      "expected_escalate": 27,
+      "predicted_escalate": 12,
+      "expected_escalate_rate": 1.0,
+      "predicted_escalate_rate": 0.444
+    }
+  ],
+  "note": "false_auto = expected escalate but auto-handled (dangerous); false_escalate = expected auto but escalated (conservative cost). Benchmark is hand-labelled single-annotator; evaluation-only."
+}

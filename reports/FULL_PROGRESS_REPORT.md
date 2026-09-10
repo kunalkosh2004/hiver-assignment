@@ -284,6 +284,42 @@ biggest lever for the final agent is intent quality — matching the Phases-4/6B
 result — while retrieval + grounded drafting already work (dense R@5 0.576 §5C,
 draft reuse 96%).
 
+### 6E — Escalation decision benchmark (Phase A, `scripts/evaluate_escalation.py`)
+
+The assignment (§11) requires a human-labelled escalation benchmark with
+`example_id / intent / expected_decision / reason`. Built from the golden 200:
+`data/golden/escalation_gold.jsonl` (hand-labelled single annotator, frozen
+guideline, evaluation-only — never used to fit the threshold). Label mix:
+**104 escalate / 96 auto** (52% escalate), conservative by construction
+(security, fraud, contested refunds, delivery investigations, compensation and
+out-of-taxonomy requests all escalate; routine status, informational how-tos,
+standard returns and casual closures auto).
+
+Agent decisions (final agent on the golden 200) vs expected:
+
+| metric | value |
+|---|---|
+| accuracy | 0.555 |
+| escalate precision / recall / F1 | 0.62 / 0.37 / 0.46 |
+| **false_auto (expected escalate, auto-handled)** | **66 / 104** |
+| false_escalate (expected auto, escalated — conservative cost) | 23 / 96 |
+
+Per-intent gaps (expected → predicted escalate rate): `delivered_but_not_received`
+1.00→0.18, `refund_request` 0.88→0.12, `account_access` 0.83→0.17, `charge_issue`
+0.91→0.55, `service_complaint_escalation` 1.00→0.44; `none` 0.12→0.31 and
+`order_status_query` 0.15→0.39 are escalated unnecessarily in the other
+direction.
+
+**What this proves:** the Phase-7 floor (`comb_low=0.8775`) was calibrated to a
+*confidence* notion ("escalate when not sure"), but human expectation is about
+*risk and actionability* — security, money, and remedy requests must reach a
+human regardless of model confidence. The floor under-escalates badly against
+that benchmark, and this is the strongest actionable signal in the evaluation:
+re-escalation policy must combine confidence with intent-level risk rules, not a
+single combined floor. This new benchmark directly motivated the policy change
+listed in §10 ("Decision log"): escalate-by-intent risk categories is the Phase E
+priority.
+
 ### Phase-6–9 reproduction (no API key)
 
 ```bash
@@ -291,6 +327,9 @@ python scripts/train_agent_intent.py        # weak-201k + dev-140 -> data/retrie
 python scripts/calibrate_escalation.py      # dev-only floor -> escalation_thresholds.json
 python scripts/evaluate_agent.py --dump-rows reports/agent_rows.json
 python scripts/analyze_agent_errors.py reports/agent_rows.json
+python scripts/build_escalation_benchmark.py      # labels TSV -> data/golden/escalation_gold.jsonl
+python scripts/evaluate_escalation.py reports/agent_rows.json   # decision vs human expected
+python scripts/evaluate_judge_agreement.py --sample 15          # optional live LLM judge (needs key)
 python scripts/build_notebook_p4.py && jupyter nbconvert --execute notebooks/04_retrieval_augmented_agent.ipynb
 python -m unittest tests.test_agent          # drafting / escalation / pipeline unit tests
 ```
