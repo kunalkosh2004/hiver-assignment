@@ -258,12 +258,25 @@ distribution + ECE-style calibration diagnostic on dev (ECE 0.12).
 
 Drafting (Phase 6): auto-handled replies reuse retrieved-resolution words in
 **≈96%** of rows (token-overlap ≥2, no fabrication); avg 263 chars, 0 empty
-drafts. Optional LLM judge: `scripts/evaluate_judge_agreement.py` grades drafts
-vs human reference replies; a live 4-row pilot (free-tier) was run before the
-**Gemini free-tier daily quota was exhausted** (OpenAI key has no credits), so
-per-row judge-vs-human agreement is generated live via that script when quota
-resets / a funded key is provided. Judge remains optional and is recorded as
-such — the deterministic numbers above never depend on it.
+drafts.
+
+**Phase B — judge-human agreement protocol.** The reply-quality rubric is
+formalized in `reports/judge_rubric.md`: 3 dimensions (helpful /
+grounded_in_retrieval / hallucination_free), 1–5 anchor tiers mapped to the
+booleans the judge emits (`tier ≥ 4`), the literal prompts, and a **decision
+gate** — the judge is only trusted when `judge_repeat_self_agreement ≥ 0.8`
+AND `judge_human_helpful_rate ≥ 0.7` AND
+`judge_vs_deterministic_grounded_kappa ≥ 0.4`. The metric math (self-agreement,
+Cohen's κ vs the reference-overlap oracle, rate-limit path, gate) is locked by
+`tests/test_judge_agreement.py` (offline, no credits).
+`scripts/evaluate_judge_agreement.py --sample 15` produces the numbers live, but
+the current committed `reports/judge_agreement.json` honestly records the live
+run as **blocked: "no rows judged (rate limit)"** — the Gemini free-tier daily
+quota hit a hard 429 on every call and the OpenAI key has no credits
+(`credit_balance_exhausted`). The instant a funded key is available the same
+script fills these rows (`--dump-rows reports/judge_agreement_rows.json` for
+audit); until then the deterministic numbers above stand alone and the judge is
+recorded as optional/unaudited.
 
 ### 6D — Failure analysis (Phase 9, `scripts/analyze_agent_errors.py`)
 

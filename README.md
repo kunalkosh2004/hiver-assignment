@@ -526,7 +526,7 @@ automatically (no `export` needed). The default models are `gemini-3.6-flash`
 python scripts/check_llm_providers.py        # config only, zero credits
 python -m unittest tests.test_llm_providers  # mocked, zero credits
 python scripts/evaluate_agent.py --llm-sample 5   # live judge on 5 drafts
-python scripts/evaluate_judge_agreement.py --sample 15  # judge-vs-human agreement study
+python scripts/evaluate_judge_agreement.py --sample 15  # judge-vs-human agreement study (§/judge_rubric.md)
 ```
 
 Note: Gemini free-tier is capped at ~5 req/min, so the judge paces itself
@@ -592,6 +592,8 @@ src/
   agent/              Phases 6–9 agent (intent.py, draft.py, escalation.py, agent.py)
   llm/                optional resilient OpenAI+Gemini provider layer (auto-fallback)
 tests/
+  test_escalation_benchmark.py  Phase A benchmark integrity (no network)
+  test_judge_agreement.py    Phase B judge-metric + rubric-gate tests (no network)
   test_llm_providers.py  mocked unit tests (no API credits)
   test_retrieval_lexical.py / test_retrieval_dense.py  retrieval unit tests (no network)
   test_agent.py        agent drafting/escalation/pipeline unit tests (no network)
