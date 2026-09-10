@@ -7,14 +7,21 @@ benchmark is never used to set these). Escalation fires on:
 
 1. hard intents   — 'none' / 'other_unclear' (catch-all bucket = no actionable
                     intent);
-2. missing evidence — no usable historical reply in the top-3, or no hits at
+2. high-risk intent — the intent is a *human-ownable risk category* (security,
+                    money, remedy, delivery investigation, complaint — see
+                    config/risk_intents.json), irrespective of confidence:
+                    Phase A's hand-labelled decision benchmark showed these
+                    must reach a human even when the model is confident;
+3. missing evidence — no usable historical reply in the top-3, or no hits at
                     all (retrieval failed);
-3. low confidence — combined confidence (0.6 * intent_prob + 0.4 * mean(top-3
-                    similarity)) below a dev-calibrated floor.
+4. low confidence — combined confidence (0.6 * intent_prob + 0.4 * mean(top-3
+                    similarity)) below a dev-calibrated floor (now applies only
+                    to non-high-risk intents).
 
-There is no escalation *ground truth* in the data; this component's behavior is
-reported as a distribution plus an ECE-style calibration diagnostic, never as
-an accuracy number.
+The high-risk set comes from a human-labelled 200-row escalation benchmark
+(data/golden/escalation_gold.jsonl, Phase A) and is stored in
+config/risk_intents.json; the benchmark itself is evaluation-only and is never
+merged into training or the threshold fit. The floor (3) is set on dev only.
 """
 from __future__ import annotations
 
@@ -45,6 +52,18 @@ def load_thresholds(path: Path | str | None) -> dict:
         return {k: data[k] for k in DEFAULT_KEYS if k in data}
     except Exception:  # noqa: BLE001
         return {}
+
+
+def _load_risk_intents() -> set[str]:
+    """Human-labelled high-risk intent set (Phase A benchmark, traceable)."""
+    p = Path(__file__).resolve().parents[2] / "config" / "risk_intents.json"
+    try:
+        return set(json.loads(p.read_text()))
+    except Exception:  # noqa: BLE001
+        return set()
+
+
+RISK_INTENTS = _load_risk_intents()
 
 
 @dataclass
@@ -89,6 +108,9 @@ def decide(
 
     if intent in ("none", "other_unclear"):
         reasons.append(f"intent={intent} (no actionable intent)")
+        action = "escalate"
+    elif intent in RISK_INTENTS:
+        reasons.append(f"intent={intent} (high-risk category)")
         action = "escalate"
     elif not hits:
         reasons.append("no retrieval hits")

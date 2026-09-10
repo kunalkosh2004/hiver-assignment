@@ -1,5 +1,6 @@
 example_id,codes,true_intent,intent,action,confidence,language
 challenge-842315,intent_off_target;escalation_conservative;retrieval_lang_mismatch,delivery_delay,delivered_but_not_received,escalate,0.7245,fr
+challenge-1242242,intent_close_secondary;escalation_conservative,delivered_but_not_received,service_complaint_escalation,escalate,0.923,en
 challenge-1379340,intent_off_target;retrieval_lang_mismatch,device_app_issue,delivery_delay,auto_handle,0.886,it
 challenge-1451501,intent_off_target;escalation_conservative,none,charge_issue,escalate,0.5654,pt
 challenge-1568158,intent_off_target;escalation_conservative,charge_issue,delivery_delay,escalate,0.8476,en
@@ -11,6 +12,7 @@ challenge-227064,intent_off_target;drafting_ungrounded,device_app_issue,delivery
 challenge-232399,intent_off_target;escalation_conservative,service_complaint_escalation,delivery_delay,escalate,0.8773,fr
 challenge-2472354,intent_off_target;drafting_ungrounded,none,delivery_delay,auto_handle,0.95,ja
 challenge-2586341,intent_off_target;drafting_ungrounded,none,delivery_delay,auto_handle,0.9121,ja
+challenge-2609965,intent_off_target;escalation_conservative,other_unclear,product_return_and_replacement,escalate,0.914,fr
 challenge-2679197,intent_off_target;escalation_conservative,product_return_and_replacement,service_complaint_escalation,escalate,0.7346,en
 challenge-2798309,intent_off_target;escalation_conservative,delivered_but_not_received,delivery_delay,escalate,0.8533,en
 challenge-2853614,intent_off_target;escalation_conservative,cancellation,service_complaint_escalation,escalate,0.7047,en
@@ -30,6 +32,7 @@ representative-1420491,intent_off_target;escalation_conservative,refund_request,
 representative-1464161,intent_off_target;escalation_conservative,device_app_issue,delivery_delay,escalate,0.6196,en
 representative-1537572,intent_off_target;escalation_conservative,service_complaint_escalation,delivery_delay,escalate,0.8408,en
 representative-1604096,intent_off_target;escalation_conservative,charge_issue,delivery_delay,escalate,0.597,en
+representative-1727624,intent_off_target;escalation_conservative,delivered_wrong_location,service_complaint_escalation,escalate,0.9302,en
 representative-1766849,intent_off_target;escalation_conservative,device_app_issue,delivery_delay,escalate,0.8604,en
 representative-2111184,intent_off_target;escalation_conservative,none,delivery_delay,escalate,0.8754,en
 representative-2151408,intent_off_target;escalation_conservative,service_complaint_escalation,delivery_delay,escalate,0.8438,en
@@ -38,6 +41,7 @@ representative-2291505,intent_off_target;escalation_conservative,product_return_
 representative-2353843,intent_off_target;escalation_conservative,service_complaint_escalation,delivery_delay,escalate,0.8643,en
 representative-2374486,intent_off_target;escalation_conservative,order_status_query,delivery_delay,escalate,0.7975,en
 representative-2389800,intent_off_target;escalation_conservative,none,delivery_delay,escalate,0.7287,en
+representative-2450570,intent_off_target;escalation_conservative,product_return_and_replacement,service_complaint_escalation,escalate,0.8842,en
 representative-2484077,intent_off_target;escalation_conservative,product_return_and_replacement,delivery_delay,escalate,0.8436,en
 representative-2573750,intent_off_target;escalation_conservative,service_complaint_escalation,delivery_delay,escalate,0.8693,en
 representative-2594956,intent_off_target;escalation_conservative,delivered_wrong_location,delivery_delay,escalate,0.8099,en
@@ -54,13 +58,13 @@ representative-679025,intent_off_target;escalation_conservative,product_return_a
 representative-880948,intent_off_target;escalation_conservative,cancellation,delivery_delay,escalate,0.8703,en
 representative-886169,intent_off_target;escalation_conservative,service_complaint_escalation,delivery_delay,escalate,0.8691,en
 representative-895946,intent_off_target;escalation_conservative,charge_issue,delivery_delay,escalate,0.8574,en
+representative-915961,intent_close_secondary;escalation_conservative,refund_request,service_complaint_escalation,escalate,0.8869,en
 representative-957126,intent_off_target;escalation_conservative,none,delivery_delay,escalate,0.8257,en
 representative-982267,intent_off_target;escalation_conservative,product_return_and_replacement,delivery_delay,escalate,0.8119,en
 representative-993935,intent_off_target;escalation_conservative,order_status_query,delivery_delay,escalate,0.8768,en
 challenge-102915,intent_off_target,service_complaint_escalation,delivery_delay,auto_handle,0.9245,en
 challenge-1033752,intent_off_target,none,delivery_delay,auto_handle,0.8801,de
 challenge-1130527,intent_off_target,order_status_query,delivery_delay,auto_handle,0.8833,en
-challenge-1242242,intent_close_secondary,delivered_but_not_received,service_complaint_escalation,auto_handle,0.923,en
 challenge-1323314,intent_off_target,service_complaint_escalation,delivery_delay,auto_handle,0.9397,en
 challenge-1578555,intent_off_target,delivered_wrong_location,delivery_delay,auto_handle,0.8797,de
 challenge-1845984,intent_off_target,charge_issue,delivery_delay,auto_handle,0.9187,en
@@ -69,8 +73,9 @@ challenge-2149534,intent_off_target,order_status_query,delivery_delay,auto_handl
 challenge-2254596,intent_off_target,none,delivery_delay,auto_handle,0.9225,it
 challenge-2284883,intent_off_target,delivered_wrong_location,delivery_delay,auto_handle,0.8943,en
 challenge-2497106,intent_off_target,device_app_issue,delivery_delay,auto_handle,0.887,en
-challenge-2609965,intent_off_target,other_unclear,product_return_and_replacement,auto_handle,0.914,fr
+challenge-2521823,escalation_conservative,service_complaint_escalation,service_complaint_escalation,escalate,0.9096,en
 challenge-2694949,intent_off_target,account_access,delivery_delay,auto_handle,0.8888,en
+challenge-2747122,escalation_conservative,service_complaint_escalation,service_complaint_escalation,escalate,0.8971,en
 challenge-2814438,intent_off_target,account_access,delivery_delay,auto_handle,0.9085,es
 challenge-2909124,intent_off_target,other_unclear,delivery_delay,auto_handle,0.9004,en
 challenge-365605,intent_off_target,none,delivery_delay,auto_handle,0.8792,fr
@@ -94,6 +99,7 @@ representative-1229688,intent_off_target,device_app_issue,delivery_delay,auto_ha
 representative-1250967,intent_off_target,service_complaint_escalation,delivery_delay,auto_handle,0.881,en
 representative-1335118,escalation_conservative,delivery_delay,delivery_delay,escalate,0.8634,en
 representative-136922,intent_off_target,cancellation,delivery_delay,auto_handle,0.9416,en
+representative-1384189,escalation_conservative,service_complaint_escalation,service_complaint_escalation,escalate,0.9315,en
 representative-1384330,intent_off_target,device_app_issue,delivery_delay,auto_handle,0.9155,en
 representative-1389974,escalation_conservative,delivery_delay,delivery_delay,escalate,0.8634,en
 representative-1399860,escalation_conservative,delivery_delay,delivery_delay,escalate,0.829,en
@@ -106,7 +112,6 @@ representative-1588773,intent_off_target,service_complaint_escalation,delivery_d
 representative-1707062,intent_off_target,none,delivery_delay,auto_handle,0.9198,en
 representative-1721707,intent_close_secondary,order_status_query,delivery_delay,auto_handle,0.9323,en
 representative-1724691,intent_off_target,charge_issue,delivery_delay,auto_handle,0.9378,en
-representative-1727624,intent_off_target,delivered_wrong_location,service_complaint_escalation,auto_handle,0.9302,en
 representative-174486,intent_off_target,none,delivery_delay,auto_handle,0.894,en
 representative-1746071,intent_off_target,service_complaint_escalation,delivery_delay,auto_handle,0.892,en
 representative-1755281,intent_off_target,other_unclear,delivery_delay,auto_handle,0.941,en
@@ -128,7 +133,6 @@ representative-2363235,intent_off_target,order_status_query,delivery_delay,auto_
 representative-2378990,intent_off_target,device_app_issue,delivery_delay,auto_handle,0.906,en
 representative-2384553,intent_off_target,none,delivery_delay,auto_handle,0.918,en
 representative-2447260,intent_close_secondary,service_complaint_escalation,delivery_delay,auto_handle,0.9062,en
-representative-2450570,intent_off_target,product_return_and_replacement,service_complaint_escalation,auto_handle,0.8842,en
 representative-2454046,intent_off_target,product_return_and_replacement,delivery_delay,auto_handle,0.9195,en
 representative-2460750,intent_off_target,product_return_and_replacement,delivery_delay,auto_handle,0.9202,en
 representative-2515914,intent_off_target,refund_request,delivery_delay,auto_handle,0.9091,en
@@ -160,18 +164,14 @@ representative-533206,intent_off_target,delivered_wrong_location,delivery_delay,
 representative-628261,intent_off_target,none,delivery_delay,auto_handle,0.9513,en
 representative-650056,intent_off_target,cancellation,delivery_delay,auto_handle,0.8875,en
 representative-832924,intent_close_secondary,order_status_query,delivery_delay,auto_handle,0.8788,en
-representative-915961,intent_close_secondary,refund_request,service_complaint_escalation,auto_handle,0.8869,en
 challenge-2170818,,delivery_delay,delivery_delay,auto_handle,0.999,en
 challenge-2171079,,delivery_delay,delivery_delay,auto_handle,0.8844,en
-challenge-2521823,,service_complaint_escalation,service_complaint_escalation,auto_handle,0.9096,en
-challenge-2747122,,service_complaint_escalation,service_complaint_escalation,auto_handle,0.8971,en
 challenge-2785904,,delivery_delay,delivery_delay,auto_handle,0.891,en
 representative-1116569,,delivery_delay,delivery_delay,auto_handle,0.9164,en
 representative-1193931,,delivery_delay,delivery_delay,auto_handle,0.886,en
 representative-1210214,,delivery_delay,delivery_delay,auto_handle,0.9243,en
 representative-1218249,,delivery_delay,delivery_delay,auto_handle,0.9202,en
 representative-1311577,,delivery_delay,delivery_delay,auto_handle,0.9038,en
-representative-1384189,,service_complaint_escalation,service_complaint_escalation,auto_handle,0.9315,en
 representative-1406593,,delivery_delay,delivery_delay,auto_handle,0.9046,en
 representative-1420099,,delivery_delay,delivery_delay,auto_handle,0.9275,en
 representative-142833,,delivery_delay,delivery_delay,auto_handle,0.9085,en

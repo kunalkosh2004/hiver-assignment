@@ -40,22 +40,23 @@
     }
   ],
   "escalation": {
-    "auto_handle": 139,
-    "escalate": 61,
-    "escalation_rate": 0.305,
+    "auto_handle": 131,
+    "escalate": 69,
+    "escalation_rate": 0.345,
     "by_true_intent": {
       "account_access": 1,
       "cancellation": 2,
       "charge_issue": 6,
-      "delivered_but_not_received": 2,
-      "delivered_wrong_location": 1,
+      "delivered_but_not_received": 3,
+      "delivered_wrong_location": 2,
       "delivery_delay": 8,
       "device_app_issue": 2,
       "none": 10,
       "order_status_query": 5,
-      "product_return_and_replacement": 11,
-      "refund_request": 1,
-      "service_complaint_escalation": 12
+      "other_unclear": 1,
+      "product_return_and_replacement": 12,
+      "refund_request": 2,
+      "service_complaint_escalation": 15
     },
     "sensitivity_to_comb_low": {
       "0.45": {
@@ -80,21 +81,21 @@
       }
     },
     "active_comb_low": 0.8775,
-    "note": "dev-calibrated floor transfers poorly to golden (domain shift) \u2014 sensitivity shown"
+    "note": "risk-intent policy shipped (Phase E): human-risk intents escalate regardless of confidence; dev-calibrated floor now applies to non-risky intents only"
   },
   "drafting": {
     "avg_cue_overlap": 0.295,
     "overlap_cooc": {
-      "()": 145,
-      "('apology',)": 39,
-      "('apology', 'ask')": 3,
+      "()": 144,
       "('ask',)": 7,
-      "('contact',)": 5,
-      "('ask', 'contact')": 1
+      "('apology',)": 42,
+      "('apology', 'ask')": 2,
+      "('ask', 'contact')": 1,
+      "('contact',)": 4
     },
-    "resolution_reuse_rate_auto": 0.9568,
+    "resolution_reuse_rate_auto": 0.9542,
     "empty_drafts": 0,
-    "avg_draft_chars": 260.3
+    "avg_draft_chars": 255.9
   },
   "calibration_dev": {
     "ece": 0.1248,

@@ -6,25 +6,25 @@
       "escalate": 23
     },
     "escalate": {
-      "auto_handle": 66,
-      "escalate": 38
+      "auto_handle": 58,
+      "escalate": 46
     }
   },
-  "accuracy": 0.555,
-  "escalate_precision": 0.623,
-  "escalate_recall": 0.3654,
-  "escalate_f1": 0.4606,
-  "auto_precision": 0.5252,
+  "accuracy": 0.595,
+  "escalate_precision": 0.6667,
+  "escalate_recall": 0.4423,
+  "escalate_f1": 0.5318,
+  "auto_precision": 0.5573,
   "auto_recall": 0.7604,
-  "false_auto_dangerous": 66,
+  "false_auto_dangerous": 58,
   "false_escalate_cost": 23,
   "expected_decision_rate": {
     "escalate": 104,
     "auto_handle": 96
   },
   "predicted_decision_rate": {
-    "auto_handle": 139,
-    "escalate": 61
+    "auto_handle": 131,
+    "escalate": 69
   },
   "per_intent": [
     {
@@ -63,17 +63,17 @@
       "intent": "delivered_but_not_received",
       "n": 11,
       "expected_escalate": 11,
-      "predicted_escalate": 2,
+      "predicted_escalate": 3,
       "expected_escalate_rate": 1.0,
-      "predicted_escalate_rate": 0.182
+      "predicted_escalate_rate": 0.273
     },
     {
       "intent": "delivered_wrong_location",
       "n": 7,
       "expected_escalate": 5,
-      "predicted_escalate": 1,
+      "predicted_escalate": 2,
       "expected_escalate_rate": 0.714,
-      "predicted_escalate_rate": 0.143
+      "predicted_escalate_rate": 0.286
     },
     {
       "intent": "delivery_delay",
@@ -111,33 +111,33 @@
       "intent": "other_unclear",
       "n": 3,
       "expected_escalate": 3,
-      "predicted_escalate": 0,
+      "predicted_escalate": 1,
       "expected_escalate_rate": 1.0,
-      "predicted_escalate_rate": 0.0
+      "predicted_escalate_rate": 0.333
     },
     {
       "intent": "product_return_and_replacement",
       "n": 18,
       "expected_escalate": 15,
-      "predicted_escalate": 11,
+      "predicted_escalate": 12,
       "expected_escalate_rate": 0.833,
-      "predicted_escalate_rate": 0.611
+      "predicted_escalate_rate": 0.667
     },
     {
       "intent": "refund_request",
       "n": 8,
       "expected_escalate": 7,
-      "predicted_escalate": 1,
+      "predicted_escalate": 2,
       "expected_escalate_rate": 0.875,
-      "predicted_escalate_rate": 0.125
+      "predicted_escalate_rate": 0.25
     },
     {
       "intent": "service_complaint_escalation",
       "n": 27,
       "expected_escalate": 27,
-      "predicted_escalate": 12,
+      "predicted_escalate": 15,
       "expected_escalate_rate": 1.0,
-      "predicted_escalate_rate": 0.444
+      "predicted_escalate_rate": 0.556
     }
   ],
   "note": "false_auto = expected escalate but auto-handled (dangerous); false_escalate = expected auto but escalated (conservative cost). Benchmark is hand-labelled single-annotator; evaluation-only."

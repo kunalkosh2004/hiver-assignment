@@ -1,22 +1,22 @@
 {
   "n_golden": 200,
-  "n_failure_rows": 162,
-  "n_success_rows": 38,
+  "n_failure_rows": 165,
+  "n_success_rows": 35,
   "category_counts": {
     "intent_off_target": 143,
-    "escalation_conservative": 61,
+    "escalation_conservative": 69,
     "intent_close_secondary": 8,
     "drafting_ungrounded": 6,
     "retrieval_lang_mismatch": 3
   },
   "co_occurrence": {
-    "('intent_off_target',)": 87,
-    "('escalation_conservative', 'intent_off_target')": 47,
-    "('escalation_conservative',)": 11,
-    "('intent_close_secondary',)": 6,
+    "('intent_off_target',)": 84,
+    "('escalation_conservative', 'intent_off_target')": 50,
+    "('escalation_conservative',)": 14,
     "('drafting_ungrounded', 'intent_off_target')": 6,
+    "('escalation_conservative', 'intent_close_secondary')": 4,
+    "('intent_close_secondary',)": 4,
     "('intent_off_target', 'retrieval_lang_mismatch')": 2,
-    "('escalation_conservative', 'intent_close_secondary')": 2,
     "('escalation_conservative', 'intent_off_target', 'retrieval_lang_mismatch')": 1
   },
   "examples": {
@@ -42,21 +42,21 @@
     ],
     "escalation_conservative": [
       {
+        "example_id": "challenge-1242242",
+        "language": "en",
+        "true_intent": "delivered_but_not_received",
+        "predicted_intent": "service_complaint_escalation",
+        "action": "escalate",
+        "query": "@USER Your customer service is the worst first they investigated the wrong item then they thought I got someone else\u2019s package now they say I",
+        "draft": "Hello! We are sorry to hear about this experience. Thank you for raising this. I have included our specialists on this thread so they can look into it for you; they will follow up with next steps shortly."
+      },
+      {
         "example_id": "challenge-1451501",
         "language": "pt",
         "true_intent": "none",
         "predicted_intent": "charge_issue",
         "action": "escalate",
         "query": "@USER Como foi minha primeira compra, eu comprei 2 (use a cabe\u00e7a c E linux a b\u00edblia), mas j\u00e1 estou fazendo a lista das pr\u00f3ximas compras",
-        "draft": "Hello! We are sorry to hear about this experience. Thank you for raising this. I have included our specialists on this thread so they can look into it for you; they will follow up with next steps shortly."
-      },
-      {
-        "example_id": "challenge-1568158",
-        "language": "en",
-        "true_intent": "charge_issue",
-        "predicted_intent": "delivery_delay",
-        "action": "escalate",
-        "query": "@USER And I have another one too this one's actual MRP is Rs. 525/ Frontech 700 MB 5001 FC BLANK CD-R- 50 Pcs URL",
         "draft": "Hello! We are sorry to hear about this experience. Thank you for raising this. I have included our specialists on this thread so they can look into it for you; they will follow up with next steps shortly."
       }
     ],
@@ -66,9 +66,9 @@
         "language": "en",
         "true_intent": "delivered_but_not_received",
         "predicted_intent": "service_complaint_escalation",
-        "action": "auto_handle",
+        "action": "escalate",
         "query": "@USER Your customer service is the worst first they investigated the wrong item then they thought I got someone else\u2019s package now they say I",
-        "draft": "Hello! We are sorry to hear about this experience. Oh my! I'm so sorry for this poor experience, Brandon! Without providing account specific details, please tell us who the carrier was for this order. You can find that here: To help, please share a little more"
+        "draft": "Hello! We are sorry to hear about this experience. Thank you for raising this. I have included our specialists on this thread so they can look into it for you; they will follow up with next steps shortly."
       },
       {
         "example_id": "challenge-197857",

@@ -33,7 +33,7 @@ the discovered intent taxonomy.
 | Phase 5D — Retrieval evaluation | ✅ Done | human-labelled pool (30q/150 pairs), `reports/retrieval_results.*` (§9) |
 | Phase 5E — Data scaling + error analysis | ✅ Done | `reports/retrieval_scaling.*`, `retrieval_error_analysis.*` (§9) |
 | Phase 6 — Response generation (grounded) | ✅ Done | `src/agent/` draft+intent, deterministic, no fabrication (§10) |
-| Phase 7 — Escalation policy | ✅ Done | `src/agent/escalation.py`, dev-calibrated floor (§10) |
+| Phase 7 — Escalation policy | ✅ Done | `src/agent/escalation.py`, dev floor (Phase E: + risk-intent set, §10) |
 | Phase 8 — Final harness + LLM judge | ✅ Done | `scripts/evaluate_agent.py`, `reports/agent_results.*` (§10) |
 | Escalation decision benchmark | ✅ Done | hand-labelled 200 (`data/golden/escalation_gold.jsonl`) + `scripts/evaluate_escalation.py` (§10) |
 | Consolidated benchmark + policy probe | ✅ Done | `scripts/consolidate_benchmark.py` → `reports/phase_c_benchmark.md` (§10) |
@@ -191,7 +191,7 @@ clusters are interpreted by hand from the actual output.
 - **~27.4% of traffic is non-English** (Spanish, Japanese, French, German, …) — a
   first-order routing concern, not an `other` intent bucket
 - English subset of the 10,000-sample: **7,289 (72.9%)**
-- **12-intent taxonomy** published to `config/amazon_intents.yaml`:
+- **12-intent taxonomy** published to `config/amazon_intents.yaml` + `config/risk_intents.json` (Phase E escalation risk set):
 
 | Intent | What the customer wants |
 | ------ | ----------------------- |
@@ -453,9 +453,9 @@ python scripts/build_error_analysis.py            # >=30 categorized failures ->
 live in `notebooks/04_retrieval_augmented_agent.ipynb` from committed reports.
 
 **Pipeline (per customer message, deterministic, no API key):** weak-201k intent
-classifier → dense message-only retrieval (temporal filter) → confidence-based
-escalation → grounded templated drafting. The drafter transforms the best
-retrieved brand reply verbatim-limited (handles/URLs/order numbers/phones/
+classifier → dense message-only retrieval (temporal filter) → risk-intent +
+confidence escalation → grounded templated drafting. The drafter transforms the
+best retrieved brand reply verbatim-limited (handles/URLs/order numbers/phones/
 `^RB` scrub-tags stripped, nothing fabricated).
 
 **Intent learning curve on the golden benchmark (200 rows):**
@@ -473,11 +473,16 @@ auto-correlated with the same small dev family — the scaling curve plateaus wh
 label noise meets class imbalance. This is the real argument for clean/LLM
 labels, not a coverage gap in retrieval.
 
-**Escalation (Phase 7, dev-calibrated floor):** fires on catch-all intents,
-missing usable evidence in top-3, or combined confidence
-(0.6·intent_prob + 0.4·mean-sim) below a floor calibrated on the **dev** set
-only (golden untouched, frozen after). On golden: **61/200 escalated (30.5%)**,
-with sensitivity 1%→7%→31%→95% as the floor moves 0.45→0.75→0.8775→0.95.
+**Escalation (Phase 7 floor → Phase E risk-intent + floor):** fires on
+catch-all intents, on **high-risk intents regardless of confidence**
+(`config/risk_intents.json`, learnt from the hand-labelled decision benchmark —
+security, money, remedy, delivery-investigation, complaint), on missing usable
+evidence in top-3, or on combined confidence (0.6·intent_prob + 0.4·mean-sim)
+below a floor calibrated on the **dev** set only (golden untouched, frozen
+after). On golden: **69/200 escalated (34.5%)** with the risk policy; on the
+human-labelled decision benchmark it scores **accuracy 0.595, escal-F1 0.53,
+58 dangerous false-autos** (vs 0.555 / 0.46 / 66 for the pre-Phase-E
+confidence-only floor; perfect-intent risk ceiling 0.875 — §10 A/C/E).
 
 **Drafting (Phase 6):** auto-handled replies reuse retrieved-resolution words in
 **~96%** of rows (token-overlap, ≥2 tokens); average draft 263 chars, zero empty;
@@ -626,12 +631,14 @@ README.md
 - Phase 4 — Deterministic baselines + evaluation ✅ *(done, §8)*
 - Phase 5 — Historical-corpus retrieval (RAG memory) ✅ *(done, §9)*
 - Phase 6 — Response generation (grounded in retrieved resolutions) ✅ *(done, §10)*
-- Phase 7 — Escalation policy (auto-handle vs escalate, confidence-based) ✅ *(done, §10)*
+- Phase 7 — Escalation policy (auto-handle vs escalate; risk-intent + dev floor, §10) ✅ *(done)*
 - Phase 8 — Final evaluation harness + LLM judge on the golden benchmark ✅ *(done, §10)*
 - Phase 9 — Failure analysis & report ✅ *(done, §10)*
 - Phase A — Escalation decision benchmark (human labels + eval) ✅ *(done, §10)*
 - Phase C — Consolidated benchmark + escalation policy probe ✅ *(done, §10)*
 - Phase D — Final report (≤6 pp) + measured reproduction timing ✅ *(done, §10)*
+- Phase E — Risk-intent escalation policy (shipped, §10)
+- Phase F — Web demo (optional) ⏳ pending
 
 **Future work (out of scope here):** LLM-labelled weak intents (requires a
 provider key; would target the intent ceiling, the dominant failure mode),

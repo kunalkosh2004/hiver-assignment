@@ -22,8 +22,8 @@ current objective).
 | **LLM provider layer** | ✅ Done — resilient OpenAI+Gemini auto-fallback (optional) |
 | **Phase 5 — Retrieval (RAG memory)** | ✅ Done — TF-IDF/BM25/dense/hybrid × {msg, ctx} over a 201,741-interaction corpus; human-labelled benchmark + scaling + error analysis |
 | **Phases 6–8 — Final agent** | ✅ Done — weak-201k intent model + dense retrieval + dev-calibrated escalation + grounded deterministic drafting; final harness on the golden 200 (LLM judge shipped off when no key) |
-| **Phase 9 — Failure analysis** | ✅ Done — per-golden-row taxonomy (162/200 rows ≥1 failure; intent misclassification dominates) |
-| **Commits** | 26 (`8f0d25c` → Phase A/B/C/D) |
+| **Phase 9 — Failure analysis** | ✅ Done — per-golden-row taxonomy (165/200 rows ≥1 failure; intent misclassification dominates) |
+| **Commits** | 27 (`8f0d25c` → Phase A/B/C/D/E) |
 | **Repro timing** | measured offline **14.54 min** warm (`reports/reproduction_timing.json`) |
 | **Reproducibility** | `seed 42`, deterministic, no API key; `pip/requirements` offline |
 
@@ -252,10 +252,12 @@ The weak labels are 86% `delivery_delay` (proxy bias) and are auto-correlated
 with the same small dev family; the learning curve plateaus where label noise
 meets class imbalance. Retrieval memory is not the bottleneck — intent is.
 
-Escalation (Phase 7): **61/200 = 30.5%** on golden with the frozen floor;
-sensitivity 1% (0.45) → 7% (0.75) → 31% (0.8775) → 95% (0.95). Spread evenly
-across true intents; no escalation ground truth exists, so this is reported as a
-distribution + ECE-style calibration diagnostic on dev (ECE 0.12).
+Escalation (Phase 7, then Phase E): **69/200 = 34.5%** on golden with the
+shipped risk-intent + floor policy (pre-Phase-E confidence-only floor produced
+61/200 = 30.5%); sensitivity 1% (0.45) → 7% (0.75) → 31% (0.8775) → 95% (0.95)
+is the floor-only view. vs the human-labelled decision benchmark the risk policy
+scores 0.595 (58 dangerous false-autos; ceiling 0.875 with perfect intent —
+§6E/§6F). The benchmark (not the floor) is the truth-bearing number.
 
 Drafting (Phase 6): auto-handled replies reuse retrieved-resolution words in
 **≈96%** of rows (token-overlap ≥2, no fabrication); avg 263 chars, 0 empty
@@ -286,12 +288,12 @@ Per-golden-row taxonomy over the agent dump:
 | category | rows |
 | ---- | --: |
 | `intent_off_target` | 143 |
-| `escalation_conservative` | 61 |
+| `escalation_conservative` | 69 |
 | `intent_close_secondary` | 8 |
 | `drafting_ungrounded` | 6 |
 | `retrieval_lang_mismatch` | 3 |
-| **failure rows (≥1 code)** | **162 / 200** |
-| success rows (0 codes) | 38 |
+| **failure rows (≥1 code)** | **165 / 200** |
+| success rows (0 codes) | 35 |
 
 Top combination `intent_off_target` alone (87 rows) outweighs all others. The
 biggest lever for the final agent is intent quality — matching the Phases-4/6B
@@ -313,10 +315,14 @@ Agent decisions (final agent on the golden 200) vs expected:
 
 | metric | value |
 |---|---|
-| accuracy | 0.555 |
-| escalate precision / recall / F1 | 0.62 / 0.37 / 0.46 |
-| **false_auto (expected escalate, auto-handled)** | **66 / 104** |
+| accuracy | 0.595 |
+| escalate precision / recall / F1 | 0.67 / 0.44 / 0.53 |
+| **false_auto (expected escalate, auto-handled)** | **58 / 104** |
 | false_escalate (expected auto, escalated — conservative cost) | 23 / 96 |
+
+*Shipped policy is the Phase-E hybrid — risk-intent override + floor — an
+improvement over the pre-Phase-E confidence-only floor (0.555 / 0.46 / 66:
+8 more human-warranted cases reach a specialist).*
 
 Per-intent gaps (expected → predicted escalate rate): `delivered_but_not_received`
 1.00→0.18, `refund_request` 0.88→0.12, `account_access` 0.83→0.17, `charge_issue`
@@ -344,7 +350,7 @@ Every method is scored on the **same 200 golden rows** (`reports/phase_c_benchma
 | logistic (msg) | 0.230 | 0.164 | – | – | – | – |
 | svm (msg) | 0.245 | 0.144 | – | – | – | – |
 | svm (msg+ctx) | 0.280 | 0.135 | – | – | – | – |
-| **agent (weak-201k)** | 0.245 | 0.050 | 0.305 | 0.555 | 0.461 | 66 |
+| **agent (weak-201k, shipped)** | 0.245 | 0.050 | 0.345 | 0.595 | 0.532 | 58 |
 
 Decision-benchmark policy probe (same rows, `reports/phase_c_benchmark.json`):
 
@@ -354,16 +360,20 @@ Decision-benchmark policy probe (same rows, `reports/phase_c_benchmark.json`):
 | always escalate | 0.520 | 0.684 | 0 | 96 |
 | risk by *predicted* intent | 0.550 | 0.274 | 87 | 3 |
 | **risk by *true* intent** | **0.875** | **0.876** | **16** | 9 |
-| agent floor (shipped) | 0.555 | 0.461 | 66 | 23 |
+| confidence-only floor (pre-Phase E) | 0.555 | 0.461 | 66 | 23 |
+| **shipped (risk-intent + floor, Phase E)** | **0.595** | **0.532** | **58** | 23 |
 
 Per-intent confusion (predicted intent × expected decision) shows the failure
 mechanism: **180/200 rows predict `delivery_delay`** (the weak-201k proxy bias),
 and of those 58 are expected escalations that were auto-handled. A human-risk
 policy (escalate when intent is risky: security, money, delivery investigation,
 remedy, complaint) would reach **87.5% decision accuracy on perfect intents —
-the shipped agent is at 55.5% entirely because of intent misprediction**, not
-retrieval or escalation logic. This is the quantitative core of §7 ("what is
-misleading") and the top priority for the one-more-week plan (§9).
+the shipped agent is at 59.5% entirely because of intent misprediction**, not
+retrieval or escalation logic. Phase E shipped exactly that risk policy
+(`config/risk_intents.json` → `src/agent/escalation.py`) and it recovered 8
+false-autos (66 → 58); the residual gap to the ceiling is intent error. This is
+the quantitative core of §7 ("what is misleading") and the top priority for the
+one-more-week plan (§9).
 
 ### Reproduction timing (Phase D, `scripts/time_reproduction.py`)
 
@@ -374,7 +384,7 @@ Measured on this machine with warm caches (`reports/reproduction_timing.json`):
 | `train_agent_intent.py` | 4.4 min |
 | `calibrate_escalation.py` | 4.0 min |
 | `evaluate_agent.py` (golden 200, LLM judge off) | 4.8 min |
-| remaining 4 scripts + full 56-test suite | 1.3 min |
+| remaining 4 scripts + full 60-test suite | 1.3 min |
 | **total offline (no API key)** | **14.54 min** |
 
 `fit_seconds` in `reports/agent_intent_models.json` varies with hardware;
@@ -473,7 +483,7 @@ numbers that build on it — are in three ways *too good*, and one way *too bad*
 | # | failure mode | 200-row count | hypothesis |
 |--:|---|---|---|
 | 1 | `intent_off_target` (primary intent missed; not even a secondary) | 143 rows | 86%-`delivery_delay` prior + TF-IDF bag-of-graphemes collapses "Prime Video app", "invoice", "refund" into `delivery_delay`; multilingual tokens share no surface features |
-| 2 | `escalation_conservative` (escalated although confident + usable evidence) | 61 | single combined floor `comb_low=0.8775` set on dev; mass-`delivery_delay` confidence near 1.0 pushes floor high; thresholds over-tuned to dev-pool |
+| 2 | `escalation_conservative` (escalated although confident + usable evidence) | 69 | single combined floor `comb_low=0.8775` set on dev + (Phase E) risky intents escalate regardless of confidence; mass-`delivery_delay` confidence near 1.0 pushes floor high; thresholds over-tuned to dev-pool |
 | 3 | `intent_close_secondary` (right family, wrong leaf) | 8 | secondary classes share super-tokens ("account", "paid"); TF-IDF can't separate costs from holds |
 | 4 | `drafting_ungrounded` (auto draft is the generic template only) | 6 | drafting intentionally never fabricates; when the top-5 retrieval lacks a usable reply *and* intent is confident, it produces a neutral template that is honest but useless |
 | 5 | `retrieval_lang_mismatch` (top-1 evidence language ≠ query) | 3 | dense embeddings are multilingual but tolerance to mixed-language queries is low; corpus is ~90% EN, so non-EN queries retrieve EN evidence |

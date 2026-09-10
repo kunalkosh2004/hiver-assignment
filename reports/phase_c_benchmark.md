@@ -6,7 +6,7 @@
 | logistic | 0.230 | 0.164 | – | – | – | – | – | – | – |
 | svm | 0.245 | 0.144 | – | – | – | – | – | – | – |
 | svm (msg+context) | 0.280 | 0.135 | – | – | – | – | – | – | – |
-| agent (weak-201k intent) | 0.245 | 0.050 | 0.305 | 0.555 | 0.461 | 66 | 95.7 | 0 | 260 |
+| agent (weak-201k intent) | 0.245 | 0.050 | 0.345 | 0.595 | 0.532 | 58 | 95.4 | 0 | 256 |
 
 Policy probe on the decision benchmark (same 200 rows):
 
@@ -16,4 +16,4 @@ Policy probe on the decision benchmark (same 200 rows):
 | always_escalate | 0.520 | 0.684 | 0 | 96 | 1.000 |
 | risk_intent_policy | 0.550 | 0.274 | 87 | 3 | 0.100 |
 | risk_true_intent_policy | 0.875 | 0.876 | 16 | 9 | 0.485 |
-| agent_floor_policy | 0.555 | 0.461 | 66 | 23 | 0.305 |
+| agent_floor_policy | 0.595 | 0.532 | 58 | 23 | 0.345 |

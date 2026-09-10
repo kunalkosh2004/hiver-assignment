@@ -1,0 +1,11 @@
+[
+  "account_access",
+  "charge_issue",
+  "delivered_but_not_received",
+  "delivered_wrong_location",
+  "refund_request",
+  "cancellation",
+  "product_return_and_replacement",
+  "service_complaint_escalation",
+  "other_unclear"
+]

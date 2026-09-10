@@ -60,6 +60,18 @@ class TestEscalationPolicy(unittest.TestCase):
         self.assertEqual(d.action, "auto_handle")
         self.assertTrue(0.0 <= d.confidence <= 1.0)
 
+    def test_high_risk_intent_escalates_despite_confidence(self):
+        d = decide(intent="charge_issue", intent_prob=0.99, margin=0.9,
+                   hits=[hit(0.6), hit(0.55), hit(0.5)])
+        self.assertEqual(d.action, "escalate")
+        self.assertTrue(any("high-risk" in r for r in d.reasons))
+
+    def test_high_risk_intent_set_from_config(self):
+        from src.agent.escalation import RISK_INTENTS  # noqa: PLC0415
+        self.assertIn("charge_issue", RISK_INTENTS)
+        self.assertIn("account_access", RISK_INTENTS)
+        self.assertNotIn("delivery_delay", RISK_INTENTS)
+
 
 class TestDrafter(unittest.TestCase):
     def test_draft_is_grounded_and_short(self):
@@ -86,15 +98,15 @@ class TestAgentPipeline(unittest.TestCase):
                 return [hit(0.5), hit(0.3)]
 
         class Dummy01:
-            classes_ = ["refund_request"]
+            classes_ = ["delivery_delay"]
 
             def predict_proba(self, xs):
                 return [[0.9]] if True else [[0.0]]
 
-        model = IntentClassifier(Dummy01(), ["refund_request"], "fake")
+        model = IntentClassifier(Dummy01(), ["delivery_delay"], "fake")
         agent = Agent(model, Fake(0))
-        out = agent.respond("give me my money", created_at="2017-01-01")
-        self.assertEqual(out["intent"], "refund_request")
+        out = agent.respond("why is my order late", created_at="2017-01-01")
+        self.assertEqual(out["intent"], "delivery_delay")
         self.assertIn(out["action"], {"auto_handle", "escalate"})
         self.assertEqual(out["action_reasons"], ["confident intent + evidence present"])
         self.assertIn("draft", out)
