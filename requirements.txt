@@ -10,3 +10,6 @@ nbclient>=0.9
 
 # Optional: LLM provider layer. Baselines run WITHOUT these.
 # pip install openai>=1.40 google-generativeai>=0.8
+
+# Optional: web demo (Phase F).
+# pip install streamlit>=1.40

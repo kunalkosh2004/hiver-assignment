@@ -558,6 +558,9 @@ python scripts/agent_chat.py
 # /topk 8    → deeper retrieval;  /reset → new customer;  /quit
 ```
 
+Browser demo (optional, Phase F): `venv/bin/python -m streamlit run app.py` —
+requires the retrieval artifacts built first (`scripts/build_retrieval_index.py`).
+
 ## Repo layout
 
 ```
@@ -592,6 +595,7 @@ scripts/
   consolidate_benchmark.py   Phase C: all methods one table + policy probe -> reports/phase_c_benchmark.*
   time_reproduction.py        Phase D: measures offline reproduction -> reports/reproduction_timing.json
   agent_chat.py  interactive console conversation with the loaded agent (/topk, /inspect)
+  app.py         optional Streamlit web demo: approx. venv/bin/python -m streamlit run app.py
   evaluate_judge_agreement.py  LLM-judge vs human agreement study -> reports/judge_agreement.*
   build_notebook_p4.py  regenerates the Phases 6–9 notebook
   check_llm_providers.py no-cost LLM health check (optional)
@@ -638,7 +642,7 @@ README.md
 - Phase C — Consolidated benchmark + escalation policy probe ✅ *(done, §10)*
 - Phase D — Final report (≤6 pp) + measured reproduction timing ✅ *(done, §10)*
 - Phase E — Risk-intent escalation policy (shipped, §10)
-- Phase F — Web demo (optional) ⏳ pending
+- Phase F — Web demo (optional) ✅ *(done: `app.py`)*
 
 **Future work (out of scope here):** LLM-labelled weak intents (requires a
 provider key; would target the intent ceiling, the dominant failure mode),

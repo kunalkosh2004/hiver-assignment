@@ -36,6 +36,7 @@ measured (see §6), all phases A–E committed and pushed.
 | B judge agreement | `reports/judge_rubric.md` + metric tests | rubric, protocol, gate; live run quota-blocked (§4) |
 | C consolidated bench | `reports/phase_c_benchmark.md` | all methods one table + escalation-policy probe |
 | E risk-intent escalation | `src/agent/escalation.py` + `config/risk_intents.json` | shipped policy: human-risk intents escalate regardless of confidence (benchmark acc 0.555 → 0.595, false_auto 66 → 58) |
+| F web demo (optional) | `app.py` | Streamlit browser demo of the agent loop (`streamlit run app.py`) |
 
 The LLM layer (`src/llm/`, OpenAI+Gemini auto-fallback) is **optional and
 disabled-by-default**; headline numbers never depend on it.
