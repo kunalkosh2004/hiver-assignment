@@ -24,12 +24,12 @@ class OpenAIProvider:
     def __init__(
         self,
         *,
-        model: str = DEFAULT_MODEL,
+        model: str | None = None,
         api_key: str | None = None,
         max_retries: int = DEFAULT_MAX_RETRIES,
         timeout: float = 30.0,
     ) -> None:
-        self.model = model
+        self.model = model or os.getenv("LLM_FALLBACK_MODEL", "").strip() or DEFAULT_MODEL
         self._api_key = api_key or os.getenv("OPENAI_API_KEY", "").strip()
         self.max_retries = max_retries
         self.timeout = timeout

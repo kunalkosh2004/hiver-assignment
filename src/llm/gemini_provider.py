@@ -13,8 +13,18 @@ from typing import Any
 
 from .base import LLMError, LLMUnavailableError, StructuredResponse
 
-DEFAULT_MODEL = "gemini-2.0-flash"
+DEFAULT_MODEL = "gemini-3.6-flash"
 DEFAULT_MAX_RETRIES = 2
+
+
+def _import_genai():
+    """Import google.generativeai once, hiding its end-of-life FutureWarning."""
+    import warnings
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        import google.generativeai as genai  # noqa: PLC0415
+    return genai
 
 
 class GeminiProvider:
@@ -23,12 +33,12 @@ class GeminiProvider:
     def __init__(
         self,
         *,
-        model: str = DEFAULT_MODEL,
+        model: str | None = None,
         api_key: str | None = None,
         max_retries: int = DEFAULT_MAX_RETRIES,
         timeout: float = 30.0,
     ) -> None:
-        self.model = model
+        self.model = model or os.getenv("LLM_MODEL", "").strip() or DEFAULT_MODEL
         self._api_key = api_key or os.getenv("GEMINI_API_KEY", "").strip()
         self.max_retries = max_retries
         self.timeout = timeout
@@ -38,7 +48,7 @@ class GeminiProvider:
         if not self._api_key:
             return False
         try:
-            import google.generativeai  # noqa: F401
+            _import_genai()
         except ImportError:
             return False
         return True
@@ -48,7 +58,7 @@ class GeminiProvider:
 
     def _get_model(self):
         if self._model_obj is None:
-            import google.generativeai as genai
+            genai = _import_genai()
             genai.configure(api_key=self._api_key)
             genai_safety = [
                 {"category": c, "threshold": "BLOCK_NONE"}

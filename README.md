@@ -514,6 +514,21 @@ Mocked unit tests (no API credits) live in `tests/test_llm_providers.py`
 (`python -m unittest tests.test_llm_providers`); `scripts/check_llm_providers.py`
 is a no-cost health check.
 
+**Testing with your keys:** keys in the project-root `.env` are loaded
+automatically (no `export` needed). The default models are `gemini-3.6-flash`
+(Gemini) and `gpt-4o-mini` (OpenAI), overridable with `LLM_MODEL` /
+`LLM_FALLBACK_MODEL`. Quick checks:
+
+```
+python scripts/check_llm_providers.py        # config only, zero credits
+python -m unittest tests.test_llm_providers  # mocked, zero credits
+python scripts/evaluate_agent.py --llm-sample 5   # live judge on 5 drafts
+```
+
+Note: Gemini free-tier is capped at ~5 req/min, so the judge paces itself
+(12s gap between drafts, skips rows that still hit the limit and reports them
+as `skipped`). The OpenAI key is used only as a fallback when Gemini fails.
+
 ## Repo layout
 
 ```

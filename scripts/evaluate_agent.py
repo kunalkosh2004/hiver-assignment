@@ -213,6 +213,15 @@ def llm_judge_sample(rows: list[dict], sample: int, seed: int) -> dict:
         return {"status": "disabled", "note": "no LLM provider key set"}
     import random  # noqa: PLC0415
 
+    def _bool(j: dict, *keys: str) -> bool:
+        for k in keys:
+            if isinstance(j.get(k), bool):
+                return j[k]
+        score = j.get("score")
+        if isinstance(score, (int, float)):
+            return bool(score >= (j.get("max_score") or 100) * 0.6)
+        return False
+
     sample_rows = random.Random(seed).sample(rows, min(sample, len(rows)))
     schema = {
         "type": "object",
@@ -223,25 +232,40 @@ def llm_judge_sample(rows: list[dict], sample: int, seed: int) -> dict:
             "notes": {"type": "string"},
         },
     }
-    judged = []
+    judged, failed = [], 0
     for r in sample_rows:
-        res = router.complete_structured(
-            system_prompt="You grade a support agent draft. Output ONLY the schema fields.",
-            user_prompt=(
-                f"Customer message:\n{r['draft']}\n\n"
-                f"DRAFT reply:\n{r['draft']}\n\n"
-                f"Retrieved historical resolutions:\n"
-                + " ".join(h.get("brand_response") or "" for h in r["evidence"] if h.get("brand_response"))[:1500]
-            ),
-            response_schema=schema,
-        )
-        if res.data:
-            judged.append(res.data)
+        try:
+            res = router.complete_structured(
+                system_prompt="You grade a support agent draft. Output ONLY the schema fields.",
+                user_prompt=(
+                    f"Customer message:\n{r['query']}\n\n"
+                    f"DRAFT reply:\n{r['draft']}\n\n"
+                    f"Retrieved historical resolutions:\n"
+                    + " ".join(b for h in r["evidence"] if isinstance((b := h.get("brand_response")), str))[:1500]
+                ),
+                response_schema=schema,
+            )
+        except Exception as exc:  # noqa: BLE001 - rate limits/short outages must not abort grading
+            failed += 1
+            print(f"  judge skip (LLM unavailable): {exc}", flush=True)
+            time.sleep(15)
+            continue
+        j = res.parsed
+        if j:
+            judged.append({
+                "example_id": r["example_id"],
+                "kind": r.get("kind", "auto"),
+                "helpful": _bool(j, "helpful", "passed", "is_helpful"),
+                "grounded_in_retrieval": _bool(j, "grounded_in_retrieval", "grounded"),
+                "hallucination_free": _bool(j, "hallucination_free", "hallucination_free"),
+                "notes": str(j.get("notes") or j.get("feedback") or ""),
+            })
+        time.sleep(12)  # stay under Gemini free-tier (5 req/min) between rows
     return {
-        "status": "ran", "n": len(judged),
-        "helpful_rate": round(sum(1 for j in judged if j.get("helpful")) / max(1, len(judged)), 4),
-        "grounded_rate": round(sum(1 for j in judged if j.get("grounded_in_retrieval")) / max(1, len(judged)), 4),
-        "hallucination_free_rate": round(sum(1 for j in judged if j.get("hallucination_free")) / max(1, len(judged)), 4),
+        "status": "ran", "n": len(judged), "skipped": failed,
+        "helpful_rate": round(sum(1 for j in judged if j["helpful"]) / max(1, len(judged)), 4),
+        "grounded_rate": round(sum(1 for j in judged if j["grounded_in_retrieval"]) / max(1, len(judged)), 4),
+        "hallucination_free_rate": round(sum(1 for j in judged if j["hallucination_free"]) / max(1, len(judged)), 4),
     }
 
 

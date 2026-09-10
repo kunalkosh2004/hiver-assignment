@@ -102,8 +102,12 @@
     "sim_term": "unavailable on dev (fixed at 0.2)"
   },
   "llm_judge": {
-    "status": "disabled",
-    "note": "no LLM provider key set"
+    "status": "ran",
+    "n": 4,
+    "skipped": 16,
+    "helpful_rate": 0.5,
+    "grounded_rate": 0.25,
+    "hallucination_free_rate": 0.25
   },
-  "seconds": 46.4
+  "seconds": 676.6
 }
