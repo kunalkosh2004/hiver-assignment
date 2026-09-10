@@ -5,15 +5,15 @@
   },
   "cache_note": "warm caches (data/retrieval/* and data/*.parquet prebuilt); a cold run additionally pays the corpus-index build (build_retrieval_index.py) and parquet cache build, documented separately.",
   "steps_seconds": {
-    "train_agent_intent": 263.71,
-    "calibrate_escalation": 239.14,
-    "evaluate_agent": 290.71,
-    "analyze_agent_errors": 2.86,
-    "build_escalation_benchmark": 5.21,
-    "evaluate_escalation": 0.41,
-    "consolidate_benchmark": 0.25,
-    "unit_tests": 69.99
+    "train_agent_intent": 81.76,
+    "calibrate_escalation": 230.52,
+    "evaluate_agent": 193.39,
+    "analyze_agent_errors": 1.32,
+    "build_escalation_benchmark": 0.83,
+    "evaluate_escalation": 0.08,
+    "consolidate_benchmark": 0.08,
+    "unit_tests": 164.75
   },
-  "total_seconds": 872.28,
-  "total_minutes": 14.54
+  "total_seconds": 672.73,
+  "total_minutes": 11.21
 }

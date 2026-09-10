@@ -2,11 +2,13 @@
 
 Take-home assignment: build an AI customer-support agent that classifies intents,
 drafts replies grounded in a brand's historical resolutions, and decides
-auto-handle vs. escalate. The repo currently contains **Phase 1 — Dataset
-Forensics**, **Phase 2 — AmazonHelp support-intent discovery**, **Phase 3 —
-golden evaluation set**, and **Phase 4 — baseline intent classifiers + LLM
-provider layer**. No *final* agent is built yet, by design (see phase plan at
-the bottom).
+auto-handle vs. escalate. The full pipeline is implemented: dataset forensics,
+AmazonHelp intent discovery, a hand-labelled golden evaluation set, baseline
+intent classifiers, a historical-retrieval memory (RAG), grounded drafting, an
+auto-handle/escalation policy with a hand-labelled decision benchmark, a final
+evaluation harness, and a browser (Streamlit) demo. Everything runs offline and
+deterministic (seed 42), and the full offline reproduction measures **<15 min**
+(`reports/reproduction_timing.json`, §10/§11).
 
 This README is the **single progress & results document**: it summarises what
 we did, every headline number from the executed notebooks / baseline runs, and
@@ -187,7 +189,7 @@ reading of clusters is intentionally not part of the automated run (no API key);
 clusters are interpreted by hand from the actual output.
 
 ### Key Phase-2 numbers (live)
-- AmazonHelp conversations: **82,556**; customer messages: **203,598**; brand replies: **203,598**
+- AmazonHelp conversations: **82,556**; customer messages / interactions: **203,598**; AmazonHelp support replies: **169,840**
 - **~27.4% of traffic is non-English** (Spanish, Japanese, French, German, …) — a
   first-order routing concern, not an `other` intent bucket
 - English subset of the 10,000-sample: **7,289 (72.9%)**
@@ -485,16 +487,16 @@ human-labelled decision benchmark it scores **accuracy 0.595, escal-F1 0.53,
 confidence-only floor; perfect-intent risk ceiling 0.875 — §10 A/C/E).
 
 **Drafting (Phase 6):** auto-handled replies reuse retrieved-resolution words in
-**~96%** of rows (token-overlap, ≥2 tokens); average draft 263 chars, zero empty;
-no URLs, phone numbers, raw order IDs or fabricated data. Optional LLM judge was
+**~95%** of auto drafts (token-overlap, ≥2 tokens); average draft ~256 chars,
+zero empty; no URLs, phone numbers, raw order IDs or fabricated data. Optional LLM judge was
 **disabled** (no provider key) and recorded as such — deterministic rubric metrics
 above are the shipped proxy.
 
-**Failure analysis (Phase 9, per-golden-row taxonomy, ≥30):** 162/200 rows carry
+**Failure analysis (Phase 9, per-golden-row taxonomy, ≥30):** 165/200 rows carry
 at least one failure code — intent misclassification dominates
 (`intent_off_target` 143 + `intent_close_secondary` 8), then
-`escalation_conservative` 61 (escalated rows that individually looked
-answerable), `drafting_ungrounded` 6, `retrieval_lang_mismatch` 3. 38/200 rows
+`escalation_conservative` 69 (escalated rows that individually looked
+answerable), `drafting_ungrounded` 6, `retrieval_lang_mismatch` 3. 35/200 rows
 are clean runs. The single largest lever for the agent is a better *intent
 model*, not better retrieval: recall is already strong (dense R@5 0.576, §9).
 
@@ -543,8 +545,9 @@ Note: Gemini free-tier is capped at ~5 req/min, so the judge paces itself
 as `skipped`). The OpenAI key is used only as a fallback when Gemini fails.
 Total reproduction time, **measured** with warm caches on this machine
 (`reports/reproduction_timing.json` via `scripts/time_reproduction.py`):
-**offline 14.54 min** (agent eval 4.8 + intent train 4.4 + calibration 4.0 +
-56 unit tests 1.2 min) — inside the 15-min requirement; with live LLM judge
+**offline 11.2 min** (agent eval ~3.2 + calibration ~3.8 + 62 unit tests
+~2.8 min — step times vary with hardware; an earlier warm run measured
+14.54 min) — inside the 15-min requirement; with live LLM judge
 adds ~12 s/judged draft. Cold runs additionally pay the one-shot corpus-index
 build and parquet cache build.
 
@@ -558,7 +561,7 @@ python scripts/agent_chat.py
 # /topk 8    → deeper retrieval;  /reset → new customer;  /quit
 ```
 
-Browser demo (optional, Phase F): `venv/bin/python -m streamlit run app.py` —
+Browser demo (optional, Phase F): `./.venv/bin/python -m streamlit run app.py` —
 requires the retrieval artifacts built first (`scripts/build_retrieval_index.py`).
 
 ## Repo layout
@@ -595,7 +598,7 @@ scripts/
   consolidate_benchmark.py   Phase C: all methods one table + policy probe -> reports/phase_c_benchmark.*
   time_reproduction.py        Phase D: measures offline reproduction -> reports/reproduction_timing.json
   agent_chat.py  interactive console conversation with the loaded agent (/topk, /inspect)
-  app.py         optional Streamlit web demo: approx. venv/bin/python -m streamlit run app.py
+  app.py         optional Streamlit web demo: approx. ./.venv/bin/python -m streamlit run app.py
   evaluate_judge_agreement.py  LLM-judge vs human agreement study -> reports/judge_agreement.*
   build_notebook_p4.py  regenerates the Phases 6–9 notebook
   check_llm_providers.py no-cost LLM health check (optional)
@@ -629,7 +632,7 @@ README.md
 - No statistic is hardcoded; every number is computed from the live data.
   Uncertain interpretations are labelled as *inference* in the notebook.
 
-## Later phases (not yet implemented)
+## Phase status (all implemented below)
 
 - Phase 3 — Golden evaluation set ✅ *(done, §7)*
 - Phase 4 — Deterministic baselines + evaluation ✅ *(done, §8)*
@@ -645,6 +648,6 @@ README.md
 - Phase F — Web demo (optional) ✅ *(done: `app.py`)*
 
 **Future work (out of scope here):** LLM-labelled weak intents (requires a
-provider key; would target the intent ceiling, the dominant failure mode),
-adding intent-level risk rules to the escalation policy (proven: 87.5% perfect-intent ceiling vs 55.5% shipped), tuning hybrid alphas on a dev pool
-risk rules (the top Phase-A finding), and an LLM-judged drafting-quality sweep.
+provider key; would target the intent ceiling — the dominant failure mode:
+87.5% perfect-intent decision ceiling vs 59.5% shipped, §10), tuning hybrid
+alphas on a dev pool, and an LLM-judged drafting-quality sweep.

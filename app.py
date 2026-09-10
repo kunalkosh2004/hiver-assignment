@@ -1,6 +1,6 @@
 """Optional Streamlit web demo for the retrieval-augmented support agent.
 
-Run with:  ./venv/bin/python -m streamlit run app.py
+Run with:  ./.venv/bin/python -m streamlit run app.py
 Requires the deterministic artifacts (agent models + retrieval index built once
 via scripts/train_agent_intent.py + scripts/build_retrieval_index.py). The LLM
 layer is NOT needed; nothing here calls out to the network except the optional
@@ -45,7 +45,9 @@ with col_q:
     st.subheader("Customer message")
     query = st.text_area("Message", examples[0], height=120)
     if st.button("Send", type="primary"):
-        result = agent.respond(query, created_at="2017-06-01 12:00:00 +0000")
+        # Corpus-stamp format (RFC-ish, month-name ordering) so the temporal
+        # filter accepts every row: this >= lexicographic max of corpus stamps.
+        result = agent.respond(query, created_at="Wed Sep 28 18:06:15 +0000 2016")
         st.session_state["result"] = result
 
 if "result" in st.session_state:

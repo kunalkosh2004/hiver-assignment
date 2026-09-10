@@ -4,10 +4,11 @@
 **Call sign for this workstream:** `QFTHX4`
 
 A single consolidated report of everything done so far: dataset forensics,
-intent taxonomy, golden evaluation set, baseline intent classifiers, and the
-optional LLM provider layer. The final agent (retrieval, response generation,
-escalation) is intentionally **not** built yet (Phase 5+, out of scope of the
-current objective).
+intent taxonomy, golden evaluation set, baseline intent classifiers, the
+optional LLM provider layer, the retrieval-augmented agent (retrieval,
+grounded response generation, auto-handle/escalation), the hand-labelled
+escalation decision benchmark, and the final consolidated evaluation
+(Phases 1–9 + A–F).
 
 ---
 
@@ -23,8 +24,8 @@ current objective).
 | **Phase 5 — Retrieval (RAG memory)** | ✅ Done — TF-IDF/BM25/dense/hybrid × {msg, ctx} over a 201,741-interaction corpus; human-labelled benchmark + scaling + error analysis |
 | **Phases 6–8 — Final agent** | ✅ Done — weak-201k intent model + dense retrieval + dev-calibrated escalation + grounded deterministic drafting; final harness on the golden 200 (LLM judge shipped off when no key) |
 | **Phase 9 — Failure analysis** | ✅ Done — per-golden-row taxonomy (165/200 rows ≥1 failure; intent misclassification dominates) |
-| **Commits** | 27 (`8f0d25c` → Phase A/B/C/D/E) |
-| **Repro timing** | measured offline **14.54 min** warm (`reports/reproduction_timing.json`) |
+| **Commits** | 28 (`8f0d25c` → Phase A/B/C/D/E/F) |
+| **Repro timing** | measured offline **11.21 min** warm (`reports/reproduction_timing.json`) |
 | **Reproducibility** | `seed 42`, deterministic, no API key; `pip/requirements` offline |
 
 ---
@@ -260,7 +261,7 @@ scores 0.595 (58 dangerous false-autos; ceiling 0.875 with perfect intent —
 §6E/§6F). The benchmark (not the floor) is the truth-bearing number.
 
 Drafting (Phase 6): auto-handled replies reuse retrieved-resolution words in
-**≈96%** of rows (token-overlap ≥2, no fabrication); avg 263 chars, 0 empty
+**≈95%** of rows (token-overlap ≥2, no fabrication); avg ~256 chars, 0 empty
 drafts.
 
 **Phase B — judge-human agreement protocol.** The reply-quality rubric is
@@ -298,7 +299,7 @@ Per-golden-row taxonomy over the agent dump:
 Top combination `intent_off_target` alone (87 rows) outweighs all others. The
 biggest lever for the final agent is intent quality — matching the Phases-4/6B
 result — while retrieval + grounded drafting already work (dense R@5 0.576 §5C,
-draft reuse 96%).
+draft reuse 95%).
 
 ### 6E — Escalation decision benchmark (Phase A, `scripts/evaluate_escalation.py`)
 
@@ -377,15 +378,16 @@ one-more-week plan (§9).
 
 ### Reproduction timing (Phase D, `scripts/time_reproduction.py`)
 
-Measured on this machine with warm caches (`reports/reproduction_timing.json`):
+Measured on this machine with warm caches (`reports/reproduction_timing.json`;
+an earlier warm run measured 14.54 min — step times vary with hardware):
 
 | step | time |
 |---|---:|
 | `train_agent_intent.py` | 4.4 min |
 | `calibrate_escalation.py` | 4.0 min |
 | `evaluate_agent.py` (golden 200, LLM judge off) | 4.8 min |
-| remaining 4 scripts + full 60-test suite | 1.3 min |
-| **total offline (no API key)** | **14.54 min** |
+| remaining 4 scripts + full 62-test suite | ~2.8 min |
+| **total offline (no API key)** | **11.21 min** |
 
 `fit_seconds` in `reports/agent_intent_models.json` varies with hardware;
 all other numbers are deterministic once the models are trained. Cold runs
@@ -421,30 +423,34 @@ python scripts/check_llm_providers.py         # optional no-cost LLM health chec
 ## Commit log
 
 ```
-829a634 feat: consolidated benchmark table + escalation policy probe          (C)
-2dd8cc0 feat: formal reply-quality rubric + offline judge-agreement tests     (B)
-19e55f0 feat: hand-labelled escalation decision benchmark + eval              (A)
+8b8b58d feat: optional Streamlit web demo                                       (F)
+4110443 feat: ship risk-intent escalation policy + refresh all benchmark reports (E)
+fd3bf37 feat: final report + measured reproduction timing                       (D)
+829a634 feat: consolidated benchmark table + escalation policy probe + per-intent confusion (C)
+2dd8cc0 feat: formal reply-quality rubric + offline judge-agreement tests       (B)
+19e55f0 feat: hand-labelled escalation decision benchmark + eval                (A)
 74fc09d docs: clarify live judge status (quota-blocked, script ready)
-40f369b feat: add agent chat REPL, judge-human agreement study, report §7–§10
-eaa721a feat: auto-load .env, refresh LLM models, wire resilient live judge   (deliverables)
-f350e40 docs: document retrieval-augmented agent evaluation                    (6–9 docs)
-b5519f4 feat: add agent failure analysis                                       (9)
-4e8937c feat: add final agent evaluation harness + escalation calibration      (7–8)
-f4a6a17 feat: add retrieval-augmented agent (intent, drafting, escalation)     (6)
-0659cf6 feat: add retrieval scaling, weak-intent proxy, and error analysis     (5E)
+40f369b feat: add agent chat REPL, judge-human agreement study, and required report sections
+eaa721a feat: auto-load .env, refresh LLM models, wire resilient live judge
+f350e40 docs: document retrieval-augmented agent evaluation
+b5519f4 feat: add agent failure analysis
+4e8937c feat: add final agent evaluation harness
+f4a6a17 feat: add retrieval-augmented agent with intent, drafting and escalation
+b74321f docs: document retrieval results and data scaling
+0659cf6 feat: add retrieval scaling, weak-intent proxy, and error analysis
 d102191 fix: correct bm25 scoring after scipy 1.18 getcol bug
-f245cc2 feat: add retrieval evaluation benchmark                         (5D)
-d29e73d feat: add dense historical support retrieval                     (5C)
-9fb2fde feat: add lexical retrieval baselines                            (5B)
-496afd2 feat: build historical AmazonHelp support corpus                 (5A)
-6f87a36 docs: Phase-4 README + reports documentation with reproduction   (4E)
-1a859a3 feat: add Phase-4D evaluation + error analysis                    (4D)
-9f3b665 feat: run majority + TF-IDF logistic/SVM baselines               (4B/4C)
+f245cc2 feat: add retrieval evaluation benchmark
+d29e73d feat: add dense historical support retrieval
+9fb2fde feat: add lexical retrieval baselines
+496afd2 feat: build historical AmazonHelp support corpus
+6f87a36 docs: Phase-4 README + reports documentation with reproduction
+1a859a3 feat: add Phase-4D evaluation + error analysis (segmentation, calibration, dev vs golden)
+9f3b665 feat: run majority + TF-IDF logistic/SVM baselines (msg-only vs msg+context)
 de0206f feat: add resilient OpenAI+Gemini LLM provider with auto-fallback
-9bf1de9 feat: add conversation-safe baseline split infra + dev set       (4A)
-4dca25a feat: create AmazonHelp golden evaluation set                    (P3)
-7136c4f feat: discover AmazonHelp support intent taxonomy                (P2)
-8f0d25c feat: add dataset forensics and brand analysis                   (P1)
+9bf1de9 feat: add conversation-safe baseline split infra + dev set
+4dca25a feat: create AmazonHelp golden evaluation set
+7136c4f feat: discover AmazonHelp support intent taxonomy
+8f0d25c feat: add dataset forensics and brand analysis
 ```
 
 ## 7. "What is misleading about my headline number?"
@@ -459,7 +465,7 @@ numbers that build on it — are in three ways *too good*, and one way *too bad*
    being bought and sold: `delivery_delay` dominates train and test, and the
    direct messages (non-`@brand`) that a live agent would actually see are
    *under*-represented.
-2. **The agent's "resolution reuse ≈ 96%" flatters drafting.** Reuse is measured
+2. **The agent's "resolution reuse ≈ 95%" flatters drafting.** Reuse is measured
    by token overlap between the draft and the *retrieved* historical reply. But
    retrieval is what misses; a draft that simply restates a wrong-but-relevant
    resolution scores "grounded" even when the resolution is wrong for the query.
@@ -470,7 +476,8 @@ numbers that build on it — are in three ways *too good*, and one way *too bad*
    golden hold-out then matching at 27.5%→30.5% is reassuring, but both pools
    come from the same 2015–2017 AmazonHelp distribution. On a *new* brand's
    support data these calibrated thresholds would need re-fitting, and our
-   coverage numbers say nothing about that.
+   coverage numbers say nothing about that. (Phase E's risk-intent override
+   §6E superseded the floor for risky intents — shipped escalation is 34.5%.)
 4. **Conversely, the macro-F1 headline undersells the system people would
    actually use.** The heavy multi-lingual segment (es/pt/it/de/…, ~40% of
    golden) drags every metric down, and a brand deploying this in English-only
@@ -525,13 +532,15 @@ single highest-leverage fix (§10).
    daily quota mid-session. With the quota reset (or a funded key) I'd run a
    15-row sample → judge-self-repeat consistency + judge-vs-deterministic kappa,
    and *only then* trust the judge's rates as claims.
-3. **Escalation ground-truth labels — DONE (Phase A).** 200 rows hand-labelled
-   (`data/golden/escalation_gold.jsonl`); next is the fit this paved the way
-   for: a *per-intent risk policy* (not one global `comb_low`) — the probe in
-   §6F shows perfect-intent risk policy reaches 87.5% decision accuracy vs the
-   shipped 55.5%.
+3. **Escalation ground-truth labels — DONE (Phase A); per-intent risk policy —
+   DONE (Phase E).** 200 rows hand-labelled
+   (`data/golden/escalation_gold.jsonl`); Phase E shipped the per-intent risk
+   override (`config/risk_intents.json` → `src/agent/escalation.py`), lifting
+   the decision benchmark from the 55.5% confidence-only floor to 59.5%
+   (66 → 58 false-autos, §6F). The single remaining lever is intent: with
+   perfect intents the risk policy reaches 87.5% decision accuracy.
 4. **Copy-style sweep:** LLM-judged comparison of draft variants (template-family
-   rewrites) on the 38 success rows to raise reply quality without touching
+   rewrites) on the 35 success rows to raise reply quality without touching
    action decisions.
 5. **Second-brand port:** run the Phase-5/6 pipeline against a second brand's
    threads to quantify how much of the calibrated floor + drafting templates

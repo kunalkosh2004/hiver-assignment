@@ -11,13 +11,13 @@ Built an end-to-end support agent for AmazonHelp on the Kaggle "Customer Support
 Twitter" corpus: **intent → retrieval memory → grounded reply → auto-handle/escalate**.
 The honest headline: the intent layer caps everything (golden macro-F1 0.078/0.050 for
 the small-dev/weak-proxy classifiers); retrieval and drafting are strong (dense R@5
-0.576; 96% grounded reuse, 0 fabricated drafts); **escalation was silently the weakest
+0.576; 95% grounded reuse, 0 fabricated drafts); **escalation was silently the weakest
 link** — a new hand-labelled 200-row decision benchmark (Phase A) exposed that the
 dev-calibrated confidence floor auto-handles 66 of 104 cases a human would escalate.
 A perfect-intent risk policy would score 87.5% decision accuracy vs 55.5% shipped
 (Phase C). Phase E shipped the risk-intent escalation policy (decision-benchmark
-acc 0.555 → 0.595, false-autos 66 → 58). 60 unit tests, offline reproduction
-measured (see §6), all phases A–E committed and pushed.
+acc 0.555 → 0.595, false-autos 66 → 58). 62 unit tests, offline reproduction
+measured (see §6), all phases A–F committed and pushed.
 
 ## 1. What was built
 
@@ -58,7 +58,7 @@ benchmark from the old confidence-only floor (0.555 / 0.461 / 66) to
 0.595 / 0.532 / 58 — 8 more human-warranted cases now reach a specialist while
 drafting and intent numbers are unchanged.
 
-Drafting (final agent, 200 rows): 200/200 non-empty, avg 260 chars, **95.7% of
+Drafting (final agent, 200 rows): 200/200 non-empty, avg ~256 chars, **95.4% of
 auto drafts reuse the retrieved resolution's words** (≥2 token overlap; the 
 deterministic drafting paradigm means rephrasing, never inventing).
 
@@ -75,7 +75,7 @@ deterministic drafting paradigm means rephrasing, never inventing).
 
 Per-intent confusion shows why: **180/200 rows predict `delivery_delay`** (the
 weak-201k proxy bias); of those, 58 were human-escalations auto-handled. The gap
-between shipped (55.5%) and perfect-intent (87.5%) is **entirely intent error** —
+between shipped (59.5%) and perfect-intent (87.5%) is **entirely intent error** —
 escalation logic and retrieval are not the bottleneck.
 
 ## 3. What is misleading about my headline number (required)
@@ -83,7 +83,7 @@ escalation logic and retrieval are not the bottleneck.
 1. **Macro-F1 0.078 (dev-140) overstates real intent ability.** 14 classes / 140
    rows ≈ 10 examples per class; one lucky class moves the average, and F1 hides
    which classes are bought/sold (`delivery_delay` dominates everything).
-2. **"96% grounded reuse" flatters drafting.** Reuse is measured *given the
+2. **"95% grounded reuse" flatters drafting.** Reuse is measured *given the
    retrieved evidence*. When retrieval is wrong-but-relevant — which it often is
    for misclassified intents — a draft restating it still scores "grounded".
    The drafter is honest given the evidence; it is not honest about whether the
@@ -135,7 +135,7 @@ finding and the one-week plan.
 ## 6. Reproducibility & timing
 
 Deterministic seed 42; every number recomputed from live data (none hardcoded);
-golden excluded from the retrieval index and runtime-asserted. 60 unit tests
+golden excluded from the retrieval index and runtime-asserted. 62 unit tests
 (`python -m unittest discover -s tests`, zero credits).
 
 ```
@@ -147,11 +147,12 @@ python scripts/consolidate_benchmark.py
 ```
 
 Measured warm-cache offline reproduction (`reports/reproduction_timing.json`,
-via `scripts/time_reproduction.py`, this machine): **14.54 min total** across
-the six scripts + full 60-test suite — inside the 15-minute requirement.
-Dominant steps: agent eval on the golden 200 **4.8 min**, weak-intent training
-**4.4 min**, dev escalation calibration **4.0 min** (each one-shot, repeatable,
-deterministic in substance — `fit_seconds` varies with hardware). A cold run
+via `scripts/time_reproduction.py`, this machine): **11.21 min total** across
+the seven scripts + full 62-test suite — inside the 15-minute requirement
+(an earlier warm run measured 14.54 min; step times vary with hardware).
+Dominant steps: agent eval on the golden 200 **~3.2 min**, dev escalation
+calibration **~3.8 min**, intent training **~1.4 min** (each one-shot,
+repeatable, deterministic in substance — `fit_seconds` varies with hardware). A cold run
 additionally pays the corpus-index build (`scripts/build_retrieval_index.py`,
 gitignored artifacts) and parquet cache build, both one-shot.
 Interactive demo: `python scripts/agent_chat.py`.
@@ -168,19 +169,25 @@ Interactive demo: `python scripts/agent_chat.py`.
    executes the proven 87.5% ceiling.
 3. **Run the judge live** once quota resets/funded key (`--sample 15`), then
    decide by the gate whether to trust its draft rankings.
-4. **Copy-style sweep** on the 38 success rows (template-family rewrites).
+4. **Copy-style sweep** on the 35 success rows (template-family rewrites).
 5. **Second-brand port** to quantify threshold transfer.
 
-## 8. Decision log (condensed — 17 full entries in the full report)
+## 8. Decision log (15 condensed — 17 full entries in the full report)
 
-AmazonHelp chosen; `prime_membership` excluded; self-built golden (200) with a
-separate *reference* file; single annotator + frozen guidelines (17 low-confidence
-notes); retrieval at message granularity; temporal filter on string timestamps;
-golden excluded from index **and runtime-asserted**; dense-over-BM25 chosen by a
-human-labelled benchmark; 201k TF-IDF weak proxy over LLM bootstrapping
-(offline, honestly disclosed as not beating 140 clean labels); `comb_low`
-dev-only + frozen + verified out-of-pool; one global floor (after measuring
-saturated weak probabilities); deterministic "never-fabricate" drafting;
-seeded-everything; LLM layer optional/disabled; **hand-labelled 200-row decision
-benchmark treated as evaluation-only — never merged into training or the
-threshold fit**.
+1. Chose **AmazonHelp** as the brand (largest clean multi-turn threads).
+2. Excluded `prime_membership` from the taxonomy (overlaps 4 other labels).
+3. Self-built the golden set (200) with a separate *reference* file (leak-proof).
+4. Single annotator + frozen guidelines, 17 low-confidence notes disclosed.
+5. Retrieval at message granularity, not conversation.
+6. Temporal filter on string timestamps (approximate by design).
+7. Golden conversations excluded from the index **and runtime-asserted**.
+8. Dense-over-BM25 chosen by a human-labelled retrieval benchmark.
+9. 201k TF-IDF weak intent proxy over LLM bootstrapping (offline, honestly
+   disclosed as not beating 140 clean labels).
+10. `comb_low` calibrated on dev only, frozen, verified out-of-pool.
+11. One global escalation floor after measuring saturated weak probabilities.
+12. Deterministic "never-fabricate" drafting over generative text.
+13. Seeded everything (42); headline numbers never need an API key.
+14. LLM layer optional + disabled-by-default.
+15. **Hand-labelled 200-row decision benchmark kept evaluation-only** — never
+    merged into training or the threshold fit.
