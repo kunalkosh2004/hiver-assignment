@@ -1,0 +1,22 @@
+{
+  "n_golden": 200,
+  "n_failure_rows": 162,
+  "n_success_rows": 38,
+  "category_counts": {
+    "intent_off_target": 143,
+    "escalation_conservative": 61,
+    "intent_close_secondary": 8,
+    "drafting_ungrounded": 6,
+    "retrieval_lang_mismatch": 3
+  },
+  "co_occurrence": {
+    "('intent_off_target',)": 87,
+    "('escalation_conservative', 'intent_off_target')": 47,
+    "('escalation_conservative',)": 11,
+    "('intent_close_secondary',)": 6,
+    "('drafting_ungrounded', 'intent_off_target')": 6,
+    "('intent_off_target', 'retrieval_lang_mismatch')": 2,
+    "('escalation_conservative', 'intent_close_secondary')": 2,
+    "('escalation_conservative', 'intent_off_target', 'retrieval_lang_mismatch')": 1
+  }
+}
