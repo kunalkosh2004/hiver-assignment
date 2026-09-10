@@ -23,7 +23,8 @@ current objective).
 | **Phase 5 — Retrieval (RAG memory)** | ✅ Done — TF-IDF/BM25/dense/hybrid × {msg, ctx} over a 201,741-interaction corpus; human-labelled benchmark + scaling + error analysis |
 | **Phases 6–8 — Final agent** | ✅ Done — weak-201k intent model + dense retrieval + dev-calibrated escalation + grounded deterministic drafting; final harness on the golden 200 (LLM judge shipped off when no key) |
 | **Phase 9 — Failure analysis** | ✅ Done — per-golden-row taxonomy (162/200 rows ≥1 failure; intent misclassification dominates) |
-| **Commits** | 15 (`8f0d25c` → docs/agent) |
+| **Commits** | 26 (`8f0d25c` → Phase A/B/C/D) |
+| **Repro timing** | measured offline **14.54 min** warm (`reports/reproduction_timing.json`) |
 | **Reproducibility** | `seed 42`, deterministic, no API key; `pip/requirements` offline |
 
 ---
@@ -364,6 +365,23 @@ the shipped agent is at 55.5% entirely because of intent misprediction**, not
 retrieval or escalation logic. This is the quantitative core of §7 ("what is
 misleading") and the top priority for the one-more-week plan (§9).
 
+### Reproduction timing (Phase D, `scripts/time_reproduction.py`)
+
+Measured on this machine with warm caches (`reports/reproduction_timing.json`):
+
+| step | time |
+|---|---:|
+| `train_agent_intent.py` | 4.4 min |
+| `calibrate_escalation.py` | 4.0 min |
+| `evaluate_agent.py` (golden 200, LLM judge off) | 4.8 min |
+| remaining 4 scripts + full 56-test suite | 1.3 min |
+| **total offline (no API key)** | **14.54 min** |
+
+`fit_seconds` in `reports/agent_intent_models.json` varies with hardware;
+all other numbers are deterministic once the models are trained. Cold runs
+additionally pay the one-shot corpus-index build (`build_retrieval_index.py`)
+and parquet cache build (both gitignored; `data/retrieval/*` / `data/*.parquet`).
+
 ### Phase-6–9 reproduction (no API key)
 
 ```bash
@@ -373,6 +391,8 @@ python scripts/evaluate_agent.py --dump-rows reports/agent_rows.json
 python scripts/analyze_agent_errors.py reports/agent_rows.json
 python scripts/build_escalation_benchmark.py      # labels TSV -> data/golden/escalation_gold.jsonl
 python scripts/evaluate_escalation.py reports/agent_rows.json   # decision vs human expected
+python scripts/consolidate_benchmark.py           # all methods + policy probe (Phase C)
+python scripts/time_reproduction.py               # verify <=15 min (Phase D)
 python scripts/evaluate_judge_agreement.py --sample 15          # optional live LLM judge (needs key)
 python scripts/build_notebook_p4.py && jupyter nbconvert --execute notebooks/04_retrieval_augmented_agent.ipynb
 python -m unittest tests.test_agent          # drafting / escalation / pipeline unit tests
@@ -391,6 +411,11 @@ python scripts/check_llm_providers.py         # optional no-cost LLM health chec
 ## Commit log
 
 ```
+829a634 feat: consolidated benchmark table + escalation policy probe          (C)
+2dd8cc0 feat: formal reply-quality rubric + offline judge-agreement tests     (B)
+19e55f0 feat: hand-labelled escalation decision benchmark + eval              (A)
+74fc09d docs: clarify live judge status (quota-blocked, script ready)
+40f369b feat: add agent chat REPL, judge-human agreement study, report §7–§10
 eaa721a feat: auto-load .env, refresh LLM models, wire resilient live judge   (deliverables)
 f350e40 docs: document retrieval-augmented agent evaluation                    (6–9 docs)
 b5519f4 feat: add agent failure analysis                                       (9)
@@ -490,9 +515,11 @@ single highest-leverage fix (§10).
    daily quota mid-session. With the quota reset (or a funded key) I'd run a
    15-row sample → judge-self-repeat consistency + judge-vs-deterministic kappa,
    and *only then* trust the judge's rates as claims.
-3. **Escalation ground-truth labels:** 200 rows of "should have been escalated"
-   from the golden conversations, fit a per-intent floor instead of one global
-   `comb_low`, report expected-vs-actual escalation per intent.
+3. **Escalation ground-truth labels — DONE (Phase A).** 200 rows hand-labelled
+   (`data/golden/escalation_gold.jsonl`); next is the fit this paved the way
+   for: a *per-intent risk policy* (not one global `comb_low`) — the probe in
+   §6F shows perfect-intent risk policy reaches 87.5% decision accuracy vs the
+   shipped 55.5%.
 4. **Copy-style sweep:** LLM-judged comparison of draft variants (template-family
    rewrites) on the 38 success rows to raise reply quality without touching
    action decisions.

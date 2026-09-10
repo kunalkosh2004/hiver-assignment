@@ -37,6 +37,7 @@ the discovered intent taxonomy.
 | Phase 8 — Final harness + LLM judge | ✅ Done | `scripts/evaluate_agent.py`, `reports/agent_results.*` (§10) |
 | Escalation decision benchmark | ✅ Done | hand-labelled 200 (`data/golden/escalation_gold.jsonl`) + `scripts/evaluate_escalation.py` (§10) |
 | Consolidated benchmark + policy probe | ✅ Done | `scripts/consolidate_benchmark.py` → `reports/phase_c_benchmark.md` (§10) |
+| Final report + reproduction timing | ✅ Done | `reports/FINAL_REPORT.md` (≤6 pp), `reports/reproduction_timing.json` (§10) |
 | Phase 9 — Failure analysis & report | ✅ Done | `reports/agent_error_analysis.*`, `notebooks/04_…` (§10) |
 
 ---
@@ -502,6 +503,7 @@ python scripts/analyze_agent_errors.py reports/agent_rows.json
 python scripts/build_escalation_benchmark.py
 python scripts/evaluate_escalation.py reports/agent_rows.json
 python scripts/consolidate_benchmark.py
+python scripts/time_reproduction.py   # optional: verify <= 15 min (writes reports/reproduction_timing.json)
 # notebook: scripts/build_notebook_p4.py && jupyter nbconvert --execute …
 ```
 
@@ -534,9 +536,12 @@ python scripts/evaluate_judge_agreement.py --sample 15  # judge-vs-human agreeme
 Note: Gemini free-tier is capped at ~5 req/min, so the judge paces itself
 (12s gap between drafts, skips rows that still hit the limit and reports them
 as `skipped`). The OpenAI key is used only as a fallback when Gemini fails.
-**Total reproduction time with keys + warm caches ≈ 12–20 min; offline
-(deterministic, no keys) ≈ 10–14 min** — the corpus index build and agent eval
-dominate; both are one-shot scripts with 15-min README walkthrough in §6.
+Total reproduction time, **measured** with warm caches on this machine
+(`reports/reproduction_timing.json` via `scripts/time_reproduction.py`):
+**offline 14.54 min** (agent eval 4.8 + intent train 4.4 + calibration 4.0 +
+56 unit tests 1.2 min) — inside the 15-min requirement; with live LLM judge
+adds ~12 s/judged draft. Cold runs additionally pay the one-shot corpus-index
+build and parquet cache build.
 
 **Try the agent interactively:**
 
@@ -580,6 +585,7 @@ scripts/
   build_escalation_benchmark.py  Phase A: labels TSV -> data/golden/escalation_gold.jsonl (200 rows)
   evaluate_escalation.py     Phase A: agent decision vs human-expected -> reports/escalation_gold_results.*
   consolidate_benchmark.py   Phase C: all methods one table + policy probe -> reports/phase_c_benchmark.*
+  time_reproduction.py        Phase D: measures offline reproduction -> reports/reproduction_timing.json
   agent_chat.py  interactive console conversation with the loaded agent (/topk, /inspect)
   evaluate_judge_agreement.py  LLM-judge vs human agreement study -> reports/judge_agreement.*
   build_notebook_p4.py  regenerates the Phases 6–9 notebook
@@ -625,6 +631,7 @@ README.md
 - Phase 9 — Failure analysis & report ✅ *(done, §10)*
 - Phase A — Escalation decision benchmark (human labels + eval) ✅ *(done, §10)*
 - Phase C — Consolidated benchmark + escalation policy probe ✅ *(done, §10)*
+- Phase D — Final report (≤6 pp) + measured reproduction timing ✅ *(done, §10)*
 
 **Future work (out of scope here):** LLM-labelled weak intents (requires a
 provider key; would target the intent ceiling, the dominant failure mode),

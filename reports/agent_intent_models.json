@@ -17,7 +17,8 @@
       "refund_request",
       "service_complaint_escalation"
     ],
-    "fit_seconds": 135.5,
+    "fit_seconds": 213.6,
+    "imbalance_note": "delivery_delay dominates weak labels (~86%); proxy bias disclosed",
     "class_counts": {
       "account_access": 3,
       "cancellation": 13,
