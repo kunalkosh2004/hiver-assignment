@@ -1,0 +1,3319 @@
+{
+  "n_failures": 131,
+  "method": "A failure is any retriever whose top-5 omits at least one judged 'useful' (level 2) candidate while >=1 exists in the pool. Levels: 0 irrelevant, 1 related, 2 useful.",
+  "by_retriever": {
+    "(pool)/benchmark": 5,
+    "bm25/ctx": 25,
+    "bm25/msg": 24,
+    "dense/ctx": 17,
+    "dense/msg": 15,
+    "tfidf/ctx": 22,
+    "tfidf/msg": 23
+  },
+  "by_mode": {
+    "multilingual_crossover": 12,
+    "lexical_mismatch": 99,
+    "insufficient_context_handling": 1,
+    "semantic_near_miss": 14,
+    "benchmark_absence": 5
+  },
+  "by_kind": {
+    "full_useful_miss": 66,
+    "partial_useful_miss": 60,
+    "no_useful_candidate_in_pool": 5
+  },
+  "failures": [
+    {
+      "query_id": "challenge-1379340",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "it",
+      "difficulty": "medium",
+      "primary_intent": "device_app_issue",
+      "mode": "multilingual_crossover",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2332811",
+        "2317689",
+        "139027"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1568158",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "charge_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2532818"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2149534",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "order_status_query",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "942699"
+      ],
+      "missed_related_case_ids": [
+        "348970",
+        "837502",
+        "930357"
+      ],
+      "top5_levels": [
+        "irrelevant",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2909124",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 3,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "2859799"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "useful",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-842315",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "multilingual_crossover",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1507922"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful",
+        "useful"
+      ]
+    },
+    {
+      "query_id": "representative-1136222",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1141562",
+        "2496352",
+        "1309094"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "irrelevant",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1210214",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "2873344",
+        "1502873"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-136922",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "cancellation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "130251",
+        "132358"
+      ],
+      "missed_related_case_ids": [
+        "483097"
+      ],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2217342",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "refund_request",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1514354",
+        "959310",
+        "2598955"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2291505",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "837591",
+        "1038875"
+      ],
+      "missed_related_case_ids": [
+        "2981998",
+        "931428"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2683519",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2299745",
+        "1333581"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2931934",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "1257056",
+        "274062"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "irrelevant",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-322945",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1544573",
+        "2604876",
+        "377955"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-458877",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "457700",
+        "457665"
+      ],
+      "missed_related_case_ids": [
+        "459988"
+      ],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful"
+      ]
+    },
+    {
+      "query_id": "representative-533206",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivered_wrong_location",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "2625655",
+        "1449082",
+        "1335103",
+        "1499843"
+      ],
+      "missed_related_case_ids": [
+        "2587367"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-628261",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2500762"
+      ],
+      "missed_related_case_ids": [
+        "25254"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-886169",
+      "model": "dense",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2252925",
+        "2132871"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1379340",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "it",
+      "difficulty": "medium",
+      "primary_intent": "device_app_issue",
+      "mode": "insufficient_context_handling",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2317689",
+        "139027"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful"
+      ]
+    },
+    {
+      "query_id": "challenge-1568158",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "charge_issue",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "538444"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2694949",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "account_access",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 3,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "476110"
+      ],
+      "missed_related_case_ids": [
+        "5325"
+      ],
+      "top5_levels": [
+        "useful",
+        "useful",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-842315",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "162020"
+      ],
+      "missed_related_case_ids": [
+        "162019"
+      ],
+      "top5_levels": [
+        "useful",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1136222",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2496352"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1179639",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "semantic_near_miss",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "577708"
+      ],
+      "missed_related_case_ids": [
+        "1746127"
+      ],
+      "top5_levels": [
+        "related",
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1210214",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "2873344",
+        "98571"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2217342",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "refund_request",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1514354",
+        "2598955"
+      ],
+      "missed_related_case_ids": [
+        "836885"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2291505",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "837591",
+        "1096676"
+      ],
+      "missed_related_case_ids": [
+        "931428"
+      ],
+      "top5_levels": [
+        "related",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2664071",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "semantic_near_miss",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "244688"
+      ],
+      "missed_related_case_ids": [
+        "896709"
+      ],
+      "top5_levels": [
+        "related",
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2683519",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2299745"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-322945",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2604876"
+      ],
+      "missed_related_case_ids": [
+        "1043602"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-458877",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "457665"
+      ],
+      "missed_related_case_ids": [
+        "459988"
+      ],
+      "top5_levels": [
+        "useful",
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful"
+      ]
+    },
+    {
+      "query_id": "representative-533206",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivered_wrong_location",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 3,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "1499843"
+      ],
+      "missed_related_case_ids": [
+        "2587367"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "useful",
+        "useful",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-628261",
+      "model": "dense",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "none",
+      "mode": "semantic_near_miss",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "387984"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1379340",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "it",
+      "difficulty": "medium",
+      "primary_intent": "device_app_issue",
+      "mode": "multilingual_crossover",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2332811"
+      ],
+      "missed_related_case_ids": [
+        "839373"
+      ],
+      "top5_levels": [
+        "useful",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1568158",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "charge_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "537466",
+        "538444",
+        "2532818"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2149534",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "order_status_query",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "942699"
+      ],
+      "missed_related_case_ids": [
+        "348970",
+        "837502",
+        "930357"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2609965",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "multilingual_crossover",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "481502",
+        "500827",
+        "481632"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "related",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2694949",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "account_access",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "476107",
+        "967240",
+        "1039535"
+      ],
+      "missed_related_case_ids": [
+        "5325"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2909124",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "535669",
+        "96767",
+        "147368"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-842315",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "multilingual_crossover",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "162020"
+      ],
+      "missed_related_case_ids": [
+        "162019"
+      ],
+      "top5_levels": [
+        "useful",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1136222",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1141562",
+        "2496352",
+        "1309094"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1179639",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "577708"
+      ],
+      "missed_related_case_ids": [
+        "911194",
+        "1746127",
+        "1456324"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1210214",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "1000989",
+        "1502873",
+        "98571"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-136922",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "cancellation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "130251",
+        "132358"
+      ],
+      "missed_related_case_ids": [
+        "457763",
+        "483097"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2217342",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "refund_request",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1514354",
+        "959310",
+        "2598955"
+      ],
+      "missed_related_case_ids": [
+        "836885"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2291505",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "837591",
+        "1096676",
+        "1038875"
+      ],
+      "missed_related_case_ids": [
+        "2981998",
+        "931428"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2378990",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "device_app_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "902439"
+      ],
+      "missed_related_case_ids": [
+        "595709"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2532842",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivered_but_not_received",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "292871",
+        "111844"
+      ],
+      "missed_related_case_ids": [
+        "798703",
+        "1533699"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2664071",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "244688"
+      ],
+      "missed_related_case_ids": [
+        "931619",
+        "896709",
+        "1326823"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2683519",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "930310",
+        "1333581"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2931934",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "1257056",
+        "274062"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-322945",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1544573",
+        "2604876",
+        "377955"
+      ],
+      "missed_related_case_ids": [
+        "1043602"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-427799",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "account_info_update",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "680653",
+        "971831"
+      ],
+      "missed_related_case_ids": [
+        "2150932"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-458877",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "457709",
+        "457700",
+        "457665"
+      ],
+      "missed_related_case_ids": [
+        "457744",
+        "459988"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-533206",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivered_wrong_location",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "2625655",
+        "1449082",
+        "1335103",
+        "1499843"
+      ],
+      "missed_related_case_ids": [
+        "2587367"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-628261",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2500762",
+        "387984"
+      ],
+      "missed_related_case_ids": [
+        "25254"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-676899",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "522621"
+      ],
+      "missed_related_case_ids": [
+        "406609"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-886169",
+      "model": "bm25",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2252925",
+        "2132871"
+      ],
+      "missed_related_case_ids": [
+        "468194"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1379340",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "it",
+      "difficulty": "medium",
+      "primary_intent": "device_app_issue",
+      "mode": "multilingual_crossover",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2332811"
+      ],
+      "missed_related_case_ids": [
+        "839373"
+      ],
+      "top5_levels": [
+        "useful",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1568158",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "charge_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "537466",
+        "2532818"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2149534",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "order_status_query",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "942699"
+      ],
+      "missed_related_case_ids": [
+        "348970",
+        "837502",
+        "930357"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2609965",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "multilingual_crossover",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "481502",
+        "500827",
+        "481632"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2694949",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "account_access",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "967240",
+        "1039535"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "useful"
+      ]
+    },
+    {
+      "query_id": "challenge-2909124",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "535669",
+        "96767",
+        "147368"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-842315",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "multilingual_crossover",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "162020"
+      ],
+      "missed_related_case_ids": [
+        "162019"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1136222",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1141562",
+        "2496352",
+        "1309094"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1179639",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "577708"
+      ],
+      "missed_related_case_ids": [
+        "911194",
+        "1746127",
+        "1456324"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1210214",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "1000989",
+        "1502873",
+        "98571"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-136922",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "cancellation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "130251",
+        "132358"
+      ],
+      "missed_related_case_ids": [
+        "457763",
+        "483097"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2217342",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "refund_request",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1514354",
+        "959310",
+        "2598955"
+      ],
+      "missed_related_case_ids": [
+        "836885"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2291505",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "837591",
+        "1096676",
+        "1038875"
+      ],
+      "missed_related_case_ids": [
+        "2981998",
+        "931428"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2378990",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "device_app_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "902439"
+      ],
+      "missed_related_case_ids": [
+        "595709"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2532842",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivered_but_not_received",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "292871",
+        "111844"
+      ],
+      "missed_related_case_ids": [
+        "798703",
+        "1533699"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2664071",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "244688"
+      ],
+      "missed_related_case_ids": [
+        "931619",
+        "896709",
+        "1326823"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2683519",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "930310",
+        "1333581"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2931934",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "1257056"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-322945",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2604876",
+        "377955"
+      ],
+      "missed_related_case_ids": [
+        "1043602"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-427799",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "account_info_update",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "680653",
+        "971831"
+      ],
+      "missed_related_case_ids": [
+        "2150932"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-458877",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "457709",
+        "457665"
+      ],
+      "missed_related_case_ids": [
+        "457744",
+        "459988"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-628261",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2500762",
+        "387984"
+      ],
+      "missed_related_case_ids": [
+        "25254"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-676899",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "522621"
+      ],
+      "missed_related_case_ids": [
+        "406609"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-886169",
+      "model": "bm25",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2132871"
+      ],
+      "missed_related_case_ids": [
+        "468194"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1568158",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "charge_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "537466",
+        "2532818"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2609965",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "multilingual_crossover",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "481502",
+        "500827",
+        "481632"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2694949",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "account_access",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "476107",
+        "967240",
+        "1039535"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful"
+      ]
+    },
+    {
+      "query_id": "challenge-2909124",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "535669",
+        "96767",
+        "147368"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1136222",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2496352",
+        "1309094"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1179639",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "577708"
+      ],
+      "missed_related_case_ids": [
+        "911194",
+        "1746127",
+        "1456324"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1210214",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "1000989",
+        "1502873",
+        "98571"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-136922",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "cancellation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "130251",
+        "132358"
+      ],
+      "missed_related_case_ids": [
+        "457763",
+        "483097"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2217342",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "refund_request",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "959310",
+        "2598955"
+      ],
+      "missed_related_case_ids": [
+        "836885"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2291505",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "837591",
+        "1096676",
+        "1038875"
+      ],
+      "missed_related_case_ids": [
+        "2981998",
+        "931428"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2378990",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "device_app_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "902439"
+      ],
+      "missed_related_case_ids": [
+        "595709"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2532842",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivered_but_not_received",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "292871",
+        "111844"
+      ],
+      "missed_related_case_ids": [
+        "798703"
+      ],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2664071",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "244688"
+      ],
+      "missed_related_case_ids": [
+        "931619",
+        "896709",
+        "1326823"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2683519",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "930310",
+        "1333581"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2931934",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "1257056",
+        "274062"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-322945",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2604876",
+        "377955"
+      ],
+      "missed_related_case_ids": [
+        "1043602"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-427799",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "account_info_update",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "971831"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "irrelevant",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "related"
+      ]
+    },
+    {
+      "query_id": "representative-458877",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "457709",
+        "457700",
+        "457665"
+      ],
+      "missed_related_case_ids": [
+        "457744",
+        "459988"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-533206",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivered_wrong_location",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "2625655",
+        "1449082",
+        "1335103"
+      ],
+      "missed_related_case_ids": [
+        "2587367"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-628261",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2500762",
+        "387984"
+      ],
+      "missed_related_case_ids": [
+        "25254"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-676899",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "522621"
+      ],
+      "missed_related_case_ids": [
+        "406609"
+      ],
+      "top5_levels": [
+        "irrelevant",
+        "UNJUDGED",
+        "irrelevant",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-886169",
+      "model": "tfidf",
+      "input_variant": "ctx",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2252925",
+        "2132871"
+      ],
+      "missed_related_case_ids": [
+        "468194"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1379340",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "it",
+      "difficulty": "medium",
+      "primary_intent": "device_app_issue",
+      "mode": "multilingual_crossover",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 2,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2332811"
+      ],
+      "missed_related_case_ids": [
+        "839373"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful"
+      ]
+    },
+    {
+      "query_id": "challenge-1568158",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "charge_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "537466",
+        "538444",
+        "2532818"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2149534",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "order_status_query",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "942699"
+      ],
+      "missed_related_case_ids": [
+        "837502",
+        "930357"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "related"
+      ]
+    },
+    {
+      "query_id": "challenge-2609965",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "multilingual_crossover",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "481502",
+        "500827",
+        "481632"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2694949",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "account_access",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "967240",
+        "1039535",
+        "476110"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "related",
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-2909124",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "other_unclear",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "535669",
+        "96767",
+        "147368"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-842315",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "fr",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "multilingual_crossover",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "1507922",
+        "162020"
+      ],
+      "missed_related_case_ids": [
+        "162019"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1136222",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2496352",
+        "1309094"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1179639",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "577708"
+      ],
+      "missed_related_case_ids": [
+        "911194",
+        "1746127",
+        "1456324"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-1210214",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 4,
+      "missed_useful_case_ids": [
+        "1000989",
+        "1502873",
+        "98571"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-136922",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "cancellation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "130251",
+        "132358"
+      ],
+      "missed_related_case_ids": [
+        "457763",
+        "483097"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2217342",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "refund_request",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "959310",
+        "2598955"
+      ],
+      "missed_related_case_ids": [
+        "836885"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2291505",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "837591",
+        "1096676",
+        "1038875"
+      ],
+      "missed_related_case_ids": [
+        "2981998",
+        "931428"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2378990",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "device_app_issue",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "902439"
+      ],
+      "missed_related_case_ids": [
+        "595709"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2532842",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivered_but_not_received",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "292871",
+        "111844"
+      ],
+      "missed_related_case_ids": [
+        "798703"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "related",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2664071",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "244688"
+      ],
+      "missed_related_case_ids": [
+        "931619",
+        "896709",
+        "1326823"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-2683519",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "930310",
+        "1333581"
+      ],
+      "missed_related_case_ids": [],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-322945",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "2604876",
+        "377955"
+      ],
+      "missed_related_case_ids": [
+        "1043602"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-427799",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "account_info_update",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "971831"
+      ],
+      "missed_related_case_ids": [
+        "2150932"
+      ],
+      "top5_levels": [
+        "irrelevant",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-458877",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "delivery_delay",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 3,
+      "missed_useful_case_ids": [
+        "457709",
+        "457665"
+      ],
+      "missed_related_case_ids": [
+        "457744",
+        "459988"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-628261",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "medium",
+      "primary_intent": "none",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2500762",
+        "387984"
+      ],
+      "missed_related_case_ids": [
+        "25254"
+      ],
+      "top5_levels": [
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-676899",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "product_return_and_replacement",
+      "mode": "lexical_mismatch",
+      "miss_kind": "full_useful_miss",
+      "useful_retrieved": 0,
+      "useful_total": 1,
+      "missed_useful_case_ids": [
+        "522621"
+      ],
+      "missed_related_case_ids": [
+        "406609"
+      ],
+      "top5_levels": [
+        "irrelevant",
+        "irrelevant",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "representative-886169",
+      "model": "tfidf",
+      "input_variant": "msg",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "service_complaint_escalation",
+      "mode": "lexical_mismatch",
+      "miss_kind": "partial_useful_miss",
+      "useful_retrieved": 1,
+      "useful_total": 2,
+      "missed_useful_case_ids": [
+        "2132871"
+      ],
+      "missed_related_case_ids": [
+        "468194"
+      ],
+      "top5_levels": [
+        "useful",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED",
+        "UNJUDGED"
+      ]
+    },
+    {
+      "query_id": "challenge-1578555",
+      "model": "(pool)",
+      "input_variant": "benchmark",
+      "language": "de",
+      "difficulty": "hard",
+      "primary_intent": "delivered_wrong_location",
+      "mode": "benchmark_absence",
+      "miss_kind": "no_useful_candidate_in_pool",
+      "useful_retrieved": 0,
+      "useful_total": 0,
+      "missed_useful_case_ids": [],
+      "missed_related_case_ids": [],
+      "top5_levels": []
+    },
+    {
+      "query_id": "challenge-2170818",
+      "model": "(pool)",
+      "input_variant": "benchmark",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "delivery_delay",
+      "mode": "benchmark_absence",
+      "miss_kind": "no_useful_candidate_in_pool",
+      "useful_retrieved": 0,
+      "useful_total": 0,
+      "missed_useful_case_ids": [],
+      "missed_related_case_ids": [
+        "1416832",
+        "1669413"
+      ],
+      "top5_levels": []
+    },
+    {
+      "query_id": "challenge-2814438",
+      "model": "(pool)",
+      "input_variant": "benchmark",
+      "language": "es",
+      "difficulty": "hard",
+      "primary_intent": "account_access",
+      "mode": "benchmark_absence",
+      "miss_kind": "no_useful_candidate_in_pool",
+      "useful_retrieved": 0,
+      "useful_total": 0,
+      "missed_useful_case_ids": [],
+      "missed_related_case_ids": [
+        "1705403"
+      ],
+      "top5_levels": []
+    },
+    {
+      "query_id": "challenge-893308",
+      "model": "(pool)",
+      "input_variant": "benchmark",
+      "language": "pt",
+      "difficulty": "hard",
+      "primary_intent": "none",
+      "mode": "benchmark_absence",
+      "miss_kind": "no_useful_candidate_in_pool",
+      "useful_retrieved": 0,
+      "useful_total": 0,
+      "missed_useful_case_ids": [],
+      "missed_related_case_ids": [],
+      "top5_levels": []
+    },
+    {
+      "query_id": "representative-2389800",
+      "model": "(pool)",
+      "input_variant": "benchmark",
+      "language": "en",
+      "difficulty": "hard",
+      "primary_intent": "none",
+      "mode": "benchmark_absence",
+      "miss_kind": "no_useful_candidate_in_pool",
+      "useful_retrieved": 0,
+      "useful_total": 0,
+      "missed_useful_case_ids": [],
+      "missed_related_case_ids": [
+        "132496"
+      ],
+      "top5_levels": []
+    }
+  ]
+}
