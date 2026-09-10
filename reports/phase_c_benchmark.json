@@ -1,0 +1,175 @@
+{
+  "n_rows": 200,
+  "note": "All rows are the SAME 200 golden rows. Intent columns from baseline_results.json (golden_all) and agent_results.json; decision columns from the human-labelled escalation benchmark via the SAME reports/agent_rows.json per-row dump. RISK_INTENTS policy is a human-risk heuristic (escalate iff predicted intent is risky); it is an offline policy probe, not the shipped agent.",
+  "policy_table": {
+    "always_auto": {
+      "n": 200,
+      "accuracy": 0.48,
+      "escalate_precision": 0.0,
+      "escalate_recall": 0.0,
+      "escalate_f1": 0.0,
+      "false_auto_dangerous": 104,
+      "false_escalate_cost": 0,
+      "escalate_rate": 0.0
+    },
+    "always_escalate": {
+      "n": 200,
+      "accuracy": 0.52,
+      "escalate_precision": 0.52,
+      "escalate_recall": 1.0,
+      "escalate_f1": 0.6842,
+      "false_auto_dangerous": 0,
+      "false_escalate_cost": 96,
+      "escalate_rate": 1.0
+    },
+    "risk_intent_policy": {
+      "n": 200,
+      "accuracy": 0.55,
+      "escalate_precision": 0.85,
+      "escalate_recall": 0.1635,
+      "escalate_f1": 0.2742,
+      "false_auto_dangerous": 87,
+      "false_escalate_cost": 3,
+      "escalate_rate": 0.1
+    },
+    "risk_true_intent_policy": {
+      "n": 200,
+      "accuracy": 0.875,
+      "escalate_precision": 0.9072,
+      "escalate_recall": 0.8462,
+      "escalate_f1": 0.8756,
+      "false_auto_dangerous": 16,
+      "false_escalate_cost": 9,
+      "escalate_rate": 0.485
+    },
+    "agent_floor_policy": {
+      "n": 200,
+      "accuracy": 0.555,
+      "escalate_precision": 0.623,
+      "escalate_recall": 0.3654,
+      "escalate_f1": 0.4606,
+      "false_auto_dangerous": 66,
+      "false_escalate_cost": 23,
+      "escalate_rate": 0.305
+    }
+  },
+  "per_intent_confusion": [
+    {
+      "predicted_intent": "delivery_delay",
+      "n": 180,
+      "expected_escalate": 87,
+      "predicted_escalate": 49,
+      "auto_as_auto": 73,
+      "auto_as_escalate": 20,
+      "escalate_as_auto": 58,
+      "escalate_as_escalate": 29
+    },
+    {
+      "predicted_intent": "service_complaint_escalation",
+      "n": 17,
+      "expected_escalate": 16,
+      "predicted_escalate": 10,
+      "auto_as_auto": 0,
+      "auto_as_escalate": 1,
+      "escalate_as_auto": 7,
+      "escalate_as_escalate": 9
+    },
+    {
+      "predicted_intent": "charge_issue",
+      "n": 1,
+      "expected_escalate": 0,
+      "predicted_escalate": 1,
+      "auto_as_auto": 0,
+      "auto_as_escalate": 1,
+      "escalate_as_auto": 0,
+      "escalate_as_escalate": 0
+    },
+    {
+      "predicted_intent": "product_return_and_replacement",
+      "n": 1,
+      "expected_escalate": 1,
+      "predicted_escalate": 0,
+      "auto_as_auto": 0,
+      "auto_as_escalate": 0,
+      "escalate_as_auto": 1,
+      "escalate_as_escalate": 0
+    },
+    {
+      "predicted_intent": "delivered_but_not_received",
+      "n": 1,
+      "expected_escalate": 0,
+      "predicted_escalate": 1,
+      "auto_as_auto": 0,
+      "auto_as_escalate": 1,
+      "escalate_as_auto": 0,
+      "escalate_as_escalate": 0
+    }
+  ],
+  "method_table": [
+    {
+      "method": "majority",
+      "intent_accuracy": 0.16,
+      "intent_macro_f1": 0.0197,
+      "escalation_rate": null,
+      "decision_accuracy": null,
+      "escalate_f1": null,
+      "false_auto": null,
+      "grounded_reuse_pct": null,
+      "empty_drafts": null,
+      "avg_draft_chars": null,
+      "source": "baseline_results.json"
+    },
+    {
+      "method": "logistic",
+      "intent_accuracy": 0.23,
+      "intent_macro_f1": 0.1635,
+      "escalation_rate": null,
+      "decision_accuracy": null,
+      "escalate_f1": null,
+      "false_auto": null,
+      "grounded_reuse_pct": null,
+      "empty_drafts": null,
+      "avg_draft_chars": null,
+      "source": "baseline_results.json"
+    },
+    {
+      "method": "svm",
+      "intent_accuracy": 0.245,
+      "intent_macro_f1": 0.1439,
+      "escalation_rate": null,
+      "decision_accuracy": null,
+      "escalate_f1": null,
+      "false_auto": null,
+      "grounded_reuse_pct": null,
+      "empty_drafts": null,
+      "avg_draft_chars": null,
+      "source": "baseline_results.json"
+    },
+    {
+      "method": "svm (msg+context)",
+      "intent_accuracy": 0.28,
+      "intent_macro_f1": 0.1351,
+      "escalation_rate": null,
+      "decision_accuracy": null,
+      "escalate_f1": null,
+      "false_auto": null,
+      "grounded_reuse_pct": null,
+      "empty_drafts": null,
+      "avg_draft_chars": null,
+      "source": "baseline_results.json"
+    },
+    {
+      "method": "agent (weak-201k intent)",
+      "intent_accuracy": 0.245,
+      "intent_macro_f1": 0.0496,
+      "escalation_rate": 0.305,
+      "decision_accuracy": 0.555,
+      "escalate_f1": 0.4606,
+      "false_auto": 66,
+      "grounded_reuse_pct": 95.67999999999999,
+      "empty_drafts": 0,
+      "avg_draft_chars": 260.3,
+      "source": "agent_results.json"
+    }
+  ]
+}

@@ -333,6 +333,37 @@ single combined floor. This new benchmark directly motivated the policy change
 listed in §10 ("Decision log"): escalate-by-intent risk categories is the Phase E
 priority.
 
+### 6F — Consolidated benchmark & escalation policy probe (Phase C, `scripts/consolidate_benchmark.py`)
+
+Every method is scored on the **same 200 golden rows** (`reports/phase_c_benchmark.md`):
+
+| method | intent acc | macro-F1 | esc-rate | decision acc | escal-F1 | false_auto |
+|---|---:|---:|---:|---:|---:|---:|
+| majority | 0.160 | 0.020 | – | – | – | – |
+| logistic (msg) | 0.230 | 0.164 | – | – | – | – |
+| svm (msg) | 0.245 | 0.144 | – | – | – | – |
+| svm (msg+ctx) | 0.280 | 0.135 | – | – | – | – |
+| **agent (weak-201k)** | 0.245 | 0.050 | 0.305 | 0.555 | 0.461 | 66 |
+
+Decision-benchmark policy probe (same rows, `reports/phase_c_benchmark.json`):
+
+| policy | accuracy | escal-F1 | false_auto | false_escalate |
+|---|---:|---:|---:|---:|
+| always auto | 0.480 | 0.000 | 104 | 0 |
+| always escalate | 0.520 | 0.684 | 0 | 96 |
+| risk by *predicted* intent | 0.550 | 0.274 | 87 | 3 |
+| **risk by *true* intent** | **0.875** | **0.876** | **16** | 9 |
+| agent floor (shipped) | 0.555 | 0.461 | 66 | 23 |
+
+Per-intent confusion (predicted intent × expected decision) shows the failure
+mechanism: **180/200 rows predict `delivery_delay`** (the weak-201k proxy bias),
+and of those 58 are expected escalations that were auto-handled. A human-risk
+policy (escalate when intent is risky: security, money, delivery investigation,
+remedy, complaint) would reach **87.5% decision accuracy on perfect intents —
+the shipped agent is at 55.5% entirely because of intent misprediction**, not
+retrieval or escalation logic. This is the quantitative core of §7 ("what is
+misleading") and the top priority for the one-more-week plan (§9).
+
 ### Phase-6–9 reproduction (no API key)
 
 ```bash
@@ -469,7 +500,7 @@ single highest-leverage fix (§10).
    threads to quantify how much of the calibrated floor + drafting templates
    transfer.
 
-## 10. Decision log (15 non-obvious decisions)
+## 10. Decision log (17 non-obvious decisions)
 
 - **Chose AmazonHelp (amazon) as the brand:** largest clean multi-turn threads
   with public replies; forensics (§1) showed it maximally exercises
@@ -509,6 +540,13 @@ single highest-leverage fix (§10).
 - **Shipped the LLM layer optional + disabled-by-default** with mocked tests,
   so the repo is runnable in ≤15 min without credentials, and the judge is a
   clearly-separated optional step.
+- **Hand-labelled a 200-row escalation decision benchmark** (104 escalate / 96
+  auto) rather than re-using the confidence floor as "truth"; it exposed that
+  the floor under-escalates (66 dangerous false-autos) and that human risk is
+  intent-driven, not confidence-driven (§6E).
+- **Kept the decision benchmark evaluation-only** — it is deliberately never
+  merged into training data or the threshold fit, so the 87.5% perfect-intent
+  ceiling (§6F) is an honestly detached measurement, not an accidental leak.
 
 ## Next steps (future work, out of scope)
 
