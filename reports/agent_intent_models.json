@@ -1,0 +1,46 @@
+{
+  "weak": {
+    "n_train": 201741,
+    "source": "weak-201k",
+    "classes_n": 12,
+    "classes": [
+      "account_access",
+      "cancellation",
+      "charge_issue",
+      "delivered_but_not_received",
+      "delivered_wrong_location",
+      "delivery_delay",
+      "device_app_issue",
+      "order_status_query",
+      "other_unclear",
+      "product_return_and_replacement",
+      "refund_request",
+      "service_complaint_escalation"
+    ],
+    "fit_seconds": 135.5,
+    "class_counts": {
+      "account_access": 3,
+      "cancellation": 13,
+      "charge_issue": 1324,
+      "delivered_but_not_received": 2596,
+      "delivered_wrong_location": 103,
+      "delivery_delay": 174605,
+      "device_app_issue": 76,
+      "order_status_query": 2,
+      "other_unclear": 1158,
+      "product_return_and_replacement": 1967,
+      "refund_request": 93,
+      "service_complaint_escalation": 19801
+    },
+    "dev_validation_proxy_macro_f1": 0.3092
+  },
+  "dev": {
+    "source": "dev-140",
+    "n_train": 140,
+    "validated_on": "dev/validation",
+    "classes_n": 14,
+    "validation_macro_f1": 0.069,
+    "validation_n": 30,
+    "fit_seconds": 0.2
+  }
+}

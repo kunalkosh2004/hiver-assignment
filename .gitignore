@@ -8,6 +8,9 @@ data/intermediate/
 data/retrieval/
 !data/.gitkeep
 
+# Per-row agent dump (regenerable via evaluate_agent.py --dump-rows)
+reports/agent_rows.json
+
 # Python
 __pycache__/
 *.pyc
