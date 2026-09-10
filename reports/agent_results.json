@@ -1,0 +1,109 @@
+{
+  "phase": "phase8-final-agent",
+  "n_golden": 200,
+  "intent_learning_curve": [
+    {
+      "label": "majority",
+      "n_train": 0,
+      "classes_n": 14,
+      "accuracy": 0.16,
+      "macro_f1": 0.0197,
+      "on_shared_subset": {
+        "n": 200,
+        "accuracy": 0.315,
+        "macro_f1": 0.0783
+      }
+    },
+    {
+      "label": "dev-140 (human)",
+      "n_train": 140,
+      "classes_n": 14,
+      "accuracy": 0.315,
+      "macro_f1": 0.0783,
+      "on_shared_subset": {
+        "n": 200,
+        "accuracy": 0.315,
+        "macro_f1": 0.0783
+      }
+    },
+    {
+      "label": "weak-201k",
+      "n_train": 201741,
+      "classes_n": 12,
+      "accuracy": 0.245,
+      "macro_f1": 0.0496,
+      "on_shared_subset": {
+        "n": 167,
+        "accuracy": 0.2934,
+        "macro_f1": 0.0632
+      }
+    }
+  ],
+  "escalation": {
+    "auto_handle": 139,
+    "escalate": 61,
+    "escalation_rate": 0.305,
+    "by_true_intent": {
+      "account_access": 1,
+      "cancellation": 2,
+      "charge_issue": 6,
+      "delivered_but_not_received": 2,
+      "delivered_wrong_location": 1,
+      "delivery_delay": 8,
+      "device_app_issue": 2,
+      "none": 10,
+      "order_status_query": 5,
+      "product_return_and_replacement": 11,
+      "refund_request": 1,
+      "service_complaint_escalation": 12
+    },
+    "sensitivity_to_comb_low": {
+      "0.45": {
+        "escalate": 2,
+        "rate": 0.01
+      },
+      "0.6": {
+        "escalate": 4,
+        "rate": 0.02
+      },
+      "0.75": {
+        "escalate": 14,
+        "rate": 0.07
+      },
+      "0.8775": {
+        "escalate": 62,
+        "rate": 0.31
+      },
+      "0.95": {
+        "escalate": 189,
+        "rate": 0.945
+      }
+    },
+    "active_comb_low": 0.8775,
+    "note": "dev-calibrated floor transfers poorly to golden (domain shift) \u2014 sensitivity shown"
+  },
+  "drafting": {
+    "avg_cue_overlap": 0.295,
+    "overlap_cooc": {
+      "()": 145,
+      "('apology',)": 39,
+      "('apology', 'ask')": 3,
+      "('ask',)": 7,
+      "('contact',)": 5,
+      "('ask', 'contact')": 1
+    },
+    "resolution_reuse_rate_auto": 0.9568,
+    "empty_drafts": 0,
+    "avg_draft_chars": 260.3
+  },
+  "calibration_dev": {
+    "ece": 0.1248,
+    "n": 30,
+    "sim_term": "unavailable on dev (fixed at 0.2)"
+  },
+  "llm_judge": {
+    "status": "disabled",
+    "note": "no LLM provider key set"
+  },
+  "seconds": 46.4
+}
